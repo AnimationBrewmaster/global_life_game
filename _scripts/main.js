@@ -1,5 +1,6 @@
 /*jshint undef: false, strict: false, latedef: nofunc, maxerr: 300*/
 /* @author Glen (THIS IS THE MERGED VERSION V2) */
+// version 11.1.1
 
 var player1 = {
     name: "",
@@ -253,7 +254,7 @@ function updateStats() {
 // actions that take place when food destination is selected
 function getFood() {
    // SetChosenPath("farm");
-    takeTurn();
+    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (player1.gb <= 0) {
@@ -275,7 +276,7 @@ function getFood() {
 
 function getwater() {
    // SetChosenPath("water");
-    takeTurn();
+    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
@@ -303,7 +304,7 @@ function getwater() {
 // actions that take place when toilet destination is selected
 function getToilet() {
    // SetChosenPath("toilet");
-    takeTurn();
+    //takeTurn();
     alertIt("You have arrived at the toilet.\nGet 3 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
     player1.hp += 3;
     updateStats();
@@ -361,7 +362,7 @@ function getJob() {
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
-    takeTurn();
+    //takeTurn();
     if (sick || sickWater) {
         if (player1.gb > 9) {
             if (confirm("You are very sick, buy medicine for $10?")) {
@@ -431,7 +432,7 @@ function buyMedicine() {
 // actions that take place when school destination is selected
 function getSchool() {
    // SetChosenPath("school");
-    takeTurn();
+    //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy an education.";
     } else {
@@ -460,7 +461,7 @@ function buySchool() {
 // actions that take place when store destination is selected
 function getStore() {
   //  SetChosenPath("store");
-    takeTurn();
+    //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy anything at the Market.";
         UpdateUserMessage(message);
@@ -486,7 +487,7 @@ function buyNewStuff() {
     if (stuffBuy === "") {
         UpdateUserMessage('nothing chosen to buy');
         
-        // TODO: get it to reopen the window? will this every get called empty?
+        // TODO: get it to reopen the window? will this every get called empty? - yes, it will now with a rejected transaction
         return;
     }
 
@@ -724,6 +725,7 @@ function checkout(item, value, message) {
 // displays message when you don;t have enough money, sends you back to the store
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
+    stuffBuy = ""; // added this to stop the infinite recursion
     buyNewStuff();
 }
 
@@ -754,7 +756,7 @@ function checkCard() {
         getPartnershipCard();
         // DANNY TO: SWAP CARD BACKGROUND TO GREEN.
     } else {
-        UpdateUserMessage("uneventful journey");
+        //UpdateUserMessage("uneventful journey");
     }
 }
 

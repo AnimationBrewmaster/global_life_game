@@ -193,6 +193,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          {
          	sym.getSymbol("mcUserMessage").$("txtScoreMessage").html(msg);
          	sym.getSymbol("mcUserMessage").play(0);
+         	console.log("message to display: " + msg);
          }
          
          // write to our global bStopDice
