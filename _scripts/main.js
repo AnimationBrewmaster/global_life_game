@@ -1,6 +1,5 @@
 /*jshint undef: false, strict: false, latedef: nofunc, maxerr: 300*/
 /* @author Glen (THIS IS THE MERGED VERSION V2) */
-// version 11.1.1
 
 var player1 = {
     name: "",
@@ -144,8 +143,8 @@ function getPositiveWord() {
 }
 
 // sets player onject stats based on user input choice of country card
-function getDifficulty(inputDifficulty) {
-    //inputDifficulty = inputDifficulty.toLowerCase();
+function getDifficulty() {
+    inputDifficulty = inputDifficulty.toLowerCase();
     switch (inputDifficulty) {
 
         case "a":
@@ -153,28 +152,24 @@ function getDifficulty(inputDifficulty) {
             player1.wp = 30;
             player1.ep = 14;
             player1.gb = 25;
-            console.log("Country A - 30, 30, 14, 25");
             break;
         case "b":
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 10;
             player1.gb = 12;
-            console.log("Country B - 20, 20, 10, 12");
             break;
         case "c":
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 7;
             player1.gb = 7;
-            console.log("Country C - 20, 20, 7, 7");
             break;
         case "d":
             player1.hp = 15;
             player1.wp = 15;
             player1.ep = 3;
             player1.gb = 2;
-            console.log("Country D - 15, 15, 3, 2");
             break;
 
         default:
@@ -182,7 +177,6 @@ function getDifficulty(inputDifficulty) {
             player1.wp = 30;
             player1.ep = 14;
             player1.gb = 25;
-            console.log("Default - 30, 30, 14, 25");
             break;
     }
     // MANUALLY UPDATING:
@@ -198,7 +192,6 @@ function getDifficulty(inputDifficulty) {
 
 // creates blank inventory
 function createInventory() {
-    console.log("creating inventory object");
     player1.soap = false;
     player1.tablet = false;
     player1.bucket = false;
@@ -210,8 +203,7 @@ function createInventory() {
 }
 
 // goes through inventory list and displays items that are held
-// tried to create new object for inventory - but throws an error in Edge - must be some connection I can't find
-// just need to cut the first 4 items to display inventory since the 4 stats will be constant
+// TODO - need to sep. inventory from stats - perhaps a new object
 function displayInventory() {
     console.log("displaying inventory");
     var currentItems = [];
@@ -221,9 +213,6 @@ function displayInventory() {
             currentItems.push(key);
         }
     }
-    // removing player stats from currentItems list
-    currentItems.splice(0, 4);       
-    console.log(currentItems);
 }
 
 // sends player stats to console
@@ -254,7 +243,7 @@ function updateStats() {
 // actions that take place when food destination is selected
 function getFood() {
    // SetChosenPath("farm");
-    //takeTurn();
+    takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (player1.gb <= 0) {
@@ -276,7 +265,7 @@ function getFood() {
 
 function getwater() {
    // SetChosenPath("water");
-    //takeTurn();
+    takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
@@ -304,7 +293,7 @@ function getwater() {
 // actions that take place when toilet destination is selected
 function getToilet() {
    // SetChosenPath("toilet");
-    //takeTurn();
+    takeTurn();
     alertIt("You have arrived at the toilet.\nGet 3 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
     player1.hp += 3;
     updateStats();
@@ -362,7 +351,7 @@ function getJob() {
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
-    //takeTurn();
+    takeTurn();
     if (sick || sickWater) {
         if (player1.gb > 9) {
             if (confirm("You are very sick, buy medicine for $10?")) {
@@ -432,7 +421,7 @@ function buyMedicine() {
 // actions that take place when school destination is selected
 function getSchool() {
    // SetChosenPath("school");
-    //takeTurn();
+    takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy an education.";
     } else {
@@ -461,7 +450,7 @@ function buySchool() {
 // actions that take place when store destination is selected
 function getStore() {
   //  SetChosenPath("store");
-    //takeTurn();
+    takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy anything at the Market.";
         UpdateUserMessage(message);
@@ -487,7 +476,7 @@ function buyNewStuff() {
     if (stuffBuy === "") {
         UpdateUserMessage('nothing chosen to buy');
         
-        // TODO: get it to reopen the window? will this every get called empty? - yes, it will now with a rejected transaction
+        // TODO: get it to reopen the window? will this every get called empty?
         return;
     }
 
@@ -725,7 +714,6 @@ function checkout(item, value, message) {
 // displays message when you don;t have enough money, sends you back to the store
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
-    stuffBuy = ""; // added this to stop the infinite recursion
     buyNewStuff();
 }
 
@@ -756,7 +744,7 @@ function checkCard() {
         getPartnershipCard();
         // DANNY TO: SWAP CARD BACKGROUND TO GREEN.
     } else {
-        //UpdateUserMessage("uneventful journey");
+        UpdateUserMessage("uneventful journey");
     }
 }
 
@@ -893,7 +881,6 @@ function travelToll(numberOfTurns) {
 }
 
 // checks to see if player has died
-// TODO need to check if player is broke - game ends there too
 function checkGameOver() {
     
     var _gameOver = true;
@@ -911,6 +898,7 @@ function checkGameOver() {
 }
 
 // updates game once player has died
+// TODO - needs to end the game
 function playerDied() {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
@@ -949,7 +937,7 @@ function CalcHowBadlyPlayerDied()
     if(player1.hp > 0)
     {
      // had health
-        _msgHealth = "They were just too thirsty for this world.";
+        _msgHealth = "They was just too thirsty for this world.";
         
     } else {
      // no health   
@@ -978,7 +966,7 @@ function CalcHowBadlyPlayerDied()
         _messageBucks = "They were buried anonymously in a paupers grave.";
     }
     
-    var factoid = "Factoid message can be seen here";
+    var factoid = "1,000,000 children die laughing every day. humor. it's just not funny.";
     var _finalMessage = _msgWater + "<br>";
         _finalMessage += _msgHealth + "<br>";
         _finalMessage += _msgEducation + "<br>";
@@ -1055,7 +1043,6 @@ function checkDiceRoll(diceRoll) {
         // we are on the second leg returning home:
         if (currentPlayerSquare + diceRoll >= HOME) {
             currentPlayerSquare = HOME;
-            console.log("current player square = " + currentPlayerSquare);
             // path is complete
             msgDiceRoll = 'You rolled a ' + diceRoll + '! More than enough to arrive back at home! Sweet!';
             travelToll(numberOfRolls);
@@ -1126,25 +1113,25 @@ function InitGameTips() {
     arrGameTips[0] = "Getting an education early on improves your chances of success.";
     arrGameTips[1] = "Don't drink water with dead animals in it.";
     arrGameTips[2] = "Don't use your poop bucket as a hat.";
-    arrGameTips[3] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit";
-    arrGameTips[4] = "Ut enim ad minim veniam";
-    arrGameTips[5] = "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
+    arrGameTips[3] = "Choosing rich parents guarantees success!";
+    arrGameTips[4] = "Blood is thicker than water. You remind me of blood. You're thick.";
+    arrGameTips[5] = "Flies are an excellent source of nutrition for motorcyclists.";
     arrGameTips[6] = "Games are a good way to get good at gaming.";
-    arrGameTips[7] = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum";
+    arrGameTips[7] = "Losing this game means, technically, you are a loser.";
     arrGameTips[8] = "Teamwork means sharing the blame.";
     arrGameTips[9] = "University is okay, but Galaxity is bigger.";
     arrGameTips[10] = "This is not a game about cowboys.";
-    arrGameTips[11] = "dolore eu fugiat nulla pariatur";
+    arrGameTips[11] = "Shooting aliens in the head is not always effective.";
     arrGameTips[12] = "On earth you would weigh similar values to what you do right now.";
     arrGameTips[13] = "Humans cannot read while standing up.";
     arrGameTips[14] = "An elephant never forgets. To say thank you.";
     arrGameTips[15] = "99% of statistics are completely true.";
     arrGameTips[16] = "The opposite of opposite is favourite.";
-    arrGameTips[17] = "Excepteur sint occaecat cupidatat non proident";
-    arrGameTips[18] = "sunt in culpa qui officia deserunt mollit anim id est laborum.";
-    arrGameTips[19] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-    arrGameTips[20] = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat";
-    arrGameTips[21] = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur";
+    arrGameTips[17] = "There are 36 letters in the white mans alphabet.";
+    arrGameTips[18] = "In australia the skytrain is called the nooptik nooptik";
+    arrGameTips[19] = "More people die every year than own rabbits.";
+    arrGameTips[20] = "Botox keeps zombies fresher longer.";
+    arrGameTips[21] = "Last years sausage fest was a total, well, you know.";
     arrGameTips[22] = "Skunks are terrible at long division";
 
     startingGameTip = Math.floor(Math.random() * arrGameTips.length);
@@ -1170,7 +1157,6 @@ function SetCountrySelected(_countrySelected) {
         bNameHasBeenEntered = true;
         SetNameEntered(_username);
     }
-    console.log("country selected agruement passed: " + _countrySelected);
     bCountryHasBeenSelected = true;
     SetInputDifficulty(_countrySelected);
 
@@ -1179,10 +1165,8 @@ function SetCountrySelected(_countrySelected) {
     AreWeReadyToStart();
 }
 
-
 function SetInputDifficulty(val) {
-    console.log("SetInputDifficulty : " + val);
-    getDifficulty(val);
+    getDifficulty();
     inputDifficulty = val;
     //  alert("difficulty:"+inputDifficulty);
     var iconsrc = "";
@@ -1245,7 +1229,7 @@ function UpdateHUD(life, water, glob, edu) {
 
     // check for player death        
     if (gameOver != true) {
-        _playerLifeStatus = " is alive and well-ish.";
+        _playerLifeStatus = " is alive and well-ish."
     } else {
         _playerLifeStatus = " is super dead. Sorry.";
     }
@@ -1289,7 +1273,7 @@ function UpdateHUD(life, water, glob, edu) {
 
 function getRandomName() {
     var arrTitles = new Array("", "", "", "Dr.", "Sir", "Mr", "Mrs.", "Ms", "Rev.", "The Hon.");
-    var arrFirstNames = new Array("Albert", "Bjork", "Groot", "Winky", "Snuffaluffagus", "Kylie");
+    var arrFirstNames = new Array("Albert", "Bjork", "Groot", "Winky", "Snuffaluffagus", "Madonna");
     var arrLastNames = new Array("Einstein", "Van Halen", "Rockefeller", "dos Santos", "Khan", "Letterman");
     var rand0 = Math.floor(Math.random() * arrTitles.length);
     var rand1 = Math.floor(Math.random() * arrFirstNames.length);
