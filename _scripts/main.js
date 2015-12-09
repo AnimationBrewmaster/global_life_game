@@ -204,7 +204,6 @@ function createInventory() {
 }
 
 // goes through inventory list and displays items that are held
-// TODO - need to sep. inventory from stats - perhaps a new object
 function displayInventory() {
     console.log("displaying inventory");
     var currentItems = [];
@@ -900,10 +899,10 @@ function checkGameOver() {
       
         playerDied();
     }
+    // TODO do we want to check for the other conditions here? example - player out of money, player reaches set number of turns, is there a "win" scenario?
 }
 
 // updates game once player has died
-// TODO - needs to end the game
 function playerDied() {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
