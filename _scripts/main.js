@@ -214,6 +214,9 @@ function displayInventory() {
             currentItems.push(key);
         }
     }
+    // removing player stats from currentItems list to leave only inventory items
+    currentItems.splice(0, 4);
+    console.log(currentItems);
 }
 
 // sends player stats to console
@@ -1230,7 +1233,7 @@ function UpdateHUD(life, water, glob, edu) {
 
     // check for player death        
     if (gameOver != true) {
-        _playerLifeStatus = " is alive and well-ish."
+        _playerLifeStatus = " is alive and well-ish.";
     } else {
         _playerLifeStatus = " is super dead. Sorry.";
     }
