@@ -480,7 +480,7 @@ function buyNewStuff() {
     if (stuffBuy === "") {
         UpdateUserMessage('nothing chosen to buy');
         
-        // TODO: get it to reopen the window? will this every get called empty?
+        // TODO: get it to reopen the window? will this every get called empty? - set stuffBuy to "" when transaction rejected to avoid infinite recursion loop
         return;
     }
 
@@ -585,7 +585,7 @@ function buyNewStuff() {
 
         default:
             UpdateUserMessage("Bad input, please try again");
-            OpenMarketHud();
+            OpenMarketHud(); // TODO: does not appear to re-open the market - continues on with the game
             break;
     }
 }
@@ -718,6 +718,7 @@ function checkout(item, value, message) {
 // displays message when you don;t have enough money, sends you back to the store
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
+    stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
     buyNewStuff();
 }
 
