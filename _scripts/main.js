@@ -1,5 +1,6 @@
 /*jshint undef: false, strict: false, latedef: nofunc, maxerr: 300*/
 /* @author Glen (THIS IS THE MERGED VERSION V2) */
+// V 11.01.01
 
 var player1 = {
     name: "",
@@ -143,9 +144,9 @@ function getPositiveWord() {
 }
 
 // sets player onject stats based on user input choice of country card
-function getDifficulty() {
-    inputDifficulty = inputDifficulty.toLowerCase();
-    switch (inputDifficulty) {
+function getDifficulty(value) {
+    //inputDifficulty = inputDifficulty.toLowerCase();
+    switch (value) {
 
         case "a":
             player1.hp = 30;
@@ -1166,7 +1167,7 @@ function SetCountrySelected(_countrySelected) {
 }
 
 function SetInputDifficulty(val) {
-    getDifficulty();
+    getDifficulty(val);
     inputDifficulty = val;
     //  alert("difficulty:"+inputDifficulty);
     var iconsrc = "";
