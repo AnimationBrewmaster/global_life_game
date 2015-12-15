@@ -861,14 +861,76 @@
                             '425px'
                         ],
                         [
-                            "eid711",
-                            "left",
+                            "eid12184",
+                            "location",
                             0,
-                            0,
+                            1000,
                             "linear",
-                            "${destinationGlowCopy3}",
-                            '753px',
-                            '753px'
+                            "${avatar_water}",
+                            [[-26.5, 215.5, 0, 0, 0, 0,0],[100.5, 285.5, 0, 0, 0, 0,145.01]]
+                        ],
+                        [
+                            "eid12185",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[100.5, 285.5, 0, 0, 0, 0,0],[458.5, 223.5, 0, 0, 0, 0,363.33]]
+                        ],
+                        [
+                            "eid12186",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[458.5, 223.5, 0, 0, 0, 0,0],[845.5, 191.5, 0, 0, 0, 0,388.32]]
+                        ],
+                        [
+                            "eid12187",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[845.5, 191.5, 0, 0, 0, 0,0],[980.5, 384.5, 0, 0, 0, 0,235.53]]
+                        ],
+                        [
+                            "eid12188",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[980.5, 384.5, 0, 0, 0, 0,0],[683.5, 333.5, 0, 0, 0, 0,301.35]]
+                        ],
+                        [
+                            "eid12189",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[683.5, 333.5, 0, 0, 0, 0,0],[425.5, 472.5, 0, 0, 0, 0,293.06]]
+                        ],
+                        [
+                            "eid12190",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[425.5, 472.5, 0, 0, 0, 0,0],[131.5, 422.5, 0, 0, 0, 0,298.22]]
+                        ],
+                        [
+                            "eid12191",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[131.5, 422.5, 0, 0, 0, 0,0],[-87.5, 451.5, 0, 0, 0, 0,220.91]]
                         ],
                         [
                             "eid8534",
@@ -881,80 +943,24 @@
                             '230px'
                         ],
                         [
-                            "eid554",
-                            "-webkit-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12859",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12860",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12861",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12862",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12863",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid12847",
+                            "eid5477",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '-90px',
-                            '-90px'
+                            "${mcHUD}",
+                            '491px',
+                            '491px'
+                        ],
+                        [
+                            "eid8653",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${destinationGlowCopy4}",
+                            '247px',
+                            '247px'
                         ],
                         [
                             "eid8497",
@@ -977,14 +983,14 @@
                             '101px'
                         ],
                         [
-                            "eid5434",
-                            "scaleY",
+                            "eid539",
+                            "left",
                             0,
                             0,
                             "linear",
-                            "${mcHUD}",
-                            '1',
-                            '1'
+                            "${hudNextDest}",
+                            '226px',
+                            '226px'
                         ],
                         [
                             "eid6281",
@@ -1007,14 +1013,14 @@
                             'none'
                         ],
                         [
-                            "eid539",
-                            "left",
+                            "eid5434",
+                            "scaleY",
                             0,
                             0,
                             "linear",
-                            "${hudNextDest}",
-                            '226px',
-                            '226px'
+                            "${mcHUD}",
+                            '1',
+                            '1'
                         ],
                         [
                             "eid12244",
@@ -1037,14 +1043,70 @@
                             '1'
                         ],
                         [
-                            "eid5914",
-                            "top",
+                            "eid554",
+                            "-webkit-transform-origin",
                             0,
                             0,
                             "linear",
-                            "${hudMarket}",
-                            '113px',
-                            '113px'
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid12964",
+                            "-moz-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid12965",
+                            "-ms-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid12966",
+                            "msTransformOrigin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid12967",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid12968",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
                             "eid8496",
@@ -1057,16 +1119,6 @@
                             '966px'
                         ],
                         [
-                            "eid8533",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${destinationGlowCopy}",
-                            '487px',
-                            '487px'
-                        ],
-                        [
                             "eid7115",
                             "scaleX",
                             0,
@@ -1077,78 +1129,6 @@
                             '1'
                         ],
                         [
-                            "eid12208",
-                            "location",
-                            0,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[-15.5, 141.5, 0, 0, 0, 0,0],[185.5, 243.5, 0, 0, 0, 0,225.4]]
-                        ],
-                        [
-                            "eid12209",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[185.5, 243.5, 0, 0, 0, 0,0],[335.5, 330.5, 0, 0, 0, 0,173.4]]
-                        ],
-                        [
-                            "eid12210",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[335.5, 330.5, 0, 0, 0, 0,0],[520.5, 420.5, 0, 0, 0, 0,205.73]]
-                        ],
-                        [
-                            "eid12211",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[520.5, 420.5, 0, 0, 0, 0,0],[579.5, 322.5, 0, 0, 0, 0,114.39]]
-                        ],
-                        [
-                            "eid12212",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[579.5, 322.5, 0, 0, 0, 0,0],[741.5, 239.5, 0, 0, 0, 0,182.02]]
-                        ],
-                        [
-                            "eid12213",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[741.5, 239.5, 0, 0, 0, 0,0],[900.5, 304.5, 0, 0, 0, 0,171.77]]
-                        ],
-                        [
-                            "eid12214",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[900.5, 304.5, 0, 0, 0, 0,0],[1030.5, 397.5, 0, 0, 0, 0,159.84]]
-                        ],
-                        [
-                            "eid12215",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[1030.5, 397.5, 0, 0, 0, 0,0],[1194.5, 433.5, 0, 0, 0, 0,167.9]]
-                        ],
-                        [
                             "eid12642",
                             "left",
                             0,
@@ -1157,6 +1137,26 @@
                             "${dicePair}",
                             '17px',
                             '17px'
+                        ],
+                        [
+                            "eid8728",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${destinationGlowCopy6}",
+                            '115px',
+                            '115px'
+                        ],
+                        [
+                            "eid5681",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${rountBtn}",
+                            '0.68',
+                            '0.68'
                         ],
                         [
                             "eid5433",
@@ -1251,24 +1251,34 @@
                             [[171.5, 380.5, 0, 0, 0, 0,0],[8.5, 352.5, 0, 0, 0, 0,165.39]]
                         ],
                         [
-                            "eid5681",
-                            "scaleX",
+                            "eid183",
+                            "display",
                             0,
                             0,
                             "linear",
-                            "${rountBtn}",
-                            '0.68',
-                            '0.68'
+                            "${hudNextDest}",
+                            'none',
+                            'none'
                         ],
                         [
-                            "eid8728",
+                            "eid350",
+                            "display",
+                            8112,
+                            0,
+                            "linear",
+                            "${hudNextDest}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid8691",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${destinationGlowCopy6}",
-                            '115px',
-                            '115px'
+                            "${destinationGlowCopy5}",
+                            '186px',
+                            '186px'
                         ],
                         [
                             "eid8652",
@@ -1291,24 +1301,14 @@
                             '108px'
                         ],
                         [
-                            "eid183",
-                            "display",
+                            "eid712",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${hudNextDest}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid350",
-                            "display",
-                            8112,
-                            0,
-                            "linear",
-                            "${hudNextDest}",
-                            'none',
-                            'block'
+                            "${destinationGlowCopy3}",
+                            '248px',
+                            '248px'
                         ],
                         [
                             "eid8690",
@@ -1321,24 +1321,24 @@
                             '522px'
                         ],
                         [
-                            "eid712",
+                            "eid12847",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${destinationGlowCopy3}",
-                            '248px',
-                            '248px'
+                            "${charJob}",
+                            '-90px',
+                            '-90px'
                         ],
                         [
-                            "eid8691",
-                            "top",
-                            0,
-                            0,
+                            "eid11974",
+                            "scaleX",
+                            4000,
+                            11,
                             "linear",
-                            "${destinationGlowCopy5}",
-                            '186px',
-                            '186px'
+                            "${avatar_job}",
+                            '1',
+                            '-1'
                         ],
                         [
                             "eid12643",
@@ -1453,14 +1453,14 @@
                             '892px'
                         ],
                         [
-                            "eid11974",
-                            "scaleX",
-                            4000,
-                            11,
+                            "eid310",
+                            "top",
+                            0,
+                            0,
                             "linear",
-                            "${avatar_job}",
-                            '1',
-                            '-1'
+                            "${obit}",
+                            '-4px',
+                            '-4px'
                         ],
                         [
                             "eid374",
@@ -1471,6 +1471,98 @@
                             "${charJob}",
                             '176px',
                             '176px'
+                        ],
+                        [
+                            "eid12208",
+                            "location",
+                            0,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[-15.5, 141.5, 0, 0, 0, 0,0],[185.5, 243.5, 0, 0, 0, 0,225.4]]
+                        ],
+                        [
+                            "eid12209",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[185.5, 243.5, 0, 0, 0, 0,0],[335.5, 330.5, 0, 0, 0, 0,173.4]]
+                        ],
+                        [
+                            "eid12210",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[335.5, 330.5, 0, 0, 0, 0,0],[520.5, 420.5, 0, 0, 0, 0,205.73]]
+                        ],
+                        [
+                            "eid12211",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[520.5, 420.5, 0, 0, 0, 0,0],[579.5, 322.5, 0, 0, 0, 0,114.39]]
+                        ],
+                        [
+                            "eid12212",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[579.5, 322.5, 0, 0, 0, 0,0],[741.5, 239.5, 0, 0, 0, 0,182.02]]
+                        ],
+                        [
+                            "eid12213",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[741.5, 239.5, 0, 0, 0, 0,0],[900.5, 304.5, 0, 0, 0, 0,171.77]]
+                        ],
+                        [
+                            "eid12214",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[900.5, 304.5, 0, 0, 0, 0,0],[1030.5, 397.5, 0, 0, 0, 0,159.84]]
+                        ],
+                        [
+                            "eid12215",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[1030.5, 397.5, 0, 0, 0, 0,0],[1194.5, 433.5, 0, 0, 0, 0,167.9]]
+                        ],
+                        [
+                            "eid330",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${mcPopup}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid5682",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${rountBtn}",
+                            '0.68',
+                            '0.68'
                         ],
                         [
                             "eid11924",
@@ -1545,44 +1637,14 @@
                             [[198.61, 485.7, 0, 0, 0, 0,0],[8.44, 476.3, 0, 0, 0, 0,190.4]]
                         ],
                         [
-                            "eid330",
-                            "display",
+                            "eid8533",
+                            "left",
                             0,
                             0,
                             "linear",
-                            "${mcPopup}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid5682",
-                            "scaleY",
-                            0,
-                            0,
-                            "linear",
-                            "${rountBtn}",
-                            '0.68',
-                            '0.68'
-                        ],
-                        [
-                            "eid310",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${obit}",
-                            '-4px',
-                            '-4px'
-                        ],
-                        [
-                            "eid12858",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${mcUserMessage}",
-                            '523px',
-                            '523px'
+                            "${destinationGlowCopy}",
+                            '487px',
+                            '487px'
                         ],
                         [
                             "eid5476",
@@ -1595,86 +1657,24 @@
                             '98px'
                         ],
                         [
-                            "eid11929",
+                            "eid12858",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${mcUserMessage}",
+                            '523px',
+                            '523px'
+                        ],
+                        [
+                            "eid711",
                             "left",
-                            2000,
+                            0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '-15px',
-                            '-15px'
-                        ],
-                        [
-                            "eid12184",
-                            "location",
-                            0,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[-26.5, 215.5, 0, 0, 0, 0,0],[100.5, 285.5, 0, 0, 0, 0,145.01]]
-                        ],
-                        [
-                            "eid12185",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[100.5, 285.5, 0, 0, 0, 0,0],[458.5, 223.5, 0, 0, 0, 0,363.33]]
-                        ],
-                        [
-                            "eid12186",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[458.5, 223.5, 0, 0, 0, 0,0],[845.5, 191.5, 0, 0, 0, 0,388.32]]
-                        ],
-                        [
-                            "eid12187",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[845.5, 191.5, 0, 0, 0, 0,0],[980.5, 384.5, 0, 0, 0, 0,235.53]]
-                        ],
-                        [
-                            "eid12188",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[980.5, 384.5, 0, 0, 0, 0,0],[683.5, 333.5, 0, 0, 0, 0,301.35]]
-                        ],
-                        [
-                            "eid12189",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[683.5, 333.5, 0, 0, 0, 0,0],[425.5, 472.5, 0, 0, 0, 0,293.06]]
-                        ],
-                        [
-                            "eid12190",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[425.5, 472.5, 0, 0, 0, 0,0],[131.5, 422.5, 0, 0, 0, 0,298.22]]
-                        ],
-                        [
-                            "eid12191",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[131.5, 422.5, 0, 0, 0, 0,0],[-87.5, 451.5, 0, 0, 0, 0,220.91]]
+                            "${destinationGlowCopy3}",
+                            '753px',
+                            '753px'
                         ],
                         [
                             "eid364",
@@ -1759,14 +1759,14 @@
                             [[1024.5, 356.5, 0, 0, 0, 0,0],[1198.5, 322.5, 0, 0, 0, 0,177.29]]
                         ],
                         [
-                            "eid5477",
-                            "top",
-                            0,
+                            "eid11929",
+                            "left",
+                            2000,
                             0,
                             "linear",
-                            "${mcHUD}",
-                            '491px',
-                            '491px'
+                            "${charJob}",
+                            '-15px',
+                            '-15px'
                         ],
                         [
                             "eid5867",
@@ -1779,14 +1779,14 @@
                             '926px'
                         ],
                         [
-                            "eid8653",
+                            "eid5914",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${destinationGlowCopy4}",
-                            '247px',
-                            '247px'
+                            "${hudMarket}",
+                            '113px',
+                            '113px'
                         ],
                         [
                             "eid5869",
@@ -1826,11 +1826,11 @@
                             fill: ['rgba(156,0,0,1.00)']
                         },
                         {
-                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto'],
+                            type: 'text',
                             id: 'Text',
                             text: 'CHALLENGE:<br>Your village doesn\'t have an outhouse. People are going wherever they can. In public. It\'s embarrassing, dangerous and very unclean. <br><br>You come into contact with some nasty microbes and get life-threatening diahrrea, just like 1.5 million other kids every year.<br><br>You lose 6 health points. <br>And one pair of clean undies.',
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
-                            type: 'text'
+                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto'],
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
                         }
                     ],
                     style: {
@@ -1872,11 +1872,11 @@
                             fill: ['rgba(97,172,57,1.00)']
                         },
                         {
-                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto'],
+                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin:0px\">​PARTNERSHIP:</p><p style=\"margin: 0px;\">You partner with T.S.O.P.W.D.T.D.I.F.** to bring clean toilets to your village.</p><p style=\"margin: 0px;\">You no longer get affected by any challenges involving toilets and sanitation. Good Job!</p><p style=\"margin: 0px;\">​</p><p style=\"margin: 0px;\">** The Society of People Who Dont Think Diahrreah Is Funny</p><p style=\"margin: 0px;\">​</p>',
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
-                            type: 'text'
+                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto'],
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
                         }
                     ],
                     style: {
@@ -1916,11 +1916,11 @@
                                 fill: ['rgba(0,0,0,0)', 'images/gameboard_home.jpg', '0px', '0px']
                             },
                             {
-                                rect: ['566px', '208px', '145px', '154px', 'auto', 'auto'],
-                                transform: [[], [], [], ['0.61', '0.61']],
-                                id: 'character_home',
                                 type: 'image',
+                                transform: [[], [], [], ['0.61', '0.61']],
                                 display: 'block',
+                                rect: ['566px', '208px', '145px', '154px', 'auto', 'auto'],
+                                id: 'character_home',
                                 fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                             }]
                         }
@@ -2027,8 +2027,8 @@
                             align: 'right',
                             textStyle: ['', '', '', '', 'uppercase'],
                             rect: ['202px', '148px', '225px', '29px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(235,235,235,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'tPlayerName',
+                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(235,235,235,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             text: '<p style=\"margin: 0px;\">​tPlayerName</p>'
                         },
@@ -2037,8 +2037,8 @@
                             align: 'left',
                             textStyle: ['', '', '', '', 'uppercase'],
                             rect: ['438px', '146px', '107px', '29px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(60,136,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'tPlayerStatus',
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(60,136,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 2],
                             text: '<p style=\"margin: 0px;\">​IS ALIVE!</p>'
                         },
@@ -2047,8 +2047,8 @@
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            rect: ['238px', '79px', '47px', '31px', 'auto', 'auto'],
                             id: 'labelEducation',
+                            rect: ['238px', '79px', '47px', '31px', 'auto', 'auto'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             opacity: '1'
                         },
@@ -2057,66 +2057,66 @@
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            rect: ['108px', '79px', '47px', '31px', 'auto', 'auto'],
                             id: 'labelGlobal',
+                            rect: ['108px', '79px', '47px', '31px', 'auto', 'auto'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             opacity: '1'
                         },
                         {
+                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             display: 'none',
                             id: 'headerGlobal',
                             text: '<p style=\"margin: 0px;\">​BUCKS</p>',
                             align: 'center',
-                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">00</p>',
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            rect: ['173px', '79px', '47px', '31px', 'auto', 'auto'],
                             id: 'labelWater',
+                            rect: ['173px', '79px', '47px', '31px', 'auto', 'auto'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             opacity: '1'
                         },
                         {
+                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             display: 'none',
                             id: 'headerEducation',
                             text: '<p style=\"margin: 0px;\">​EDUCATION</p>',
                             align: 'center',
-                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
+                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             display: 'none',
                             id: 'headerWater',
                             text: '<p style=\"margin: 0px;\">​WATER</p>',
                             align: 'center',
-                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            rect: ['42px', '78px', '47px', '31px', 'auto', 'auto'],
                             id: 'labelLife',
+                            rect: ['42px', '78px', '47px', '31px', 'auto', 'auto'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             opacity: '1'
                         },
                         {
+                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             display: 'none',
                             id: 'headerLife',
                             text: '<p style=\"margin: 0px;\">​HEALTH</p>',
                             align: 'center',
-                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             rect: ['42px', '75px', '45px', '29px', 'auto', 'auto'],
@@ -2165,11 +2165,11 @@
                             type: 'rect'
                         },
                         {
-                            rect: ['564', '20', '259', '110', 'auto', 'auto'],
-                            display: 'none',
-                            symbolName: 'buttonflash',
+                            type: 'rect',
                             id: 'buttonflash',
-                            type: 'rect'
+                            symbolName: 'buttonflash',
+                            display: 'none',
+                            rect: ['564', '20', '259', '110', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -2273,13 +2273,13 @@
                             fill: ['rgba(0,0,0,0)', '_images/button_red.png', '0px', '0px']
                         },
                         {
-                            font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto'],
-                            textStyle: ['', '', '', '', 'none'],
-                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
-                            id: 'button_text',
+                            font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             text: '<p style=\"margin: 0px;\">​CLOSE</p>',
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
                             align: 'left',
+                            textStyle: ['', '', '', '', 'none'],
+                            id: 'button_text',
                             type: 'text'
                         },
                         {
@@ -2332,11 +2332,11 @@
                             rect: ['0', '0', '384', '480', 'auto', 'auto'],
                             c: [
                             {
-                                transform: [[], [], [], ['1.44508', '1.44508']],
+                                type: 'rect',
                                 id: 'flare_animation',
                                 symbolName: 'flare_animation',
-                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto'],
-                                type: 'rect'
+                                transform: [[], [], [], ['1.44508', '1.44508']],
+                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto']
                             },
                             {
                                 type: 'image',
@@ -2345,21 +2345,21 @@
                                 fill: ['rgba(0,0,0,0)', 'images/newGreenCard.png', '0px', '0px']
                             },
                             {
-                                transform: [[], [], [], ['0.69208', '0.69208']],
+                                type: 'rect',
                                 id: 'flare_animationCopy',
                                 symbolName: 'flare_animation',
-                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto'],
-                                type: 'rect'
+                                transform: [[], [], [], ['0.69208', '0.69208']],
+                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto']
                             }]
                         },
                         {
+                            rect: ['48px', '181px', '306px', '331px', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            type: 'text',
-                            text: '<p style=\"margin: 0px;\">​</p>',
-                            id: 'txtBody',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'txtBody',
+                            text: '<p style=\"margin: 0px;\">​</p>',
                             align: 'left',
-                            rect: ['48px', '181px', '306px', '331px', 'auto', 'auto']
+                            type: 'text'
                         },
                         {
                             type: 'text',
@@ -2545,9 +2545,9 @@
                                 type: 'text',
                                 align: 'center',
                                 text: '<p style=\"margin:0px\">​CLOSE</p>',
-                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto'],
-                                title: 'CLOSE',
                                 font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
+                                title: 'CLOSE',
+                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto'],
                                 textShadow: ['rgba(33,33,33,1.00)', 0, -2, 1],
                                 id: 'label'
                             }]
@@ -2707,14 +2707,14 @@
                             '2px'
                         ],
                         [
-                            "eid98",
-                            "textShadow.color",
+                            "eid96",
+                            "textShadow.offsetH",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            'rgba(33,33,33,1.00)',
-                            'rgba(33,33,33,1.00)'
+                            '0px',
+                            '0px'
                         ],
                         [
                             "eid31",
@@ -2737,14 +2737,14 @@
                             '2px'
                         ],
                         [
-                            "eid96",
-                            "textShadow.offsetH",
+                            "eid98",
+                            "textShadow.color",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            '0px',
-                            '0px'
+                            'rgba(33,33,33,1.00)',
+                            'rgba(33,33,33,1.00)'
                         ],
                         [
                             "eid17",
@@ -2837,13 +2837,13 @@
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(165,255,0,0.59)', 51], ['rgba(221,255,99,1.00)', 51]]]],
                             c: [
                             {
+                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', ''],
                                 type: 'text',
-                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto'],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', '1px', '1px', '1px'],
-                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', '']
+                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto']
                             }]
                         },
                         {
@@ -2912,14 +2912,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -2992,6 +3002,16 @@
                             '2px'
                         ],
                         [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
+                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
+                        ],
+                        [
                             "eid31",
                             "left",
                             1000,
@@ -3010,16 +3030,6 @@
                             "${base_a}",
                             '0px',
                             '2px'
-                        ],
-                        [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
-                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3082,24 +3092,14 @@
                             '0px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ]
                     ]
                 }
@@ -3132,13 +3132,13 @@
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(254,200,19,0.73)', 51], ['rgba(204,152,0,1.00)', 51]]]],
                             c: [
                             {
+                                rect: ['-2', '11', '102%', '27', 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', ''],
-                                type: 'text',
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                rect: ['-2', '11', '102%', '27', 'auto', 'auto']
+                                type: 'text'
                             }]
                         },
                         {
@@ -3206,14 +3206,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -3286,6 +3296,16 @@
                             '2px'
                         ],
                         [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
+                        ],
+                        [
                             "eid31",
                             "left",
                             1000,
@@ -3304,16 +3324,6 @@
                             "${base_a}",
                             '0px',
                             '2px'
-                        ],
-                        [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3376,24 +3386,14 @@
                             '0px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ]
                     ]
                 }
@@ -3465,14 +3465,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -3545,44 +3555,24 @@
                             '2px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
-                        ],
-                        [
-                            "eid31",
-                            "left",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid24",
+                            "eid25",
                             "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '0px',
-                            '2px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3645,14 +3635,24 @@
                             'rgba(255,255,255,1.00)'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
+                            "eid31",
+                            "left",
                             1000,
+                            0,
                             "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid24",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ]
                     ]
                 }
@@ -3684,13 +3684,13 @@
                             boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['-2', '8px', '102%', '27', 'auto', 'auto'],
-                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', ''],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                type: 'text'
+                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', '']
                             }]
                         },
                         {
@@ -3952,15 +3952,15 @@
                             fill: ['rgba(255,201,0,1.00)']
                         },
                         {
-                            id: 'hudMarket2',
                             type: 'image',
+                            id: 'hudMarket2',
                             rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/hudMarket.png', '0px', '0px']
                         },
                         {
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnPlumbing',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3968,8 +3968,8 @@
                         },
                         {
                             rect: ['309px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBike',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3977,8 +3977,8 @@
                         },
                         {
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFilter',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3986,8 +3986,8 @@
                         },
                         {
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnKit',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3995,8 +3995,8 @@
                         },
                         {
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFood',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4004,8 +4004,8 @@
                         },
                         {
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBucket',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4013,8 +4013,8 @@
                         },
                         {
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnTablet',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4022,8 +4022,8 @@
                         },
                         {
                             rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnSoap',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4032,8 +4032,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4282,72 +4281,71 @@
                             fill: ['rgba(109,109,109,1.00)']
                         },
                         {
-                            id: 'hudNextDestination3',
                             type: 'image',
+                            id: 'hudNextDestination3',
                             rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/hudNextDestination.png', '0px', '0px']
                         },
                         {
+                            rect: ['61px', '235px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnFarm',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['61px', '235px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['61px', '93px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnHospital',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['61px', '93px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['179px', '93px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnJob',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['179px', '93px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['300px', '93px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnMarket',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['300px', '93px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['419px', '93px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnToilet',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['419px', '93px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['180px', '235px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnSchool',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['180px', '235px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         },
                         {
+                            rect: ['420px', '235px', '128', '128', 'auto', 'auto'],
                             type: 'rect',
-                            transform: [[], [], [], ['0.92969', '1.10938']],
                             id: 'btnWater',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['420px', '235px', '128', '128', 'auto', 'auto']
+                            transform: [[], [], [], ['0.92969', '1.10938']]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4699,13 +4697,13 @@
                     dom: [
                         {
                             type: 'text',
-                            id: 'txtScoreMessage',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['0px', '67px', '230px', '192px', 'auto', 'auto'],
                             align: 'left',
+                            text: '<p style=\"margin: 0px; text-align: left;\">​</p>',
+                            rect: ['0px', '67px', '230px', '192px', 'auto', 'auto'],
+                            id: 'txtScoreMessage',
                             font: ['bree-serif, sans-serif', [12, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             opacity: '0',
-                            text: '<p style=\"margin: 0px; text-align: left;\">​</p>'
+                            textStyle: ['', '', '', '', 'none']
                         }
                     ],
                     style: {
@@ -4806,12 +4804,12 @@
                             fill: ['rgba(0,0,0,0)', 'images/dice-resized-v2.png', '0px', '0px', '1024px', '2048px', 'no-repeat']
                         },
                         {
+                            rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             id: 'rollagain',
                             text: '<p style=\"margin: 0px;\">ROLL THE DICE</p>',
                             align: 'center',
-                            rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -4861,6 +4859,26 @@
                             "${bg}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid340",
+                            "display",
+                            1053,
+                            0,
+                            "linear",
+                            "${dice-resized-v2}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid1",
+                            "height",
+                            0,
+                            0,
+                            "linear",
+                            "${dice-resized-v2}",
+                            '0px',
+                            '150px'
                         ],
                         [
                             "eid3",
@@ -5136,26 +5154,6 @@
                             [-600,-600],
                             [-800,-600],
                             {valueTemplate: '@@0@@px @@1@@px'}
-                        ],
-                        [
-                            "eid340",
-                            "display",
-                            1053,
-                            0,
-                            "linear",
-                            "${dice-resized-v2}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid1",
-                            "height",
-                            0,
-                            0,
-                            "linear",
-                            "${dice-resized-v2}",
-                            '0px',
-                            '150px'
                         ]
                     ]
                 }
@@ -5178,31 +5176,31 @@
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(99,99,231,1.00)', 0], ['rgba(0,0,0,1.00)', 100]]]]
                         },
                         {
-                            transform: [[], [], [], ['1.14999', '1.14999']],
-                            id: 'tombstone',
-                            type: 'image',
                             rect: ['271px', '-527px', '377px', '474px', 'auto', 'auto'],
+                            id: 'tombstone',
+                            transform: [[], [], [], ['1.14999', '1.14999']],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/tombstone.png', '0px', '0px']
                         },
                         {
                             type: 'text',
-                            id: 'txtNom',
+                            align: 'center',
                             textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [20, 'px'], 'rgba(113,113,113,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
-                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
                             text: '<p style=\"margin: 0px;\">nom</p>',
+                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
                             opacity: '0',
-                            align: 'center'
+                            id: 'txtNom'
                         },
                         {
                             type: 'text',
-                            id: 'txtObit',
+                            align: 'left',
                             textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [16, 'px'], 'rgba(88,88,88,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
-                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
                             text: '<p style=\"margin: 0px;\">obit</p>',
+                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
                             opacity: '0',
-                            align: 'left'
+                            id: 'txtObit'
                         },
                         {
                             type: 'image',
@@ -5443,18 +5441,18 @@
                 content: {
                     dom: [
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            transform: [[], [], [], ['2.18', '2.18']],
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], [], [], ['2.18', '2.18']]
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            transform: [[], [], [], ['2.71', '2.71']],
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], [], [], ['2.71', '2.71']]
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -5468,13 +5466,13 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid172",
+                            "eid168",
                             "scaleY",
                             0,
-                            500,
+                            821,
                             "linear",
-                            "${dice_symbol_2}",
-                            '2.71',
+                            "${dice_symbol_1}",
+                            '2.18',
                             '1'
                         ],
                         [
@@ -5496,8 +5494,18 @@
                             [[227.02, 390.14, 0, 0, 0, 0,0],[227.01, 232.57, 0, 0, 0, 0,157.57]]
                         ],
                         [
-                            "eid171",
+                            "eid167",
                             "scaleX",
+                            0,
+                            821,
+                            "linear",
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
+                        ],
+                        [
+                            "eid172",
+                            "scaleY",
                             0,
                             500,
                             "linear",
@@ -5506,23 +5514,13 @@
                             '1'
                         ],
                         [
-                            "eid168",
-                            "scaleY",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
-                        ],
-                        [
-                            "eid167",
+                            "eid171",
                             "scaleX",
                             0,
-                            821,
+                            500,
                             "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
+                            "${dice_symbol_2}",
+                            '2.71',
                             '1'
                         ],
                         [
@@ -6044,38 +6042,37 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['385px', '64px', '136', '56', 'auto', 'auto'],
                             id: 'shadow1',
                             symbolName: 'shadow',
                             opacity: '0',
-                            rect: ['385px', '64px', '136', '56', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['182px', '8px', '136', '56', 'auto', 'auto'],
                             id: 'shadow2',
                             symbolName: 'shadow',
                             opacity: '0',
-                            rect: ['182px', '8px', '136', '56', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            transform: [[], ['26'], [], ['2.18', '2.18']],
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
+                            type: 'rect',
+                            transform: [[], ['26'], [], ['2.18', '2.18']]
                         },
                         {
-                            type: 'rect',
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            transform: [[], [], [], ['2.71', '2.71']],
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
+                            type: 'rect',
+                            transform: [[], [], [], ['2.71', '2.71']]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '100px']
+                            rect: [null, null, '600px', '100px']
                         }
                     }
                 },
@@ -6124,34 +6121,14 @@
                             '0'
                         ],
                         [
-                            "eid6962",
-                            "opacity",
+                            "eid168",
+                            "scaleY",
                             0,
                             821,
                             "linear",
-                            "${shadow2}",
-                            '0',
-                            '0.5'
-                        ],
-                        [
-                            "eid8977",
-                            "opacity",
-                            821,
-                            525,
-                            "linear",
-                            "${shadow2}",
-                            '0.5',
-                            '0.19'
-                        ],
-                        [
-                            "eid8203",
-                            "opacity",
-                            5000,
-                            0,
-                            "easeOutQuad",
-                            "${shadow2}",
-                            '0.19',
-                            '0'
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
                         ],
                         [
                             "eid8207",
@@ -6164,16 +6141,6 @@
                             '26deg'
                         ],
                         [
-                            "eid8208",
-                            "rotateZ",
-                            5000,
-                            500,
-                            "easeInQuad",
-                            "${dice_symbol_2}",
-                            '0deg',
-                            '-29deg'
-                        ],
-                        [
                             "eid167",
                             "scaleX",
                             0,
@@ -6182,6 +6149,16 @@
                             "${dice_symbol_1}",
                             '2.18',
                             '1'
+                        ],
+                        [
+                            "eid8208",
+                            "rotateZ",
+                            5000,
+                            500,
+                            "easeInQuad",
+                            "${dice_symbol_2}",
+                            '0deg',
+                            '-29deg'
                         ],
                         [
                             "eid144",
@@ -6496,14 +6473,34 @@
                             '8px'
                         ],
                         [
-                            "eid168",
-                            "scaleY",
+                            "eid6962",
+                            "opacity",
                             0,
                             821,
                             "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
+                            "${shadow2}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid8977",
+                            "opacity",
+                            821,
+                            525,
+                            "linear",
+                            "${shadow2}",
+                            '0.5',
+                            '0.19'
+                        ],
+                        [
+                            "eid8203",
+                            "opacity",
+                            5000,
+                            0,
+                            "easeOutQuad",
+                            "${shadow2}",
+                            '0.19',
+                            '0'
                         ]
                     ]
                 }
@@ -6534,12 +6531,12 @@
                             fill: ['rgba(53,53,53,1.00)']
                         },
                         {
+                            rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​ROLL DICE</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -6598,16 +6595,6 @@
                             '0.5145769715309143'
                         ],
                         [
-                            "eid5593",
-                            "top",
-                            0,
-                            1000,
-                            "linear",
-                            "${Text}",
-                            '23px',
-                            '21px'
-                        ],
-                        [
                             "eid5633",
                             "width",
                             0,
@@ -6626,6 +6613,16 @@
                             "${RoundRect}",
                             '10px',
                             '10px'
+                        ],
+                        [
+                            "eid5593",
+                            "top",
+                            0,
+                            1000,
+                            "linear",
+                            "${Text}",
+                            '23px',
+                            '21px'
                         ],
                         [
                             "eid5591",
@@ -6686,12 +6683,12 @@
                             fill: ['rgba(53,53,53,1)']
                         },
                         {
+                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">TIPS</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
