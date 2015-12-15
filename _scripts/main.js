@@ -39,6 +39,7 @@ var my_stage;
 var startingGameTip;
 var arrGameTips = [];
 var getDifficulty;
+var countryValue; // numberic value for country used for card selection
 var _username;
 var bUserInputDisabled = false; // used to disable user changing input after game start
 
@@ -153,24 +154,28 @@ function getDifficulty(value) {
             player1.wp = 30;
             player1.ep = 14;
             player1.gb = 25;
+            countryValue = 0;
             break;
         case "b":
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 10;
             player1.gb = 12;
+            countryValue = 1;
             break;
         case "c":
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 7;
             player1.gb = 7;
+            countryValue = 1;
             break;
         case "d":
             player1.hp = 15;
             player1.wp = 15;
             player1.ep = 3;
             player1.gb = 2;
+            countryValue = 2;
             break;
 
         default:
@@ -178,6 +183,7 @@ function getDifficulty(value) {
             player1.wp = 30;
             player1.ep = 14;
             player1.gb = 25;
+            countryValue = 0;
             break;
     }
     // MANUALLY UPDATING:
@@ -738,6 +744,8 @@ function HideStartingInstructions() {
 
 // checks for action cards and chooses the type
 function checkCard() {
+	getChallengeCard(); // TODO - temp code to test card functionality - remove and uncomment lower code
+	/*
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -750,19 +758,26 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
+    */
 }
 
 // randomly selects challenge card
+// TODO - full test with set of 3 x 4 cards
 function getChallengeCard() {
-    var number = Math.floor(Math.random() * challengeCards.length);
+    var number = Math.floor(Math.random() * challengeCards[countryValue].length);
+    console.log(challengeCards[countryValue]);
+    console.log(challengeCards[countryValue].length);
+    console.log(countryValue);
+    console.log(number);
     console.log("challenge Card! - " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
-    var _msg = challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact;
+    var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
     UpdatePopup("Challenge Card!", _msg, "red");
-    impactStats(challengeCards[number].hp, challengeCards[number].wp, challengeCards[number].ep, challengeCards[number].gb);
+    impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
 }
 
 // randomly selects partnership card
+// TODO - repeat challenge card code with new partnership methods once testing is successful
 function getPartnershipCard() {
     var number = Math.floor(Math.random() * partnershipCards.length);
     console.log("partnership Card! - " + number);
