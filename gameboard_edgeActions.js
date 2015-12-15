@@ -59,26 +59,28 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
       
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7000, function(sym, e) {
+        Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7000, function(sym, e) {
          if(bStopDice == 7)
-         {
-         	sym.stop();
-         	// show the selection HUD
-         	sym.$("hudNextDest").show();
-         }
+         sym.stop();
 
       });
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8000, function(sym, e) {
-         if(bStopDice > 7)
+         if(bStopDice == 8) // 8 is our max steps:
          {
-         alert('bstopDice out of range:' + bStopDice);
-         sym.stop();
+         	sym.stop();
+         	// show the selection HUD
+         	sym.$("hudNextDest").show();
          }
+         stop();
+         
+         
 
       });
       //Edge binding end
+      
+      
       
       
       
@@ -89,7 +91,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          if(bStopDice < 1)
          sym.stop();
-         
 
       });
       //Edge binding end
@@ -106,10 +107,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          var diceStopsAt1;
          // and this holds the frame dice 2 stops at, visible or not:
          var diceStopsAt2;
+         //var TOTAL_POSITIONS = 8; // how many positions the game will allow for before looping around again.
          
          // null these out to start:
          sym.setVariable("diceStopsAt1", -1);
          sym.setVariable("diceStopsAt2", -1); 
+         //sym.setVariable("TOTAL_POSITIONS", 8); 
          // INIT TYPE STUFF FOR COMP READY:
          // make username unselectable. i've already gone into Edge and tweaked the cursor.
          sym.$("txtUsername").css("webkit-user-select","none");  
@@ -611,6 +614,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // crappy fix to solve issue with button text getting selected during clicks, irritating.
          sym.getSymbol("mcHUD").getSymbol("rectButton").stop("out");
          sym.StopFlashDiceButton();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8096, function(sym, e) {
+         if(bStopDice > 8)
+         {
+         	sym.stop(0);
+         	// show the selection HUD
+         	sym.$("hudNextDest").show();
+         }
+         stop();
+         
+         
 
       });
       //Edge binding end
