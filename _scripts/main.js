@@ -744,8 +744,6 @@ function HideStartingInstructions() {
 
 // checks for action cards and chooses the type
 function checkCard() {
-	getChallengeCard(); // TODO - temp code to test card functionality - remove and uncomment lower code
-	/*
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -758,17 +756,12 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
-    */
 }
 
 // randomly selects challenge card
 // TODO - full test with set of 3 x 4 cards
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
-    console.log(challengeCards[countryValue]);
-    console.log(challengeCards[countryValue].length);
-    console.log(countryValue);
-    console.log(number);
     console.log("challenge Card! - " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
@@ -777,15 +770,13 @@ function getChallengeCard() {
 }
 
 // randomly selects partnership card
-// TODO - repeat challenge card code with new partnership methods once testing is successful
 function getPartnershipCard() {
-    var number = Math.floor(Math.random() * partnershipCards.length);
+    var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
     console.log("partnership Card! - " + number);
    // UpdateUserMessage("Partnership Card!\n\n" + partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact);
-    var _msg = partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact;
+    var _msg = partnershipCards[countryValue][number].title + "\n" + partnershipCards[countryValue][number].text + "\n" + partnershipCards[countryValue][number].impact;
     UpdatePopup("Partnership Card!", _msg, "green");
-
-    impactStats(partnershipCards[number].hp, partnershipCards[number].wp, partnershipCards[number].ep, partnershipCards[number].gb);
+    impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
 }
 
 // updates player stats from sent agruements
