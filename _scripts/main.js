@@ -759,7 +759,6 @@ function checkCard() {
 }
 
 // randomly selects challenge card
-// TODO - full test with set of 3 x 4 cards
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
     console.log("challenge Card! - " + number);
