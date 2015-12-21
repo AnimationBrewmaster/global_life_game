@@ -144,11 +144,11 @@ challengeCards[2][3] = challengeCard4C;
 
 // TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
 
-// TODO - drop an education level (card #19) - need a function ot go through the education levels and check vs players current education value - when changing go to mid-value of new level
+// TODO - drop an education level (card #19) - .special = "loseEductionalLevel"
 
-// TODO - gain an education level (card #21)
+// TODO - gain an education level (card #21) - .special = "gainEductionalLevel"
 
-// TODO - remove items (all) from inventory - send them to the createInventory() function - it wipes it all
+// TODO - remove items (all) from inventory - .special = "createInventory"
 
 
 

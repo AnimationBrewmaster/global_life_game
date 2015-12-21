@@ -799,13 +799,17 @@ function specialCards(fnstring) {
 			gotSick();
 			break;
 			
-		case "functionY":
-			functionY();
+		case "gainEductionalLevel":
+			gainEducationLevel();
 			break;
 			
-		case "functionZ": 
-			functionZ();
+		case "loseEducationLevel": 
+			loseEducationLevel();
 			break;
+			
+		case "createInventory": 
+			createInventory();
+			break;	
 			
 		default: 
 			// nothing 
@@ -821,6 +825,43 @@ function specialCards(fnstring) {
 function gotSick() {
 	sick = true;
 	console.log("you got sick!!");
+}
+
+function gainEducationLevel() {
+	modifyEducationLevel(1);
+	console.log("gain some education");
+
+function loseEducationLevel() {
+	modifyEducationLevel(-1);
+	console.log("lose some education");
+
+// TODO - test function
+function modifyEducationLevel(direction){
+	if (player1.ep > 30) {
+        if (direction < 0) {
+        	player1.ep = 29;
+        	console.log("education dropped from the top spot");
+        }
+        else {
+        	player1.ep += 3;
+        	console.log("already at the top spot - have 3 more points");
+        }
+    } 
+    else if (player1.ep <=30 && player1.ep > 4) {
+        player1.ep += 3 * direction;
+        console.log("resulting education change: " + 3 * direction);
+    } 
+    else {
+        if (direction < 0) {
+        	player1.ep = 0;
+        	console.log("already have no education - can't get any lower");
+        }
+        else {
+        	player1.ep = 6;
+        	console.log("education bumped up to level 2");
+        }
+    }
+    updateStats();
 }
 
 // updates player stats from sent agruements
