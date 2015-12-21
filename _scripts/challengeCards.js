@@ -128,7 +128,7 @@ challengeCards[1][3] = challengeCard4B;
 var challengeCard4C = new Object();
 challengeCard4C.title = "Food Quality";
 challengeCard4C.text = "Malnutrition reduces your immunity to disease. You contract diseases easier now.";
-challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks.";
+challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks."; // TODO - need to implement this
 challengeCard4C.hp = -2;
 challengeCard4C.wp = 0;
 challengeCard4C.ep = 0;
@@ -136,6 +136,18 @@ challengeCard4C.gb = 0;
 challengeCards[2][3] = challengeCard4C;
 
 //TODO - add the 55 other cards....
+
+// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
+// TODO - block user from a destination until power up is gained - check when power-up is purchased for all timed losses
+
+// TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
+
+// TODO - drop an education level (card #19) - need a function ot go through the education levels and check vs players current education value - when changing go to mid-value of new level
+
+// TODO - gain an education level (card #21)
+
+// TODO - remove items (all) from inventory - send them to the createInventory() function - it wipes it all
+
 
 
 

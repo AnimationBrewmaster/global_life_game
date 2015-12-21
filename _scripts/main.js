@@ -765,7 +765,9 @@ function getChallengeCard() {
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
     UpdatePopup("Challenge Card!", _msg, "red");
+    // checking for "sickness"
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
+    
 }
 
 // randomly selects partnership card
