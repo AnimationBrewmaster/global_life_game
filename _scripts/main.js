@@ -593,6 +593,13 @@ function buyNewStuff() {
             OpenMarketHud(); // TODO: does not appear to re-open the market - continues on with the game
             break;
     }
+    checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them idf sick, feed them if hungry, etc.)
+}
+
+// TODO - Glen: write this function out
+function checkPowerUp(powerUp) {
+	// go through the power up list and give them the power	
+	
 }
 
 // gets user prompt on what they want to buy and adds to inventory if the have enough money
@@ -767,7 +774,9 @@ function getChallengeCard() {
     UpdatePopup("Challenge Card!", _msg, "red");
     // checking for "sickness"
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
-    
+    if (challengeCards[countryValue][number].special) {
+    	specialCards(challengeCards[countryValue][number].special);
+    }
 }
 
 // randomly selects partnership card
@@ -778,6 +787,33 @@ function getPartnershipCard() {
     var _msg = partnershipCards[countryValue][number].title + "\n" + partnershipCards[countryValue][number].text + "\n" + partnershipCards[countryValue][number].impact;
     UpdatePopup("Partnership Card!", _msg, "green");
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
+}
+
+// TODO - add in the proper function names
+function specialCards(fnstring) {
+	// one way - makes sense to me
+	switch (fnstring) {
+		case "functionX":
+			functionX();
+			break;
+			
+		case "functionY":
+			functionY();
+			break;
+			
+		case "functionZ": 
+			functionZ();
+			break;
+			
+		default: 
+			// nothing 
+			break;
+	}
+	// alternate
+	/*
+	 * var fn - window[fnstring];
+	 * if (typeof fn === "function") fn();
+	 */
 }
 
 // updates player stats from sent agruements
