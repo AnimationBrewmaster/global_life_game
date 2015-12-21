@@ -207,6 +207,7 @@ function createInventory() {
     player1.filter = false;
     player1.bike = false; 
     player1.plumbing = false;
+    player1.medicine = false;
 }
 
 // goes through inventory list and displays items that are held
@@ -603,7 +604,6 @@ function checkPowerUp(powerUp) {
 }
 
 // gets user prompt on what they want to buy and adds to inventory if the have enough money
-// TODO - better way to do this would be to have store inventory with item, message, and value so can aout check with a single expression
 /* moved to buyNewStuff()
 function buyStuff() {
     var spent = 0;
@@ -751,6 +751,7 @@ function HideStartingInstructions() {
 
 // checks for action cards and chooses the type
 function checkCard() {
+	//getChallengeCard(); //TEMP TESTING
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -768,12 +769,13 @@ function checkCard() {
 // randomly selects challenge card
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
+    // var number = 3; //TEMP TESTING
     console.log("challenge Card! - " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
     UpdatePopup("Challenge Card!", _msg, "red");
-    // checking for "sickness"
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
+    // checking for special case cards
     if (challengeCards[countryValue][number].special) {
     	specialCards(challengeCards[countryValue][number].special);
     }
@@ -793,8 +795,8 @@ function getPartnershipCard() {
 function specialCards(fnstring) {
 	// one way - makes sense to me
 	switch (fnstring) {
-		case "functionX":
-			functionX();
+		case "gotSick":
+			gotSick();
 			break;
 			
 		case "functionY":
@@ -814,6 +816,11 @@ function specialCards(fnstring) {
 	 * var fn - window[fnstring];
 	 * if (typeof fn === "function") fn();
 	 */
+}
+
+function gotSick() {
+	sick = true;
+	console.log("you got sick!!");
 }
 
 // updates player stats from sent agruements

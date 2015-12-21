@@ -133,12 +133,12 @@ challengeCard4C.hp = -2;
 challengeCard4C.wp = 0;
 challengeCard4C.ep = 0;
 challengeCard4C.gb = 0;
-//challengeCard4C.special = "gotSick";
+challengeCard4C.special = "gotSick";
 challengeCards[2][3] = challengeCard4C;
 
 //TODO - add the 55 other cards....
 
-// TODO - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
+// DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
 // TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
 // TODO - block user from a destination until power up is gained - check when power-up is purchased for all timed losses
 
