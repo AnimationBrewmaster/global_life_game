@@ -830,10 +830,12 @@ function gotSick() {
 function gainEducationLevel() {
 	modifyEducationLevel(1);
 	console.log("gain some education");
+}	
 
 function loseEducationLevel() {
 	modifyEducationLevel(-1);
 	console.log("lose some education");
+}
 
 // TODO - test function
 function modifyEducationLevel(direction){
