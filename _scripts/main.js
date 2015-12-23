@@ -268,7 +268,7 @@ function getFood() {
     }
     UpdateUserMessage("You have arrived at the farm.\n" + message);
     updateStats();
-    takeTurn();
+    //takeTurn();
 }
 
 // actions that take place when water destination is selected
@@ -297,7 +297,7 @@ function getwater() {
     }
     UpdateUserMessage("You have arrived at the water source.\n" + message);
     updateStats();
-    takeTurn();
+    //takeTurn();
 }
 
 // actions that take place when toilet destination is selected
@@ -307,12 +307,13 @@ function getToilet() {
     alertIt("You have arrived at the toilet.\nGet 3 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
     player1.hp += 3;
     updateStats();
-    takeTurn();
+    //takeTurn();
 }
 
 // actions that take place when job destination is selected
 function getJob() {
    // SetChosenPath("job");
+   	takeTurn();
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
@@ -354,7 +355,7 @@ function getJob() {
         }
         updateStats();
     }
-    takeTurn();
+    //takeTurn();
 
 }
 
@@ -381,7 +382,7 @@ function getMedical() {
             UpdateUserMessage("Unfortunately you have no money to buy medicine.");
         }
     }
-    takeTurn();
+    //takeTurn();
 }
 
 // get and check user input for buying medicine and then update player stats
@@ -437,7 +438,7 @@ function getSchool() {
     } else {
         buySchool();
     }
-    takeTurn();
+    //takeTurn();
 }
 
 // gets and checks user input for schooling spending and updates player stats
@@ -467,7 +468,8 @@ function getStore() {
     } else {
         OpenMarketHud();
     }
-    takeTurn();
+    //updateStats();
+    //takeTurn();
 }
 
 function OpenMarketHud() {
@@ -737,10 +739,12 @@ function rejectTransaction() {
 // completes the steps for a turn
 function takeTurn() {
     // hide the game start stuff, enter name, pick level, etc:
-    HideStartingInstructions();
-    LetPlayerRoll();
+    //HideStartingInstructions();
+    //console.log("* HideStartingInstructions *");
+    //LetPlayerRoll();
     checkCard(); // cards are live again.
     updateStats();
+    console.log("* updating stats *");
     displayInventory();
 }
 
@@ -751,7 +755,8 @@ function HideStartingInstructions() {
 
 // checks for action cards and chooses the type
 function checkCard() {
-	//getChallengeCard(); //TEMP TESTING
+	getChallengeCard(); //TEMP TESTING
+	/*
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -764,21 +769,24 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
+    */
 }
 
 // randomly selects challenge card
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
-    // var number = 3; //TEMP TESTING
-    console.log("challenge Card! - " + number);
+    var number = 5; //TEMP TESTING
+    console.log("challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
     UpdatePopup("Challenge Card!", _msg, "red");
+    if (challengeCards[countryValue][number].special) {
+    	console.log(challengeCards[countryValue][number].special);
+    	specialCards(challengeCards[countryValue][number].special);   	
+    }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
     // checking for special case cards
-    if (challengeCards[countryValue][number].special) {
-    	specialCards(challengeCards[countryValue][number].special);
-    }
+
 }
 
 // randomly selects partnership card
@@ -794,6 +802,7 @@ function getPartnershipCard() {
 // TODO - add in the proper function names
 function specialCards(fnstring) {
 	// one way - makes sense to me
+	console.log("activating special case function: " + fnstring);
 	switch (fnstring) {
 		case "gotSick":
 			gotSick();

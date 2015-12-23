@@ -136,7 +136,7 @@ challengeCard4C.gb = 0;
 challengeCard4C.special = "gotSick";
 challengeCards[2][3] = challengeCard4C;
 
-//TODO - add the 55 other cards....
+//TODO - add the other cards....
 
 // DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
 // TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
@@ -144,12 +144,107 @@ challengeCards[2][3] = challengeCard4C;
 
 // TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
 
-// TODO - drop an education level (card #19) - .special = "loseEductionalLevel"
+// TODO - TEST - drop an education level (card #19) - .special = "loseEductionalLevel"
+//card 19 TODO - when rest of cards are in set array values to correct number
+var challengeCard19A = new Object();
+challengeCard19A.title = "Illness and Education";
+challengeCard19A.text = "You get the flu and miss a field trip that covered half a topic of your class, resulting in a poor test result. Appreciate the fact that you get to go to school. It is estimated that over 770 million people around the world are illiterate and do not have access to education - leaving them trapped in poverty.";
+challengeCard19A.impact = "Lose 2 health points and drop an education level.";
+challengeCard19A.hp = -3;
+challengeCard19A.wp = 0;
+challengeCard19A.ep = 0;
+challengeCard19A.gb = 0;
+challengeCard19A.special = "loseEducationLevel";
+challengeCards[0][4] = challengeCard19A;
 
-// TODO - gain an education level (card #21) - .special = "gainEductionalLevel"
+var challengeCard19B = new Object();
+challengeCard19B.title = "Illness and Education";
+challengeCard19B.text = "You get sick and miss a few days of school. You fall slightly behind and must do homework to catch up. Appreciate the fact that you get to go to school. It is estimated that over 770 million people around the world are illiterate and do not have access to education - leaving them trapped in poverty.";
+challengeCard19B.impact = "Lose 2 health points and drop an education level.";
+challengeCard19B.hp = -2;
+challengeCard19B.wp = 0;
+challengeCard19B.ep = 0;
+challengeCard19B.gb = 0;
+challengeCard19B.special = "loseEducationLevel";
+challengeCards[1][4] = challengeCard19B;
 
-// TODO - remove items (all) from inventory - .special = "createInventory"
+var challengeCard19C = new Object();
+challengeCard19C.title = "Illness and Education";
+challengeCard19C.text = "A lack of sanitation causes you to get schistosomiasis, a parasite that invades your body causing many health problems - this also keeps you from attending school.";
+challengeCard19C.impact = "Lose 1 health point, lose 2 water points, and drop an education level.";
+challengeCard19B.hp = -1;
+challengeCard19C.wp = 2;
+challengeCard19C.ep = 0;
+challengeCard19C.gb = 0;
+challengeCard19C.special = "loseEducationLevel";
+challengeCards[2][4] = challengeCard19C;
 
 
 
 
+// TODO - TEST - remove items (all) from inventory - .special = "createInventory"
+//card 30 TODO - when rest of cards are in set array values to correct number
+var challengeCard30A = new Object();
+challengeCard30A.title = "War";
+challengeCard30A.text = "Your country is involved with a war in a distant country. Many of the returning soldiers suffer from PTSD and struggle to fit back into society. Your government does not seem to support them upon their return. This has a negative impact on the families and communities these soldiers return to. Your country also spends money on this war causing taxes to go up.";
+challengeCard30A.impact = "Lose 2 health points and $3 Global Bucks.";
+challengeCard30A.hp = -2;
+challengeCard30A.wp = 0;
+challengeCard30A.ep = 0;
+challengeCard30A.gb = -3;
+challengeCards[0][5] = challengeCard30A;
+
+var challengeCard30B = new Object();
+challengeCard30B.title = "War";
+challengeCard30B.text = "War breaks out between your country and a neighbouring country over water and resources. Someone in your family is forced to go and fight. Much damage is done during the fighting, and it is difficult to get food and water, and what is available is much more expensive than it used to be.";
+challengeCard30B.impact = "Lose 2 health points, 2 water points, and $3 Global Bucks.";
+challengeCard30B.hp = -2;
+challengeCard30B.wp = -2;
+challengeCard30B.ep = 0;
+challengeCard30B.gb = -3;
+challengeCards[1][5] = challengeCard30B;
+
+var challengeCard30C = new Object();
+challengeCard30C.title = "War";
+challengeCard30C.text = "Civil war breaks out in your country. You are forced to flee and seek refuge elsewhere. ";
+challengeCard30C.impact = "Lose 2 health points, 2 water points and $2 Global Bucks. Also, if you purchased anything from the market or own anything, leave it behind when you flee.";
+challengeCard30C.hp = -2;
+challengeCard30C.wp = -2;
+challengeCard30C.ep = 0;
+challengeCard30C.gb = -2;
+challengeCard30C.special = "createInventory"; //TODO - BUG!!! - when you have 2 global bucks and you got to market and trigger this card - global bucks up doesn't update, even thouh valeu is 0 and HUD doesn't pop-up
+challengeCards[2][5] = challengeCard30C;
+
+
+// template for cards
+/*
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][XX] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][XX] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = -1;
+challengeCardXXC.wp = 2;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][XX] = challengeCardXXC;
+ */

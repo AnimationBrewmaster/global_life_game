@@ -136,3 +136,5 @@ partnershipCard4C.gb = 0;
 partnershipCards[2][3] = partnershipCard4C;
 
 //TODO - add the 55 other cards....
+
+// TODO - gain an education level (card #21) - .special = "gainEductionalLevel" - see challengeCards.js
