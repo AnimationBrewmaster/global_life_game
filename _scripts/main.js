@@ -755,8 +755,8 @@ function HideStartingInstructions() {
 
 // checks for action cards and chooses the type
 function checkCard() {
-	getChallengeCard(); //TEMP TESTING
-	/*
+	//getChallengeCard(); //TEMP TESTING
+
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -769,24 +769,23 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
-    */
+
 }
 
 // randomly selects challenge card
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
-    var number = 5; //TEMP TESTING
+    //var number = 5; //TEMP TESTING
     console.log("challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
     UpdatePopup("Challenge Card!", _msg, "red");
+    // checking for special case cards
     if (challengeCards[countryValue][number].special) {
     	console.log(challengeCards[countryValue][number].special);
     	specialCards(challengeCards[countryValue][number].special);   	
     }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
-    // checking for special case cards
-
 }
 
 // randomly selects partnership card
@@ -799,7 +798,7 @@ function getPartnershipCard() {
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
 }
 
-// TODO - add in the proper function names
+// special card function that get agruements from challengeCards.js
 function specialCards(fnstring) {
 	// one way - makes sense to me
 	console.log("activating special case function: " + fnstring);
@@ -846,7 +845,7 @@ function loseEducationLevel() {
 	console.log("lose some education");
 }
 
-// TODO - test function
+// TODO - test function more fully
 function modifyEducationLevel(direction){
 	if (player1.ep > 30) {
         if (direction < 0) {
@@ -1325,6 +1324,7 @@ function AreWeReadyToStart() {
 
 function UpdateHUD(life, water, glob, edu) {
     // alert('UpdateHud');
+    console.log(life + " " + water + " " + glob + " " + edu);
     var _life;
     var _water;
     var _glob;
@@ -1358,8 +1358,9 @@ function UpdateHUD(life, water, glob, edu) {
         });
     }
 
-    if ((glob != "") && (glob != undefined)) {
+    if ((glob != "") && (glob != undefined)) { // TODO - I think a bug is here, the HUD not updating when a value zero for that zero value
         _glob = glob;
+        console.log("_glob = glob");
         TweenLite.to(objGlobal, _mTweenTime, {
             overwrite: "all",
             newScore: _glob,

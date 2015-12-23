@@ -212,7 +212,7 @@ challengeCard30C.hp = -2;
 challengeCard30C.wp = -2;
 challengeCard30C.ep = 0;
 challengeCard30C.gb = -2;
-challengeCard30C.special = "createInventory"; //TODO - BUG!!! - when you have 2 global bucks and you got to market and trigger this card - global bucks up doesn't update, even thouh valeu is 0 and HUD doesn't pop-up
+challengeCard30C.special = "createInventory";
 challengeCards[2][5] = challengeCard30C;
 
 
