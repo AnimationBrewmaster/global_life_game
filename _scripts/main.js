@@ -373,7 +373,7 @@ function getMedical() {
                 updateStats();
             }
         } else {
-            alertIt("You are very sick but don't have enough money for the cure.");
+            UpdateUserMessage("You are very sick but don't have enough money for the cure.");
         }
     } else {
         if (player1.gb > 0) {
@@ -388,7 +388,7 @@ function getMedical() {
 // get and check user input for buying medicine and then update player stats
 function buyMedicine() {
 
-    var medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)", Math.round(Math.random() * 4) + 1);
+    var medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
     medicineBuy = Number(medicineBuy);
 
     if (parseInt(medicineBuy) == NaN) {
@@ -404,28 +404,37 @@ function buyMedicine() {
             case 1:
                 impactStats(2, 0, 0, -1);
                 updateStats();
+                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
                 break;
             case 2:
                 impactStats(4, 0, 0, -2);
+                updateStats();
+                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
                 break;
             case 3:
                 impactStats(6, 0, 0, -3);
                 updateStats();
+                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
                 break;
             case 4:
                 impactStats(8, 0, 0, -4);
                 updateStats();
+                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
                 break;
             case 5:
                 impactStats(10, 0, 0, -5);
                 updateStats();
+                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
                 break;
+            case 10:
+            	player1.medicine = true;
+            	UpdateUserMessage("You bought medicine to carry with you in case you get sick.");    
             default:
                 UpdateUserMessage("Bad input, please try again");
                 break;
         }
     }
-    UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+    //UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
 
 }
 

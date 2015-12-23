@@ -144,7 +144,7 @@ challengeCards[2][3] = challengeCard4C;
 
 // TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
 
-// TODO - TEST - drop an education level (card #19) - .special = "loseEductionalLevel"
+// DONE - TEST - drop an education level (card #19) - .special = "loseEductionalLevel"
 //card 19 TODO - when rest of cards are in set array values to correct number
 var challengeCard19A = new Object();
 challengeCard19A.title = "Illness and Education";
@@ -182,7 +182,7 @@ challengeCards[2][4] = challengeCard19C;
 
 
 
-// TODO - TEST - remove items (all) from inventory - .special = "createInventory"
+// DONE- TEST - remove items (all) from inventory - .special = "createInventory"
 //card 30 TODO - when rest of cards are in set array values to correct number
 var challengeCard30A = new Object();
 challengeCard30A.title = "War";
