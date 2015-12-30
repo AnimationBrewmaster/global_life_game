@@ -1852,4 +1852,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("buttonflash");
    //Edge symbol end:'buttonflash'
 
+   //=========================================================
+   
+   //Edge symbol: 'Preloader'
+   (function(symbolName) {   
+   
+   })("Preloader");
+   //Edge symbol end:'Preloader'
+
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-581531069");
