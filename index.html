@@ -23,6 +23,9 @@
     {
 		visibility: hidden;
 	}
+    #startButton{
+        visibility: hidden;   
+    }
 	</style>
 	</head>
 
@@ -35,19 +38,26 @@
   </ol>
     </div>
 <div id="starting_instructions" >
-      <div id="gameinstructions" class="form-container" style="background-image:url(_images/icon_avg.png); background-position: center;"> <strong>Global Life Game Engine</strong> 
+      <div id="gameinstructions" class="form-container">
+          <img src="images/character.png" id="character">
+          <img src="images/official_logo_smaller.png">
     <!-- img src="_images/icon_avg.png" id="country_type" name="country_type" width="128" height="128" align="right" -->
-    <div id="startMessage">1. Please enter your character name:
-          <div id="namefield"> NAME:
-        <input name="username" id="user_name" onblur="SetNameEntered(this.value);" class="form-field">
+    <div id="startMessage">
+          PLEASE SELECT THE COUNTRY TYPE YOU WISH TO PLAY AS:
+          <div id="country_type"> 
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"> A </button>
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> B </button>
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> C </button>
       </div>
-          2. Please select the country you are playing:
-          <div id="country_type"> COUNTRY TYPE: (A = easier, D = harder) <br />
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a">A</button>
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b">B</button>
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c">C</button>
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="d">D</button>
-      </div>
+        <div id="choice_description"> 
+            <ul><li>A = EASIER (first world)</li>
+                <li>B = CHALLENGING (developing nation)</li>
+                <li>C = DIFFICULT (third world)</li>
+        </ul></div>
+
+        <div id="startButton">
+        <button type="button" onclick="AreWeReadyToStart();" name="start_button" value="c">START!</button>
+        </div>
         </div>
   </div>
       

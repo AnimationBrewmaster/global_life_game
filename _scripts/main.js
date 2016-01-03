@@ -81,13 +81,16 @@ var objLife = {
 var selectedPathEdgeFile; // getMedical, getJob, getStore, getToilet, getfood, getSchool, getWater
 var chosenPath = ""; // 'medical', 'job', 'store', 'toilet', 'food', 'school' or 'water'
 var pathDescription = "";
+var selectedCountry;
+
+var arrPotentialCharNamesMale;
+var arrPotentialCharNamesFemale;
+var characterName = "";
 
 var currentPathFunctionHolder; //used to delay the main game functions (getjob, gettoilet) until the user rolls.
 
 function InitGame() {
     THE_GAME = AdobeEdge.getComposition('EDGE-581531069').getStage();
-    // set the focus on the user name input:    
-    document.getElementById("user_name").focus();
 }
 
 function SetChosenPath(which_path) {
@@ -1013,6 +1016,7 @@ function checkGameOver() {
 }
 
 // updates game once player has died
+// TODO - needs to end the game
 function playerDied() {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
@@ -1020,6 +1024,7 @@ function playerDied() {
     //document.body.style.backgroundColor = "#ff0000";
 
     gameOver = true;
+    UpdateHUD();
     
     // pop up the tombstone
    //THE_GAME.ShowGameOver();
@@ -1224,29 +1229,33 @@ function UpdatePlayerPositionAlongTimeline(num_of_secs) {
 }
 
 function InitGameTips() {
-    arrGameTips[0] = "Getting an education early on improves your chances of success.";
-    arrGameTips[1] = "Don't drink water with dead animals in it.";
-    arrGameTips[2] = "Don't use your poop bucket as a hat.";
-    arrGameTips[3] = "A birthday suit is seldom appropriate for birthday parties.";
-    arrGameTips[4] = "Blood is thicker than water. Aquaman's blood is, like, super thick I bet.";
-    arrGameTips[5] = "Flies are an excellent source of nutrition for motorcyclists.";
-    arrGameTips[6] = "Games are a good way to get good at gaming.";
-    arrGameTips[7] = "Losing this game means, technically, you are a loser. Ouch.";
-    arrGameTips[8] = "Teamwork means sharing the blame.";
-    arrGameTips[9] = "University is okay, but Galaxity is bigger.";
-    arrGameTips[10] = "This is not a game about cowboys.";
-    arrGameTips[11] = "Shooting aliens in the head is not always effective.";
-    arrGameTips[12] = "On earth you would weigh similar values to what you do right now.";
-    arrGameTips[13] = "Igpay Atinlay is SO meta.";
-    arrGameTips[14] = "An elephant never forgets. To say thank you.";
-    arrGameTips[15] = "99% of statistics are completely true.";
-    arrGameTips[16] = "The opposite of opposite is favourite.";
-    arrGameTips[17] = "It turns out turning my voice into a whine isn't that much of a miracle.";
-    arrGameTips[18] = "If you got 99 problems, making lists probably isn't one of them.";
-    arrGameTips[19] = "More people die every year than own rabbits.";
-    arrGameTips[20] = "Botox keeps zombies fresher longer.";
-    arrGameTips[21] = "Last years sausage fest was a total, well, you know.";
-    arrGameTips[22] = "Skunks are terrible at long division";
+    arrGameTips[0] = "The first thing you should do is buy a bike from the market. The bike will allow you to travel much faster.";
+    arrGameTips[1] = "Education points equals more work, and more work equals more money, and more money equals better opportunities.";
+    arrGameTips[2] = "As Country A, the game is much easier than in Country B or C.";
+    arrGameTips[3] = "The second thing you should do is buy education. Go back and forth from education to job to make lots of money.";
+    arrGameTips[4] = "Once you have reached an Intelligence level of 31 or more, start saving for indoor plumbing.";
+    arrGameTips[5] = "Don’t underestimate the importance of education.";
+    arrGameTips[6] = "Compared to the others, seeking sanitation is not as important in County A.";
+    arrGameTips[7] = "Getting medical help is still important. Buy medicine or soap just in case you get sick.";
+    arrGameTips[8] = "If you are running low on water and have enough money, buy a Biosand Filter. This will allow you to get clean water safely.";
+    arrGameTips[9] = "Only if you get below 10 health and/or water points should you then go to the farm or river.";
+    arrGameTips[10] = "Although you can’t do so in the game, try to donate money and resources to actual people living in developing countries.";
+    arrGameTips[11] = "Prioritize getting your food and water levels up.";
+    arrGameTips[12] = "Get to the market to buy any essential supplies.";
+    arrGameTips[13] = "One you have enough health and water for the next couple of turns, try to get some education points.";
+    arrGameTips[14] = "Your survival should be your priority. Prioritize getting health, water, and medicine instead of education or things from the market.";
+    arrGameTips[15] = "Purchase a bar of soap and a water purification tablet from the store. These things can save your life.";
+    arrGameTips[16] = "Buying a bucket is very useful if you are low on water.";
+    arrGameTips[17] = "If you are low on health points and money, you can go to the toilet to get some free health points.";
+    arrGameTips[18] = "Once you have sustainable health points and water points, start working on your education. ";
+    arrGameTips[19] = "After you make enough money, buying a bike can help you get food and water faster.";
+    arrGameTips[20] = "Buying a biosand filter can really help you stay healthy and get lots of clean water.";
+    arrGameTips[21] = "Seeing how much help a biosand filter can be, consider how much a biosand filter would help people in real life that need clean water.";
+    arrGameTips[22] = "You must always have an eye on your health and water for it can drop quite fast with any waterborne diseases. Especially when you are far away from water or food.";
+    arrGameTips[23] = "Buying a cheap water sanitation tablet can save you from sickness.";
+    arrGameTips[24] = "An education is less important than proper sanitation, medicine and food.";
+    arrGameTips[25] = "Don’t underestimate the crippling power of diseases and parasites.";
+    arrGameTips[26] = "A stable job is the gateway to a better quality of life. ";
 
     startingGameTip = Math.floor(Math.random() * arrGameTips.length);
 }
@@ -1261,48 +1270,138 @@ function GetRandomGameTip() {
     swal("Random Game Tip!", arrGameTips[startingGameTip]);
 }
 
+function MakeBoyOrGirl()
+{
+    var playerSex = null;
+    var bRandomRoll = Math.round(Math.random());
+    
+    if(bRandomRoll)
+    {
+        playerSex = "MALE";   
+    } else {
+        playerSex = "FEMALE";
+    }
+    
+    console.log('PLAYER SEX IS ' + playerSex);
+    return playerSex;
+}
+
+var characterImg;
+
+function GetCharacterName(_selectedCountry)
+{
+    
+    console.log("SELECTED COUNTRY IS " + _selectedCountry);
+    switch(_selectedCountry)
+    {
+        case "a" :       
+            arrPotentialCharNamesMale = new Array("Arthur_Anderson", "Aaron_Albertson", "Albert_Aduna");
+            arrPotentialCharNamesFemale = new Array("Anne Archer", "Anita Anderson", "Allison Arno");
+            break;
+            
+         case "b" :       
+            arrPotentialCharNamesMale = new Array("Bob_Butcher", "Bill_Banker", "Ben_Barkowitz");
+            arrPotentialCharNamesFemale = new Array("Betty_Blue", "Bjorna_Banksty", "Breanne_Bennett");
+            break;    
+        
+         case "c" :       
+            arrPotentialCharNamesMale = new Array("Charlie_Cho", "Chad_Charger", "Champ_Chowdah");
+            arrPotentialCharNamesFemale = new Array("Carey_Cash", "Coraline_Collins", "Chevy_Chase");
+            break;
+            
+        default:
+            console.log('bad switch');
+    }
+    
+    var randNum = Math.ceil(Math.random() * arrPotentialCharNamesMale.length - 1); // give us a 0, 1 or 2
+    var _sex = MakeBoyOrGirl();
+    
+    switch(_sex)
+    {
+        case "MALE" :
+            characterName = arrPotentialCharNamesMale[randNum];
+            characterImg = "images/character_" + _selectedCountry + "_" + Math.round(Math.random()) + ".png"; 
+            console.log("CHAR NAME: " + characterName);
+            break;
+                
+        case "FEMALE" :
+            characterName = arrPotentialCharNamesFemale[randNum];
+             characterImg = "images/character_" + _selectedCountry + "_" + Math.round(Math.random() + 2) + ".png"; 
+            break;
+    }
+    
+    console.log("CHAR NAME IS " + characterName + " and randNum was " + randNum);
+    console.log("CHAR IMAGE IS " + characterImg);
+    
+     document.getElementById("character").src = characterImg;
+    
+    playername = characterName;
+    
+    // update the large text at the top of the screen. still hoping to do something cool with this.
+    UpdatePlayerStageName(playername);
+    // also update the text at the very bottom of the HUD that states whether the user is alive or dead:
+    UpdatePlayerName(playername.toUpperCase());
+
+    
+}
 
 
 function SetCountrySelected(_countrySelected) {
-
-    if (bNameHasBeenEntered == false) // if they haven't entered their name give them one
-    {
-        _username = getRandomName();
-        bNameHasBeenEntered = true;
-        SetNameEntered(_username);
-    }
+    
+    bNameHasBeenEntered = true;    
     bCountryHasBeenSelected = true;
+    
     SetInputDifficulty(_countrySelected);
+    GetCharacterName(_countrySelected);
 
     // update the stats accordingly:
     updateStats();
-    AreWeReadyToStart();
+    // don't start yet. swap the background out.
+    //AreWeReadyToStart();
+    
+     document.getElementById("startButton").style.display = "block";
+     document.getElementById("startButton").style.visibility = "visible";
 }
 
 function SetInputDifficulty(val) {
+    
+    var msgA = "Welcome to easy street. Country A gives you easy access to healthcare, food and plenty of options. Make good choices and life should be a breeze.";
+    var msgB = "Be careful. To live in Country B you need to make good choices, have luck on your side and be able to get yourself out of a jam. Medicine and water are your friend. So is a bicycle! Put your mettle to the pedal.";
+    var msgC = "You are brave. Life is HARD in Country C. You live at the mercy of warlords and disease, famine and - dear lord, what is that SMELL? Oh yeah, no bathrooms. Only your wits can save you now. Make great choices!";
+    
     getDifficulty(val);
     inputDifficulty = val;
     //  alert("difficulty:"+inputDifficulty);
-    var iconsrc = "";
+    var bgImage = "";
+    var charImage = "";
     switch (val) {
         case "a":
-            iconsrc = "url('_images/icon_rich.png')";
+            bgImage = "url('images/bgA.jpg')";
+            charImage="url('images/asdf.jpg')";
+            _message = msgA;
             break;
         case "b":
-            iconsrc = "url('_images/icon_avg.png')";
+            bgImage = "url('images/bgB.jpg')";
+            charImage="url('images/asdf.jpg')";
+             _message = msgB;
             break;
         case "c":
-            iconsrc = "url('_images/icon_poor.png')";
+            bgImage = "url('images/bgC.jpg')";
+            charImage="url('images/asdf.jpg')";
+             _message = msgC;
             break;
-        case "d":
-            iconsrc = "url('_images/icon_poor.png')";
+        default:
+            bgImage = "url('images/bg0.jpg')";
+             _message = "A = EASIER (first world), B = CHALLENGING (developing nation) , C = DIFFICULT (third world)";
             break;
     }
 
-    document.getElementById("gameinstructions").style.backgroundImage = iconsrc;
+    document.getElementById("game").style.backgroundImage = bgImage;
+    document.getElementById("choice_description").textContent = _message;
+
     updateStats();
 }
-
+/*
 function SetNameEntered(newname) {
     if ((newname == "") || (newname == undefined)) {
         // no name, we need to make one up:
@@ -1322,6 +1421,7 @@ function SetNameEntered(newname) {
     // update form field:
     document.getElementById("user_name").value = _username;
 }
+*/
 
 function AreWeReadyToStart() {
     if ((bCountryHasBeenSelected) && (bNameHasBeenEntered)) {
@@ -1340,7 +1440,7 @@ function UpdateHUD(life, water, glob, edu) {
     var _edu;
     var _playerLifeStatus;
 
-    var _mTweenTime = 0.5;
+    var _mTweenTime = 1;
 
     // check for player death        
     if (gameOver != true) {
@@ -1387,16 +1487,6 @@ function UpdateHUD(life, water, glob, edu) {
     }
 }
 
-function getRandomName() {
-    var arrTitles = new Array("", "", "", "Dr.", "Sir", "Mr", "Mrs.", "Ms", "Rev.", "The Hon.");
-    var arrFirstNames = new Array("Albert", "Bjork", "Groot", "Winky", "Snuffaluffagus", "Madonna");
-    var arrLastNames = new Array("Einstein", "Van Halen", "Rockefeller", "dos Santos", "Khan", "Letterman");
-    var rand0 = Math.floor(Math.random() * arrTitles.length);
-    var rand1 = Math.floor(Math.random() * arrFirstNames.length);
-    var rand2 = Math.floor(Math.random() * arrLastNames.length);
-    var nuName = "" + arrTitles[rand0] + " " + arrFirstNames[rand1] + " " + arrLastNames[rand2];
-    return nuName;
-}
 
 /*
 STICK ALL FUNCTIONS THAT TALK TO EDGE AFTER THIS:

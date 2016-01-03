@@ -285,11 +285,14 @@
 			"animationEnabled":"true",
 			"invisible":"false"}},
 	"mcUserMessage-Default Timeline_playhead_ms":"0",
+	"expanded:images/bgA.jpg":"nil",
+	"expanded:images/character_c_3.png":"nil",
 	"expanded:_images/button_rect.png":"nil",
 	"expanded:images/card_red.png":"nil",
 	"expanded:images/bg_hospital.png":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"true",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
 	"expanded:images/newGreenCard.png":"nil",
+	"expanded:images/character_a_0.png":"nil",
 	"symbol_hudNextDest":{
 		"element_${hudMarket2}":{
 			"timelineColor2":"0xd35d6e",
@@ -347,6 +350,7 @@
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
 			"timelineColor":"0x50bd82"}},
+	"expanded:images/character_a_3.png":"nil",
 	"symbol_rountBtn":{
 		"element_${Text}":{
 			"timelineColor2":"0xba5b89",
@@ -368,9 +372,11 @@
 	"expanded:images/button_red.png":"nil",
 	"popChallenge-Default Timeline_playhead_ms":"0",
 	"expanded:images/hudNextDestination2.png":"nil",
+	"expanded:images/character_c_2.png":"nil",
 	"expanded:images/placeHolders/bg_school.png":"nil",
 	"expanded:_images/button_rect_hilite.png":"nil",
 	"pref__general__FilterNonAnimatedElements":"false",
+	"expanded:images/character_a_1.png":"nil",
 	"symbol_dice-resized-v2_symbol_1":{
 		"element_${rollagain}":{
 			"timelineColor2":"0xd35d6e",
@@ -414,7 +420,7 @@
 			"timelineColor3":"0x29647e",
 			"timelineColor":"0x00a9fa"}},
 	"expanded:images/_0007_flare%20spiky%20circle.png":"nil",
-	"StageZoomFactor":"75",
+	"StageZoomFactor":"49",
 	"simpleButton_3-Default Timeline_mark_ms":"-1",
 	"expanded:_images/button_red.png":"nil",
 	"symbol_simpleButton_2":{
@@ -562,6 +568,7 @@
 	"rountBtn-Default Timeline_playhead_ms":"0",
 	"expanded:_images/hud_360.png":"nil",
 	"popup-Default Timeline_playhead_ms":"0",
+	"expanded:images/character_c_1.png":"nil",
 	"symbol_stage":{
 		"element_${marker4Copy4}":{
 			"timelineColor2":"0xba5b89",
@@ -623,7 +630,7 @@
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"timelineColor":"0x008dc8"},
-		"defaultStageParentHeight":"672px",
+		"defaultStageParentHeight":"600px",
 		"element_${marker3}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
@@ -698,7 +705,7 @@
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
 			"timelineColor":"0x008dc8"},
-		"defaultStageParentWidth":"1028px",
+		"defaultStageParentWidth":"1024px",
 		"element_${charToilet}":{
 			"timelineColor2":"0xd35d6e",
 			"timelineColor3":"0x7e4b52",
@@ -777,7 +784,7 @@
 			"timelineColor3":"0x4a485e",
 			"animationEnabled":"false",
 			"timelineColor":"0x63599f"},
-		"dummyStageParentWidth":"1028px",
+		"dummyStageParentWidth":"1024px",
 		"element_${bikeJob}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
@@ -1160,13 +1167,13 @@
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f"},
 		"element_${divFarm}":{
-			"epOpened":"true",
+			"epOpened":"false",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096",
 			"locked":"false",
 			"animationEnabled":"false",
 			"timelineColor2":"0x168c84",
-			"invisible":"false"},
+			"invisible":"true"},
 		"element_${game_bg}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
@@ -1375,7 +1382,7 @@
 			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
 			"timelineColor":"0xfb657a"},
-		"dummyStageParentHeight":"672px",
+		"dummyStageParentHeight":"600px",
 		"element_${avatar_med}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
@@ -1392,7 +1399,7 @@
 			"timelineColor2":"0xcbbd71",
 			"invisible":"false",
 			"timelineColor":"0xeedf79",
-			"animationEnabled":"false",
+			"animationEnabled":"true",
 			"timelineColor3":"0x7b7652"},
 		"element_${gameboard_genericCopy5}":{
 			"timelineColor2":"0x1095d2",
@@ -1417,14 +1424,14 @@
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096"}},
-	"TransitionIdCounter":"14012",
+	"TransitionIdCounter":"14063",
 	"symbol_btnInvisible":{
 		"element_${invisible_button}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
 			"animationEnabled":"true",
 			"timelineColor":"0xceaef4"}},
-	"viewStartY":"45",
+	"viewStartY":"36",
 	"shadow-Default Timeline_playhead_ms":"0",
 	"expanded:images/placeHolders/bg_market.png":"nil",
 	"button_close-Default Timeline_playhead_ms":"0",
@@ -1445,7 +1452,7 @@
 	"expanded:_images/hud.png":"nil",
 	"expanded:images/placeHolders/bg_hospital.png":"nil",
 	"nextElementColorIndex":"11",
-	"stage-Default Timeline_playhead_ms":"8250",
+	"stage-Default Timeline_playhead_ms":"0",
 	"expanded:images/hudNextDestination.png":"nil",
 	"HTMLFileName":"gameboard.html",
 	"expanded:images/destination_glow.png":"nil",
@@ -1457,6 +1464,7 @@
 	"mcHUD-Default Timeline_playhead_ms":"0",
 	"expanded:images/tombstone.png":"nil",
 	"expanded:images/placeHolders/bg_water.png":"nil",
+	"expanded:images/character_b_1.png":"nil",
 	"symbol_popChallenge":{
 		"element_${Text}":{
 			"timelineColor2":"0x1095d2",
@@ -1470,8 +1478,15 @@
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
 			"timelineColor":"0x00bda4"}},
+	"expanded:images/character_a_2.png":"nil",
 	"hudNextDest_2-Default Timeline_playhead_ms":"0",
+	"expanded:images/official_logo_smaller.png":"nil",
+	"pref__general__GenerateSmoothTransitions":"false",
+	"expanded:images/character_c_0.png":"nil",
+	"expanded:images/character_b_3.png":"nil",
+	"expanded:images/hudNextDestination3.png":"nil",
 	"expanded:images/character_try01.png":"nil",
+	"expanded:images/bg0.jpg":"nil",
 	"dice-resized-v2_symbol_1-Default Timeline_playhead_ms":"0",
 	"symbol_flare_animation":{
 		"element_${flare}":{
@@ -1479,7 +1494,10 @@
 			"timelineColor3":"0x4a485e",
 			"animationEnabled":"true",
 			"timelineColor":"0x63599f"}},
+	"expanded:images/bgC.jpg":"nil",
 	"expanded:images/speech-bubble.png":"nil",
+	"expanded:images/bgB.jpg":"nil",
+	"expanded:images/gameIntroScreen.jpg":"nil",
 	"Preloader-Default Timeline_playhead_ms":"0",
 	"expanded:images/bg_job.png":"nil",
 	"expanded:images/game_hud_v2.png":"nil",
@@ -1487,7 +1505,7 @@
 	"expanded:images/newRedCard.png":"nil",
 	"popPartnership-Default Timeline_playhead_ms":"0",
 	"dicePair-Default Timeline_playhead_ms":"0",
-	"expanded:images/hudNextDestination3.png":"nil",
+	"expanded:images/character_b_0.png":"nil",
 	"expanded:images/path3.png":"nil",
 	"rectButton-Default Timeline_playhead_ms":"0",
 	"symbol_rectButton":{
@@ -1531,7 +1549,7 @@
 	"pref__general__AutoKeyframeProperties":"false",
 	"PreloaderType":"Immediate",
 	"expanded:images/character.png":"nil",
-	"pref__general__GenerateSmoothTransitions":"false",
+	"expanded:images/character_b_2.png":"nil",
 	"symbol_button_close":{
 		"element_${button_red}":{
 			"timelineColor2":"0xd35d6e",

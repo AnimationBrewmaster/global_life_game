@@ -24,8 +24,8 @@
                 version: "6.0.0",
                 minimumCompatibleVersion: "5.0.0",
                 build: "6.0.0.400",
-                scaleToFit: "both",
-                centerStage: "both",
+                scaleToFit: "width",
+                centerStage: "horizontal",
                 resizeInstances: false,
                 content: {
                     dom: [
@@ -45,8 +45,8 @@
                             {
                                 id: 'bg_farm',
                                 type: 'image',
-                                rect: ['84px', '0', '1028px', '672px', 'auto', 'auto'],
-                                fill: ["rgba(0,0,0,0)",im+"bg_farm.png",'0px','0px']
+                                rect: ['84px', '0', '71.6%', '83.2%', 'auto', 'auto'],
+                                fill: ["rgba(0,0,0,0)",im+"bg_farm.png",'0%','0%','100%','auto', 'no-repeat']
                             },
                             {
                                 id: 'pathmarkersCopy6',
@@ -663,6 +663,17 @@
                             boxShadow: ["", 0, 0, 0, 0, "rgba(0,0,0,0)"]
                         },
                         {
+                            id: 'txtUsername',
+                            type: 'text',
+                            rect: ['24px', '17px', '968px', '96px', 'auto', 'auto'],
+                            cursor: 'default',
+                            opacity: '0.48107215477441',
+                            text: "<p style=\"margin:0px\">the Global Life Game! &nbsp; &nbsp;&nbsp;</p>",
+                            align: "center",
+                            font: ['rancho, fantasy', [51, "px"], "rgba(255,255,255,1.00)", "400", "none", "normal", "break-word", ""],
+                            textStyle: ["", "", "", "", "none"]
+                        },
+                        {
                             id: 'hudMarket',
                             symbolName: 'hudNextDest',
                             display: 'none',
@@ -674,7 +685,7 @@
                             id: 'mcHUD',
                             symbolName: 'mcHUD',
                             type: 'rect',
-                            rect: ['64px', '498px', '763', '248', 'auto', 'auto'],
+                            rect: ['104px', '428px', '763', '248', 'auto', 'auto'],
                             transform: [[],[],[],['1','0.88']]
                         },
                         {
@@ -682,26 +693,15 @@
                             symbolName: 'hudNextDest_2',
                             display: 'none',
                             type: 'rect',
-                            rect: ['226px', '108px', '600', '405', 'auto', 'auto'],
+                            rect: ['228px', '38px', '600', '405', 'auto', 'auto'],
                             filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(67,67,67,1.00)", 0, 2, 2]
                         },
                         {
                             id: 'rountBtn',
                             symbolName: 'rountBtn',
                             type: 'rect',
-                            rect: ['926px', '522px', '95', '94', 'auto', 'auto'],
+                            rect: ['929px', '466px', '95', '94', 'auto', 'auto'],
                             transform: [[],[],[],['0.68','0.68']]
-                        },
-                        {
-                            id: 'txtUsername',
-                            type: 'text',
-                            rect: ['24px', '17px', '993px', '96px', 'auto', 'auto'],
-                            cursor: 'default',
-                            opacity: '0.48107215477441',
-                            text: "<p style=\"margin:0px\">Enter Your Name Above: &nbsp; &nbsp; &nbsp; &nbsp;</p>",
-                            align: "left",
-                            font: ['rancho, fantasy', [77, "px"], "rgba(255,255,255,1.00)", "400", "none", "normal", "break-word", ""],
-                            textStyle: ["", "", "", "", "none"]
                         },
                         {
                             id: 'txtDestination',
@@ -717,7 +717,7 @@
                             id: 'mcUserMessage',
                             symbolName: 'mcUserMessage',
                             type: 'rect',
-                            rect: ['398px', '537px', '211', '233', 'auto', 'auto']
+                            rect: ['438px', '482px', '211', '233', 'auto', 'auto']
                         },
                         {
                             id: 'mcPopup',
@@ -736,7 +736,7 @@
                         {
                             id: 'clicker',
                             type: 'ellipse',
-                            rect: ['681px', '530px', '230px', '75px', 'auto', 'auto'],
+                            rect: ['684px', '470px', '230px', '75px', 'auto', 'auto'],
                             cursor: 'pointer',
                             borderRadius: ["50%", "50%", "50%", "50%"],
                             opacity: '0',
@@ -747,8 +747,8 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '1028px', '672px', 'auto', 'auto'],
-                            overflow: 'hidden',
+                            rect: ['null', 'null', '1024px', '600px', 'auto', 'auto'],
+                            overflow: 'visible',
                             fill: ["rgba(255,255,255,0.00)"]
                         }
                     }
@@ -856,8 +856,8 @@
                             0,
                             "easeOutQuad",
                             "${mcUserMessage}",
-                            '398px',
-                            '398px'
+                            '438px',
+                            '438px'
                         ],
                         [
                             "eid12970",
@@ -881,7 +881,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14012",
+                            "eid14063",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -892,7 +892,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14013",
+                            "eid14064",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -903,7 +903,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14014",
+                            "eid14065",
                             "msTransformOrigin",
                             0,
                             0,
@@ -914,7 +914,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14015",
+                            "eid14066",
                             "-o-transform-origin",
                             0,
                             0,
@@ -925,7 +925,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14016",
+                            "eid14067",
                             "transform-origin",
                             0,
                             0,
@@ -994,6 +994,16 @@
                             "${pathmarkers}",
                             'none',
                             'none'
+                        ],
+                        [
+                            "eid14047",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${Stage}",
+                            '1024px',
+                            '1024px'
                         ],
                         [
                             "eid309",
@@ -1094,8 +1104,8 @@
                             0,
                             "linear",
                             "${hudNextDest}",
-                            '108px',
-                            '108px'
+                            '38px',
+                            '38px'
                         ],
                         [
                             "eid11929",
@@ -1236,8 +1246,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '64px',
-                            '64px'
+                            '104px',
+                            '104px'
                         ],
                         [
                             "eid364",
@@ -1328,8 +1338,8 @@
                             0,
                             "linear",
                             "${rountBtn}",
-                            '926px',
-                            '926px'
+                            '929px',
+                            '929px'
                         ],
                         [
                             "eid13062",
@@ -1348,8 +1358,8 @@
                             0,
                             "linear",
                             "${rountBtn}",
-                            '522px',
-                            '522px'
+                            '466px',
+                            '466px'
                         ],
                         [
                             "eid311",
@@ -1792,8 +1802,8 @@
                             0,
                             "linear",
                             "${mcUserMessage}",
-                            '537px',
-                            '537px'
+                            '482px',
+                            '482px'
                         ],
                         [
                             "eid12847",
@@ -1894,8 +1904,8 @@
                             0,
                             "linear",
                             "${hudNextDest}",
-                            '226px',
-                            '226px'
+                            '228px',
+                            '228px'
                         ],
                         [
                             "eid5681",
@@ -2014,8 +2024,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '498px',
-                            '498px'
+                            '428px',
+                            '428px'
                         ]
                     ]
                 }
@@ -2245,7 +2255,7 @@
                             align: 'right',
                             rect: ['202px', '148px', '225px', '29px', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'uppercase'],
-                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(235,235,235,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(255,210,10,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             id: 'tPlayerName',
                             text: '<p style=\"margin: 0px;\">​tPlayerName</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
@@ -4493,7 +4503,7 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-265px', '-165px', '1094px', '710px', 'auto', 'auto'],
+                            rect: ['-44.2%', '-50%', '399%', '398.5%', 'auto', 'auto'],
                             stroke: [3, 'rgb(236, 236, 236)', 'solid'],
                             id: 'Rectangle',
                             opacity: '1',
@@ -4671,8 +4681,8 @@
                             712,
                             "linear",
                             "${Rectangle}",
-                            '-269px',
-                            '-265px'
+                            '-44.83%',
+                            '-50%'
                         ],
                         [
                             "eid500",
@@ -4731,8 +4741,8 @@
                             0,
                             "linear",
                             "${Rectangle}",
-                            '-165px',
-                            '-165px'
+                            '-50%',
+                            '-50%'
                         ],
                         [
                             "eid489",
