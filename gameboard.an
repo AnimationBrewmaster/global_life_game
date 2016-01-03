@@ -290,7 +290,7 @@
 	"expanded:_images/button_rect.png":"nil",
 	"expanded:images/card_red.png":"nil",
 	"expanded:images/bg_hospital.png":"nil",
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"pref__general__AutoKeyframePropertiesArmed":"true",
 	"expanded:images/newGreenCard.png":"nil",
 	"expanded:images/character_a_0.png":"nil",
 	"symbol_hudNextDest":{
@@ -630,7 +630,7 @@
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"timelineColor":"0x008dc8"},
-		"defaultStageParentHeight":"600px",
+		"defaultStageParentHeight":"660px",
 		"element_${marker3}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
@@ -1382,7 +1382,7 @@
 			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
 			"timelineColor":"0xfb657a"},
-		"dummyStageParentHeight":"600px",
+		"dummyStageParentHeight":"660px",
 		"element_${avatar_med}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
@@ -1424,14 +1424,14 @@
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096"}},
-	"TransitionIdCounter":"14063",
+	"TransitionIdCounter":"14128",
 	"symbol_btnInvisible":{
 		"element_${invisible_button}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
 			"animationEnabled":"true",
 			"timelineColor":"0xceaef4"}},
-	"viewStartY":"36",
+	"viewStartY":"276",
 	"shadow-Default Timeline_playhead_ms":"0",
 	"expanded:images/placeHolders/bg_market.png":"nil",
 	"button_close-Default Timeline_playhead_ms":"0",

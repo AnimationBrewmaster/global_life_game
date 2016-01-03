@@ -685,8 +685,8 @@
                             id: 'mcHUD',
                             symbolName: 'mcHUD',
                             type: 'rect',
-                            rect: ['104px', '428px', '763', '248', 'auto', 'auto'],
-                            transform: [[],[],[],['1','0.88']]
+                            rect: ['12.1%', '73.2%', '763', '248', 'auto', 'auto'],
+                            transform: [[],[],[],['0.84693','0.84693']]
                         },
                         {
                             id: 'hudNextDest',
@@ -700,7 +700,7 @@
                             id: 'rountBtn',
                             symbolName: 'rountBtn',
                             type: 'rect',
-                            rect: ['929px', '466px', '95', '94', 'auto', 'auto'],
+                            rect: ['891px', '523px', '95', '94', 'auto', 'auto'],
                             transform: [[],[],[],['0.68','0.68']]
                         },
                         {
@@ -717,7 +717,8 @@
                             id: 'mcUserMessage',
                             symbolName: 'mcUserMessage',
                             type: 'rect',
-                            rect: ['438px', '482px', '211', '233', 'auto', 'auto']
+                            rect: ['453px', '486px', '211', '233', 'auto', 'auto'],
+                            transform: [[],[],[],['0.96497','0.96497']]
                         },
                         {
                             id: 'mcPopup',
@@ -736,7 +737,7 @@
                         {
                             id: 'clicker',
                             type: 'ellipse',
-                            rect: ['684px', '470px', '230px', '75px', 'auto', 'auto'],
+                            rect: ['666px', '487px', '230px', '75px', 'auto', 'auto'],
                             cursor: 'pointer',
                             borderRadius: ["50%", "50%", "50%", "50%"],
                             opacity: '0',
@@ -747,8 +748,8 @@
                     style: {
                         '${Stage}': {
                             isStage: true,
-                            rect: ['null', 'null', '1024px', '600px', 'auto', 'auto'],
-                            overflow: 'visible',
+                            rect: ['null', 'null', '1024px', '660px', 'auto', 'auto'],
+                            overflow: 'hidden',
                             fill: ["rgba(255,255,255,0.00)"]
                         }
                     }
@@ -856,8 +857,8 @@
                             0,
                             "easeOutQuad",
                             "${mcUserMessage}",
-                            '438px',
-                            '438px'
+                            '453px',
+                            '453px'
                         ],
                         [
                             "eid12970",
@@ -881,7 +882,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14063",
+                            "eid14128",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -892,7 +893,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14064",
+                            "eid14129",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -903,7 +904,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14065",
+                            "eid14130",
                             "msTransformOrigin",
                             0,
                             0,
@@ -914,7 +915,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14066",
+                            "eid14131",
                             "-o-transform-origin",
                             0,
                             0,
@@ -925,7 +926,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14067",
+                            "eid14132",
                             "transform-origin",
                             0,
                             0,
@@ -1246,8 +1247,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '104px',
-                            '104px'
+                            '12.12%',
+                            '12.12%'
                         ],
                         [
                             "eid364",
@@ -1338,8 +1339,8 @@
                             0,
                             "linear",
                             "${rountBtn}",
-                            '929px',
-                            '929px'
+                            '891px',
+                            '891px'
                         ],
                         [
                             "eid13062",
@@ -1358,8 +1359,8 @@
                             0,
                             "linear",
                             "${rountBtn}",
-                            '466px',
-                            '466px'
+                            '523px',
+                            '523px'
                         ],
                         [
                             "eid311",
@@ -1458,8 +1459,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '0.88',
-                            '0.88'
+                            '0.84693',
+                            '0.84693'
                         ],
                         [
                             "eid6281",
@@ -1538,8 +1539,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '1',
-                            '1'
+                            '0.84693',
+                            '0.84693'
                         ],
                         [
                             "eid183",
@@ -1762,8 +1763,8 @@
                             0,
                             "easeOutQuad",
                             "${mcUserMessage}",
-                            '1',
-                            '1'
+                            '0.96497',
+                            '0.96497'
                         ],
                         [
                             "eid12971",
@@ -1802,8 +1803,8 @@
                             0,
                             "linear",
                             "${mcUserMessage}",
-                            '482px',
-                            '482px'
+                            '486px',
+                            '486px'
                         ],
                         [
                             "eid12847",
@@ -2024,8 +2025,8 @@
                             0,
                             "linear",
                             "${mcHUD}",
-                            '428px',
-                            '428px'
+                            '73.18%',
+                            '73.18%'
                         ]
                     ]
                 }
