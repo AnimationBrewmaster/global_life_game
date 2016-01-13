@@ -260,16 +260,298 @@ challengeCard8C.ep = 0;
 challengeCard8C.gb = -2;
 challengeCards[2][7] = challengeCard8C;
 
-//TODO - add the other cards....
+//card 9
+var challengeCard9A = new Object();
+challengeCard9A.title = "Government Spending/Debt";
+challengeCard9A.text = "Your government spent money they did not have and have gone into debt because of that. That means an increase in taxes and a reduction in services such as hospitals and schools.";
+challengeCard9A.impact = "Lose $4 Global Bucks and lose 1 education level";
+challengeCard9A.hp = 0;
+challengeCard9A.wp = 0;
+challengeCard9A.ep = 0;
+challengeCard9A.gb = -4;
+challengeCard9A.special = "loseEducationLevel";
+challengeCards[0][8] = challengeCard9A;
+
+var challengeCard9B = new Object();
+challengeCard9B.title = "Government Spending/Debt";
+challengeCard9B.text = "Your government spends money to expand their military rather than improve services to the people. That means a reduction in services such as schools and hospitals.";
+challengeCard9B.impact = "Lose 2 health points and lose 1 education leve";
+challengeCard9B.hp = -2;
+challengeCard9B.wp = 0;
+challengeCard9B.ep = 0;
+challengeCard9B.gb = 0;
+challengeCard9B.special = "loseEducationLevel";
+challengeCards[1][8] = challengeCard9B;
+
+var challengeCard9C = new Object();
+challengeCard9C.title = "Government Spending/Debt";
+challengeCard9C.text = "Foreign aid workers do not consult local farmers when developing a project. The money is wasted and no progress is made.";
+challengeCard9C.impact = "Lose $2 Global Bucks and 1 health point.";
+challengeCard9C.hp = -1;
+challengeCard9C.wp = 0;
+challengeCard9C.ep = 0;
+challengeCard9C.gb = -2;
+challengeCards[2][8] = challengeCard9C;
+
+//card 10
+var challengeCard10A = new Object();
+challengeCard10A.title = "Disease";
+challengeCard10A.text = "You get sick with a bacterial infection. You have to go to the doctor, which is covered by your health insurance, and then get medicine from the pharmacy.";
+challengeCard10A.impact = "Lose 2 health point and $3 Global Bucks";
+challengeCard10A.hp = -2;
+challengeCard10A.wp = 0;
+challengeCard10A.ep = 0;
+challengeCard10A.gb = -3;
+challengeCards[0][9] = challengeCard10A;
+
+var challengeCard10B = new Object();
+challengeCard10B.title = "Disease";
+challengeCard10B.text = "You get sick with a bacterial infection. You miss 3 days of work, and have to pay to see a doctor, pay for medicine, and lose salary.";
+challengeCard10B.impact = "Lose 2 health points and $4 Global Bucks";
+challengeCard10B.hp = -2;
+challengeCard10B.wp = 0;
+challengeCard10B.ep = 0;
+challengeCard10B.gb = -4;
+challengeCards[1][9] = challengeCard10B;
+
+var challengeCard10C = new Object();
+challengeCard10C.title = "Disease";
+challengeCard10C.text = "You have been infected with malaria and have to travel far to get medical treatment. The medicine is expensive and you have not been able to work since you got sick.";
+challengeCard10C.impact = "Lose 3 Global Bucks and 3 health points";
+challengeCard10C.hp = -3;
+challengeCard10C.wp = 0;
+challengeCard10C.ep = 0;
+challengeCard10C.gb = -3;
+challengeCards[2][9] = challengeCard10C;
+
+//card 11
+var challengeCard11A = new Object();
+challengeCard11A.title = "Hygiene and Sanitation";
+challengeCard11A.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. You must travel to the pharmacy down the block to purchase medicine.";
+challengeCard11A.impact = "";
+challengeCard11A.hp = 0;
+challengeCard11A.wp = 0;
+challengeCard11A.ep = 0;
+challengeCard11A.gb = 0;
+challengeCards[0][10] = challengeCard11A;
+
+var challengeCard11B = new Object();
+challengeCard11B.title = "Hygiene and Sanitation";
+challengeCard11B.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. Getting medicine is a little bit tricky and costs quite a bit of money.";
+challengeCard11B.impact = "Lose $3 Global Bucks and 2 water points";
+challengeCard11B.hp = 0;
+challengeCard11B.wp = -2;
+challengeCard11B.ep = 0;
+challengeCard11B.gb = -3;
+challengeCards[1][10] = challengeCard11B;
+
+// TODO - implement sickness function 
+var challengeCard11C = new Object();
+challengeCard11C.title = "Hygiene and Sanitation";
+challengeCard11C.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. Without treatment, it could be fatal, but luckily you can purchase medicine for $3 Global Bucks if you make it to the hospital in the next three turns. ";
+challengeCard11C.impact = "If not, lose 6 health points.";
+challengeCard11C.hp = -6;
+challengeCard11C.wp = 0;
+challengeCard11C.ep = 0;
+challengeCard11C.gb = 0;
+challengeCards[2][10] = challengeCard11C;
+
+//card 12
+var challengeCard12A = new Object();
+challengeCard12A.title = "Illness and Education";
+challengeCard12A.text = "You get sick with the flu and must stay home from school.";
+challengeCard12A.impact = "Lose 2 health points and drop one education level.";
+challengeCard12A.hp = -2;
+challengeCard12A.wp = 0;
+challengeCard12A.ep = 0;
+challengeCard12A.gb = 0;
+challengeCard12A.special = "loseEducationLevel";
+challengeCards[0][11] = challengeCard12A;
+
+var challengeCard12B = new Object();
+challengeCard12B.title = "Illness and Education";
+challengeCard12B.text = "You get sick with the flu and must stay home from school.";
+challengeCard12B.impact = "Lose 2 health points and drop one education level.";
+challengeCard12B.hp = -2;
+challengeCard12B.wp = 0;
+challengeCard12B.ep = 0;
+challengeCard12B.gb = 0;
+challengeCard12B.special = "loseEducationLevel";
+challengeCards[1][11] = challengeCard12B;
+
+// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
+var challengeCard12C = new Object();
+challengeCard12C.title = "Illness and Education";
+challengeCard12C.text = "One of your family members dies of HIV/AIDS. You cannot go to school and must stay home to run the family business.";
+challengeCard12C.impact = "You cannot go to school for 7 turns.";
+challengeCard12C.hp = 0;
+challengeCard12C.wp = 0;
+challengeCard12C.ep = 0;
+challengeCard12C.gb = 0;
+challengeCards[2][11] = challengeCard12C;
+
+//card 13
+var challengeCard13A = new Object();
+challengeCard13A.title = "Waterborne Illness";
+challengeCard13A.text = "You get sick from drinking water from the river while out camping.";
+challengeCard13A.impact = "Lose 2 health and 2 water points.";
+challengeCard13A.hp = -2;
+challengeCard13A.wp = 0;
+challengeCard13A.ep = -2;
+challengeCard13A.gb = 0;
+challengeCards[0][12] = challengeCard13A;
+
+var challengeCard13B = new Object();
+challengeCard13B.title = "Waterborne Illness";
+challengeCard13B.text = "You get sick from drinking untreated water.";
+challengeCard13B.impact = "Lose 2 health and 2 water points.";
+challengeCard13B.hp = -2;
+challengeCard13B.wp = -2;
+challengeCard13B.ep = 0;
+challengeCard13B.gb = 0;
+challengeCards[1][12] = challengeCard13B;
+
+var challengeCard13C = new Object();
+challengeCard13C.title = "Waterborne Illness";
+challengeCard13C.text = "You get infected with a waterborne illness after drinking untreated water. Half the beds in the local hospital are filled with similar cases. Diarrhea kills over 1 million people around the world each year due to lack of access to sanitation and clean water.";
+challengeCard13C.impact = "Lose 2 health points, 2 water points, and a Global Buck.";
+challengeCard13C.hp = -2;
+challengeCard13C.wp = -2;
+challengeCard13C.ep = 0;
+challengeCard13C.gb = -1;
+challengeCards[2][12] = challengeCard13C;
+
+//card 14
+// TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
+var challengeCard14A = new Object();
+challengeCard14A.title = "Bathroom Break";
+challengeCard14A.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14A.impact = "If you don’t make it, lose 3 health points and 3 water points.";
+challengeCard14A.hp = -3;
+challengeCard14A.wp = -3;
+challengeCard14A.ep = 0;
+challengeCard14A.gb = 0;
+challengeCards[0][13] = challengeCard14A;
+
+var challengeCard14B = new Object();
+challengeCard14B.title = "Bathroom Break";
+challengeCard14B.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14B.impact = "If you don’t make it, lose 3 health points and 3 water points.";
+challengeCard14B.hp = -3;
+challengeCard14B.wp = -3;
+challengeCard14B.ep = 0;
+challengeCard14B.gb = 0;
+challengeCards[1][13] = challengeCard14B;
+
+var challengeCard14C = new Object();
+challengeCard14C.title = "Bathroom Break";
+challengeCard14C.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14C.impact = "If you don’t make it, lose 3 health points and 3 water points.";
+challengeCard14C.hp = -3;
+challengeCard14C.wp = -3;
+challengeCard14C.ep = 0;
+challengeCard14C.gb = 0;
+challengeCards[2][13] = challengeCard14C;
+
+//card 15
+var challengeCard15A = new Object();
+challengeCard15A.title = "Hygiene and Sanitation";
+challengeCard15A.text = "You don’t wash your hands while out in a public bathroom and you get sick. You must miss work for a of couple days.";
+challengeCard15A.impact = "Lose $3 Global Bucks and 2 Health Points.";
+challengeCard15A.hp = -2;
+challengeCard15A.wp = 0;
+challengeCard15A.ep = 0;
+challengeCard15A.gb = -3;
+challengeCards[0][14] = challengeCard15A;
+
+var challengeCard15B = new Object();
+challengeCard15B.title = "Hygiene and Sanitation";
+challengeCard15B.text = "You get diarrhea from your lack of access to clean water so you must miss work for 4 days.";
+challengeCard15B.impact = "Lose $3 Global Bucks and 2 Health Points.";
+challengeCard15B.hp = -2;
+challengeCard15B.wp = 0;
+challengeCard15B.ep = 0;
+challengeCard15B.gb = -3;
+challengeCards[1][14] = challengeCard15B;
+
+var challengeCard15C = new Object();
+challengeCard15C.title = "Hygiene and Sanitation";
+challengeCard15C.text = "An illness caused by your lack of sanitation/washing your hands after going to the bathroom, causes you to miss work.";
+challengeCard15C.impact = "Lose $3 Global Bucks and 2 Health Points.";
+challengeCard15C.hp = -2;
+challengeCard15C.wp = 0;
+challengeCard15C.ep = 0;
+challengeCard15C.gb = -3;
+challengeCards[2][14] = challengeCard15C;
+
+//card 16
+//no card 16
+
+//card 17
+var challengeCard17A = new Object();
+challengeCard17A.title = "Civil War and Unrest";
+challengeCard17A.text = "There is civil unrest in your country due to poor representation of your ethnicity in government. This makes it difficult to have a healthy lifestyle or get to work.";
+challengeCard17A.impact = "Lose $3 Global Bucks and 2 health points";
+challengeCard17A.hp = -2;
+challengeCard17A.wp = 0;
+challengeCard17A.ep = 0;
+challengeCard17A.gb = -3;
+challengeCards[0][15] = challengeCard17A;
+
+var challengeCard17B = new Object();
+challengeCard17B.title = "Civil War and Unrest";
+challengeCard17B.text = "A small country near you has thousands of refugees flooding into your country due to civil war.. The cost of feeding these refugees is huge and because your country is small it doesn’t have the resources. Your country is also frustrated that other countries around the world are not doing more to help.";
+challengeCard17B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard17B.hp = -2;
+challengeCard17B.wp = 0;
+challengeCard17B.ep = 0;
+challengeCard17B.gb = -2;
+challengeCards[1][15] = challengeCard17B;
+
+var challengeCard17C = new Object();
+challengeCard17C.title = "Civil War and Unrest";
+challengeCard17C.text = "Civil war breaks out! You and your family must abandon everything you have to avoid being caught up in the violence.";
+challengeCard17C.impact = "Lose 3 Global Bucks, 2 health points and 2 water points. ";
+challengeCard17C.hp = -2;
+challengeCard17C.wp = -2;
+challengeCard17C.ep = 0;
+challengeCard17C.gb = -3;
+challengeCards[2][15] = challengeCard17C;
+
+//card 18
+var challengeCard18A = new Object();
+challengeCard18A.title = "Injury";
+challengeCard18A.text = "";
+challengeCard18A.impact = "";
+challengeCard18A.hp = 0;
+challengeCard18A.wp = 0;
+challengeCard18A.ep = 0;
+challengeCard18A.gb = 0;
+challengeCards[0][16] = challengeCard18A;
+
+var challengeCard18B = new Object();
+challengeCard18B.title = "Injury";
+challengeCard18B.text = "";
+challengeCard18B.impact = "";
+challengeCard18B.hp = 0;
+challengeCard18B.wp = 0;
+challengeCard18B.ep = 0;
+challengeCard18B.gb = 0;
+challengeCards[1][16] = challengeCard18B;
+
+var challengeCard18C = new Object();
+challengeCard18C.title = "Injury";
+challengeCard18C.text = "";
+challengeCard18C.impact = "";
+challengeCard18C.hp = 0;
+challengeCard18C.wp = 0;
+challengeCard18C.ep = 0;
+challengeCard18C.gb = 0;
+challengeCards[2][16] = challengeCard18C;
 
 // DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
-// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
-// TODO - block user from a destination until power up is gained - check when power-up is purchased for all timed losses
-
-// TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
 
 // DONE - TEST - drop an education level (card #19) - .special = "loseEductionalLevel"
-//card 19 TODO - when rest of cards are in set array values to correct number
 var challengeCard19A = new Object();
 challengeCard19A.title = "Illness and Education";
 challengeCard19A.text = "You get the flu and miss a field trip that covered half a topic of your class, resulting in a poor test result. Appreciate the fact that you get to go to school. It is estimated that over 770 million people around the world are illiterate and do not have access to education - leaving them trapped in poverty.";
@@ -279,7 +561,7 @@ challengeCard19A.wp = 0;
 challengeCard19A.ep = 0;
 challengeCard19A.gb = 0;
 challengeCard19A.special = "loseEducationLevel";
-challengeCards[0][8] = challengeCard19A;
+challengeCards[0][17] = challengeCard19A;
 
 var challengeCard19B = new Object();
 challengeCard19B.title = "Illness and Education";
@@ -290,7 +572,7 @@ challengeCard19B.wp = 0;
 challengeCard19B.ep = 0;
 challengeCard19B.gb = 0;
 challengeCard19B.special = "loseEducationLevel";
-challengeCards[1][8] = challengeCard19B;
+challengeCards[1][17] = challengeCard19B;
 
 var challengeCard19C = new Object();
 challengeCard19C.title = "Illness and Education";
@@ -301,10 +583,44 @@ challengeCard19C.wp = 2;
 challengeCard19C.ep = 0;
 challengeCard19C.gb = 0;
 challengeCard19C.special = "loseEducationLevel";
-challengeCards[2][8] = challengeCard19C;
+challengeCards[2][17] = challengeCard19C;
 
 
+// TODO - block user from a destination until power up is gained - check when power-up is purchased for all timed losses
 
+//TODO - add the other cards....
+
+//card 20
+var challengeCard20A = new Object();
+challengeCard20A.title = "Family Illness";
+challengeCard20A.text = "Your father just got diagnosed with cancer and the treatment is very expensive. Luckily your government has a universal healthcare system where everyone receives medical treatment and your job provides health insurance so the cost to you is reduced.";
+challengeCard20A.impact = "Lose $5 Global Bucks to help while he is off of work.";
+challengeCard20A.hp = 0;
+challengeCard20A.wp = 0;
+challengeCard20A.ep = 0;
+challengeCard20A.gb = -5;
+challengeCards[0][18] = challengeCard20A;
+
+var challengeCard20B = new Object();
+challengeCard20B.title = "Family Illness";
+challengeCard20B.text = "Your father becomes ill and cannot work. You must now support your family.";
+challengeCard20B.impact = "Lose $6 Global Bucks.";
+challengeCard20B.hp = 0;
+challengeCard20B.wp = 0;
+challengeCard20B.ep = 0;
+challengeCard20B.gb = -6;
+challengeCards[1][18] = challengeCard20B;
+
+// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
+var challengeCard20C = new Object();
+challengeCard20C.title = "Family Illness";
+challengeCard20C.text = "Your country has great education that is free up to grade 12, but you want to go to college or university which is expensive. You accumulate student loans that take you years to pay off.";
+challengeCard20C.impact = "You cannot go to school for 7 turns.";
+challengeCard20C.hp = 0;
+challengeCard20C.wp = 0;
+challengeCard20C.ep = 0;
+challengeCard20C.gb = 0;
+challengeCards[2][18] = challengeCard20C;
 
 // DONE- TEST - remove items (all) from inventory - .special = "createInventory"
 //card 30 TODO - when rest of cards are in set array values to correct number
@@ -316,7 +632,7 @@ challengeCard30A.hp = -2;
 challengeCard30A.wp = 0;
 challengeCard30A.ep = 0;
 challengeCard30A.gb = -3;
-challengeCards[0][9] = challengeCard30A;
+challengeCards[0][19] = challengeCard30A;
 
 var challengeCard30B = new Object();
 challengeCard30B.title = "War";
@@ -326,7 +642,7 @@ challengeCard30B.hp = -2;
 challengeCard30B.wp = -2;
 challengeCard30B.ep = 0;
 challengeCard30B.gb = -3;
-challengeCards[1][9] = challengeCard30B;
+challengeCards[1][19] = challengeCard30B;
 
 var challengeCard30C = new Object();
 challengeCard30C.title = "War";
@@ -337,7 +653,7 @@ challengeCard30C.wp = -2;
 challengeCard30C.ep = 0;
 challengeCard30C.gb = -2;
 challengeCard30C.special = "createInventory";
-challengeCards[2][9] = challengeCard30C;
+challengeCards[2][19] = challengeCard30C;
 
 
 // template for cards

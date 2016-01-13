@@ -323,6 +323,229 @@ partnershipCard10C.ep = 0;
 partnershipCard10C.gb = 0;
 partnershipCards[2][9] = partnershipCard10C;
 
+// card 11
+var partnershipCard11A = new Object();
+partnershipCard11A.title = "Hygiene/Sanitation";
+partnershipCard11A.text = "An organization comes into your school and teaches you about why you should wash your hands so you and your classmates are sick less often.";
+partnershipCard11A.impact = "Add 2 Water Points and 2 Health Points.";
+partnershipCard11A.hp = 2;
+partnershipCard11A.wp = 2;
+partnershipCard11A.ep = 0;
+partnershipCard11A.gb = 0;
+partnershipCards[0][10] = partnershipCard11A;
+
+var partnershipCard11B = new Object();
+partnershipCard11B.title = "Hygiene/Sanitation";
+partnershipCard11B.text = "Your teacher teaches you about the importance of hygiene and sanitation and how to keep yourself and others from getting sick, allowing you to prevent illness in the future.";
+partnershipCard11B.impact = "Add 2 Water and 2 Health Points.";
+partnershipCard11B.hp = 2;
+partnershipCard11B.wp = 2;
+partnershipCard11B.ep = 0;
+partnershipCard11B.gb = 0;
+partnershipCards[1][10] = partnershipCard11B;
+
+var partnershipCard11C = new Object();
+partnershipCard11C.title = "Hygiene/Sanitation";
+partnershipCard11C.text = "An organization comes into your village to teach you about proper sanitation and installs a biosand filter allowing you to drink cleaner water every day so you can fight water borne illness more effectively.";
+partnershipCard11C.impact = "Add 2 Water and 2 Health Points.";
+partnershipCard11C.hp = 2;
+partnershipCard11C.wp = 2;
+partnershipCard11C.ep = 0;
+partnershipCard11C.gb = 0;
+partnershipCards[2][10] = partnershipCard11C;
+
+//card 12
+var partnershipCard12A = new Object();
+partnershipCard12A.title = "Illness & Education";
+partnershipCard12A.text = "Your school nurse comes into your classroom and shows you a presentation about the importance of living a healthy lifestyle and how to avoid illness. The nurse talks about how to lower the spread of illnesses so you and your classmates can go to school more often.";
+partnershipCard12A.impact = "Gain 2 Health Points and 1 Education Level.";
+partnershipCard12A.hp = 1;
+partnershipCard12A.wp = 0;
+partnershipCard12A.ep = 0;
+partnershipCard12A.gb = 0;
+partnershipCard12A.special = "gainEducationLevel";
+partnershipCards[0][11] = partnershipCard12A;
+
+var partnershipCard12B = new Object();
+partnershipCard12B.title = "Illness & Education";
+partnershipCard12B.text = "An organization teaches you about how to keep yourself healthy and how this can help you attend school more often and make a more healthy and successful life for yourself.";
+partnershipCard12B.impact = "Gain 2 health points and 1 Education Level.";
+partnershipCard12B.hp = 2;
+partnershipCard12B.wp = 0;
+partnershipCard12B.ep = 0;
+partnershipCard12B.gb = 0;
+partnershipCard12B.special = "gainEducationLevel";
+partnershipCards[1][11] = partnershipCard12B;;
+
+var partnershipCard12C = new Object();
+partnershipCard12C.title = "Illness & Education";
+partnershipCard12C.text = "An international aid organization teaches you about how to best avoid contracting disease. You get sick less often and can now attend school more to get a better education. You can even teach the rest of your family if they are not educated – this helps all of you raise yourself out of poverty.";
+partnershipCard12C.impact = "Gain 2 Health Points and 1 Education Level.";
+partnershipCard12C.hp = 2;
+partnershipCard12C.wp = 0;
+partnershipCard12C.ep = 0;
+partnershipCard12C.gb = 0;
+partnershipCard12C.special = "gainEducationLevel";
+partnershipCards[2][11] = partnershipCard12C;
+
+//card 13
+var partnershipCard13A = new Object();
+partnershipCard13A.title = "Contamination";
+partnershipCard13A.text = "You learn about how soap and chemicals going into water sources from things such as washing your car in your driveway is bad for the environment.This allows you to be more environmentally conscious in regards to your watershed.";
+partnershipCard13A.impact = "Gain 2 Water Points.";
+partnershipCard13A.hp = 0;
+partnershipCard13A.wp = 2;
+partnershipCard13A.ep = 0;
+partnershipCard13A.gb = 0;
+partnershipCards[0][12] = partnershipCard13A;
+
+var partnershipCard13B = new Object();
+partnershipCard13B.title = "Contamination";
+partnershipCard13B.text = "Your city gets a grant to make sure that your water treatment facilities are up to healthy standards. You now drink and wash in cleaner water every day, making you healthier and preventing water borne illness.";
+partnershipCard13B.impact = "Gain 2 Water Points.";
+partnershipCard13B.hp = 0;
+partnershipCard13B.wp = 2;
+partnershipCard13B.ep = 0;
+partnershipCard13B.gb = 0;
+partnershipCards[1][12] = partnershipCard13B;
+
+var partnershipCard13C = new Object();
+partnershipCard13C.title = "Contamination";
+partnershipCard13C.text = "An international aid organization teaches your village how to treat their water and dispose of waste using proper sanitation which greatly reduces water borne illness.";
+partnershipCard13C.impact = "Gain 3 Water Points.";
+partnershipCard13C.hp = 0;
+partnershipCard13C.wp = 3;
+partnershipCard13C.ep = 0;
+partnershipCard13C.gb = 0;
+partnershipCards[2][12] = partnershipCard13C;
+
+//card 14
+var partnershipCard14A = new Object();
+partnershipCard14A.title = "Bathroom Sanitation";
+partnershipCard14A.text = "You learn about how washing your hands is important from a very early age. You are sick less often and live a healthier life.";
+partnershipCard14A.impact = "Gain 1 Health Point.";
+partnershipCard14A.hp = 1;
+partnershipCard14A.wp = 0;
+partnershipCard14A.ep = 0;
+partnershipCard14A.gb = 0;
+partnershipCards[0][13] = partnershipCard14A;
+
+var partnershipCard14B = new Object();
+partnershipCard14B.title = "Bathroom Sanitation";
+partnershipCard14B.text = "Your learn from an early age that having clean hands when you eat is important and you are sick less often.";
+partnershipCard14B.impact = "Gain 1 Health Point.";
+partnershipCard14B.hp = 1;
+partnershipCard14B.wp = 0;
+partnershipCard14B.ep = 0;
+partnershipCard14B.gb = 0;
+partnershipCards[1][13] = partnershipCard14B;
+
+var partnershipCard14C = new Object();
+partnershipCard14C.title = "Bathroom Sanitation";
+partnershipCard14C.text = "An organization teaches you about the importance of drinking and preparing food in clean water,, this helps keep you and your family healthier.";
+partnershipCard14C.impact = "Gain 2 Health Points. ";
+partnershipCard14C.hp = 2;
+partnershipCard14C.wp = 0;
+partnershipCard14C.ep = 0;
+partnershipCard14C.gb = 0;
+partnershipCards[2][13] = partnershipCard14C;
+
+//card 17
+var partnershipCard17A = new Object();
+partnershipCard17A.title = "Civil War/Unrest ";
+partnershipCard17A.text = "Your government and other members of the United Nations shut down a major terrorist group that were threatening the safety of your country. Your sense of security has improved, and the government no longer needs funding for a war effort.";
+partnershipCard17A.impact = "Add 1 Health Point 1 Global Buck. ";
+partnershipCard17A.hp = 1;
+partnershipCard17A.wp = 0;
+partnershipCard17A.ep = 0;
+partnershipCard17A.gb = 1;
+partnershipCards[0][14] = partnershipCard17A;
+
+var partnershipCard17B = new Object();
+partnershipCard17B.title = "Civil War/Unrest ";
+partnershipCard17B.text = "The United Nations brokers a peace deal stopping the destructive civil war across your country. Now with less worry of war, your country can expect more foreign investment.";
+partnershipCard17B.impact = "Add 2 Global Bucks and 2 Health Point";
+partnershipCard17B.hp = 2;
+partnershipCard17B.wp = 0;
+partnershipCard17B.ep = 0;
+partnershipCard17B.gb = 2;
+partnershipCards[1][14] = partnershipCard17B;
+
+var partnershipCard17C = new Object();
+partnershipCard17C.title = "Civil War/Unrest ";
+partnershipCard17C.text = "Your country has just come to the end of a 5 year long civil war. With the war no longer plaguing your country's people and using up resources you have more access to health care, education, and no longer live in fear.";
+partnershipCard17C.impact = "Add 3 health points, 3 Global Bucks.";
+partnershipCard17C.hp = 3;
+partnershipCard17C.wp = 0;
+partnershipCard17C.ep = 0;
+partnershipCard17C.gb = 3;
+partnershipCards[2][14] = partnershipCard17C;
+
+//card 19
+var partnershipCard19A = new Object();
+partnershipCard19A.title = "Illness - Education";
+partnershipCard19A.text = "A new hospital opens near your house. You can now access health care more easily.";
+partnershipCard19A.impact = "Add 3 Health Points.";
+partnershipCard19A.hp = 3;
+partnershipCard19A.wp = 0;
+partnershipCard19A.ep = 0;
+partnershipCard19A.gb = 0;
+partnershipCards[0][15] = partnershipCard19A;
+
+var partnershipCard19B = new Object();
+partnershipCard19B.title = "Illness - Education";
+partnershipCard19B.text = "A new clinic opens up in a city near your town. You now have more accessible health care. ";
+partnershipCard19B.impact = "Add 3 Health Points.";
+partnershipCard19B.hp = 3;
+partnershipCard19B.wp = 0;
+partnershipCard19B.ep = 0;
+partnershipCard19B.gb = 0;
+partnershipCards[1][15] = partnershipCard19B;
+
+var partnershipCard19C = new Object();
+partnershipCard19C.title = "Illness - Education";
+partnershipCard19C.text = "A doctor from an international organization has arrived in your village to give free vaccinations.";
+partnershipCard19C.impact = "Add 3 Health Points.";
+partnershipCard19C.hp = 3;
+partnershipCard19C.wp = 0;
+partnershipCard19C.ep = 0;
+partnershipCard19C.gb = 0;
+partnershipCards[2][15] = partnershipCard19C;
+
+//card 20
+var partnershipCard20A = new Object();
+partnershipCard20A.title = "Illness - Family";
+partnershipCard20A.text = "Your brother catches a cold and it quickly spreads to your family. You go to the doctor and he gives an antibiotic that quickly cures your family.";
+partnershipCard20A.impact = "Add 2 Health Point.";
+partnershipCard20A.hp = 2;
+partnershipCard20A.wp = 0;
+partnershipCard20A.ep = 0;
+partnershipCard20A.gb = 0;
+partnershipCards[0][16] = partnershipCard20A;
+
+var partnershipCard20B = new Object();
+partnershipCard20B.title = "Illness - Family";
+partnershipCard20B.text = "Your father and sister contract malaria. Luckily, an international aid organization has subsidized medicine in your country to buy, so you can afford medication to cure your father and sister.";
+partnershipCard20B.impact = "Add 3 Health Point.";
+partnershipCard20B.hp = 3;
+partnershipCard20B.wp = 0;
+partnershipCard20B.ep = 0;
+partnershipCard20B.gb = 0;
+partnershipCards[1][16] = partnershipCard20B;
+
+var partnershipCard20C = new Object();
+partnershipCard20C.title = "Illness - Family";
+partnershipCard20C.text = "Your brother and father contract an illness from the dirty water in the village river, luckily there is a doctor only a few kilometers walk away and you get medication from him helping your father and brother recover.";
+partnershipCard20C.impact = "Add 3 Health Point.";
+partnershipCard20C.hp = 3;
+partnershipCard20C.wp = 0;
+partnershipCard20C.ep = 0;
+partnershipCard20C.gb = 0;
+partnershipCards[2][16] = partnershipCard20C;
+
+
+
+
 //TODO - add the 55 other cards....
 
 // TODO - gain an education level (card #21) - .special = "gainEductionalLevel" - see challengeCards.js
