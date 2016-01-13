@@ -136,6 +136,130 @@ challengeCard4C.gb = 0;
 challengeCard4C.special = "gotSick";
 challengeCards[2][3] = challengeCard4C;
 
+//card 5
+var challengeCard5A = new Object();
+challengeCard5A.title = "Land Ownership";
+challengeCard5A.text = "Your City purchases your house so they can expand a local roadway. This helps speed up traffic but means you have to relocate out of your neighbourhood. You also aren’t happy with the price they forced you to take for your house.";
+challengeCard5A.impact = "Gain $2 Global Bucks but lose 2 health points.";
+challengeCard5A.hp = -2;
+challengeCard5A.wp = 0;
+challengeCard5A.ep = 0;
+challengeCard5A.gb = 2;
+challengeCards[0][4] = challengeCard5A;
+
+var challengeCard5B = new Object();
+challengeCard5B.title = "Land Ownership";
+challengeCard5B.text = "The government takes your land and you don’t have enough money for another good plot of land. You must now grow your crops on rough land, reducing its yield.";
+challengeCard5B.impact = "Lose 2 health points and $2 Global Bucks";
+challengeCard5B.hp = -2;
+challengeCard5B.wp = 0;
+challengeCard5B.ep = 0;
+challengeCard5B.gb = 2;
+challengeCards[1][4] = challengeCard5B;
+
+var challengeCard5C = new Object();
+challengeCard5C.title = "Land Ownership";
+challengeCard5C.text = "Poor farmers in your community are forced onto marginal land that makes growing profitable crops increasingly difficult. They also don’t own the land, so any money they make goes to pay the landowners very high rent.";
+challengeCard5C.impact = "Lose 2 health points and $2 Global Bucks";
+challengeCard5C.hp = -2;
+challengeCard5C.wp = 0;
+challengeCard5C.ep = 0;
+challengeCard5C.gb = 2;
+challengeCards[2][4] = challengeCard5C;
+
+//card 6
+var challengeCard6A = new Object();
+challengeCard6A.title = "Agriculture";
+challengeCard6A.text = "The food you are able to purchase at the grocery store is cheap but has not been grown locally. It has been modified to last longer to survive the trip from the country where it can be produced cheaply, so it has less nutrition than non-modified food.";
+challengeCard6A.impact = "Lost 4 health points.";
+challengeCard6A.hp = -4;
+challengeCard6A.wp = 0;
+challengeCard6A.ep = 0;
+challengeCard6A.gb = 0;
+challengeCards[0][5] = challengeCard6A;
+
+var challengeCard6B = new Object();
+challengeCard6B.title = "Agriculture";
+challengeCard6B.text = "Wealthier countries have put rules in place to protect and fund their own farmers, while taxing food from other countries so it is more expensive. This means you have trouble selling your food to anyone outside your country.";
+challengeCard6B.impact = "Lose$ 3 Global Bucks.";
+challengeCard6B.hp = 0;
+challengeCard6B.wp = 0;
+challengeCard6B.ep = 0;
+challengeCard6B.gb = -3;
+challengeCards[1][5] = challengeCard6B;
+
+var challengeCard6C = new Object();
+challengeCard6C.title = "Agriculture";
+challengeCard6C.text = "You harvested a good crop this year. You would have earned $5 Global Bucks but a rich family who lives 100kms away owns the land and you were forced to pay their very high rent.";
+challengeCard6C.impact = "Earn $5 Global Bucks then pay $3 for rent. ";
+challengeCard6C.hp = 0;
+challengeCard6C.wp = 0;
+challengeCard6C.ep = 0;
+challengeCard6C.gb = 2;
+challengeCards[2][5] = challengeCard6C;
+
+//card 7
+var challengeCard7A = new Object();
+challengeCard7A.title = "Deforestation";
+challengeCard7A.text = "Companies are clear cutting forests in order to make room for grazing land for cattle, this leads to an environmental crisis involving erosion, flooding, turbidity in the water, loss of animal habitat, and a loss of tourism to the region.";
+challengeCard7A.impact = "Gain $3 Global Bucks for adding grazing land, then lose $8 Global Bucks due to decreased tourism and environmental disasters causing damage.";
+challengeCard7A.hp = 0;
+challengeCard7A.wp = 0;
+challengeCard7A.ep = 0;
+challengeCard7A.gb = -5;
+challengeCards[0][6] = challengeCard7A;
+
+var challengeCard7B = new Object();
+challengeCard7B.title = "Deforestation";
+challengeCard7B.text = "A foreign company is using your local forest for lumber, driving up prices on wood/lumber in your country for building and heating.";
+challengeCard7B.impact = "Lose $2 Global Bucks.";
+challengeCard7B.hp = 0;
+challengeCard7B.wp = 0;
+challengeCard7B.ep = 0;
+challengeCard7B.gb = -2;
+challengeCards[1][6] = challengeCard7B;
+
+var challengeCard7C = new Object();
+challengeCard7C.title = "Deforestation";
+challengeCard7C.text = "Transnational companies are using resources from your country but it is causing massive deforestation near your town. Over cutting leads to less land that had previously been used for shelter and hunting. It also causes soil erosion and threatens the native species  along with damaging crops and your water supply.";
+challengeCard7C.impact = "Lose $1 global buck, lose 2 water points, and lose one health point.";
+challengeCard7C.hp = -1;
+challengeCard7C.wp = -2;
+challengeCard7C.ep = 0;
+challengeCard7C.gb = -1;
+challengeCards[2][6] = challengeCard7C;
+
+//card 8
+var challengeCard8A = new Object();
+challengeCard8A.title = "Fertilizer/Pesticide";
+challengeCard8A.text = "Fertilizer/pesticide companies generated record breaking profits this year, but because of all of the inorganic chemicals used in the fertilizer, the people who ate the foods that used the fertilizer/pesticides may have increased health risks.";
+challengeCard8A.impact = "Gain $3 Global Bucks but lose 5 health points.";
+challengeCard8A.hp = -5;
+challengeCard8A.wp = 0;
+challengeCard8A.ep = 0;
+challengeCard8A.gb = 3;
+challengeCards[0][7] = challengeCard8A;
+
+var challengeCard8B = new Object();
+challengeCard8B.title = "Fertilizer/Pesticide";
+challengeCard8B.text = "Several small farms have overused fertilizer and the resulting runoff has contaminated your town’s water supply.";
+challengeCard8B.impact = "Lose 3 water points and 3 health points.";
+challengeCard8B.hp = -3;
+challengeCard8B.wp = -3;
+challengeCard8B.ep = 0;
+challengeCard8B.gb = 0;
+challengeCards[1][7] = challengeCard8B;
+
+var challengeCard8C = new Object();
+challengeCard8C.title = "Fertilizer/Pesticide";
+challengeCard8C.text = "Your family's small farm produced very little because you have not been taught proper crop rotation and could not afford fertilizer. The agriculture you did produce is substantially smaller so it is not in high demand.";
+challengeCard8C.impact = "Lose $2 Global Bucks and 2 health points";
+challengeCard8C.hp = -2;
+challengeCard8C.wp = 0;
+challengeCard8C.ep = 0;
+challengeCard8C.gb = -2;
+challengeCards[2][7] = challengeCard8C;
+
 //TODO - add the other cards....
 
 // DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
@@ -155,7 +279,7 @@ challengeCard19A.wp = 0;
 challengeCard19A.ep = 0;
 challengeCard19A.gb = 0;
 challengeCard19A.special = "loseEducationLevel";
-challengeCards[0][4] = challengeCard19A;
+challengeCards[0][8] = challengeCard19A;
 
 var challengeCard19B = new Object();
 challengeCard19B.title = "Illness and Education";
@@ -166,7 +290,7 @@ challengeCard19B.wp = 0;
 challengeCard19B.ep = 0;
 challengeCard19B.gb = 0;
 challengeCard19B.special = "loseEducationLevel";
-challengeCards[1][4] = challengeCard19B;
+challengeCards[1][8] = challengeCard19B;
 
 var challengeCard19C = new Object();
 challengeCard19C.title = "Illness and Education";
@@ -177,7 +301,7 @@ challengeCard19C.wp = 2;
 challengeCard19C.ep = 0;
 challengeCard19C.gb = 0;
 challengeCard19C.special = "loseEducationLevel";
-challengeCards[2][4] = challengeCard19C;
+challengeCards[2][8] = challengeCard19C;
 
 
 
@@ -192,7 +316,7 @@ challengeCard30A.hp = -2;
 challengeCard30A.wp = 0;
 challengeCard30A.ep = 0;
 challengeCard30A.gb = -3;
-challengeCards[0][5] = challengeCard30A;
+challengeCards[0][9] = challengeCard30A;
 
 var challengeCard30B = new Object();
 challengeCard30B.title = "War";
@@ -202,7 +326,7 @@ challengeCard30B.hp = -2;
 challengeCard30B.wp = -2;
 challengeCard30B.ep = 0;
 challengeCard30B.gb = -3;
-challengeCards[1][5] = challengeCard30B;
+challengeCards[1][9] = challengeCard30B;
 
 var challengeCard30C = new Object();
 challengeCard30C.title = "War";
@@ -213,7 +337,7 @@ challengeCard30C.wp = -2;
 challengeCard30C.ep = 0;
 challengeCard30C.gb = -2;
 challengeCard30C.special = "createInventory";
-challengeCards[2][5] = challengeCard30C;
+challengeCards[2][9] = challengeCard30C;
 
 
 // template for cards
@@ -226,7 +350,7 @@ challengeCardXXA.hp = 0;
 challengeCardXXA.wp = 0;
 challengeCardXXA.ep = 0;
 challengeCardXXA.gb = 0;
-challengeCards[0][XX] = challengeCardXXA;
+challengeCards[0][QQ] = challengeCardXXA;
 
 var challengeCardXXB = new Object();
 challengeCardXXB.title = "";
@@ -236,15 +360,15 @@ challengeCardXXB.hp = 0;
 challengeCardXXB.wp = 0;
 challengeCardXXB.ep = 0;
 challengeCardXXB.gb = 0;
-challengeCards[1][XX] = challengeCardXXB;
+challengeCards[1][QQ] = challengeCardXXB;
 
 var challengeCardXXC = new Object();
 challengeCardXXC.title = "";
 challengeCardXXC.text = "";
 challengeCardXXC.impact = "";
-challengeCardXXC.hp = -1;
-challengeCardXXC.wp = 2;
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
 challengeCardXXC.ep = 0;
 challengeCardXXC.gb = 0;
-challengeCards[2][XX] = challengeCardXXC;
+challengeCards[2][QQ] = challengeCardXXC;
  */
