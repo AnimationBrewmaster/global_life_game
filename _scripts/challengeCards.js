@@ -521,32 +521,32 @@ challengeCards[2][15] = challengeCard17C;
 //card 18
 var challengeCard18A = new Object();
 challengeCard18A.title = "Injury";
-challengeCard18A.text = "";
-challengeCard18A.impact = "";
+challengeCard18A.text = "You hurt your knee playing football with your friend. Physiotherapy is not covered completely by your health care.";
+challengeCard18A.impact = "Lose $5 Global Buck";
 challengeCard18A.hp = 0;
 challengeCard18A.wp = 0;
 challengeCard18A.ep = 0;
-challengeCard18A.gb = 0;
+challengeCard18A.gb = -5;
 challengeCards[0][16] = challengeCard18A;
 
 var challengeCard18B = new Object();
 challengeCard18B.title = "Injury";
-challengeCard18B.text = "";
-challengeCard18B.impact = "";
+challengeCard18B.text = "Your leg is broken because of your unsafe workplace. Your job does not provide Worker Compensation and as recover you receive no income.";
+challengeCard18B.impact = "Lose $5 Global Bucks";
 challengeCard18B.hp = 0;
 challengeCard18B.wp = 0;
 challengeCard18B.ep = 0;
-challengeCard18B.gb = 0;
+challengeCard18B.gb = -5;
 challengeCards[1][16] = challengeCard18B;
 
 var challengeCard18C = new Object();
 challengeCard18C.title = "Injury";
-challengeCard18C.text = "";
-challengeCard18C.impact = "";
-challengeCard18C.hp = 0;
+challengeCard18C.text = "Even though the civil war in your country has ended, there are still thousands of landmines left around. You step on one and are lucky to only lose your leg. Unfortunately, this makes it hard to do work.";
+challengeCard18C.impact = "Lose 4 health points and $4 Global Bucks. ";
+challengeCard18C.hp = -4;
 challengeCard18C.wp = 0;
 challengeCard18C.ep = 0;
-challengeCard18C.gb = 0;
+challengeCard18C.gb = -4;
 challengeCards[2][16] = challengeCard18C;
 
 // DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
