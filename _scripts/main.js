@@ -304,11 +304,12 @@ function getwater() {
 }
 
 // actions that take place when toilet destination is selected
+// TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bouns (free from getting sick for a few turns?)
 function getToilet() {
    // SetChosenPath("toilet");
     takeTurn();
-    alertIt("You have arrived at the toilet.\nGet 3 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
-    player1.hp += 3;
+    alertIt("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
+    player1.hp += 2;
     updateStats();
     //takeTurn();
 }
@@ -455,14 +456,19 @@ function getSchool() {
 
 // gets and checks user input for schooling spending and updates player stats
 function buySchool() {
-    var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education?", Math.round(Math.random() * 5));
+    var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?", Math.round(Math.random() * 3));
     var bucksSpent = parseInt(schoolBuy);
     if (bucksSpent == NaN) {
         UpdateUserMessage("Bad input, please try again");
         buySchool();
-    } else if (bucksSpent > player1.gb) {
+    } else if (bucksSpent > 3) {
+    	UpdateUserMessage("That amount is above the maximum allowed, please choose a value of 3 or less");
+        buySchool();
+    } 
+    else if (bucksSpent > player1.gb) {
         UpdateUserMessage("You don't have that much money, try buying a little less");
         buySchool();
+        
     } else {
         impactStats(0, 0, 2 * bucksSpent, -bucksSpent);
         updateStats();
@@ -539,7 +545,7 @@ function buyNewStuff() {
             break;
 
         case "food":
-            spent = 3;
+            spent = 2;
             itemMessage = "food message";
             if (checkout("food", spent, itemMessage)) {
                 player1.food = true;
@@ -550,7 +556,7 @@ function buyNewStuff() {
             break;
 
         case "kit":
-            spent = 4;
+            spent = 3;
             itemMessage = "kit message";
             if (checkout("kit", spent, itemMessage)) {
                 player1.kit = true;
