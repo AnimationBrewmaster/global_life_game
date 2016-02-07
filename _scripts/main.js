@@ -623,117 +623,6 @@ function checkPowerUp(powerUp) {
 	
 }
 
-// gets user prompt on what they want to buy and adds to inventory if the have enough money
-/* moved to buyNewStuff()
-function buyStuff() {
-    var spent = 0;
-    var itemMessage = "";
-    var stuffBuy = prompt("Welcome to the store, you have " + player1.gb + " Global Bucks\nWhat would you like to buy?\nbar of 'soap'= $1\nwater purification 'tablet' = $1\n'bucket' for carrying water = $2\n'food' = $3\nfirst aid 'kit' = $4\nbiosand 'filter' = $20\n'bike' = $20\n'plumbing' = $100\n'nothing' = $0", "soap, tablet, bucket, food. kit, filter, bike, plumbing, nothing");
-    switch (stuffBuy) {
-
-        case "soap":
-            spent = 1;
-            itemMessage = "bar of soap message";
-            if (checkout("soap", spent, itemMessage) === true) {
-                player1.soap = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "tablet":
-            spent = 1;
-            itemMessage = "tablet message";
-            if (checkout("tablet", spent, itemMessage)) {
-                player1.tablet = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "bucket":
-            spent = 2;
-            itemMessage = "bucket message";
-            if (checkout("bucket", spent, itemMessage)) {
-                player1.bucket = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "food":
-            spent = 3;
-            itemMessage = "food message";
-            if (checkout("food", spent, itemMessage)) {
-                player1.food = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "kit":
-            spent = 4;
-            itemMessage = "kit message";
-            if (checkout("kit", spent, itemMessage)) {
-                player1.kit = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "filter":
-            spent = 20;
-            itemMessage = "filter message";
-            if (checkout("filter", spent, itemMessage)) {
-                player1.filter = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "bike":
-            spent = 20;
-            itemMessage = "bike message";
-            if (checkout("bike", spent, itemMessage)) {
-                player1.bike = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "plumbing":
-            spent = 100;
-            itemMessage = "plumbing message";
-            if (checkout("plumbing", spent, itemMessage)) {
-                player1.plumbing = true;
-                updateStats();
-            } else {
-                rejectTransaction();
-            }
-            break;
-
-        case "nothing":
-            spent = 0;
-            itemMessage = "No bonuses for you.";
-            alertIt("You bought nothing and spent 0 Global Bucks.\n" + itemMessage);
-            break;
-
-        default:
-            alertIt("Bad input, please try again");
-            buyNewStuff();
-            break;
-    }
-}
-
-*/
-
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
 function checkout(item, value, message) {
     if (player1.gb < value) {
@@ -1293,6 +1182,7 @@ function MakeBoyOrGirl()
 }
 
 var characterImg;
+var characterBike;
 
 function GetCharacterName(_selectedCountry)
 {
@@ -1321,33 +1211,37 @@ function GetCharacterName(_selectedCountry)
     
     var randNum = Math.ceil(Math.random() * arrPotentialCharNamesMale.length - 1); // give us a 0, 1 or 2
     var _sex = MakeBoyOrGirl();
+    var _ethnix = Math.round(Math.random()); // females start at +2;
     
     switch(_sex)
     {
         case "MALE" :
             characterName = arrPotentialCharNamesMale[randNum];
-            characterImg = "images/character_" + _selectedCountry + "_" + Math.round(Math.random()) + ".png"; 
-            console.log("CHAR NAME: " + characterName);
+            characterImg = "images/character_" + _selectedCountry + "_" + _ethnix + ".png"; 
+            characterBike = "images/character_" + _selectedCountry + "_" + _ethnix + "_bike.png"; 
+            //onsole.log("CHAR NAME: " + characterName);
             break;
                 
         case "FEMALE" :
             characterName = arrPotentialCharNamesFemale[randNum];
-             characterImg = "images/character_" + _selectedCountry + "_" + Math.round(Math.random() + 2) + ".png"; 
+            characterImg = "images/character_" + _selectedCountry + "_" + Number(_ethnix + 2) + ".png"; 
+            characterBike = "images/character_" + _selectedCountry + "_" + Number(_ethnix + 2) + "_bike.png"; 
             break;
     }
     
     console.log("CHAR NAME IS " + characterName + " and randNum was " + randNum);
+    console.log("CHAR BIKE IS " + characterBike + " and randNum was " + randNum);
     console.log("CHAR IMAGE IS " + characterImg);
     
-     document.getElementById("character").src = characterImg;
-    
+    document.getElementById("character").src = characterImg;
     playername = characterName;
     
     // update the large text at the top of the screen. still hoping to do something cool with this.
     UpdatePlayerStageName(playername);
+    // update all the avatars to the current pick (inside EDGE):
+    UpdatePlayerAvatar(characterImg,characterBike);
     // also update the text at the very bottom of the HUD that states whether the user is alive or dead:
     UpdatePlayerName(playername.toUpperCase());
-
     
 }
 

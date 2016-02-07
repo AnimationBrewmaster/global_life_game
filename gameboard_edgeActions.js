@@ -192,6 +192,29 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          }
          
+         UpdatePlayerAvatar = function(avtr, bike)
+         {
+         	console.log('UpdatePlayerAvatar; called from EDGE:' + avtr);
+         	//_bike = avtr = "_bike"
+         	//sym.$("").src = avtr;
+         	sym.$("charJob").attr("src", avtr);
+         	sym.$("charMed").attr("src", avtr);
+         	sym.$("charMarket").attr("src", avtr);
+         	sym.$("charToilet").attr("src", avtr);
+         	sym.$("charWater").attr("src", avtr);
+         	sym.$("charSchool").attr("src", avtr);
+         	sym.$("charFarm").attr("src", avtr);
+         	sym.getSymbol("hudNextDest").$("character").attr("src", avtr);
+         	// and the bike versions:
+         	sym.$("bikeJob").attr("src", bike);
+         	sym.$("bikeMed").attr("src", bike);
+         	sym.$("bikeMarket").attr("src", bike);
+         	sym.$("bikeToilet").attr("src", bike);
+         	sym.$("bikeWater").attr("src", bike);
+         	sym.$("bikeSchool").attr("src", bike);
+         	sym.$("bikeFarm").attr("src", bike);
+         }
+         
          UpdateUserMessage = function(msg)
          {
          	sym.getSymbol("mcUserMessage").$("txtScoreMessage").html(msg);
@@ -201,14 +224,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // write to our global bStopDice
          sym.SetNumberDiceShouldStopOn = function(newrollamt)
          {
-         	console.log('SetNumberDiceShouldStopOn:' + newrollamt);
+         	//console.log('SetNumberDiceShouldStopOn:' + newrollamt);
          	sym.ShowDiceBasedOnGlensValue(newrollamt);
          	//StartDice();
          }
          
          sym.SetNewTimelineStopPosition = function(val)
          {
-         	console.log('SetNewTimelineStopPosition');
+         	//console.log('SetNewTimelineStopPosition');
          	bStopDice = val;
          }
          
@@ -432,12 +455,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          HideSecondDice = function() // not a sym.function because it gets called locally in this file
          {
-         	console.log("SHOULD BE HIDING 2ND DICE RIGHT NOW");
+         //	console.log("SHOULD BE HIDING 2ND DICE RIGHT NOW");
          
          	sym.getSymbol("dicePair").$("dice_symbol_2").hide();
          	sym.getSymbol("dicePair").$("shadow2").hide();
          
-         	console.log("2ND should be hidden now");
+         //	console.log("2ND should be hidden now");
          }
          // same as above:
          ShowSecondDice = function()
@@ -448,7 +471,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.StopDice = function()
          {
-         	console.log("sym.stopDice called");
+         //	console.log("sym.stopDice called");
          	sym.getSymbol("dicePair").getSymbol("dice_symbol_1").stop(0);
          	sym.getSymbol("dicePair").getSymbol("dice_symbol_2").stop(0);
          	sym.getSymbol("dicePair").stop(0);
@@ -463,7 +486,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.FlashDiceButton = function()
          {
-         	console.log("FLASH DICE BUTTON #####################");
+         //	console.log("FLASH DICE BUTTON #####################");
          	sym.getSymbol("mcHUD").$("buttonflash").show();
          	sym.getSymbol("mcHUD").getSymbol("buttonflash").play();
          }
@@ -488,7 +511,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.HideAllBikes = function()
          {
-         
          	// Hide all the bikes
          	sym.$("bikeJob").hide();
          	sym.$("bikeMed").hide();
@@ -497,7 +519,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("bikeWater").hide();
          	sym.$("bikeSchool").hide();
          	sym.$("bikeFarm").hide();
-         
          	// and SHOW the avatar
          	sym.$("charJob").show();
          	sym.$("charMed").show();
@@ -506,13 +527,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("charWater").show();
          	sym.$("charSchool").show();
          	sym.$("charFarm").show();
-         
-         
          }
          
          sym.ShowAllBikes = function()
          {
-         
          	// Hide all the bikes
          	sym.$("bikeJob").show();
          	sym.$("bikeMed").show();
@@ -530,7 +548,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("charWater").hide();
          	sym.$("charSchool").hide();
          	sym.$("charFarm").hide();
-         
          }
          
          sym.ShowObituary = function(nom, obit)
@@ -538,12 +555,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("obit").$("txtNom").html(nom);
          	sym.getSymbol("obit").$("txtObit").html(obit);
          
-         
          	// now unhide it and play the animation:
          	sym.$("obit").show();
          	sym.getSymbol("obit").play(1);
-         
-         
          }
          
          
@@ -556,9 +570,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          //sym.ShowAllBikes();
          sym.HideAllBikes();
          //HideSecondDice();
-         
-         
-         
 
       });
       //Edge binding end
