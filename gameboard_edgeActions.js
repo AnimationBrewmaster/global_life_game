@@ -217,6 +217,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          UpdateUserMessage = function(msg)
          {
+         	sym.getSymbol("mcUserMessage").$("txtScoreMessage").html("");
+         	sym.getSymbol("mcUserMessage").stop(0);
          	sym.getSymbol("mcUserMessage").$("txtScoreMessage").html(msg);
          	sym.getSymbol("mcUserMessage").play(0);
          }
@@ -1365,7 +1367,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFarm}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("Farms have fresh food.");
          sym.getSymbol("btnFarm").play("over");
          
          
@@ -1390,7 +1392,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnSchool}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("An education will get you a better job. A better job will get you more money faster.");
          sym.getSymbol("btnSchool").play("over");
          
          
@@ -1415,7 +1417,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnWater}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("Living uses water. Every turn will use some of yours. Always have an ample supply.");
          sym.getSymbol("btnWater").play("over");
          
          
@@ -1440,8 +1442,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnHospital}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("Hospitals heal you when you're sick and give you health related items.");
          sym.getSymbol("btnHospital").play("over");
+         
+         
          
          
 
@@ -1465,10 +1469,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnJob}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("A job will bring in income and allow you to buy food and supplies.");
          sym.getSymbol("btnJob").play("over");
-         
-         
 
       });
       //Edge binding end
@@ -1491,8 +1493,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnMarket}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("Markets will sell you a variety of useful items including food and transportation.");
          sym.getSymbol("btnMarket").play("over");
+         
          
          
 
@@ -1517,7 +1520,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnToilet}", "mouseover", function(sym, e) {
-         // insert code to be run when the mouse hovers over the object
+         UpdateUserMessage("Visiting a toilet gives you a health advantage and allows you to avoid nasty diseases");
          sym.getSymbol("btnToilet").play("over");
          
          
@@ -1537,6 +1540,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("toilet");
          SetHolderFunction(getToilet);
+         
 
       });
       //Edge binding end
