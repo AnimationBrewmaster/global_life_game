@@ -619,7 +619,16 @@ function buyNewStuff() {
 
 // TODO - Glen: write this function out
 function checkPowerUp(powerUp) {
-	// go through the power up list and give them the power	
+	// go through the power up list and give them the power
+	switch (powerUp) {
+		case "plumbing":
+			console.log("plumbingp power up");
+			player1.wp = 100;
+			break;
+			
+		default:
+		console.log("nothing");
+	}
 	
 }
 
@@ -908,6 +917,23 @@ function checkGameOver() {
         playerDied();
     }
     // TODO do we want to check for the other conditions here? example - player out of money, player reaches set number of turns, is there a "win" scenario?
+    if (playerWins()) {
+    	playerWon();
+    }
+}
+
+// checks for win condition
+function playerWins() {
+	//return true;
+	if (player1.hp >= 50 && player1.wp >= 50 && player1.ep >= 30 && player1.gb >= 75 && (player1.filter == true || player1.plumbing == true)) {
+		console.log("players wins = true");
+		return true;
+		
+	}
+	else {
+		console.log("players wins = false");
+		return false;
+	}	
 }
 
 // updates game once player has died
@@ -928,7 +954,32 @@ function playerDied() {
 
 }
 
+function playerWon() {
+    //alert('dead');
+    console.log("player won");
+    UpdateUserMessage("Congratulations! You won!!");
+    updateStats();
+    //document.body.style.backgroundColor = "#ff0000";
 
+    gameOver = true;
+    UpdateHUD();
+    
+    // pop up the tombstone
+   //THE_GAME.ShowGameOver();
+   var winMessage = "Congratulations on achieving a sustainable life!<br>Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions!<br> Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";
+   
+   THE_GAME.ShowObituary(_username, winMessage);  
+
+}
+
+// TODO - add win conditions here
+/*  WIN CONDITIONS
+    50 Health Points
+    50 Water Points
+    30 Education Points
+    $75 Global Bucks
+    A Biosand Filter or Plumbing
+ */
 function CalcHowBadlyPlayerDied()
 {
     var _msgWater = "";
