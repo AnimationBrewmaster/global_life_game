@@ -694,8 +694,9 @@ function getChallengeCard() {
     //var number = 5; //TEMP TESTING
     console.log("challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
-    var _msg = challengeCards[countryValue][number].title + "\n" + challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
-    UpdatePopup("Challenge Card!", _msg, "red");
+    var _title = challengeCards[countryValue][number].title;
+    var _msg = challengeCards[countryValue][number].text + "<br><br>" + challengeCards[countryValue][number].impact;
+    UpdatePopup(_title, _msg, "red");
     // checking for special case cards
     if (challengeCards[countryValue][number].special) {
     	console.log(challengeCards[countryValue][number].special);
@@ -709,8 +710,9 @@ function getPartnershipCard() {
     var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
     console.log("partnership Card! - " + number);
    // UpdateUserMessage("Partnership Card!\n\n" + partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact);
-    var _msg = partnershipCards[countryValue][number].title + "\n" + partnershipCards[countryValue][number].text + "\n" + partnershipCards[countryValue][number].impact;
-    UpdatePopup("Partnership Card!", _msg, "green");
+   	var _title = partnershipCards[countryValue][number].title;
+    var _msg = partnershipCards[countryValue][number].text + "<br><br>" + partnershipCards[countryValue][number].impact;
+    UpdatePopup(_title, _msg, "green");
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
 }
 
@@ -733,6 +735,10 @@ function specialCards(fnstring) {
 			
 		case "createInventory": 
 			createInventory();
+			break;
+			
+		case "gotDiarrhea":
+			gotDiarrhea();
 			break;	
 			
 		default: 
@@ -759,6 +765,11 @@ function gainEducationLevel() {
 function loseEducationLevel() {
 	modifyEducationLevel(-1);
 	console.log("lose some education");
+}
+
+function gotDiarrhea() {
+	// TODO - code this (get medicine in 3 turns or lose 6 health points)
+	console.log("you got Diarrhea!");
 }
 
 // TODO - test function more fully
@@ -880,6 +891,7 @@ function bikeRolls() {
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
 // TODO - needs to add power ups and down turn impacts
+// TODO - change this so it happens after every dice roll, not just at destinations
 function travelToll(numberOfTurns) {
 
     // resetting number of rolls global variable

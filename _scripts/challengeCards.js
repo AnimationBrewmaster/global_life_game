@@ -34,7 +34,7 @@ challengeCards[1][0] = challengeCard1B;
 
 var challengeCard1C = new Object();
 challengeCard1C.title = "Wage / Employment";
-challengeCard1C.text = "You get a job on a fishing boat. Unfortunately, the fish you catch are sold to feed the pets of people in wealthy countries. Overfishing has depleted your fish population, this leaves little food for your community. ";
+challengeCard1C.text = "You get a job on a fishing boat. Unfortunately, the fish you catch are sold to feed the pets of people in wealthy countries. Overfishing has depleted your fish population, this leaves little food for your community.";
 challengeCard1C.impact = "You earn 5 Global Bucks but have to give 2 back to developed nations and 2 to the bank, keeping only 1. Also lose 1 health point.";
 challengeCard1C.hp = -1;
 challengeCard1C.wp = 0;
@@ -86,7 +86,7 @@ challengeCards[0][2] = challengeCard3A;
 
 var challengeCard3B = new Object();
 challengeCard3B.title = "Food Availability";
-challengeCard3B.text = "Not enough food is is delivered to the market due to drought and crop shortage so you were unable to buy enough food.";
+challengeCard3B.text = "Not enough food is delivered to the market due to drought and crop shortage so you were unable to buy enough food.";
 challengeCard3B.impact = "Lose 3 health points.";
 challengeCard3B.hp = -3;
 challengeCard3B.wp = 0;
@@ -128,7 +128,7 @@ challengeCards[1][3] = challengeCard4B;
 var challengeCard4C = new Object();
 challengeCard4C.title = "Food Quality";
 challengeCard4C.text = "Malnutrition reduces your immunity to disease. You contract diseases easier now.";
-challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks."; // TODO - need to implement this
+challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks."; // TODO - need to implement this (already part of main game - need to add user feedback)
 challengeCard4C.hp = -2;
 challengeCard4C.wp = 0;
 challengeCard4C.ep = 0;
@@ -154,7 +154,7 @@ challengeCard5B.impact = "Lose 2 health points and $2 Global Bucks";
 challengeCard5B.hp = -2;
 challengeCard5B.wp = 0;
 challengeCard5B.ep = 0;
-challengeCard5B.gb = 2;
+challengeCard5B.gb = -2;
 challengeCards[1][4] = challengeCard5B;
 
 var challengeCard5C = new Object();
@@ -164,7 +164,7 @@ challengeCard5C.impact = "Lose 2 health points and $2 Global Bucks";
 challengeCard5C.hp = -2;
 challengeCard5C.wp = 0;
 challengeCard5C.ep = 0;
-challengeCard5C.gb = 2;
+challengeCard5C.gb = -2;
 challengeCards[2][4] = challengeCard5C;
 
 //card 6
@@ -328,11 +328,11 @@ challengeCards[2][9] = challengeCard10C;
 var challengeCard11A = new Object();
 challengeCard11A.title = "Hygiene and Sanitation";
 challengeCard11A.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. You must travel to the pharmacy down the block to purchase medicine.";
-challengeCard11A.impact = "";
+challengeCard11A.impact = "Lose $2 Global Bucks and 2 water points";
 challengeCard11A.hp = 0;
-challengeCard11A.wp = 0;
+challengeCard11A.wp = -2;
 challengeCard11A.ep = 0;
-challengeCard11A.gb = 0;
+challengeCard11A.gb = -2;
 challengeCards[0][10] = challengeCard11A;
 
 var challengeCard11B = new Object();
@@ -348,12 +348,13 @@ challengeCards[1][10] = challengeCard11B;
 // TODO - implement sickness function 
 var challengeCard11C = new Object();
 challengeCard11C.title = "Hygiene and Sanitation";
-challengeCard11C.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. Without treatment, it could be fatal, but luckily you can purchase medicine for $3 Global Bucks if you make it to the hospital in the next three turns. ";
+challengeCard11C.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. Without treatment, it could be fatal, but luckily you can purchase medicine for $3 Global Bucks if you make it to the hospital in the next three turns.";
 challengeCard11C.impact = "If not, lose 6 health points.";
-challengeCard11C.hp = -6;
+challengeCard11C.hp = -6; // TODO - remove health point loss when "diarrhea" function works implemented 
 challengeCard11C.wp = 0;
 challengeCard11C.ep = 0;
 challengeCard11C.gb = 0;
+challengeCard11C.special = "gotDiarrhea";
 challengeCards[2][10] = challengeCard11C;
 
 //card 12
@@ -379,7 +380,7 @@ challengeCard12B.gb = 0;
 challengeCard12B.special = "loseEducationLevel";
 challengeCards[1][11] = challengeCard12B;
 
-// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
+// TODO - block user from a destination for # of turns - use countdown variable to send an unblock message
 var challengeCard12C = new Object();
 challengeCard12C.title = "Illness and Education";
 challengeCard12C.text = "One of your family members dies of HIV/AIDS. You cannot go to school and must stay home to run the family business.";
@@ -396,8 +397,8 @@ challengeCard13A.title = "Waterborne Illness";
 challengeCard13A.text = "You get sick from drinking water from the river while out camping.";
 challengeCard13A.impact = "Lose 2 health and 2 water points.";
 challengeCard13A.hp = -2;
-challengeCard13A.wp = 0;
-challengeCard13A.ep = -2;
+challengeCard13A.wp = -2;
+challengeCard13A.ep = 0;
 challengeCard13A.gb = 0;
 challengeCards[0][12] = challengeCard13A;
 
@@ -556,7 +557,7 @@ var challengeCard19A = new Object();
 challengeCard19A.title = "Illness and Education";
 challengeCard19A.text = "You get the flu and miss a field trip that covered half a topic of your class, resulting in a poor test result. Appreciate the fact that you get to go to school. It is estimated that over 770 million people around the world are illiterate and do not have access to education - leaving them trapped in poverty.";
 challengeCard19A.impact = "Lose 2 health points and drop an education level.";
-challengeCard19A.hp = -3;
+challengeCard19A.hp = -2;
 challengeCard19A.wp = 0;
 challengeCard19A.ep = 0;
 challengeCard19A.gb = 0;
@@ -579,7 +580,7 @@ challengeCard19C.title = "Illness and Education";
 challengeCard19C.text = "A lack of sanitation causes you to get schistosomiasis, a parasite that invades your body causing many health problems - this also keeps you from attending school.";
 challengeCard19C.impact = "Lose 1 health point, lose 2 water points, and drop an education level.";
 challengeCard19B.hp = -1;
-challengeCard19C.wp = 2;
+challengeCard19C.wp = -2;
 challengeCard19C.ep = 0;
 challengeCard19C.gb = 0;
 challengeCard19C.special = "loseEducationLevel";
@@ -646,7 +647,7 @@ challengeCards[1][19] = challengeCard30B;
 
 var challengeCard30C = new Object();
 challengeCard30C.title = "War";
-challengeCard30C.text = "Civil war breaks out in your country. You are forced to flee and seek refuge elsewhere. ";
+challengeCard30C.text = "Civil war breaks out in your country. You are forced to flee and seek refuge elsewhere.";
 challengeCard30C.impact = "Lose 2 health points, 2 water points and $2 Global Bucks. Also, if you purchased anything from the market or own anything, leave it behind when you flee.";
 challengeCard30C.hp = -2;
 challengeCard30C.wp = -2;

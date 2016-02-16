@@ -359,7 +359,7 @@ var partnershipCard12A = new Object();
 partnershipCard12A.title = "Illness & Education";
 partnershipCard12A.text = "Your school nurse comes into your classroom and shows you a presentation about the importance of living a healthy lifestyle and how to avoid illness. The nurse talks about how to lower the spread of illnesses so you and your classmates can go to school more often.";
 partnershipCard12A.impact = "Gain 2 Health Points and 1 Education Level.";
-partnershipCard12A.hp = 1;
+partnershipCard12A.hp = 2;
 partnershipCard12A.wp = 0;
 partnershipCard12A.ep = 0;
 partnershipCard12A.gb = 0;
@@ -548,7 +548,7 @@ partnershipCards[2][16] = partnershipCard20C;
 
 //TODO - add the 55 other cards....
 
-// TODO - gain an education level (card #21) - .special = "gainEductionalLevel" - see challengeCards.js
+// TODO - gain an education level (card #21) - .special = "gainEductionalLevel" - see challengeCards.js - COMPELTE - REQUIRES FULL TEST
 
 // template for partnership cards
 /*
