@@ -42,6 +42,7 @@ var getDifficulty;
 var countryValue; // numberic value for country used for card selection
 var _username;
 var bUserInputDisabled = false; // used to disable user changing input after game start
+var additionalInfo = ""; // extra messgae info to concat on dice roll messages
 
 var _prevLife = 0;
 var _prevWater = 0;
@@ -281,6 +282,7 @@ function getwater() {
     takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
+    
     if (roll === 1) {
         if (player1.filter) {
             message = "The water is contaminated.  Fortunately you have a biosand filter so you don't get sick.";
@@ -308,7 +310,7 @@ function getwater() {
 function getToilet() {
    // SetChosenPath("toilet");
     takeTurn();
-    alertIt("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
+    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
     player1.hp += 2;
     updateStats();
     //takeTurn();
@@ -859,9 +861,9 @@ function ExecutePlayerRoll() // called by the dice function.
 
     PassDiceRollToEdge(dice_roll);
 
-    numberOfRolls += 1;
-    console.log("number of rolls = " + numberOfRolls);
-    console.log("YOU ROLLED A " + dice_roll);
+    //numberOfRolls += 1;
+    //console.log("number of rolls = " + numberOfRolls);
+    //console.log("YOU ROLLED A " + dice_roll);
 
     // delay doing anything until the dice animation has had time to finish:
     intervalDiceAnimTimeDelay = setInterval(WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal, 1000, dice_roll);
@@ -876,7 +878,7 @@ function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal(dice_roll) {
     THE_GAME.ShowDiceBasedOnGlensValue(dice_roll);
 }
 
-// rolls 3 dice until total of dice rolls equals 6, then passes number of rolls to travel toll function
+// rolls 3 dice until total of dice rolls equals 6, then passes number of rolls to travel toll function - NO LONGER CALLED
 function bikeRolls() {
     var number = 0;
     var i = 0;
@@ -887,6 +889,7 @@ function bikeRolls() {
         i++;
     }
     travelToll(i);
+    
 }
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
@@ -895,22 +898,26 @@ function bikeRolls() {
 function travelToll(numberOfTurns) {
 
     // resetting number of rolls global variable
-    numberOfRolls = 0;
-    UpdateUserMessage('hello');
-    UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
-
+    //numberOfRolls = 0;
+    //UpdateUserMessage('hello');
+    //UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
+	additionalInfo = "";
     impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
     updateStats();
     if (sick === true) {
         UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
+        additionalInfo = "<br>You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.";
         impactStats(-2 * numberOfTurns, 0, 0, 0);
         updateStats();
     }
     if (sickWater === true) {
         UpdateUserMessage("You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points");
+        additionalInfo = "<br>You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points";
         impactStats(-2 * numberOfTurns, -2 * numberOfTurns, 0, 0);
         updateStats();
     }
+    //TODO - add check power ups here?
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 // checks to see if player has died
@@ -928,7 +935,7 @@ function checkGameOver() {
       
         playerDied();
     }
-    // TODO do we want to check for the other conditions here? example - player out of money, player reaches set number of turns, is there a "win" scenario?
+    // Check for player win scenario
     if (playerWins()) {
     	playerWon();
     }
@@ -984,14 +991,6 @@ function playerWon() {
 
 }
 
-// TODO - add win conditions here
-/*  WIN CONDITIONS
-    50 Health Points
-    50 Water Points
-    30 Education Points
-    $75 Global Bucks
-    A Biosand Filter or Plumbing
- */
 function CalcHowBadlyPlayerDied()
 {
     var _msgWater = "";
@@ -1105,7 +1104,7 @@ function checkDiceRoll(diceRoll) {
             intervalDiceButtonFlashes = setInterval(FlashTheDice, 3000);
 
             // adjust their stats before passing to VIEW
-            travelToll(numberOfRolls);
+            travelToll(1);
             
             
             // call DestinationFunction();
@@ -1113,6 +1112,7 @@ function checkDiceRoll(diceRoll) {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + "\nRoll Again?";
+            travelToll(1);
             FlashTheDice();
         }
 
@@ -1122,7 +1122,7 @@ function checkDiceRoll(diceRoll) {
             currentPlayerSquare = HOME;
             // path is complete
             msgDiceRoll = 'You rolled a ' + diceRoll + '! More than enough to arrive back at home! Sweet!';
-            travelToll(numberOfRolls);
+            travelToll(1);
             // show hud here
             // reset currentPlayerSquare to zero
             currentPlayerSquare = 0;
@@ -1137,6 +1137,7 @@ function checkDiceRoll(diceRoll) {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "Player is now at position " + currentPlayerSquare + "\nRoll Again?";
+            travelToll(1);
             //LetPlayerRoll();
             FlashTheDice();
         }
@@ -1148,7 +1149,7 @@ function checkDiceRoll(diceRoll) {
     // alert the correct message. i moved the alerts here so they wouldn't stop time and halt player movement:
     if (msgDiceRoll !== "") {
         //        alert("checkDiceRoll: "+msgDiceRoll);
-        UpdateUserMessage(msgDiceRoll);
+        UpdateUserMessage(msgDiceRoll+additionalInfo);
     }
 }
 
