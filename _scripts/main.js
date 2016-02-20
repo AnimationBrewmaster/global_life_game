@@ -642,7 +642,7 @@ function checkout(item, value, message) {
     } else {
         console.log("checkout true");
         player1.gb -= value;
-        UpdateUserMessage("You just bought " + item + " for " + value + " Global Bucks.\n" + message);
+        UpdateUserMessage("You just bought " + item + " for " + value + " Global Bucks.\n"); // "+ message" for more context
         return true;
     }
 }
@@ -660,7 +660,7 @@ function takeTurn() {
     //HideStartingInstructions();
     //console.log("* HideStartingInstructions *");
     //LetPlayerRoll();
-    checkCard(); // cards are live again.
+    checkCard(); // TODO remove once we solve pop-up bug
     updateStats();
     console.log("* updating stats *");
     displayInventory();
@@ -672,9 +672,10 @@ function HideStartingInstructions() {
 }
 
 // checks for action cards and chooses the type
+// TODO function checkCard(square) 
 function checkCard() {
+	//console.log("position arguement sent: " + square);
 	//getChallengeCard(); //TEMP TESTING
-
     var number = Math.floor((Math.random() * 100) + 1);
     console.log("Random Card Numer: " + number);
     if (number < 36) {
@@ -687,7 +688,18 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
-
+	// TODO simple version for now, will check vs each destination in future
+	/*
+	if (square == 2 || square == 7) {
+		getChallengeCard();
+	}
+	else if (square == 5) {
+		getPartnershipCard();
+	}
+	else {
+		console.log("empty square");
+	}
+	*/
 }
 
 // randomly selects challenge card
@@ -1111,8 +1123,9 @@ function checkDiceRoll(diceRoll) {
         } else {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
-            msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + "\nRoll Again?";
+            msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + "\nRoll Again?";           
             travelToll(1);
+            // checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
             FlashTheDice();
         }
 
@@ -1138,6 +1151,8 @@ function checkDiceRoll(diceRoll) {
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "Player is now at position " + currentPlayerSquare + "\nRoll Again?";
             travelToll(1);
+            
+            //checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
             //LetPlayerRoll();
             FlashTheDice();
         }
@@ -1356,7 +1371,7 @@ function SetInputDifficulty(val) {
             break;
         default:
             bgImage = "url('images/bg0.jpg')";
-             _message = "A = EASIER (first world), B = CHALLENGING (developing nation) , C = DIFFICULT (third world)";
+             _message = "A = EASIER (Developed Nation), B = CHALLENGING (Emerging Nation) , C = DIFFICULT (Developing Nation)";
             break;
     }
 

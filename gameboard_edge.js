@@ -21,9 +21,9 @@
         ],
         symbols = {
             "stage": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "both",
                 centerStage: "both",
                 resizeInstances: false,
@@ -650,7 +650,8 @@
                             opacity: '0.48107215477441',
                             text: "<p style=\"margin:0px\">the Global Life Game! &nbsp; &nbsp;&nbsp;</p>",
                             align: "center",
-                            font: ['rancho, fantasy', [51, "px"], "rgba(255,255,255,1.00)", "400", "none", "normal", "break-word", ""]
+                            font: ['rancho, fantasy', [51, "px"], "rgba(255,255,255,1)", "400", "none", "normal", "break-word", ""],
+                            textShadow: ["rgba(0,0,0,0.65098)", 3, 3, 3]
                         },
                         {
                             id: 'hudNextDest',
@@ -841,12 +842,12 @@
                             '453px'
                         ],
                         [
-                            "eid13061",
+                            "eid13063",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersMarket}",
+                            "${pathmarkersCopy4}",
                             'none',
                             'none'
                         ],
@@ -872,7 +873,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14408",
+                            "eid14423",
                             "-moz-transform-origin",
                             0,
                             0,
@@ -883,7 +884,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14409",
+                            "eid14424",
                             "-ms-transform-origin",
                             0,
                             0,
@@ -894,7 +895,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14410",
+                            "eid14425",
                             "msTransformOrigin",
                             0,
                             0,
@@ -905,7 +906,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14411",
+                            "eid14426",
                             "-o-transform-origin",
                             0,
                             0,
@@ -916,7 +917,7 @@
                             {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
-                            "eid14412",
+                            "eid14427",
                             "transform-origin",
                             0,
                             0,
@@ -1017,34 +1018,24 @@
                             '1024px'
                         ],
                         [
-                            "eid13081",
-                            "scaleX",
-                            0,
-                            0,
-                            "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid13082",
-                            "scaleX",
-                            1048,
-                            0,
-                            "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid13065",
+                            "eid13061",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersCopy6}",
+                            "${pathmarkersMarket}",
                             'none',
                             'none'
+                        ],
+                        [
+                            "eid5434",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${mcHUD}",
+                            '0.84693',
+                            '0.84693'
                         ],
                         [
                             "eid5433",
@@ -1139,86 +1130,24 @@
                             [[886.55, 485.29, 0, 0, 0, 0,0],[1032.96, 743.85, 0, 0, 0, 0,297.13]]
                         ],
                         [
-                            "eid12184",
-                            "location",
-                            0,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[123.22, 564.48, 0, 0, 0, 0,0],[310.49, 429.32, 0, 0, 0, 0,230.95]]
-                        ],
-                        [
-                            "eid12185",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[310.49, 429.32, 0, 0, 0, 0,0],[444.95, 307.92, 0, 0, 0, 0,181.16]]
-                        ],
-                        [
-                            "eid12186",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[444.95, 307.92, 0, 0, 0, 0,0],[403.39, 196.4, 0, 0, 0, 0,119.01]]
-                        ],
-                        [
-                            "eid12187",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[403.39, 196.4, 0, 0, 0, 0,0],[475.54, 136.12, 0, 0, 0, 0,94.02]]
-                        ],
-                        [
-                            "eid12188",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[475.54, 136.12, 0, 0, 0, 0,0],[658.34, 175.3, 0, 0, 0, 0,186.95]]
-                        ],
-                        [
-                            "eid12189",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[658.34, 175.3, 0, 0, 0, 0,0],[712.71, 334.23, 0, 0, 0, 0,167.97]]
-                        ],
-                        [
-                            "eid12190",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[712.71, 334.23, 0, 0, 0, 0,0],[989.94, 434.14, 0, 0, 0, 0,294.68]]
-                        ],
-                        [
-                            "eid12191",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[989.94, 434.14, 0, 0, 0, 0,0],[1158.07, 445.74, 0, 0, 0, 0,168.53]]
-                        ],
-                        [
-                            "eid5681",
+                            "eid7115",
                             "scaleX",
                             0,
                             0,
+                            "easeOutQuad",
+                            "${mcUserMessage}",
+                            '0.96497',
+                            '0.96497'
+                        ],
+                        [
+                            "eid364",
+                            "height",
+                            0,
+                            0,
                             "linear",
-                            "${rountBtn}",
-                            '0.68',
-                            '0.68'
+                            "${charJob}",
+                            '188px',
+                            '188px'
                         ],
                         [
                             "eid183",
@@ -1251,14 +1180,14 @@
                             '38px'
                         ],
                         [
-                            "eid13063",
-                            "display",
+                            "eid6281",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersCopy4}",
-                            'none',
-                            'none'
+                            "${mcPopup}",
+                            '13px',
+                            '13px'
                         ],
                         [
                             "eid11929",
@@ -1271,24 +1200,24 @@
                             '-15px'
                         ],
                         [
-                            "eid7115",
-                            "scaleX",
-                            0,
-                            0,
-                            "easeOutQuad",
-                            "${mcUserMessage}",
-                            '0.96497',
-                            '0.96497'
-                        ],
-                        [
-                            "eid12847",
-                            "top",
+                            "eid184",
+                            "display",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '-90px',
-                            '-90px'
+                            "${hudMarket}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid12997",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${mcHUD}",
+                            '12.12%',
+                            '12.12%'
                         ],
                         [
                             "eid12643",
@@ -1383,76 +1312,44 @@
                             'none'
                         ],
                         [
-                            "eid11924",
-                            "location",
+                            "eid12642",
+                            "left",
                             0,
-                            1000,
+                            0,
                             "linear",
-                            "${avatar_job}",
-                            [[178.5, 588.79, 0, 0, 0, 0,0],[208.17, 459.29, 0, 0, 0, 0,132.86]]
+                            "${dicePair}",
+                            '17px',
+                            '17px'
                         ],
                         [
-                            "eid11925",
-                            "location",
-                            1000,
-                            1000,
+                            "eid12858",
+                            "top",
+                            0,
+                            0,
                             "linear",
-                            "${avatar_job}",
-                            [[207.78, 459, 0, 0, 0, 0,0],[325.14, 355.21, 0, 0, 0, 0,156.67]]
+                            "${mcUserMessage}",
+                            '526px',
+                            '526px'
                         ],
                         [
-                            "eid11930",
-                            "location",
-                            2000,
-                            1000,
+                            "eid13081",
+                            "scaleX",
+                            0,
+                            0,
                             "linear",
                             "${avatar_job}",
-                            [[325.25, 355.41, 0, 0, 0, 0,0],[403.57, 256.1, 0, 0, 0, 0,126.48]]
+                            '1',
+                            '1'
                         ],
                         [
-                            "eid11932",
-                            "location",
-                            3000,
-                            1000,
+                            "eid13082",
+                            "scaleX",
+                            1048,
+                            0,
                             "linear",
                             "${avatar_job}",
-                            [[403.68, 256.3, 0, 0, 0, 0,0],[516.8, 181.73, 0, 0, 0, 0,135.49]]
-                        ],
-                        [
-                            "eid11933",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[516.91, 181.93, 0, 0, 0, 0,0],[652.33, 282.6, 0, 0, 0, 0,168.74]]
-                        ],
-                        [
-                            "eid11934",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[652.44, 282.8, 0, 0, 0, 0,0],[834.92, 370.87, 0, 0, 0, 0,202.62]]
-                        ],
-                        [
-                            "eid11935",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[835.03, 371.07, 0, 0, 0, 0,0],[1060.54, 475.73, 0, 0, 0, 0,248.61]]
-                        ],
-                        [
-                            "eid11936",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[1060.65, 475.93, 0, 0, 0, 0,0],[1180.55, 502.02, 0, 0, 0, 0,122.71]]
+                            '1',
+                            '1'
                         ],
                         [
                             "eid363",
@@ -1465,24 +1362,34 @@
                             '0.61'
                         ],
                         [
-                            "eid310",
+                            "eid330",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${mcPopup}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid12847",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${obit}",
-                            '-4px',
-                            '-4px'
+                            "${charJob}",
+                            '-90px',
+                            '-90px'
                         ],
                         [
-                            "eid374",
-                            "width",
+                            "eid5682",
+                            "scaleY",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '176px',
-                            '176px'
+                            "${rountBtn}",
+                            '0.68',
+                            '0.68'
                         ],
                         [
                             "eid12208",
@@ -1557,18 +1464,18 @@
                             [[109.85, 627.64, 0, 0, 0, 0,0],[58.17, 711.76, 0, 0, 0, 0,98.73]]
                         ],
                         [
-                            "eid330",
-                            "display",
+                            "eid374",
+                            "width",
                             0,
                             0,
                             "linear",
-                            "${mcPopup}",
-                            'none',
-                            'none'
+                            "${charJob}",
+                            '176px',
+                            '176px'
                         ],
                         [
-                            "eid5682",
-                            "scaleY",
+                            "eid5681",
+                            "scaleX",
                             0,
                             0,
                             "linear",
@@ -1577,64 +1484,96 @@
                             '0.68'
                         ],
                         [
-                            "eid12858",
+                            "eid310",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${mcUserMessage}",
-                            '526px',
-                            '526px'
+                            "${obit}",
+                            '-4px',
+                            '-4px'
                         ],
                         [
-                            "eid12642",
-                            "left",
+                            "eid11924",
+                            "location",
                             0,
-                            0,
+                            1000,
                             "linear",
-                            "${dicePair}",
-                            '17px',
-                            '17px'
+                            "${avatar_job}",
+                            [[178.5, 588.79, 0, 0, 0, 0,0],[208.17, 459.29, 0, 0, 0, 0,132.86]]
                         ],
                         [
-                            "eid12997",
-                            "left",
-                            0,
-                            0,
+                            "eid11925",
+                            "location",
+                            1000,
+                            1000,
                             "linear",
-                            "${mcHUD}",
-                            '12.12%',
-                            '12.12%'
+                            "${avatar_job}",
+                            [[207.78, 459, 0, 0, 0, 0,0],[325.14, 355.21, 0, 0, 0, 0,156.67]]
                         ],
                         [
-                            "eid184",
+                            "eid11930",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[325.25, 355.41, 0, 0, 0, 0,0],[403.57, 256.1, 0, 0, 0, 0,126.48]]
+                        ],
+                        [
+                            "eid11932",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[403.68, 256.3, 0, 0, 0, 0,0],[516.8, 181.73, 0, 0, 0, 0,135.49]]
+                        ],
+                        [
+                            "eid11933",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[516.91, 181.93, 0, 0, 0, 0,0],[652.33, 282.6, 0, 0, 0, 0,168.74]]
+                        ],
+                        [
+                            "eid11934",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[652.44, 282.8, 0, 0, 0, 0,0],[834.92, 370.87, 0, 0, 0, 0,202.62]]
+                        ],
+                        [
+                            "eid11935",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[835.03, 371.07, 0, 0, 0, 0,0],[1060.54, 475.73, 0, 0, 0, 0,248.61]]
+                        ],
+                        [
+                            "eid11936",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[1060.65, 475.93, 0, 0, 0, 0,0],[1180.55, 502.02, 0, 0, 0, 0,122.71]]
+                        ],
+                        [
+                            "eid13065",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${hudMarket}",
+                            "${pathmarkersCopy6}",
                             'none',
                             'none'
-                        ],
-                        [
-                            "eid6281",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${mcPopup}",
-                            '13px',
-                            '13px'
-                        ],
-                        [
-                            "eid364",
-                            "height",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            '188px',
-                            '188px'
                         ],
                         [
                             "eid12081",
@@ -1709,14 +1648,76 @@
                             [[1023.54, 338.85, 0, 0, 0, 0,0],[1224.45, 364.93, 0, 0, 0, 0,202.6]]
                         ],
                         [
-                            "eid5434",
-                            "scaleY",
+                            "eid12184",
+                            "location",
                             0,
-                            0,
+                            1000,
                             "linear",
-                            "${mcHUD}",
-                            '0.84693',
-                            '0.84693'
+                            "${avatar_water}",
+                            [[123.22, 564.48, 0, 0, 0, 0,0],[310.49, 429.32, 0, 0, 0, 0,230.95]]
+                        ],
+                        [
+                            "eid12185",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[310.49, 429.32, 0, 0, 0, 0,0],[444.95, 307.92, 0, 0, 0, 0,181.16]]
+                        ],
+                        [
+                            "eid12186",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[444.95, 307.92, 0, 0, 0, 0,0],[403.39, 196.4, 0, 0, 0, 0,119.01]]
+                        ],
+                        [
+                            "eid12187",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[403.39, 196.4, 0, 0, 0, 0,0],[475.54, 136.12, 0, 0, 0, 0,94.02]]
+                        ],
+                        [
+                            "eid12188",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[475.54, 136.12, 0, 0, 0, 0,0],[658.34, 175.3, 0, 0, 0, 0,186.95]]
+                        ],
+                        [
+                            "eid12189",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[658.34, 175.3, 0, 0, 0, 0,0],[712.71, 334.23, 0, 0, 0, 0,167.97]]
+                        ],
+                        [
+                            "eid12190",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[712.71, 334.23, 0, 0, 0, 0,0],[989.94, 434.14, 0, 0, 0, 0,294.68]]
+                        ],
+                        [
+                            "eid12191",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[989.94, 434.14, 0, 0, 0, 0,0],[1158.07, 445.74, 0, 0, 0, 0,168.53]]
                         ],
                         [
                             "eid5867",
@@ -1752,9 +1753,9 @@
                 }
             },
             "popChallenge": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -1762,25 +1763,25 @@
                     dom: [
                         {
                             rect: ['0px', '0px', '1128px', '678px', 'auto', 'auto'],
-                            opacity: '0.65637703252033',
-                            id: 'Scrim',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'Scrim',
+                            opacity: '0.65637703252033',
                             type: 'rect',
                             fill: ['rgba(0,0,0,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['270px', '171px', '573px', '295px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['270px', '171px', '573px', '295px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(156,0,0,1.00)']
                         },
                         {
-                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto'],
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: 'CHALLENGE:<br>Your village doesn\'t have an outhouse. People are going wherever they can. In public. It\'s embarrassing, dangerous and very unclean. <br><br>You come into contact with some nasty microbes and get life-threatening diahrrea, just like 1.5 million other kids every year.<br><br>You lose 6 health points. <br>And one pair of clean undies.',
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1798,9 +1799,9 @@
                 }
             },
             "popPartnership": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -1808,25 +1809,25 @@
                     dom: [
                         {
                             rect: ['0px', '0px', '1128px', '678px', 'auto', 'auto'],
-                            opacity: '0.65637703252033',
-                            id: 'Scrim',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'Scrim',
+                            opacity: '0.65637703252033',
                             type: 'rect',
                             fill: ['rgba(0,0,0,1.00)']
                         },
                         {
-                            type: 'rect',
+                            rect: ['286px', '230px', '526px', '244px', 'auto', 'auto'],
                             id: 'Rectangle',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            rect: ['286px', '230px', '526px', '244px', 'auto', 'auto'],
+                            type: 'rect',
                             fill: ['rgba(97,172,57,1.00)']
                         },
                         {
-                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto'],
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: '<p style=\"margin:0px\">​PARTNERSHIP:</p><p style=\"margin: 0px;\">You partner with T.S.O.P.W.D.T.D.I.F.** to bring clean toilets to your village.</p><p style=\"margin: 0px;\">You no longer get affected by any challenges involving toilets and sanitation. Good Job!</p><p style=\"margin: 0px;\">​</p><p style=\"margin: 0px;\">** The Society of People Who Dont Think Diahrreah Is Funny</p><p style=\"margin: 0px;\">​</p>',
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
-                            type: 'text'
+                            type: 'text',
+                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1844,33 +1845,33 @@
                 }
             },
             "mcHome": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1280', '800', 'auto', 'auto'],
-                            id: 'div_home',
                             type: 'group',
+                            id: 'div_home',
+                            rect: ['0px', '0px', '1280', '800', 'auto', 'auto'],
                             c: [
                             {
-                                type: 'image',
                                 rect: ['0px', '0px', '1280px', '800px', 'auto', 'auto'],
+                                type: 'image',
                                 id: 'gameboard_home',
                                 opacity: '1',
                                 display: 'block',
                                 fill: ['rgba(0,0,0,0)', 'images/gameboard_home.jpg', '0px', '0px']
                             },
                             {
-                                transform: [[], [], [], ['0.61', '0.61']],
                                 type: 'image',
-                                id: 'character_home',
+                                transform: [[], [], [], ['0.61', '0.61']],
                                 display: 'block',
                                 rect: ['566px', '208px', '145px', '154px', 'auto', 'auto'],
+                                id: 'character_home',
                                 fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                             }]
                         }
@@ -1896,14 +1897,13 @@
                             '145px'
                         ],
                         [
-                            "eid39",
-                            "opacity",
+                            "eid37",
+                            "location",
+                            0,
                             1500,
-                            500,
                             "linear",
-                            "${gameboard_home}",
-                            '1',
-                            '0'
+                            "${character_home}",
+                            [[638.22, 285.09, 0, 0, 0, 0,0],[1338.5, 285.09, 0, 0, 0, 0,700.28]]
                         ],
                         [
                             "eid41",
@@ -1916,14 +1916,14 @@
                             'none'
                         ],
                         [
-                            "eid42",
-                            "display",
-                            2000,
+                            "eid31",
+                            "height",
+                            0,
                             0,
                             "linear",
-                            "${gameboard_home}",
-                            'block',
-                            'none'
+                            "${character_home}",
+                            '154px',
+                            '154px'
                         ],
                         [
                             "eid22",
@@ -1936,188 +1936,189 @@
                             '0.61'
                         ],
                         [
-                            "eid31",
-                            "height",
-                            0,
+                            "eid42",
+                            "display",
+                            2000,
                             0,
                             "linear",
-                            "${character_home}",
-                            '154px',
-                            '154px'
+                            "${gameboard_home}",
+                            'block',
+                            'none'
                         ],
                         [
-                            "eid37",
-                            "location",
-                            0,
+                            "eid39",
+                            "opacity",
                             1500,
+                            500,
                             "linear",
-                            "${character_home}",
-                            [[638.22, 285.09, 0, 0, 0, 0,0],[1338.5, 285.09, 0, 0, 0, 0,700.28]]
+                            "${gameboard_home}",
+                            '1',
+                            '0'
                         ]
                     ]
                 }
             },
             "mcHUD": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['23px', '14px', '810px', '145px', 'auto', 'auto'],
-                            id: 'game_hud_v2',
                             type: 'image',
+                            id: 'game_hud_v2',
+                            rect: ['23px', '14px', '810px', '145px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/game_hud_v2.png', '0px', '0px']
                         },
                         {
-                            rect: ['202px', '148px', '225px', '29px', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(255,210,10,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'right',
                             id: 'tPlayerName',
                             text: '<p style=\"margin: 0px;\">​tPlayerName</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            type: 'text'
+                            rect: ['202px', '148px', '225px', '29px', 'auto', 'auto']
                         },
                         {
-                            rect: ['438px', '146px', '107px', '29px', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(60,136,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
+                            type: 'text',
                             align: 'left',
                             id: 'tPlayerStatus',
                             text: '<p style=\"margin: 0px;\">​IS ALIVE!</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 2],
-                            type: 'text'
+                            rect: ['438px', '146px', '107px', '29px', 'auto', 'auto']
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
-                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            id: 'labelEducation',
                             rect: ['238px', '79px', '47px', '31px', 'auto', 'auto'],
+                            opacity: '1',
+                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            opacity: '1'
+                            id: 'labelEducation'
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
-                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            id: 'labelGlobal',
                             rect: ['108px', '79px', '47px', '31px', 'auto', 'auto'],
+                            opacity: '1',
+                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            opacity: '1'
+                            id: 'labelGlobal'
                         },
                         {
-                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            display: 'none',
+                            type: 'text',
+                            align: 'center',
                             id: 'headerGlobal',
                             text: '<p style=\"margin: 0px;\">​BUCKS</p>',
-                            align: 'center',
-                            type: 'text'
+                            display: 'none',
+                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">00</p>',
-                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            id: 'labelWater',
                             rect: ['173px', '79px', '47px', '31px', 'auto', 'auto'],
+                            opacity: '1',
+                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            opacity: '1'
+                            id: 'labelWater'
                         },
                         {
-                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            display: 'none',
+                            type: 'text',
+                            align: 'center',
                             id: 'headerEducation',
                             text: '<p style=\"margin: 0px;\">​EDUCATION</p>',
-                            align: 'center',
-                            type: 'text'
+                            display: 'none',
+                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
-                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            display: 'none',
+                            type: 'text',
+                            align: 'center',
                             id: 'headerWater',
                             text: '<p style=\"margin: 0px;\">​WATER</p>',
-                            align: 'center',
-                            type: 'text'
+                            display: 'none',
+                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             type: 'text',
                             align: 'center',
                             text: '<p style=\"margin: 0px;\">​00</p>',
-                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
-                            id: 'labelLife',
                             rect: ['42px', '78px', '47px', '31px', 'auto', 'auto'],
+                            opacity: '1',
+                            font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            opacity: '1'
+                            id: 'labelLife'
                         },
                         {
-                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            display: 'none',
+                            type: 'text',
+                            align: 'center',
                             id: 'headerLife',
                             text: '<p style=\"margin: 0px;\">​HEALTH</p>',
-                            align: 'center',
-                            type: 'text'
+                            display: 'none',
+                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             rect: ['42px', '75px', '45px', '29px', 'auto', 'auto'],
-                            opacity: '0.49428353658537',
-                            id: 'gloss',
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
+                            id: 'gloss',
+                            opacity: '0.49428353658537',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
                             rect: ['108px', '75px', '45px', '29px', 'auto', 'auto'],
-                            opacity: '0.49428353658537',
-                            id: 'glossCopy',
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
+                            id: 'glossCopy',
+                            opacity: '0.49428353658537',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
                             rect: ['174px', '75px', '46px', '29px', 'auto', 'auto'],
-                            opacity: '0.49428353658537',
-                            id: 'glossCopy2',
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
+                            id: 'glossCopy2',
+                            opacity: '0.49428353658537',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
                             rect: ['240px', '75px', '45px', '29px', 'auto', 'auto'],
-                            opacity: '0.49428353658537',
-                            id: 'glossCopy3',
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
+                            id: 'glossCopy3',
+                            opacity: '0.49428353658537',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
                             rect: ['321px', '34px', '244px', '58px', 'auto', 'auto'],
-                            opacity: '0.49428353658537',
-                            id: 'glossCopy4',
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
+                            id: 'glossCopy4',
+                            opacity: '0.49428353658537',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
-                            rect: ['575px', '35px', '237', '90', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'rectButton',
                             symbolName: 'rectButton',
-                            type: 'rect'
+                            rect: ['575px', '35px', '237', '90', 'auto', 'auto']
                         },
                         {
                             type: 'rect',
-                            id: 'buttonflash',
-                            symbolName: 'buttonflash',
                             display: 'none',
-                            rect: ['564', '20', '259', '110', 'auto', 'auto']
+                            symbolName: 'buttonflash',
+                            rect: ['564', '20', '259', '110', 'auto', 'auto'],
+                            id: 'buttonflash'
                         }
                     ],
                     style: {
@@ -2181,16 +2182,6 @@
                             'none'
                         ],
                         [
-                            "eid5674",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${rectButton}",
-                            '35px',
-                            '35px'
-                        ],
-                        [
                             "eid5475",
                             "display",
                             0,
@@ -2199,41 +2190,51 @@
                             "${headerLife}",
                             'none',
                             'none'
+                        ],
+                        [
+                            "eid5674",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${rectButton}",
+                            '35px',
+                            '35px'
                         ]
                     ]
                 }
             },
             "button_close": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'button_red',
                             rect: ['0px', '0px', '90px', '49px', 'auto', 'auto'],
+                            id: 'button_red',
+                            type: 'image',
                             cursor: 'pointer',
                             fill: ['rgba(0,0,0,0)', '_images/button_red.png', '0px', '0px']
                         },
                         {
-                            type: 'text',
+                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                            align: 'left',
-                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
-                            id: 'button_text',
-                            textStyle: ['', '', '', '', 'none'],
                             text: '<p style=\"margin: 0px;\">​CLOSE</p>',
-                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto']
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
+                            align: 'left',
+                            textStyle: ['', '', '', '', 'none'],
+                            id: 'button_text',
+                            type: 'text'
                         },
                         {
                             rect: ['1px', '0px', '90px', '49px', 'auto', 'auto'],
-                            opacity: '0.25886051829268',
-                            id: 'clickstate',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
+                            id: 'clickstate',
+                            opacity: '0.25886051829268',
                             type: 'rect',
                             fill: ['rgba(29,29,29,1)']
                         }
@@ -2253,70 +2254,70 @@
                 }
             },
             "popup": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0', '0', '384', '480', 'auto', 'auto'],
-                            id: 'mcRed',
                             type: 'group',
+                            id: 'mcRed',
+                            rect: ['0', '0', '384', '480', 'auto', 'auto'],
                             c: [
                             {
-                                rect: ['0', '0', '384px', '480px', 'auto', 'auto'],
-                                id: 'bgRed',
                                 type: 'image',
+                                id: 'bgRed',
+                                rect: ['0', '0', '384px', '480px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/newRedCard.png', '0px', '0px']
                             }]
                         },
                         {
-                            rect: ['0', '0', '384', '480', 'auto', 'auto'],
-                            id: 'mcGreen',
                             type: 'group',
+                            id: 'mcGreen',
+                            rect: ['0', '0', '384', '480', 'auto', 'auto'],
                             c: [
                             {
-                                transform: [[], [], [], ['1.44508', '1.44508']],
+                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animation',
                                 symbolName: 'flare_animation',
-                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto'],
-                                type: 'rect'
+                                type: 'rect',
+                                transform: [[], [], [], ['1.44508', '1.44508']]
                             },
                             {
-                                rect: ['0', '0', '384px', '480px', 'auto', 'auto'],
-                                id: 'bgGreen',
                                 type: 'image',
+                                id: 'bgGreen',
+                                rect: ['0', '0', '384px', '480px', 'auto', 'auto'],
                                 fill: ['rgba(0,0,0,0)', 'images/newGreenCard.png', '0px', '0px']
                             },
                             {
-                                transform: [[], [], [], ['0.69208', '0.69208']],
+                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animationCopy',
                                 symbolName: 'flare_animation',
-                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto'],
-                                type: 'rect'
+                                type: 'rect',
+                                transform: [[], [], [], ['0.69208', '0.69208']]
                             }]
                         },
                         {
-                            font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            align: 'left',
+                            rect: ['48px', '181px', '306px', '331px', 'auto', 'auto'],
+                            textStyle: ['', '', '', '', 'none'],
                             id: 'txtBody',
                             text: '<p style=\"margin: 0px;\">​</p>',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['48px', '181px', '306px', '331px', 'auto', 'auto']
+                            align: 'left',
+                            font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
                         },
                         {
                             type: 'text',
                             align: 'center',
                             textStyle: ['', '', '', '', 'none'],
-                            rect: ['-44px', '129px', '471px', '49px', 'auto', 'auto'],
-                            id: 'txtHeading',
                             font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(148,135,34,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
+                            text: '<p style=\"margin: 0px;\"><span style=\"font-size: 30px; text-transform: uppercase;\">asdf</span><span style=\"font-size: 24px; text-transform: uppercase;\">​</span></p>',
+                            rect: ['-44px', '129px', '471px', '49px', 'auto', 'auto'],
                             textShadow: ['rgba(0,0,0,0.40)', 0, 2, 2],
-                            text: '<p style=\"margin: 0px;\"><span style=\"font-size: 30px; text-transform: uppercase;\">asdf</span><span style=\"font-size: 24px; text-transform: uppercase;\">​</span></p>'
+                            id: 'txtHeading'
                         },
                         {
                             type: 'rect',
@@ -2368,6 +2369,16 @@
                             '419px'
                         ],
                         [
+                            "eid6382",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${flare_animationCopy}",
+                            '0.69208',
+                            '0.69208'
+                        ],
+                        [
                             "eid7162",
                             "top",
                             0,
@@ -2378,8 +2389,48 @@
                             '-43px'
                         ],
                         [
-                            "eid6382",
-                            "scaleY",
+                            "eid7161",
+                            "left",
+                            0,
+                            0,
+                            "easeOutQuad",
+                            "${flare_animation}",
+                            '-46px',
+                            '-46px'
+                        ],
+                        [
+                            "eid7155",
+                            "top",
+                            0,
+                            0,
+                            "easeOutQuad",
+                            "${flare_animationCopy}",
+                            '-47px',
+                            '-47px'
+                        ],
+                        [
+                            "eid7154",
+                            "left",
+                            0,
+                            0,
+                            "easeOutQuad",
+                            "${flare_animationCopy}",
+                            '-46px',
+                            '-46px'
+                        ],
+                        [
+                            "eid7157",
+                            "scaleX",
+                            0,
+                            0,
+                            "easeOutQuad",
+                            "${flare_animation}",
+                            '1.44508',
+                            '1.44508'
+                        ],
+                        [
+                            "eid6381",
+                            "scaleX",
                             0,
                             0,
                             "linear",
@@ -2398,56 +2449,6 @@
                             '122px'
                         ],
                         [
-                            "eid7155",
-                            "top",
-                            0,
-                            0,
-                            "easeOutQuad",
-                            "${flare_animationCopy}",
-                            '-47px',
-                            '-47px'
-                        ],
-                        [
-                            "eid6381",
-                            "scaleX",
-                            0,
-                            0,
-                            "linear",
-                            "${flare_animationCopy}",
-                            '0.69208',
-                            '0.69208'
-                        ],
-                        [
-                            "eid7157",
-                            "scaleX",
-                            0,
-                            0,
-                            "easeOutQuad",
-                            "${flare_animation}",
-                            '1.44508',
-                            '1.44508'
-                        ],
-                        [
-                            "eid7154",
-                            "left",
-                            0,
-                            0,
-                            "easeOutQuad",
-                            "${flare_animationCopy}",
-                            '-46px',
-                            '-46px'
-                        ],
-                        [
-                            "eid7161",
-                            "left",
-                            0,
-                            0,
-                            "easeOutQuad",
-                            "${flare_animation}",
-                            '-46px',
-                            '-46px'
-                        ],
-                        [
                             "eid7166",
                             "width",
                             0,
@@ -2461,9 +2462,9 @@
                 }
             },
             "simpleButton": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: true,
@@ -2472,11 +2473,11 @@
                         {
                             rect: ['0', '0', '100%', '40', 'auto', 'auto'],
                             borderRadius: ['6px 6px', '6px 6px', '6px 6px', '6px 6px'],
-                            boxShadow: ['', 2, 2, 8, 0, 'rgba(0,0,0,0.40625)'],
+                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]],
                             id: 'base_a',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
-                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]]
+                            boxShadow: ['', 2, 2, 8, 0, 'rgba(0,0,0,0.40625)']
                         },
                         {
                             type: 'rect',
@@ -2485,8 +2486,8 @@
                             stroke: [2, 'rgba(255,255,255,1.00)', 'solid'],
                             rect: ['0', '0', '98%', '36', 'auto', 'auto'],
                             title: 'CLOSE',
-                            boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(253,0,0,0.77)', 22], ['rgba(255,0,0,0.59)', 51], ['rgba(146,23,33,1.00)', 51]]]],
+                            boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             c: [
                             {
                                 type: 'text',
@@ -2494,14 +2495,14 @@
                                 text: '<p style=\"margin:0px\">​CLOSE</p>',
                                 font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                                 title: 'CLOSE',
-                                id: 'label',
+                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto'],
                                 textShadow: ['rgba(33,33,33,1.00)', 0, -2, 1],
-                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto']
+                                id: 'label'
                             }]
                         },
                         {
-                            rect: ['0px', '0', '100%', '40px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['0px', '0', '100%', '40px', 'auto', 'auto'],
                             id: 'hotspot',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'pointer',
@@ -2564,24 +2565,14 @@
                             '11px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "null",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "null",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ],
                         [
                             "eid29",
@@ -2604,14 +2595,24 @@
                             '2px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "null",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "null",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid99",
@@ -2654,14 +2655,14 @@
                             '2px'
                         ],
                         [
-                            "eid42",
-                            "border-color",
+                            "eid96",
+                            "textShadow.offsetH",
                             0,
                             0,
-                            "null",
-                            "${base_b}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "linear",
+                            "${label}",
+                            '0px',
+                            '0px'
                         ],
                         [
                             "eid31",
@@ -2694,26 +2695,6 @@
                             'rgba(33,33,33,1.00)'
                         ],
                         [
-                            "eid19",
-                            "boxShadow.blur",
-                            1000,
-                            0,
-                            "null",
-                            "${base_a}",
-                            '8px',
-                            '8px'
-                        ],
-                        [
-                            "eid22",
-                            "boxShadow.blur",
-                            2000,
-                            0,
-                            "null",
-                            "${base_a}",
-                            '8px',
-                            '0px'
-                        ],
-                        [
                             "eid17",
                             "boxShadow.offsetH",
                             1000,
@@ -2734,14 +2715,34 @@
                             '0px'
                         ],
                         [
-                            "eid96",
-                            "textShadow.offsetH",
+                            "eid19",
+                            "boxShadow.blur",
+                            1000,
                             0,
+                            "null",
+                            "${base_a}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid22",
+                            "boxShadow.blur",
+                            2000,
                             0,
-                            "linear",
-                            "${label}",
-                            '0px',
+                            "null",
+                            "${base_a}",
+                            '8px',
                             '0px'
+                        ],
+                        [
+                            "eid42",
+                            "border-color",
+                            0,
+                            0,
+                            "null",
+                            "${base_b}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                         [
                             "eid100",
@@ -2757,9 +2758,9 @@
                 }
             },
             "simpleButton_1": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: true,
@@ -2768,11 +2769,11 @@
                         {
                             rect: [0, 0, '100%', 40, 'auto', 'auto'],
                             borderRadius: ['6px 6px', '6px 6px', '6px 6px', '6px 6px'],
-                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]],
+                            boxShadow: ['', '2px', '2px', '8px', 0, 'rgba(0,0,0,0.40625)'],
                             id: 'base_a',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
-                            boxShadow: ['', '2px', '2px', '8px', 0, 'rgba(0,0,0,0.40625)']
+                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]]
                         },
                         {
                             type: 'rect',
@@ -2780,22 +2781,22 @@
                             id: 'base_b',
                             stroke: ['2px', 'rgba(255,255,255,1.00)', 'solid'],
                             rect: [0, 0, '98%', 36, 'auto', 'auto'],
-                            fill: ['rgba(192,192,192,0.00)', [270, [['rgba(165,255,0,0.59)', 51], ['rgba(221,255,99,1.00)', 51]]]],
                             boxShadow: ['inset', '0px', '0px', '43px', '2px', 'rgba(124,156,172,0.60)'],
+                            fill: ['rgba(192,192,192,0.00)', [270, [['rgba(165,255,0,0.59)', 51], ['rgba(221,255,99,1.00)', 51]]]],
                             c: [
                             {
-                                type: 'text',
                                 rect: [-2, 11, '102.04%', 27, 'auto', 'auto'],
+                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', ''],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', '1px', '1px', '1px'],
-                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', '']
+                                type: 'text'
                             }]
                         },
                         {
-                            type: 'rect',
                             rect: ['0px', 0, '100%', '40px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'hotspot',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'pointer',
@@ -2859,14 +2860,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -2939,24 +2950,14 @@
                             '2px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
+                            "eid40",
+                            "background-image",
+                            0,
                             1000,
-                            0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${base_b}",
+                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
+                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
                         ],
                         [
                             "eid31",
@@ -2989,24 +2990,14 @@
                             '1px'
                         ],
                         [
-                            "eid17",
-                            "boxShadow.offsetH",
-                            1000,
+                            "eid42",
+                            "border-color",
+                            0,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid20",
-                            "boxShadow.offsetH",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${base_b}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                         [
                             "eid19",
@@ -3029,32 +3020,42 @@
                             '0px'
                         ],
                         [
-                            "eid42",
-                            "border-color",
-                            0,
+                            "eid17",
+                            "boxShadow.offsetH",
+                            1000,
                             0,
                             "linear",
-                            "${base_b}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${base_a}",
+                            '2px',
+                            '2px'
                         ],
                         [
-                            "eid40",
-                            "background-image",
+                            "eid20",
+                            "boxShadow.offsetH",
+                            2000,
                             0,
-                            1000,
                             "linear",
-                            "${base_b}",
-                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
-                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
+                            "${base_a}",
+                            '2px',
+                            '0px'
+                        ],
+                        [
+                            "eid25",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ]
                     ]
                 }
             },
             "simpleButton_2": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: true,
@@ -3063,11 +3064,11 @@
                         {
                             rect: ['0', '0', '100%', '40', 'auto', 'auto'],
                             borderRadius: ['6px 6px', '6px 6px', '6px 6px', '6px 6px'],
-                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]],
+                            boxShadow: ['', 2, 2, 8, 0, 'rgba(0,0,0,0.40625)'],
                             id: 'base_a',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
-                            boxShadow: ['', 2, 2, 8, 0, 'rgba(0,0,0,0.40625)']
+                            fill: ['rgba(192,192,192,1)', [270, [['rgba(127,127,127,1.00)', 0], ['rgba(255,255,255,1.00)', 100]]]]
                         },
                         {
                             type: 'rect',
@@ -3075,22 +3076,22 @@
                             id: 'base_b',
                             stroke: [2, 'rgba(255,255,255,1.00)', 'solid'],
                             rect: ['0', '0', '98%', '36', 'auto', 'auto'],
-                            fill: ['rgba(192,192,192,0.00)', [270, [['rgba(254,200,19,0.73)', 51], ['rgba(204,152,0,1.00)', 51]]]],
                             boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
+                            fill: ['rgba(192,192,192,0.00)', [270, [['rgba(254,200,19,0.73)', 51], ['rgba(204,152,0,1.00)', 51]]]],
                             c: [
                             {
-                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', ''],
                                 type: 'text',
+                                rect: ['-2', '11', '102%', '27', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                rect: ['-2', '11', '102%', '27', 'auto', 'auto']
+                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', '']
                             }]
                         },
                         {
-                            type: 'rect',
                             rect: ['0px', '0', '100%', '40px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'hotspot',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'pointer',
@@ -3153,14 +3154,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -3233,24 +3244,14 @@
                             '2px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
+                            "eid40",
+                            "background-image",
+                            0,
                             1000,
-                            0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid31",
@@ -3283,24 +3284,14 @@
                             '1px'
                         ],
                         [
-                            "eid17",
-                            "boxShadow.offsetH",
-                            1000,
+                            "eid42",
+                            "border-color",
+                            0,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid20",
-                            "boxShadow.offsetH",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${base_b}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                         [
                             "eid19",
@@ -3323,32 +3314,42 @@
                             '0px'
                         ],
                         [
-                            "eid42",
-                            "border-color",
-                            0,
+                            "eid17",
+                            "boxShadow.offsetH",
+                            1000,
                             0,
                             "linear",
-                            "${base_b}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${base_a}",
+                            '2px',
+                            '2px'
                         ],
                         [
-                            "eid40",
-                            "background-image",
+                            "eid20",
+                            "boxShadow.offsetH",
+                            2000,
                             0,
-                            1000,
                             "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
+                            "${base_a}",
+                            '2px',
+                            '0px'
+                        ],
+                        [
+                            "eid25",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ]
                     ]
                 }
             },
             "buttonGameTips": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: true,
@@ -3502,6 +3503,16 @@
                             '2px'
                         ],
                         [
+                            "eid25",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${label}",
+                            '-2px',
+                            '-2px'
+                        ],
+                        [
                             "eid40",
                             "background-image",
                             0,
@@ -3512,26 +3523,6 @@
                             [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
-                            "eid31",
-                            "left",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid24",
-                            "left",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '2px'
-                        ],
-                        [
                             "eid33",
                             "textShadow.offsetH",
                             0,
@@ -3540,36 +3531,6 @@
                             "${label}",
                             '1px',
                             '1px'
-                        ],
-                        [
-                            "eid42",
-                            "border-color",
-                            0,
-                            0,
-                            "linear",
-                            "${base_b}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
-                        ],
-                        [
-                            "eid19",
-                            "boxShadow.blur",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '8px',
-                            '8px'
-                        ],
-                        [
-                            "eid22",
-                            "boxShadow.blur",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '8px',
-                            '0px'
                         ],
                         [
                             "eid17",
@@ -3592,22 +3553,62 @@
                             '0px'
                         ],
                         [
-                            "eid25",
+                            "eid19",
+                            "boxShadow.blur",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '8px',
+                            '8px'
+                        ],
+                        [
+                            "eid22",
+                            "boxShadow.blur",
+                            2000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '8px',
+                            '0px'
+                        ],
+                        [
+                            "eid42",
+                            "border-color",
+                            0,
+                            0,
+                            "linear",
+                            "${base_b}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
+                        ],
+                        [
+                            "eid31",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid24",
                             "left",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ]
                     ]
                 }
             },
             "simpleButton_3": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: true,
@@ -3627,22 +3628,22 @@
                             id: 'base_b',
                             stroke: [2, 'rgba(255,255,255,1.00)', 'solid'],
                             rect: ['0', '0', '98%', '36', 'auto', 'auto'],
-                            boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(92,254,109,0.76)', 51], ['rgba(0,255,3,1.00)', 51]]]],
+                            boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             c: [
                             {
-                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto'],
                                 font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', ''],
+                                type: 'text',
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                type: 'text'
+                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto']
                             }]
                         },
                         {
-                            rect: ['0px', '-4px', '100%', '40px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['0px', '-4px', '100%', '40px', 'auto', 'auto'],
                             id: 'hotspot',
                             stroke: [0, 'rgb(0, 0, 0)', 'none'],
                             cursor: 'pointer',
@@ -3665,24 +3666,14 @@
                     },
                     data: [
                         [
-                            "eid32",
-                            "top",
-                            1000,
+                            "eid42",
+                            "border-color",
+                            0,
                             0,
                             "null",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid27",
-                            "top",
-                            2000,
-                            0,
-                            "null",
-                            "${base_a}",
-                            '0px',
-                            '2px'
+                            "${base_b}",
+                            'rgba(255,255,255,1.00)',
+                            'rgba(255,255,255,1.00)'
                         ],
                         [
                             "eid245",
@@ -3736,14 +3727,24 @@
                             '2px'
                         ],
                         [
-                            "eid42",
-                            "border-color",
-                            0,
+                            "eid32",
+                            "top",
+                            1000,
                             0,
                             "null",
-                            "${base_b}",
-                            'rgba(255,255,255,1.00)',
-                            'rgba(255,255,255,1.00)'
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid27",
+                            "top",
+                            2000,
+                            0,
+                            "null",
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ],
                         [
                             "eid12",
@@ -3796,14 +3797,15 @@
                             '2px'
                         ],
                         [
-                            "eid36",
-                            "textShadow.offsetV",
+                            "eid243",
+                            "border-top-left-radius",
+                            8000,
                             0,
-                            0,
-                            "null",
-                            "${label}",
-                            '1px',
-                            '1px'
+                            "linear",
+                            "${base_a}",
+                            [90.1,90.1],
+                            [90.1,90.1],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
                             "eid40",
@@ -3857,15 +3859,14 @@
                             '2px'
                         ],
                         [
-                            "eid243",
-                            "border-top-left-radius",
-                            8000,
+                            "eid36",
+                            "textShadow.offsetV",
                             0,
-                            "linear",
-                            "${base_a}",
-                            [90.1,90.1],
-                            [90.1,90.1],
-                            {valueTemplate: '@@0@@% @@1@@%'}
+                            0,
+                            "null",
+                            "${label}",
+                            '1px',
+                            '1px'
                         ],
                         [
                             "eid242",
@@ -3882,9 +3883,9 @@
                 }
             },
             "hudNextDest": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -3892,87 +3893,87 @@
                     dom: [
                         {
                             rect: ['-260px', '-164px', '1094px', '710px', 'auto', 'auto'],
-                            opacity: '0.8063617653963',
-                            id: 'Rectangle',
                             stroke: [3, 'rgb(236, 236, 236)', 'solid'],
+                            id: 'Rectangle',
+                            opacity: '0.8063617653963',
                             type: 'rect',
                             fill: ['rgba(255,201,0,1.00)']
                         },
                         {
-                            rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
-                            id: 'hudMarket2',
                             type: 'image',
+                            id: 'hudMarket2',
+                            rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/hudMarket.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnPlumbing',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['309px', '231px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBike',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFilter',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnKit',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFood',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBucket',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
-                            id: 'btnTablet',
+                            type: 'rect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'btnTablet',
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
-                            id: 'btnSoap',
+                            type: 'rect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'btnSoap',
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         }
@@ -3992,9 +3993,9 @@
                 }
             },
             "hud_MARKET": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -4002,9 +4003,9 @@
                     dom: [
                         {
                             rect: ['-260px', '-164px', '1094px', '710px', 'auto', 'auto'],
-                            stroke: [3, 'rgb(236, 236, 236)', 'solid'],
-                            id: 'Rectangle',
                             opacity: '0.8063617653963',
+                            id: 'Rectangle',
+                            stroke: [3, 'rgb(236, 236, 236)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(255,201,0,1.00)']
                         },
@@ -4015,74 +4016,74 @@
                             fill: ['rgba(0,0,0,0)', 'images/hudMarket.png', '0px', '0px']
                         },
                         {
+                            type: 'rect',
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnPlumbing',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['309px', '231px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnBike',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnFilter',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnKit',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnFood',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             id: 'btnBucket',
-                            opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
+                            type: 'rect',
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            id: 'btnTablet',
                             opacity: '0',
+                            id: 'btnTablet',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
                             type: 'rect',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            id: 'btnSoap',
+                            rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
                             opacity: '0',
+                            id: 'btnSoap',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
@@ -4110,9 +4111,9 @@
                 }
             },
             "hudNextDest_1": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -4120,9 +4121,9 @@
                     dom: [
                         {
                             rect: ['-260px', '-164px', '1094px', '710px', 'auto', 'auto'],
-                            opacity: '0.87807158119658',
-                            id: 'Rectangle',
                             stroke: [3, 'rgb(236, 236, 236)', 'solid'],
+                            id: 'Rectangle',
+                            opacity: '0.87807158119658',
                             type: 'rect',
                             fill: ['rgba(122,171,4,1)']
                         },
@@ -4133,65 +4134,65 @@
                             fill: ['rgba(0,0,0,0)', 'images/hudNextDestination2.png', '0px', '0px']
                         },
                         {
-                            type: 'rect',
                             rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnHospital',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnEmployment',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnMarket',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBathroom',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
+                            type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnWater',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
-                            id: 'btnSchool',
+                            type: 'rect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'btnSchool',
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         },
                         {
-                            type: 'rect',
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            opacity: '0',
-                            id: 'btnFarm',
+                            type: 'rect',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            id: 'btnFarm',
+                            opacity: '0',
                             cursor: 'pointer',
                             fill: ['rgba(192,192,192,1)']
                         }
@@ -4211,9 +4212,9 @@
                 }
             },
             "hudNextDest_2": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -4221,103 +4222,102 @@
                     dom: [
                         {
                             rect: ['-44.2%', '-50%', '399%', '398.5%', 'auto', 'auto'],
-                            stroke: [3, 'rgb(236, 236, 236)', 'solid'],
-                            id: 'Rectangle',
                             opacity: '1',
+                            id: 'Rectangle',
+                            stroke: [3, 'rgb(236, 236, 236)', 'solid'],
                             type: 'rect',
                             fill: ['rgba(0,0,0,0.74)']
                         },
                         {
+                            rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             id: 'hudNextDestination3',
                             type: 'image',
-                            rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/hudNextDestination.png', '0px', '0px']
                         },
                         {
+                            rect: ['-207px', '-33px', '960px', '640px', 'auto', 'auto'],
                             id: 'gameboard_2016',
                             type: 'image',
-                            rect: ['-207px', '-33px', '960px', '640px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/gameboard_2016.jpg', '0px', '0px']
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.46201']],
+                            rect: ['-86px', '261px', '128', '128', 'auto', 'auto'],
                             id: 'btnFarm',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['-86px', '261px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.46201']],
+                            rect: ['-88px', '52px', '128', '128', 'auto', 'auto'],
                             id: 'btnHospital',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['-88px', '52px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.45919']],
+                            rect: ['109px', '53px', '128', '128', 'auto', 'auto'],
                             id: 'btnJob',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['109px', '53px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.45919']],
+                            rect: ['302px', '53px', '128', '128', 'auto', 'auto'],
                             id: 'btnMarket',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['302px', '53px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.45919']],
+                            rect: ['499px', '53px', '128', '128', 'auto', 'auto'],
                             id: 'btnToilet',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['499px', '53px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.46201']],
+                            rect: ['108px', '261px', '128', '128', 'auto', 'auto'],
                             id: 'btnSchool',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['108px', '261px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.34577', '1.46201']],
+                            rect: ['304px', '261px', '128', '128', 'auto', 'auto'],
                             id: 'btnWater',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['304px', '261px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            rect: ['469px', '239px', '161px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['-1']],
+                            tag: 'img',
                             id: 'character',
-                            fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px'],
                             type: 'image',
-                            tag: 'img'
+                            rect: ['469px', '239px', '161px', '172px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                         },
                         {
+                            type: 'text',
                             align: 'center',
-                            rect: ['76px', '-39px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
+                            rect: ['76px', '-39px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['rancho, fantasy', [51, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">CHOOSE A DESTINATION</span></p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">CHOOSE A DESTINATION</span></p>'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4366,14 +4366,14 @@
                             '108px'
                         ],
                         [
-                            "eid497",
-                            "left",
+                            "eid503",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${btnFarm}",
-                            '-86px',
-                            '-86px'
+                            "${btnHospital}",
+                            '52px',
+                            '52px'
                         ],
                         [
                             "eid501",
@@ -4416,14 +4416,14 @@
                             '1.45919'
                         ],
                         [
-                            "eid517",
-                            "scaleY",
+                            "eid453",
+                            "left",
                             0,
-                            0,
+                            712,
                             "linear",
-                            "${btnToilet}",
-                            '1.45919',
-                            '1.45919'
+                            "${Rectangle}",
+                            '-44.83%',
+                            '-50%'
                         ],
                         [
                             "eid500",
@@ -4466,24 +4466,24 @@
                             '499px'
                         ],
                         [
-                            "eid484",
-                            "scaleX",
-                            0,
-                            0,
-                            "linear",
-                            "${btnFarm}",
-                            '1.34577',
-                            '1.34577'
-                        ],
-                        [
-                            "eid510",
+                            "eid514",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${btnMarket}",
+                            "${btnToilet}",
                             '53px',
                             '53px'
+                        ],
+                        [
+                            "eid456",
+                            "top",
+                            712,
+                            0,
+                            "linear",
+                            "${Rectangle}",
+                            '-50%',
+                            '-50%'
                         ],
                         [
                             "eid489",
@@ -4556,16 +4556,6 @@
                             '1.34577'
                         ],
                         [
-                            "eid504",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${btnJob}",
-                            '53px',
-                            '53px'
-                        ],
-                        [
                             "eid495",
                             "top",
                             0,
@@ -4574,6 +4564,16 @@
                             "${btnWater}",
                             '261px',
                             '261px'
+                        ],
+                        [
+                            "eid504",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${btnJob}",
+                            '53px',
+                            '53px'
                         ],
                         [
                             "eid496",
@@ -4596,44 +4596,44 @@
                             '261px'
                         ],
                         [
-                            "eid456",
-                            "top",
-                            712,
-                            0,
-                            "linear",
-                            "${Rectangle}",
-                            '-50%',
-                            '-50%'
-                        ],
-                        [
-                            "eid514",
+                            "eid510",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${btnToilet}",
+                            "${btnMarket}",
                             '53px',
                             '53px'
                         ],
                         [
-                            "eid453",
-                            "left",
+                            "eid484",
+                            "scaleX",
                             0,
-                            712,
+                            0,
                             "linear",
-                            "${Rectangle}",
-                            '-44.83%',
-                            '-50%'
+                            "${btnFarm}",
+                            '1.34577',
+                            '1.34577'
                         ],
                         [
-                            "eid503",
-                            "top",
+                            "eid517",
+                            "scaleY",
                             0,
                             0,
                             "linear",
-                            "${btnHospital}",
-                            '52px',
-                            '52px'
+                            "${btnToilet}",
+                            '1.45919',
+                            '1.45919'
+                        ],
+                        [
+                            "eid497",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${btnFarm}",
+                            '-86px',
+                            '-86px'
                         ],
                         [
                             "eid490",
@@ -4649,28 +4649,27 @@
                 }
             },
             "mcUserMessage": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '67px', '202px', '152px', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [10, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            align: 'left',
+                            type: 'text',
+                            text: '<p style=\"margin: 0px; text-align: left;\">​</p>',
                             id: 'txtScoreMessage',
                             opacity: '0',
-                            text: '<p style=\"margin: 0px; text-align: left;\">​</p>',
-                            type: 'text'
+                            align: 'left',
+                            rect: ['0px', '67px', '202px', '152px', 'auto', 'auto']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '258px', '177px']
+                            rect: [null, null, '258px', '177px']
                         }
                     }
                 },
@@ -4742,36 +4741,36 @@
                 }
             },
             "dice-resized-v2_symbol_1": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['-9px', '-28px', '219px', '191px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['-9px', '-28px', '219px', '191px', 'auto', 'auto'],
                             id: 'bg',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             display: 'block',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(181,181,181,1.00)', 0], ['rgba(89,89,89,1.00)', 100]]]]
                         },
                         {
-                            rect: ['0px', '0px', '1024px', '2048px', 'auto', 'auto'],
-                            id: 'dice-resized-v2',
                             type: 'image',
                             display: 'block',
+                            rect: ['0px', '0px', '1024px', '2048px', 'auto', 'auto'],
+                            id: 'dice-resized-v2',
                             fill: ['rgba(0,0,0,0)', 'images/dice-resized-v2.png', '0px', '0px', '1024px', '2048px', 'no-repeat']
                         },
                         {
-                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
+                            rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto'],
                             id: 'rollagain',
                             text: '<p style=\"margin: 0px;\">ROLL THE DICE</p>',
                             align: 'center',
-                            rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto']
+                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -4821,6 +4820,16 @@
                             "${bg}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid1",
+                            "height",
+                            0,
+                            0,
+                            "linear",
+                            "${dice-resized-v2}",
+                            '0px',
+                            '150px'
                         ],
                         [
                             "eid3",
@@ -5106,24 +5115,14 @@
                             "${dice-resized-v2}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid1",
-                            "height",
-                            0,
-                            0,
-                            "linear",
-                            "${dice-resized-v2}",
-                            '0px',
-                            '150px'
                         ]
                     ]
                 }
             },
             "obit": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -5131,43 +5130,43 @@
                     dom: [
                         {
                             rect: ['-26px', '-20px', '1072px', '692px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(99,99,231,1.00)', 0], ['rgba(0,0,0,1.00)', 100]]]]
                         },
                         {
-                            transform: [[], [], [], ['1.14999', '1.14999']],
-                            id: 'tombstone',
                             type: 'image',
+                            id: 'tombstone',
                             rect: ['271px', '-527px', '377px', '474px', 'auto', 'auto'],
+                            transform: [[], [], [], ['1.14999', '1.14999']],
                             fill: ['rgba(0,0,0,0)', 'images/tombstone.png', '0px', '0px']
                         },
                         {
                             type: 'text',
-                            id: 'txtNom',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
                             align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [20, 'px'], 'rgba(113,113,113,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
+                            text: '<p style=\"margin: 0px;\">nom</p>',
+                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
                             opacity: '0',
-                            text: '<p style=\"margin: 0px;\">nom</p>'
+                            id: 'txtNom'
                         },
                         {
                             type: 'text',
-                            id: 'txtObit',
-                            textStyle: ['', '', '', '', 'none'],
-                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
                             align: 'left',
+                            textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [16, 'px'], 'rgba(88,88,88,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
+                            text: '<p style=\"margin: 0px;\">obit</p>',
+                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
                             opacity: '0',
-                            text: '<p style=\"margin: 0px;\">obit</p>'
+                            id: 'txtObit'
                         },
                         {
-                            rect: ['-26px', '-11px', '1088px', '707px', 'auto', 'auto'],
-                            id: 'invisible_button',
                             type: 'image',
+                            id: 'invisible_button',
+                            rect: ['-26px', '-11px', '1088px', '707px', 'auto', 'auto'],
                             cursor: 'default',
                             fill: ['rgba(0,0,0,0)', 'images/invisible_button.png', '0px', '0px']
                         },
@@ -5200,6 +5199,25 @@
                             '1'
                         ],
                         [
+                            "eid12493",
+                            "location",
+                            2750,
+                            250,
+                            "easeOutElastic",
+                            "${simpleButton}",
+                            [[476, 739.69, 0, 0, 0, 0,0],[476, 623, 0, 0, 0, 0,116.69]]
+                        ],
+                        [
+                            "eid12459",
+                            "scaleY",
+                            2750,
+                            0,
+                            "easeOutBounce",
+                            "${tombstone}",
+                            '1.14999',
+                            '1.14999'
+                        ],
+                        [
                             "eid12291",
                             "opacity",
                             0,
@@ -5218,25 +5236,6 @@
                             "${Rectangle}",
                             '0.000000',
                             '1'
-                        ],
-                        [
-                            "eid12459",
-                            "scaleY",
-                            2750,
-                            0,
-                            "easeOutBounce",
-                            "${tombstone}",
-                            '1.14999',
-                            '1.14999'
-                        ],
-                        [
-                            "eid12493",
-                            "location",
-                            2750,
-                            250,
-                            "easeOutElastic",
-                            "${simpleButton}",
-                            [[476, 739.69, 0, 0, 0, 0,0],[476, 623, 0, 0, 0, 0,116.69]]
                         ],
                         [
                             "eid12463",
@@ -5280,19 +5279,19 @@
                 }
             },
             "destinationGlow": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'image',
+                            rect: ['0px', '0px', '153px', '155px', 'auto', 'auto'],
                             id: 'destination_glow',
                             opacity: '0.3',
-                            rect: ['0px', '0px', '153px', '155px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/destination_glow.png', '0px', '0px']
                         }
                     ],
@@ -5340,19 +5339,19 @@
                 }
             },
             "btnInvisible": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '128px', '128px', 'auto', 'auto'],
+                            type: 'image',
                             id: 'invisible_button',
                             opacity: '0',
-                            type: 'image',
+                            rect: ['0px', '0px', '128px', '128px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/invisible_button.png', '0px', '0px']
                         }
                     ],
@@ -5394,27 +5393,27 @@
                 }
             },
             "dicePair": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], [], [], ['2.18', '2.18']]
+                            transform: [[], [], [], ['2.18', '2.18']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         },
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], [], [], ['2.71', '2.71']]
+                            transform: [[], [], [], ['2.71', '2.71']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -5427,6 +5426,16 @@
                     duration: 1346,
                     autoPlay: true,
                     data: [
+                        [
+                            "eid168",
+                            "scaleY",
+                            0,
+                            821,
+                            "linear",
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
+                        ],
                         [
                             "eid154",
                             "location",
@@ -5446,26 +5455,6 @@
                             [[227.02, 390.14, 0, 0, 0, 0,0],[227.01, 232.57, 0, 0, 0, 0,157.57]]
                         ],
                         [
-                            "eid168",
-                            "scaleY",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
-                        ],
-                        [
-                            "eid171",
-                            "scaleX",
-                            0,
-                            500,
-                            "linear",
-                            "${dice_symbol_2}",
-                            '2.71',
-                            '1'
-                        ],
-                        [
                             "eid167",
                             "scaleX",
                             0,
@@ -5478,6 +5467,16 @@
                         [
                             "eid172",
                             "scaleY",
+                            0,
+                            500,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '2.71',
+                            '1'
+                        ],
+                        [
+                            "eid171",
+                            "scaleX",
                             0,
                             500,
                             "linear",
@@ -5507,19 +5506,19 @@
                 }
             },
             "dice_symbol_1_1": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '90px', '90px', 'auto', 'auto'],
-                            id: 'dice',
                             type: 'image',
                             display: 'none',
+                            rect: ['0px', '0px', '90px', '90px', 'auto', 'auto'],
+                            id: 'dice',
                             fill: ['rgba(0,0,0,0)', 'images/dice2.png', '0px', '0px', '512px', '1024px', 'no-repeat']
                         }
                     ],
@@ -5965,18 +5964,18 @@
                 }
             },
             "shadow": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['-5px', '-22px', '118px', '100px', 'auto', 'auto'],
-                            id: 'shadow_dice',
                             type: 'image',
+                            id: 'shadow_dice',
+                            rect: ['-5px', '-22px', '118px', '100px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/shadow_dice2.png', '0px', '0px']
                         }
                     ],
@@ -5995,41 +5994,41 @@
                 }
             },
             "dicePair_1": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['385px', '64px', '136', '56', 'auto', 'auto'],
                             id: 'shadow1',
                             symbolName: 'shadow',
-                            rect: ['385px', '64px', '136', '56', 'auto', 'auto'],
-                            opacity: '0'
+                            opacity: '0',
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            rect: ['182px', '8px', '136', '56', 'auto', 'auto'],
                             id: 'shadow2',
                             symbolName: 'shadow',
-                            rect: ['182px', '8px', '136', '56', 'auto', 'auto'],
-                            opacity: '0'
+                            opacity: '0',
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            transform: [[], ['26'], [], ['2.18', '2.18']],
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            transform: [[], ['26'], [], ['2.18', '2.18']],
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            transform: [[], [], [], ['2.71', '2.71']],
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            transform: [[], [], [], ['2.71', '2.71']],
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -6083,34 +6082,14 @@
                             '0'
                         ],
                         [
-                            "eid6962",
-                            "opacity",
+                            "eid168",
+                            "scaleY",
                             0,
                             821,
                             "linear",
-                            "${shadow2}",
-                            '0',
-                            '0.5'
-                        ],
-                        [
-                            "eid8977",
-                            "opacity",
-                            821,
-                            525,
-                            "linear",
-                            "${shadow2}",
-                            '0.5',
-                            '0.19'
-                        ],
-                        [
-                            "eid8203",
-                            "opacity",
-                            5000,
-                            0,
-                            "easeOutQuad",
-                            "${shadow2}",
-                            '0.19',
-                            '0'
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
                         ],
                         [
                             "eid8207",
@@ -6133,14 +6112,14 @@
                             '1'
                         ],
                         [
-                            "eid168",
-                            "scaleY",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
+                            "eid8208",
+                            "rotateZ",
+                            5000,
+                            500,
+                            "easeInQuad",
+                            "${dice_symbol_2}",
+                            '0deg',
+                            '-29deg'
                         ],
                         [
                             "eid144",
@@ -6255,48 +6234,8 @@
                             [[219.06, 125.85, 0, 0, 0, 0,0],[221, 810.55, 0, 0, 0, 0,684.7]]
                         ],
                         [
-                            "eid190",
-                            "top",
-                            0,
-                            500,
-                            "linear",
-                            "${shadow2}",
-                            '-4px',
-                            '10px'
-                        ],
-                        [
-                            "eid12565",
-                            "top",
-                            500,
-                            321,
-                            "linear",
-                            "${shadow2}",
-                            '10px',
-                            '58px'
-                        ],
-                        [
-                            "eid191",
-                            "top",
-                            821,
-                            258,
-                            "linear",
-                            "${shadow2}",
-                            '58px',
-                            '35px'
-                        ],
-                        [
-                            "eid12566",
-                            "top",
-                            1079,
-                            267,
-                            "easeOutQuad",
-                            "${shadow2}",
-                            '35px',
-                            '8px'
-                        ],
-                        [
-                            "eid171",
-                            "scaleX",
+                            "eid172",
+                            "scaleY",
                             0,
                             500,
                             "linear",
@@ -6305,8 +6244,8 @@
                             '1'
                         ],
                         [
-                            "eid12554",
-                            "scaleX",
+                            "eid12555",
+                            "scaleY",
                             500,
                             321,
                             "linear",
@@ -6315,8 +6254,8 @@
                             '1.25'
                         ],
                         [
-                            "eid12568",
-                            "scaleX",
+                            "eid12569",
+                            "scaleY",
                             821,
                             258,
                             "linear",
@@ -6325,54 +6264,14 @@
                             '1.18'
                         ],
                         [
-                            "eid12556",
-                            "scaleX",
+                            "eid12557",
+                            "scaleY",
                             1079,
                             267,
                             "linear",
                             "${dice_symbol_2}",
                             '1.18',
                             '1'
-                        ],
-                        [
-                            "eid179",
-                            "left",
-                            0,
-                            821,
-                            "linear",
-                            "${shadow1}",
-                            '586px',
-                            '0px'
-                        ],
-                        [
-                            "eid181",
-                            "left",
-                            821,
-                            110,
-                            "linear",
-                            "${shadow1}",
-                            '0px',
-                            '175px'
-                        ],
-                        [
-                            "eid183",
-                            "left",
-                            931,
-                            148,
-                            "linear",
-                            "${shadow1}",
-                            '175px',
-                            '285px'
-                        ],
-                        [
-                            "eid12599",
-                            "left",
-                            1079,
-                            267,
-                            "easeOutQuad",
-                            "${shadow1}",
-                            '285px',
-                            '385px'
                         ],
                         [
                             "eid180",
@@ -6415,8 +6314,48 @@
                             '64px'
                         ],
                         [
-                            "eid172",
-                            "scaleY",
+                            "eid179",
+                            "left",
+                            0,
+                            821,
+                            "linear",
+                            "${shadow1}",
+                            '586px',
+                            '0px'
+                        ],
+                        [
+                            "eid181",
+                            "left",
+                            821,
+                            110,
+                            "linear",
+                            "${shadow1}",
+                            '0px',
+                            '175px'
+                        ],
+                        [
+                            "eid183",
+                            "left",
+                            931,
+                            148,
+                            "linear",
+                            "${shadow1}",
+                            '175px',
+                            '285px'
+                        ],
+                        [
+                            "eid12599",
+                            "left",
+                            1079,
+                            267,
+                            "easeOutQuad",
+                            "${shadow1}",
+                            '285px',
+                            '385px'
+                        ],
+                        [
+                            "eid171",
+                            "scaleX",
                             0,
                             500,
                             "linear",
@@ -6425,8 +6364,8 @@
                             '1'
                         ],
                         [
-                            "eid12555",
-                            "scaleY",
+                            "eid12554",
+                            "scaleX",
                             500,
                             321,
                             "linear",
@@ -6435,8 +6374,8 @@
                             '1.25'
                         ],
                         [
-                            "eid12569",
-                            "scaleY",
+                            "eid12568",
+                            "scaleX",
                             821,
                             258,
                             "linear",
@@ -6445,8 +6384,8 @@
                             '1.18'
                         ],
                         [
-                            "eid12557",
-                            "scaleY",
+                            "eid12556",
+                            "scaleX",
                             1079,
                             267,
                             "linear",
@@ -6455,31 +6394,91 @@
                             '1'
                         ],
                         [
-                            "eid8208",
-                            "rotateZ",
-                            5000,
+                            "eid190",
+                            "top",
+                            0,
                             500,
-                            "easeInQuad",
-                            "${dice_symbol_2}",
-                            '0deg',
-                            '-29deg'
+                            "linear",
+                            "${shadow2}",
+                            '-4px',
+                            '10px'
+                        ],
+                        [
+                            "eid12565",
+                            "top",
+                            500,
+                            321,
+                            "linear",
+                            "${shadow2}",
+                            '10px',
+                            '58px'
+                        ],
+                        [
+                            "eid191",
+                            "top",
+                            821,
+                            258,
+                            "linear",
+                            "${shadow2}",
+                            '58px',
+                            '35px'
+                        ],
+                        [
+                            "eid12566",
+                            "top",
+                            1079,
+                            267,
+                            "easeOutQuad",
+                            "${shadow2}",
+                            '35px',
+                            '8px'
+                        ],
+                        [
+                            "eid6962",
+                            "opacity",
+                            0,
+                            821,
+                            "linear",
+                            "${shadow2}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid8977",
+                            "opacity",
+                            821,
+                            525,
+                            "linear",
+                            "${shadow2}",
+                            '0.5',
+                            '0.19'
+                        ],
+                        [
+                            "eid8203",
+                            "opacity",
+                            5000,
+                            0,
+                            "easeOutQuad",
+                            "${shadow2}",
+                            '0.19',
+                            '0'
                         ]
                     ]
                 }
             },
             "rectButton": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '237px', '90px', 'auto', 'auto'],
-                            id: 'button_rect',
                             type: 'image',
+                            id: 'button_rect',
+                            rect: ['0px', '0px', '237px', '90px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', '_images/button_rect.png', '0px', '0px']
                         },
                         {
@@ -6493,12 +6492,12 @@
                             fill: ['rgba(53,53,53,1.00)']
                         },
                         {
-                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
+                            rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​ROLL DICE</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto']
+                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -6525,6 +6524,66 @@
                             "${RoundRect}",
                             '5px',
                             '5px'
+                        ],
+                        [
+                            "eid5634",
+                            "height",
+                            0,
+                            0,
+                            "linear",
+                            "${RoundRect}",
+                            '70px',
+                            '70px'
+                        ],
+                        [
+                            "eid7349",
+                            "opacity",
+                            2000,
+                            107,
+                            "easeOutQuad",
+                            "${RoundRect}",
+                            '0.5145769715309143',
+                            '0'
+                        ],
+                        [
+                            "eid7350",
+                            "opacity",
+                            2107,
+                            143,
+                            "easeOutQuad",
+                            "${RoundRect}",
+                            '0',
+                            '0.5145769715309143'
+                        ],
+                        [
+                            "eid5632",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${RoundRect}",
+                            '10px',
+                            '10px'
+                        ],
+                        [
+                            "eid5593",
+                            "top",
+                            0,
+                            1000,
+                            "linear",
+                            "${Text}",
+                            '23px',
+                            '21px'
+                        ],
+                        [
+                            "eid5633",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${RoundRect}",
+                            '218px',
+                            '218px'
                         ],
                         [
                             "eid5591",
@@ -6555,83 +6614,23 @@
                             "${RoundRect}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid7349",
-                            "opacity",
-                            2000,
-                            107,
-                            "easeOutQuad",
-                            "${RoundRect}",
-                            '0.5145769715309143',
-                            '0'
-                        ],
-                        [
-                            "eid7350",
-                            "opacity",
-                            2107,
-                            143,
-                            "easeOutQuad",
-                            "${RoundRect}",
-                            '0',
-                            '0.5145769715309143'
-                        ],
-                        [
-                            "eid5593",
-                            "top",
-                            0,
-                            1000,
-                            "linear",
-                            "${Text}",
-                            '23px',
-                            '21px'
-                        ],
-                        [
-                            "eid5633",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${RoundRect}",
-                            '218px',
-                            '218px'
-                        ],
-                        [
-                            "eid5632",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${RoundRect}",
-                            '10px',
-                            '10px'
-                        ],
-                        [
-                            "eid5634",
-                            "height",
-                            0,
-                            0,
-                            "linear",
-                            "${RoundRect}",
-                            '70px',
-                            '70px'
                         ]
                     ]
                 }
             },
             "rountBtn": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'button_round',
                             rect: ['0px', '0px', '95px', '94px', 'auto', 'auto'],
+                            id: 'button_round',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', '_images/button_round.png', '0px', '0px']
                         },
                         {
@@ -6645,12 +6644,12 @@
                             fill: ['rgba(53,53,53,1)']
                         },
                         {
-                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
+                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">TIPS</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto']
+                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -6691,19 +6690,19 @@
                 }
             },
             "flare_animation": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'image',
+                            rect: ['0px', '0px', '132px', '131px', 'auto', 'auto'],
                             id: 'flare',
                             opacity: '1',
-                            rect: ['0px', '0px', '132px', '131px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/_0007_flare%20spiky%20circle.png', '0px', '0px']
                         }
                     ],
@@ -6781,19 +6780,19 @@
                 }
             },
             "buttonflash": {
-                version: "6.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "6.0.0.400",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            type: 'image',
+                            rect: ['0px', '0px', '259px', '110px', 'auto', 'auto'],
                             id: 'button_rect_hilite',
                             opacity: '1',
-                            rect: ['0px', '0px', '259px', '110px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', '_images/button_rect_hilite.png', '0px', '0px']
                         }
                     ],

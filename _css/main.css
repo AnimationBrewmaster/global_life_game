@@ -105,6 +105,33 @@ ul.links {
 ul.links li {
     margin-bottom: 1em;
 }
+
+p.intro {
+	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
+	font-size: 1em;
+    width: 360px;
+}
+
+
+div.text {
+	float: right;
+	width: 360px;
+	padding 10px;
+	margin 10px;
+}
+
+h3.title {
+	float: right;
+}
+
+ul.win {
+	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
+	font-size: 1em;
+	list-style-type: none;
+	text-align: left;	
+}
+
+
 /*table styles*/
 
 /*form styles*/
