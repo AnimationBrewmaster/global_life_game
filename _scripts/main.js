@@ -932,7 +932,7 @@ function travelToll(numberOfTurns) {
     	sicknessTimer -= 1;
     }
     else if (sicknessTimer = 1) {
-    	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points);
+    	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points");
     	player1.hp -= 6;
     	sicknessTimer = -1;
     	updateStats();
