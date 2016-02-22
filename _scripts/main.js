@@ -32,7 +32,7 @@ var DESTINATION = 4;
 var HOME = 8;
 var inputDifficulty = "a"; // USA! USA! USA!
 var bPlayerIsDead = false;
-
+var sicknessTimer = -1; // variable that can be used to track timed sickness attacks
 var bCountryHasBeenSelected = false;
 var bNameHasBeenEntered = false;
 var my_stage;
@@ -249,7 +249,6 @@ function showGlensButtons() {
 
 // update the screen displayed game stats
 function updateStats() {
-
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
@@ -257,7 +256,7 @@ function updateStats() {
 // actions that take place when food destination is selected
 function getFood() {
    // SetChosenPath("farm");
-    takeTurn();
+    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (player1.gb <= 0) {
@@ -279,7 +278,7 @@ function getFood() {
 
 function getwater() {
    // SetChosenPath("water");
-    takeTurn();
+    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     
@@ -306,10 +305,11 @@ function getwater() {
 }
 
 // actions that take place when toilet destination is selected
-// TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bouns (free from getting sick for a few turns?)
+// TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bonus (free from getting sick for a few turns?)
 function getToilet() {
    // SetChosenPath("toilet");
-    takeTurn();
+    //takeTurn();
+    // TODO - shorten the user message - far far too long
     UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
     player1.hp += 2;
     updateStats();
@@ -319,14 +319,13 @@ function getToilet() {
 // actions that take place when job destination is selected
 function getJob() {
    // SetChosenPath("job");
-   	takeTurn();
+   	//takeTurn();
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
         alertIt("There is no work today, try again tomorrow.");
     } else {
         // award them points based on the education they got.
-        // TODO: create feedback messages that remind the player getting 
         // more education is a good investment
         if (player1.ep > 30) {
             player1.gb += 50;
@@ -368,7 +367,7 @@ function getJob() {
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
-    takeTurn();
+    //takeTurn();
     if (sick || sickWater) {
         if (player1.gb > 9) {
             if (confirm("You are very sick, buy medicine for $10?")) {
@@ -447,7 +446,7 @@ function buyMedicine() {
 // actions that take place when school destination is selected
 function getSchool() {
    // SetChosenPath("school");
-    takeTurn();
+    //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy an education.";
     } else {
@@ -481,7 +480,7 @@ function buySchool() {
 // actions that take place when store destination is selected
 function getStore() {
   //  SetChosenPath("store");
-    takeTurn();
+   //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy anything at the Market.";
         UpdateUserMessage(message);
@@ -655,12 +654,13 @@ function rejectTransaction() {
 }
 
 // completes the steps for a turn
+// NO LONGER CALLED
 function takeTurn() {
     // hide the game start stuff, enter name, pick level, etc:
     //HideStartingInstructions();
     //console.log("* HideStartingInstructions *");
     //LetPlayerRoll();
-    checkCard(); // TODO remove once we solve pop-up bug
+    checkCard();
     updateStats();
     console.log("* updating stats *");
     displayInventory();
@@ -672,7 +672,7 @@ function HideStartingInstructions() {
 }
 
 // checks for action cards and chooses the type
-// TODO function checkCard(square) 
+// TODO function checkCard(square) - once we get pop-up too start working
 function checkCard() {
 	//console.log("position arguement sent: " + square);
 	//getChallengeCard(); //TEMP TESTING
@@ -782,7 +782,8 @@ function loseEducationLevel() {
 }
 
 function gotDiarrhea() {
-	// TODO - code this (get medicine in 3 turns or lose 6 health points)
+	// TODO - test this (get medicine in 3 turns or lose 6 health points)
+	sicknessTimer = 3;
 	console.log("you got Diarrhea!");
 }
 
@@ -906,9 +907,7 @@ function bikeRolls() {
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
 // TODO - needs to add power ups and down turn impacts
-// TODO - change this so it happens after every dice roll, not just at destinations
 function travelToll(numberOfTurns) {
-
     // resetting number of rolls global variable
     //numberOfRolls = 0;
     //UpdateUserMessage('hello');
@@ -928,6 +927,21 @@ function travelToll(numberOfTurns) {
         impactStats(-2 * numberOfTurns, -2 * numberOfTurns, 0, 0);
         updateStats();
     }
+    // TODO - need to test sickness timer
+    if (sicknessTimer > 1) {
+    	sicknessTimer -= 1;
+    }
+    else if (sicknessTimer = 1) {
+    	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points);
+    	player1.hp -= 6;
+    	sicknessTimer = -1;
+    	updateStats();
+    }
+    else {
+    	// reset timer if goes beyond point of impact
+    	sicknessTimer = -1;
+    }
+    
     //TODO - add check power ups here?
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
@@ -968,7 +982,6 @@ function playerWins() {
 }
 
 // updates game once player has died
-// TODO - needs to end the game
 function playerDied() {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
@@ -1113,10 +1126,11 @@ function checkDiceRoll(diceRoll) {
             msgDiceRoll = 'You rolled a ' + diceRoll + ', more than enough to arrive safely at your destination!';
             
            
+            
             intervalDiceButtonFlashes = setInterval(FlashTheDice, 3000);
-
-            // adjust their stats before passing to VIEW
+			// adjust their stats before passing to VIEW
             travelToll(1);
+            //takeTurn();
             
             
             // call DestinationFunction();
@@ -1125,6 +1139,7 @@ function checkDiceRoll(diceRoll) {
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + "\nRoll Again?";           
             travelToll(1);
+            checkCard(); 
             // checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
             FlashTheDice();
         }
@@ -1151,6 +1166,8 @@ function checkDiceRoll(diceRoll) {
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "Player is now at position " + currentPlayerSquare + "\nRoll Again?";
             travelToll(1);
+            checkCard(); 
+            //takeTurn();
             
             //checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
             //LetPlayerRoll();
