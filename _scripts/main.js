@@ -227,6 +227,7 @@ function displayInventory() {
     // removing player stats from currentItems list to leave only inventory items
     currentItems.splice(0, 4);
     console.log(currentItems);
+    return currentItems;
 }
 
 // sends player stats to console
@@ -310,7 +311,7 @@ function getToilet() {
    // SetChosenPath("toilet");
     //takeTurn();
     // TODO - shorten the user message - far far too long
-    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
+    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free.");
     player1.hp += 2;
     updateStats();
     //takeTurn();
@@ -323,7 +324,7 @@ function getJob() {
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
-        alertIt("There is no work today, try again tomorrow.");
+        UpdateUserMessage("There is no work today, try again tomorrow.");
     } else {
         // award them points based on the education they got.
         // more education is a good investment
@@ -709,14 +710,17 @@ function getChallengeCard() {
     console.log("challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _title = challengeCards[countryValue][number].title;
-    var _msg = challengeCards[countryValue][number].text + "<br><br>" + challengeCards[countryValue][number].impact;
-    UpdatePopup(_title, _msg, "red");
+    //var _msg = challengeCards[countryValue][number].text + "<br><br>" + challengeCards[countryValue][number].impact;
+    var _msg = challengeCards[countryValue][number].text + "\n" + challengeCards[countryValue][number].impact;
+    //UpdatePopup(_title, _msg, "red");
+    alert("CHALLENGE CARD\n" + _title + "\n" + _msg);
     // checking for special case cards
     if (challengeCards[countryValue][number].special) {
     	console.log(challengeCards[countryValue][number].special);
     	specialCards(challengeCards[countryValue][number].special);   	
     }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 // randomly selects partnership card
@@ -725,9 +729,12 @@ function getPartnershipCard() {
     console.log("partnership Card! - " + number);
    // UpdateUserMessage("Partnership Card!\n\n" + partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact);
    	var _title = partnershipCards[countryValue][number].title;
-    var _msg = partnershipCards[countryValue][number].text + "<br><br>" + partnershipCards[countryValue][number].impact;
-    UpdatePopup(_title, _msg, "green");
+    //var _msg = partnershipCards[countryValue][number].text + "<br><br>" + partnershipCards[countryValue][number].impact;
+    var _msg = partnershipCards[countryValue][number].text + "\n" + partnershipCards[countryValue][number].impact;
+    //UpdatePopup(_title, _msg, "green");
+    alert("PARTNERSHIP CARD\n" + _title + "\n" + _msg);
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 // special card function that get agruements from challengeCards.js
@@ -814,6 +821,7 @@ function modifyEducationLevel(direction){
         }
     }
     updateStats();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 // updates player stats from sent agruements
@@ -823,6 +831,8 @@ function impactStats(hp, wp, ep, gb) {
     player1.ep += ep;
     player1.gb += gb;
     checkGameOver();
+    console.log("updating HUD from impactStats function");
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 function rolls() {
@@ -930,20 +940,46 @@ function travelToll(numberOfTurns) {
     // TODO - need to test sickness timer
     if (sicknessTimer > 1) {
     	sicknessTimer -= 1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     }
-    else if (sicknessTimer = 1) {
+    else if (sicknessTimer == 1) {
     	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points");
     	player1.hp -= 6;
     	sicknessTimer = -1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     	updateStats();
     }
     else {
     	// reset timer if goes beyond point of impact
     	sicknessTimer = -1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     }
     
     //TODO - add check power ups here?
+    checkPowerUps();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
+}
+
+function checkPowerUps() {
+	// some temp functions to make up for loss of inventory control
+    if (player1.food && player1.hp < 2) {
+    	console.log("used food");
+    	player1.food = false;
+    	player1.hp += 4;
+    	updateStats();
+    	additionalInfo += "<br>You ate some food you were carrying and gained 4 Health Points.";
+    }
+    if (player1.kit && player1.hp < 2) {
+    	console.log("used kit");
+    	player1.kit = false;
+    	player1.hp += 6;
+    	updateStats();
+    	additionalInfo += "<br>You used your first aid kit and gained 6 Health Points.";
+    }
+    if (player1.plumbing == true) {
+    	player1.wp = 100;
+    	updateStats();
+    }
 }
 
 // checks to see if player has died
@@ -982,7 +1018,10 @@ function playerWins() {
 }
 
 // updates game once player has died
-function playerDied() {
+function playerDied()
+
+
+ {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
     updateStats();
@@ -1250,15 +1289,20 @@ function InitGameTips() {
 
     startingGameTip = Math.floor(Math.random() * arrGameTips.length);
 }
-
+//TODO - revert back
 function GetRandomGameTip() {
     // every game will start the tips from a 
     // random position to keep things fresh:
+    /*
     startingGameTip++;
     if (startingGameTip > arrGameTips.length - 1)
         startingGameTip = 0;
-
+	
+	
     swal("Random Game Tip!", arrGameTips[startingGameTip]);
+    */
+   swal("INVENTORY", displayInventory());
+   
 }
 
 function MakeBoyOrGirl()

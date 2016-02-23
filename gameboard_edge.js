@@ -6644,10 +6644,12 @@
                             fill: ['rgba(53,53,53,1)']
                         },
                         {
+                        	// TODO - GLen - revert back
                             type: 'text',
                             rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto'],
                             id: 'Text',
-                            text: '<p style=\"margin: 0px;\">TIPS</p>',
+                            //text: '<p style=\"margin: 0px;\">TIPS</p>',
+                            text: '<p style=\"margin: 0px;\">Stuff</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
                             font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }

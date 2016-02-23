@@ -998,7 +998,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol end:'simpleButton_3'
 
    //=========================================================
-   
+   // TODO Glen - revert back
    //Edge symbol: 'hudNextDest'
    (function(symbolName) {   
    
@@ -1006,7 +1006,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "soap";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 1 Global Buck?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1022,7 +1023,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "tablet";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 1 Global Buck?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1038,7 +1040,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "bucket";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 2 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1054,7 +1057,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "food";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 2 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1071,7 +1075,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "kit";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 3 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1087,7 +1092,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "filter";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 20 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1103,7 +1109,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "plumbing";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 100 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1119,7 +1126,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "bike";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for 20 Global Bucks?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1339,7 +1347,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      
+      // TODO - Glen revert back
 
       
 
@@ -1367,7 +1375,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFarm}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Farms have fresh food.");
+         //UpdateUserMessage("Farms have fresh food.");
+         UpdateUserMessage("Go here to get the health points you need to survive. To determine how many health points you can buy for 1 Global Buck, but be careful – rolling a 1 will get you sick.");
          sym.getSymbol("btnFarm").play("over");
          
          
@@ -1392,7 +1401,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnSchool}", "mouseover", function(sym, e) {
-         UpdateUserMessage("An education will get you a better job. A better job will get you more money faster.");
+         //UpdateUserMessage("An education will get you a better job. A better job will get you more money faster.");
+         UpdateUserMessage("Go here to gain education points. The more Education Points you have, the more you get paid when you go to your job. You gain 2 education points for every Global Buck you spend (MAX of 6 points per visit).");
          sym.getSymbol("btnSchool").play("over");
          
          
@@ -1417,7 +1427,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnWater}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Living uses water. Every turn will use some of yours. Always have an ample supply.");
+         //UpdateUserMessage("Living uses water. Every turn will use some of yours. Always have an ample supply.");
+         UpdateUserMessage("Go here to collect the water points you will need to survive. If you have a bucket, you will be able to collect twice as many water points. Be cautious, untreated water can give you a water borne illness.");
          sym.getSymbol("btnWater").play("over");
          
          
@@ -1442,7 +1453,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnHospital}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Hospitals heal you when you're sick and give you health related items.");
+         //UpdateUserMessage("Hospitals heal you when you're sick and give you health related items.");
+         UpdateUserMessage("Go here to gain health points and cure illnesses. For every Global Buck you spend, you 2 Health Points (max 10 points per visit). You can also purchase 1 dose of medication per visit.");
          sym.getSymbol("btnHospital").play("over");
          
          
@@ -1469,7 +1481,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnJob}", "mouseover", function(sym, e) {
-         UpdateUserMessage("A job will bring in income and allow you to buy food and supplies.");
+         //UpdateUserMessage("A job will bring in income and allow you to buy food and supplies.");
+         UpdateUserMessage("Go to your job to earn money. The higher your education, the more money you earn. You will need Global Bucks to help you buy things and survive the game.");
          sym.getSymbol("btnJob").play("over");
 
       });
@@ -1493,7 +1506,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnMarket}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Markets will sell you a variety of useful items including food and transportation.");
+         //UpdateUserMessage("Markets will sell you a variety of useful items including food and transportation.");
+         UpdateUserMessage("Go here to purchase a variety of items that can help you in your life. (Max 1 item purchased per visit)");
          sym.getSymbol("btnMarket").play("over");
          
          
@@ -1520,7 +1534,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnToilet}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Visiting a toilet gives you a health advantage and allows you to avoid nasty diseases");
+         //UpdateUserMessage("Visiting a toilet gives you a health advantage and allows you to avoid nasty diseases");
+         UpdateUserMessage("Go here to gain 2 health points for free. Dispose of your human waste properly to reduce the chance of getting sick. A form of simple sanitation would be a covered hole in the ground yet nearly 1/3 of the planet lives without proper sanitation.");
          sym.getSymbol("btnToilet").play("over");
          
          
