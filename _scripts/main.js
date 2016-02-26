@@ -245,6 +245,12 @@ function showGlensButtons() {
     document.getElementById("glens_nav").style.visibility = "visible";
 }
 
+function HideStartingInstructions() {
+    console.log("HideStartingInstructions()");
+    document.getElementById('starting_instructions').style.display = "none";
+}
+
+
 // ------- gameplay functions -------
 
 // update the screen displayed game stats
@@ -252,6 +258,9 @@ function updateStats() {
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
+
+
+//-------- destination functions ------------
 
 // actions that take place when food destination is selected
 function getFood() {
@@ -309,8 +318,7 @@ function getwater() {
 function getToilet() {
    // SetChosenPath("toilet");
     //takeTurn();
-    // TODO - shorten the user message - far far too long
-    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free\n\nHaving a way to properly dispose of watse greatly reduces your chance of getting sick.\nA basic defintion for sanitation is a covered hole in the ground.\nNearly one third of the planet is without sanitation.");
+    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free.");
     player1.hp += 2;
     updateStats();
     //takeTurn();
@@ -456,6 +464,7 @@ function getSchool() {
 }
 
 // gets and checks user input for schooling spending and updates player stats
+// TODO - have function call EDGE interface, send possbile values and recieve players input
 function buySchool() {
     var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?", Math.round(Math.random() * 3));
     var bucksSpent = parseInt(schoolBuy);
@@ -507,7 +516,7 @@ function buyNewStuff() {
     if (stuffBuy === "") {
         UpdateUserMessage('nothing chosen to buy');
         
-        // TODO: get it to reopen the window? will this every get called empty? - set stuffBuy to "" when transaction rejected to avoid infinite recursion loop
+        // TODO: get it to reopen the window? will this ever get called empty? - set stuffBuy to "" when transaction rejected to avoid infinite recursion loop
         return;
     }
 
@@ -618,20 +627,7 @@ function buyNewStuff() {
     checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them idf sick, feed them if hungry, etc.)
 }
 
-// TODO - Glen: write this function out
-function checkPowerUp(powerUp) {
-	// go through the power up list and give them the power
-	switch (powerUp) {
-		case "plumbing":
-			console.log("plumbingp power up");
-			player1.wp = 100;
-			break;
-			
-		default:
-		console.log("nothing");
-	}
-	
-}
+
 
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
 function checkout(item, value, message) {
@@ -653,23 +649,8 @@ function rejectTransaction() {
     buyNewStuff();
 }
 
-// completes the steps for a turn
-// NO LONGER CALLED
-function takeTurn() {
-    // hide the game start stuff, enter name, pick level, etc:
-    //HideStartingInstructions();
-    //console.log("* HideStartingInstructions *");
-    //LetPlayerRoll();
-    checkCard();
-    updateStats();
-    console.log("* updating stats *");
-    displayInventory();
-}
 
-function HideStartingInstructions() {
-    console.log("HideStartingInstructions()");
-    document.getElementById('starting_instructions').style.display = "none";
-}
+// -------------- card functions ---------------
 
 // checks for action cards and chooses the type
 // TODO function checkCard(square) - once we get pop-up too start working
@@ -705,29 +686,46 @@ function checkCard() {
 // randomly selects challenge card
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
-    //var number = 5; //TEMP TESTING
-    console.log("challenge Card! : " + number);
+    var specialMsg = ""; //TEMP TESTING
+    console.log("Challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _title = challengeCards[countryValue][number].title;
     var _msg = challengeCards[countryValue][number].text + "<br><br>" + challengeCards[countryValue][number].impact;
     UpdatePopup(_title, _msg, "red");
     // checking for special case cards
     if (challengeCards[countryValue][number].special) {
-    	console.log(challengeCards[countryValue][number].special);
-    	specialCards(challengeCards[countryValue][number].special);   	
+    	specialMsg = challengeCards[countryValue][number].special;
+    	specialCards(challengeCards[countryValue][number].special); 	   	
     }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
+    // pass data to console
+    console.log("**********CARD DATA**********");
+    console.log(_title);
+    console.log(challengeCards[countryValue][number].impact);
+    console.log(specialMsg);
+    console.log("*****************************");
 }
 
 // randomly selects partnership card
 function getPartnershipCard() {
     var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
-    console.log("partnership Card! - " + number);
+    var specialMsg = ""; //TEMP TESTING
+    console.log("Partnership Card! - " + number);
    // UpdateUserMessage("Partnership Card!\n\n" + partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact);
    	var _title = partnershipCards[countryValue][number].title;
     var _msg = partnershipCards[countryValue][number].text + "<br><br>" + partnershipCards[countryValue][number].impact;
     UpdatePopup(_title, _msg, "green");
+    if (partnershipCards[countryValue][number].special) {
+    	specialMsg = partnershipCards[countryValue][number].special;
+    	specialCards(partnershipCards[countryValue][number].special); 	   	
+    }
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
+    // pass data to console
+    console.log("**********CARD DATA**********");
+    console.log(_title);
+    console.log(challengeCards[countryValue][number].impact);
+    console.log(specialMsg);
+    console.log("*****************************");
 }
 
 // special card function that get agruements from challengeCards.js
@@ -766,6 +764,7 @@ function specialCards(fnstring) {
 	 */
 }
 
+// functions to handle special effects inroduced by Challenge or Partnership Cards
 function gotSick() {
 	sick = true;
 	console.log("you got sick!!");
@@ -816,6 +815,70 @@ function modifyEducationLevel(direction){
     updateStats();
 }
 
+
+// --------- turn based functions ------------
+
+// completes the steps for a turn
+// NO LONGER CALLED
+function takeTurn() {
+    // hide the game start stuff, enter name, pick level, etc:
+    //HideStartingInstructions();
+    //console.log("* HideStartingInstructions *");
+    //LetPlayerRoll();
+    checkCard();
+    updateStats();
+    console.log("* updating stats *");
+    displayInventory();
+}
+
+
+function checkPlayerCondition() {
+	// check if player is sick from food
+    if (sick === true) {
+        UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
+        additionalInfo = "<br>You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.";
+        impactStats(-2 * numberOfTurns, 0, 0, 0);
+        updateStats();
+    }
+    // check if player is sick from water
+    if (sickWater === true) {
+        UpdateUserMessage("You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points");
+        additionalInfo = "<br>You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points";
+        impactStats(-2 * numberOfTurns, -2 * numberOfTurns, 0, 0);
+        updateStats();
+    }
+    // check if player is sick from Challenge Card
+    if (sicknessTimer > 1) {
+    	sicknessTimer -= 1;
+    }
+    else if (sicknessTimer == 1) {
+    	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points");
+    	player1.hp -= 6;
+    	sicknessTimer = -1;
+    	updateStats();
+    }
+    else {
+    	// reset timer if goes beyond point of impact
+    	sicknessTimer = -1;
+    }
+    
+}
+
+// TODO - Glen: write this function out
+function checkPowerUp(powerUp) {
+	// go through the power up list and give them the power
+	switch (powerUp) {
+		case "plumbing":
+			console.log("plumbingp power up");
+			player1.wp = 100;
+			break;
+			
+		default:
+		console.log("nothing");
+	}
+	
+}
+
 // updates player stats from sent agruements
 function impactStats(hp, wp, ep, gb) {
     player1.hp += hp;
@@ -825,11 +888,28 @@ function impactStats(hp, wp, ep, gb) {
     checkGameOver();
 }
 
+// determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
+// TODO - needs to add power ups and down turn impacts
+function travelToll(numberOfTurns) {
+    // resetting number of rolls global variable
+    //numberOfRolls = 0;
+    //UpdateUserMessage('hello');
+    //UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
+	additionalInfo = "";
+    impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
+    updateStats();
+    checkPlayerCondition();
+    checkPowerUp();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
+}
+
+// OBSOLETE?
 function rolls() {
     // changed to let player control dice roll:
     LetPlayerRoll();
 }
 
+// OBSOLETE?
 function LetPlayerRoll() {
     //    ShowTheDice();
     //alert('Roll Again? (LetPlayerRoll)');
@@ -891,60 +971,6 @@ function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal(dice_roll) {
     THE_GAME.ShowDiceBasedOnGlensValue(dice_roll);
 }
 
-// rolls 3 dice until total of dice rolls equals 6, then passes number of rolls to travel toll function - NO LONGER CALLED
-function bikeRolls() {
-    var number = 0;
-    var i = 0;
-    while (number <= 6) {
-        number += Math.floor((Math.random() * 6) + 1);
-        number += Math.floor((Math.random() * 6) + 1);
-        number += Math.floor((Math.random() * 6) + 1);
-        i++;
-    }
-    travelToll(i);
-    
-}
-
-// determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
-// TODO - needs to add power ups and down turn impacts
-function travelToll(numberOfTurns) {
-    // resetting number of rolls global variable
-    //numberOfRolls = 0;
-    //UpdateUserMessage('hello');
-    //UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
-	additionalInfo = "";
-    impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
-    updateStats();
-    if (sick === true) {
-        UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
-        additionalInfo = "<br>You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.";
-        impactStats(-2 * numberOfTurns, 0, 0, 0);
-        updateStats();
-    }
-    if (sickWater === true) {
-        UpdateUserMessage("You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points");
-        additionalInfo = "<br>You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points";
-        impactStats(-2 * numberOfTurns, -2 * numberOfTurns, 0, 0);
-        updateStats();
-    }
-    // TODO - need to test sickness timer
-    if (sicknessTimer > 1) {
-    	sicknessTimer -= 1;
-    }
-    else if (sicknessTimer = 1) {
-    	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points");
-    	player1.hp -= 6;
-    	sicknessTimer = -1;
-    	updateStats();
-    }
-    else {
-    	// reset timer if goes beyond point of impact
-    	sicknessTimer = -1;
-    }
-    
-    //TODO - add check power ups here?
-    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
-}
 
 // checks to see if player has died
 function checkGameOver() {
