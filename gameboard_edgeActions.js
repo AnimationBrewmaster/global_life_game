@@ -761,6 +761,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${SCRIM}", "click", function(sym, e) {
+         return;
+
+      });
+      //Edge binding end
+
    })("popup");
    //Edge symbol end:'popup'
 

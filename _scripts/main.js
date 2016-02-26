@@ -124,7 +124,7 @@ function SetChosenPath(which_path) {
             break;
     }
     // this is where i'll update the field on stage for now.
-    UpdateUserMessage("You've decided " + pathDescription + ". " + getPositiveWord() + "!");
+    UpdateUserMessage("You've decided " + pathDescription + "!");
     UpdateEdgeStageDestinationTextField(which_path);
     // hide the starting instructions:
     HideStartingInstructions();
@@ -132,20 +132,6 @@ function SetChosenPath(which_path) {
     // and show the correct background.    
     THE_GAME.getComposition().getStage().ShowNewBackground(which_path);
     FlashTheDice();
-}
-
-
-// returns player name from user prompt
-function getPlayerName() {
-    var inputName = prompt("Enter your Name:", "Honcho");
-    return inputName;
-}
-
-
-function getPositiveWord() {
-    var arrPosWords = new Array("Nice", "Sweet", "Great", "Awesome", "Excellent", "Wonderful", "Gnarly", "Dope", "Terrific", "Wicked","Shiny");
-    var randNum = Math.floor(Math.random() * arrPosWords.length);
-    return arrPosWords[randNum];
 }
 
 // sets player onject stats based on user input choice of country card
@@ -190,7 +176,7 @@ function getDifficulty(value) {
             countryValue = 0;
             break;
     }
-    // MANUALLY UPDATING:
+    // MANUALLY UPDATING, IE FOR TESTING END OF GAME SCENARIOS, LOW HEALTH:
     /*
     player1.hp = 5;
     player1.wp = 5;
@@ -250,11 +236,12 @@ function HideStartingInstructions() {
     document.getElementById('starting_instructions').style.display = "none";
 }
 
-
 // ------- gameplay functions -------
 
 // update the screen displayed game stats
 function updateStats() {
+    // this appears to be the replacement candidate for takeTurn() so I'll check for cards here.
+     checkCard();
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
@@ -265,7 +252,6 @@ function updateStats() {
 // actions that take place when food destination is selected
 function getFood() {
    // SetChosenPath("farm");
-    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     if (player1.gb <= 0) {
@@ -280,14 +266,12 @@ function getFood() {
     }
     UpdateUserMessage("You have arrived at the farm.\n" + message);
     updateStats();
-    //takeTurn();
 }
 
 // actions that take place when water destination is selected
 
 function getwater() {
    // SetChosenPath("water");
-    //takeTurn();
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
     
@@ -310,24 +294,20 @@ function getwater() {
     }
     UpdateUserMessage("You have arrived at the water source.\n" + message);
     updateStats();
-    //takeTurn();
 }
 
 // actions that take place when toilet destination is selected
 // TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bonus (free from getting sick for a few turns?)
 function getToilet() {
    // SetChosenPath("toilet");
-    //takeTurn();
     UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free.");
     player1.hp += 2;
     updateStats();
-    //takeTurn();
 }
 
 // actions that take place when job destination is selected
 function getJob() {
    // SetChosenPath("job");
-   	//takeTurn();
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
@@ -368,14 +348,11 @@ function getJob() {
         }
         updateStats();
     }
-    //takeTurn();
-
 }
 
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
-    //takeTurn();
     if (sick || sickWater) {
         if (player1.gb > 9) {
             if (confirm("You are very sick, buy medicine for $10?")) {
@@ -395,7 +372,6 @@ function getMedical() {
             UpdateUserMessage("Unfortunately you have no money to buy medicine.");
         }
     }
-    //takeTurn();
 }
 
 // get and check user input for buying medicine and then update player stats
@@ -454,13 +430,11 @@ function buyMedicine() {
 // actions that take place when school destination is selected
 function getSchool() {
    // SetChosenPath("school");
-    //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy an education.";
     } else {
         buySchool();
     }
-    //takeTurn();
 }
 
 // gets and checks user input for schooling spending and updates player stats
@@ -489,7 +463,6 @@ function buySchool() {
 // actions that take place when store destination is selected
 function getStore() {
   //  SetChosenPath("store");
-   //takeTurn();
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy anything at the Market.";
         UpdateUserMessage(message);
@@ -497,7 +470,6 @@ function getStore() {
         OpenMarketHud();
     }
     //updateStats();
-    //takeTurn();
 }
 
 function OpenMarketHud() {
@@ -627,8 +599,6 @@ function buyNewStuff() {
     checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them idf sick, feed them if hungry, etc.)
 }
 
-
-
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
 function checkout(item, value, message) {
     if (player1.gb < value) {
@@ -648,7 +618,6 @@ function rejectTransaction() {
     stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
     buyNewStuff();
 }
-
 
 // -------------- card functions ---------------
 
@@ -818,20 +787,6 @@ function modifyEducationLevel(direction){
 
 // --------- turn based functions ------------
 
-// completes the steps for a turn
-// NO LONGER CALLED
-function takeTurn() {
-    // hide the game start stuff, enter name, pick level, etc:
-    //HideStartingInstructions();
-    //console.log("* HideStartingInstructions *");
-    //LetPlayerRoll();
-    checkCard();
-    updateStats();
-    console.log("* updating stats *");
-    displayInventory();
-}
-
-
 function checkPlayerCondition() {
 	// check if player is sick from food
     if (sick === true) {
@@ -903,44 +858,16 @@ function travelToll(numberOfTurns) {
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
-// OBSOLETE?
-function rolls() {
-    // changed to let player control dice roll:
-    LetPlayerRoll();
-}
-
-// OBSOLETE?
-function LetPlayerRoll() {
-    //    ShowTheDice();
-    //alert('Roll Again? (LetPlayerRoll)');
-    //ShowTheDice();
-    //AdobeEdge.getComposition('EDGE-581531069').getStage().ShowDice();
-    // need to show the dice widget.
-}
-
 function ShowTheDice() {
-    // THE_GAME.ShowDice();
     THE_GAME.getComposition().getStage().ShowDice();
 }
 
 function HideTheDice() {
-    //   my_stage = AdobeEdge.getComposition('EDGE-581531069').getStage();
-    alert('hidthedice');
-    //        THE_GAME.HideDice();
     THE_GAME.getComposition().getStage().HideDice();
 }
 
-
-
-
-function AlertHolderFunction()
-{
-    alert("worked");
-}
-
 function ExecutePlayerRoll() // called by the dice function.
-{
-    
+{   
     // hide the dice so it can't be clicked again:
      THE_GAME.HideDiceButtons();
     var dice_roll = 0;
@@ -967,7 +894,6 @@ function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal(dice_roll) {
     clearInterval(intervalDiceAnimTimeDelay);
     checkDiceRoll(dice_roll);
     // pass it to the new dice:
-
     THE_GAME.ShowDiceBasedOnGlensValue(dice_roll);
 }
 
@@ -999,7 +925,6 @@ function playerWins() {
 	if (player1.hp >= 50 && player1.wp >= 50 && player1.ep >= 30 && player1.gb >= 75 && (player1.filter == true || player1.plumbing == true)) {
 		console.log("players wins = true");
 		return true;
-		
 	}
 	else {
 		console.log("players wins = false");
@@ -1012,13 +937,9 @@ function playerDied() {
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
     updateStats();
-    //document.body.style.backgroundColor = "#ff0000";
 
     gameOver = true;
     UpdateHUD();
-    
-    // pop up the tombstone
-   //THE_GAME.ShowGameOver();
     
     THE_GAME.ShowObituary(_username, CalcHowBadlyPlayerDied());
 
@@ -1029,13 +950,11 @@ function playerWon() {
     console.log("player won");
     UpdateUserMessage("Congratulations! You won!!");
     updateStats();
-    //document.body.style.backgroundColor = "#ff0000";
 
     gameOver = true;
     UpdateHUD();
     
     // pop up the tombstone
-   //THE_GAME.ShowGameOver();
    var winMessage = "Congratulations on achieving a sustainable life!<br>Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions!<br> Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";
    
    THE_GAME.ShowObituary(_username, winMessage);  
@@ -1138,7 +1057,7 @@ function checkDiceRoll(diceRoll) {
     if(gameOver){
         return;   
     }
-
+  
     //THE_GAME.HideDiceButton();
     UpdateUserMessage("YOU JUST ROLLED A " + diceRoll);
     var msgDiceRoll = "";
@@ -1149,16 +1068,11 @@ function checkDiceRoll(diceRoll) {
             // round down to the destination value:
             currentPlayerSquare = DESTINATION;
             // stop them at midpoint
-            msgDiceRoll = 'You rolled a ' + diceRoll + ', more than enough to arrive safely at your destination!';
-            
-           
+            msgDiceRoll = 'You rolled a ' + diceRoll + ', more than enough to arrive safely at your destination!';      
             
             intervalDiceButtonFlashes = setInterval(FlashTheDice, 3000);
 			// adjust their stats before passing to VIEW
             travelToll(1);
-            //takeTurn();
-            
-            
             // call DestinationFunction();
         } else {
             currentPlayerSquare += diceRoll;
@@ -1193,15 +1107,12 @@ function checkDiceRoll(diceRoll) {
             msgDiceRoll = "Player is now at position " + currentPlayerSquare + "\nRoll Again?";
             travelToll(1);
             checkCard(); 
-            //takeTurn();
             
             //checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
-            //LetPlayerRoll();
             FlashTheDice();
         }
     }
     // move player to currentplayersquare:
-
     UpdatePlayerPositionAlongTimeline(Number(currentPlayerSquare));
 
     // alert the correct message. i moved the alerts here so they wouldn't stop time and halt player movement:
@@ -1423,27 +1334,6 @@ function SetInputDifficulty(val) {
 
     updateStats();
 }
-/*
-function SetNameEntered(newname) {
-    if ((newname == "") || (newname == undefined)) {
-        // no name, we need to make one up:
-        _username = getRandomName();
-    } else {
-        // grab the passed value
-        _username = newname;
-    }
-    bNameHasBeenEntered = true;
-
-    //write to the global:
-    playername = _username;
-    // update the HUD
-    //UpdatePlayerName(_username);
-    // update stage text:
-    UpdatePlayerStageName(_username);
-    // update form field:
-    document.getElementById("user_name").value = _username;
-}
-*/
 
 function AreWeReadyToStart() {
     if ((bCountryHasBeenSelected) && (bNameHasBeenEntered)) {

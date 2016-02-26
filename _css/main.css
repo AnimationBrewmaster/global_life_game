@@ -29,7 +29,7 @@ background: url(../images/bg0.jpg) no-repeat center center fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
- 
+ 	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
 }
 
 #game, #character{
@@ -75,49 +75,31 @@ background: url(../images/bg0.jpg) no-repeat center center fixed;
 /*specific container styles*/
 
 /*main article styles*/
-article h1 {
-    font-family: Bitter, Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
+h1 {
     font-size: 2.8em;
-    color: rgb(168, 88, 163);
-    margin-bottom: .5em;
 }
-article h2 {
-    font-family: Bitter, Georgia, Times, "Times New Roman", serif;
+h2 {
     font-size: 1.5em;
-    color: rgb(65, 64, 66);
-    margin-bottom: .5em;
-    clear: both;
 }
-article h3 {
-    font-family: Bitter, Georgia, Times, "Times New Roman", serif;
+h3 {
     font-size: 1.2em;
-    color: rgb(251, 174, 44);
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-ul.links {
-    list-style: none;
-    margin: 0;
-    padding 0;
-}
-ul.links li {
-    margin-bottom: 1em;
-}
-
-p.intro {
-	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
-	font-size: 1em;
-    width: 360px;
 }
 
 
-div.text {
+
+
+.intro {
+
+    width: 300px;
+}
+
+
+.text {
 	float: right;
-	width: 360px;
+	width: 300px;
 	padding 10px;
 	margin 10px;
+    font-size: 80%;
 }
 
 h3.title {
@@ -125,10 +107,7 @@ h3.title {
 }
 
 ul.win {
-	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
-	font-size: 1em;
-	list-style-type: none;
-	text-align: left;	
+
 }
 
 
