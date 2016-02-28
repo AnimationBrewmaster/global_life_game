@@ -92,6 +92,7 @@ var currentPathFunctionHolder; //used to delay the main game functions (getjob, 
 
 function InitGame() {
     THE_GAME = AdobeEdge.getComposition('EDGE-581531069').getStage();
+    createInventory();
 }
 
 function SetChosenPath(which_path) {
@@ -244,6 +245,92 @@ function updateStats() {
      checkCard();
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
+    
+   var inventoryTally = "";
+    
+    /*
+     var inventoryTally = 
+    player1.soap + "<br>" + 
+    player1.tablet + "<br>" + 
+    player1.bucket + "<br>" + 
+    player1.food + "<br>" + 
+    player1.kit + "<br>" + 
+    player1.filter + "<br>" + 
+    player1.bike + "<br>" + 
+    player1.plumbing + "<br>" + 
+    player1.medicine;
+    */
+    
+    if(player1.soap){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+     if(player1.tablet){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.bucket){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.food){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.kit){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.filter){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.bike){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.plumbing){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    inventoryTally += "<br>";
+    
+    
+     if(player1.medicine){
+        inventoryTally += "YES";
+    } else {
+        inventoryTally += "NO";
+    }
+    
+    InvUpdateInventory(inventoryTally);
 }
 
 
@@ -624,10 +711,13 @@ function rejectTransaction() {
 // checks for action cards and chooses the type
 // TODO function checkCard(square) - once we get pop-up too start working
 function checkCard() {
+    
+    var square = currentPlayerSquare;
 	//console.log("position arguement sent: " + square);
 	//getChallengeCard(); //TEMP TESTING
+    /*
     var number = Math.floor((Math.random() * 100) + 1);
-    console.log("Random Card Numer: " + number);
+    console.log("Random Card Number: " + number);
     if (number < 36) {
         getChallengeCard();
 
@@ -638,8 +728,10 @@ function checkCard() {
     } else {
         UpdateUserMessage("uneventful journey");
     }
+    
+    */
 	// TODO simple version for now, will check vs each destination in future
-	/*
+	
 	if (square == 2 || square == 7) {
 		getChallengeCard();
 	}
@@ -649,7 +741,7 @@ function checkCard() {
 	else {
 		console.log("empty square");
 	}
-	*/
+	
 }
 
 // randomly selects challenge card

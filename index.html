@@ -14,6 +14,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
 	<script src="https://use.edgefonts.net/rancho.js"></script>
+        <script src="https://use.edgefonts.net/kotta-one.js"></script> 
 	<script src="_scripts/main.js"></script>
 	<script src="_scripts/challengeCards.js"></script>
 	<script src="_scripts/partnershipCards.js"></script>
@@ -54,7 +55,7 @@
     	</h3>
     	<p class="intro">
     		The objective of the game is to reach a certain standard of living so you can sustain your life. The more developed the country you choose, the easier it is to reach this sustainable level. You ‘win’ when you have:
-    	</p>
+    	
     	<ul class="win">
     		<li>50 Health Points</li>
             <li>50 Water Points</li>
@@ -71,7 +72,7 @@
     <!-- img src="_images/icon_avg.png" id="country_type" name="country_type" width="128" height="128" align="right" -->
    
     <div id="startMessage">
-          PLEASE SELECT THE COUNTRY TYPE YOU WISH TO PLAY AS:
+          To begin playing select a difficulty below:
           <div id="country_type"> 
         <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"> A </button>
         <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> B </button>
@@ -81,10 +82,11 @@
             <ul><li>A = EASIER (Developed Nation)</li>
                 <li>B = CHALLENGING (Emerging Nation)</li>
                 <li>C = DIFFICULT (Developing Nation)</li>
-        </ul></div>
+        </ul>
+        </div>
 
-        <div id="startButton">
-        <button type="button" onclick="AreWeReadyToStart();" name="start_button" id="start_button" value="c" style="">START!</button>
+        <div id="startButton" style="text-align:center;">
+        <button type="button" onclick="AreWeReadyToStart();" name="start_button" id="start_button" value="c" class="start-button">START!</button>
         </div>
         </div>
   </div>

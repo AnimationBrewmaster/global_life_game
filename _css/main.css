@@ -6,7 +6,7 @@
 /*Global styles -----------------------------------------------------------------------------------------------------------*/
 
 /*limited reset*/
-html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, figure, canvas, video, th, td, tr {
     margin: 0;
     padding: 0;
     border: 0;
@@ -29,7 +29,8 @@ background: url(../images/bg0.jpg) no-repeat center center fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
- 	font-family: Bitter, Georgia, Times, "Times New Roman", serif;
+    font-family: kotta-one, serif;
+    font-size:80%;
 }
 
 #game, #character{
@@ -39,7 +40,6 @@ background: url(../images/bg0.jpg) no-repeat center center fixed;
     -o-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
 }
-
 
 /* Global classes */
 
@@ -85,31 +85,21 @@ h3 {
     font-size: 1.2em;
 }
 
-
-
-
 .intro {
-
     width: 300px;
 }
-
 
 .text {
 	float: right;
 	width: 300px;
 	padding 10px;
 	margin 10px;
-    font-size: 80%;
+    font-size: 100%;
 }
 
 h3.title {
 	float: right;
 }
-
-ul.win {
-
-}
-
 
 /*table styles*/
 

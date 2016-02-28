@@ -19,7 +19,6 @@
       
       #country_type {
           font-size: x-small;
-          text-align: center;
       }
       
       #starting_instructions {
@@ -41,13 +40,12 @@
       
       #choice_description {
         padding: 10px;
-        font-family: serif;
-        font-size:large;
+        font-size:small;
         width:800px;
       }
       
       li {
-          padding: 6px;
+          padding: 2px;
       }
       
       button {
@@ -68,7 +66,6 @@
           display: inline-block;
           cursor: pointer;
           color: #ffffff;
-          font-family: Arial;
           font-size: 24px;
           font-weight: bold;
           padding: 10px;
@@ -120,7 +117,6 @@ styles for the Start Game form:
           -webkit-box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 0px 0;
           -moz-box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 0px 0;
           box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 0px 0;
-          font-family: 'Helvetica Neue', Helvetica, sans-serif;
           text-decoration: none; 
           min-width: 100%;
           padding: 20px;
@@ -182,7 +178,6 @@ styles for the Start Game form:
           box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
           text-shadow: #8f8f8f 0 1px 0;
           color: #4f4f4f;
-          font-family: helvetica, serif;
           padding: 8.5px 18px;
           font-size: 14px;
           text-decoration: none;
@@ -213,4 +208,22 @@ styles for the Start Game form:
           background: -o-linear-gradient(top, #8a8a8a, #2e2e2e);
           background-image: -ms-linear-gradient(top, #8a8a8a 0%, #2e2e2e 100%);
           color: #ffcc00;
+      }
+
+ .start-button {
+          border: 1px solid #ff0000;
+          background:#ff0000;
+            color:white;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+          -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+          box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
+          text-shadow: #8f8f8f 0 1px 0;
+
+          padding: 8.5px 18px;
+          font-size: 200%;
+          text-decoration: none;
+          vertical-align: middle;
       }

@@ -562,6 +562,57 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("obit").play(1);
          }
          
+         InvBuyFood = function()
+         {
+         alert("USE FOOD");
+         }
+         
+         InvBuySoap = function()
+         {
+         	alert("USE SOAP");
+         }
+         
+         InvBuyTablet = function()
+         {
+         	alert("USE TABLET");
+         }
+         
+         InvBuyBucket = function()
+         {
+         	alert("USE BUCKET");
+         }
+         
+         InvBuyKit = function()
+         {
+         	alert("USE KIT");
+         }
+         
+         InvBuyFilter = function()
+         {
+         	alert("USE FILTER");
+         }
+         
+         InvBuyBike = function()
+         {
+         	alert("USE BIKE");
+         }
+         
+         InvBuyPlumbing = function()
+         {
+         	alert("USE PLUMBING");
+         }
+         
+         InvBuyMedicine = function()
+         {
+         	alert("USE MEDICINE");
+         }
+         
+         InvUpdateInventory = function(inventoryTotals)
+         {
+         	sym.getSymbol("InventoryItems").$("InventoryTotals").html(inventoryTotals);
+         }
+         
+         
          
          // don't let the dice roll yet:
          sym.StopDice();
@@ -596,20 +647,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${rountBtn}", "mouseover", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseover", function(sym, e) {
          sym.getSymbol("rountBtn").stop("over");
          
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${rountBtn}", "mouseout", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseout", function(sym, e) {
          sym.getSymbol("rountBtn").stop("out");
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${rountBtn}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${btnTips}", "click", function(sym, e) {
          GetRandomGameTip();
 
       });
@@ -639,6 +690,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("hudNextDest").show();
          }
          stop();
+         
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "click", function(sym, e) {
+         
+         
+         
+         
+         sym.$("InventoryItems").show();
+         sym.$("InventoryItems").show();
+         sym.getSymbol("InventoryItems").play(0);
+         
          
          
 
@@ -1880,5 +1946,98 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    
    })("Preloader");
    //Edge symbol end:'Preloader'
+
+   //=========================================================
+   
+   //Edge symbol: 'InventoryItems'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${btnMedicine}", "click", function(sym, e) {
+         InvBuyMedicine();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnPlumbing}", "click", function(sym, e) {
+         InvBuyPlumbing();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnBike}", "click", function(sym, e) {
+         InvBuyBike();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnFilter}", "click", function(sym, e) {
+         InvBuyFilter();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnKit}", "click", function(sym, e) {
+         InvBuyKit();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnFood}", "click", function(sym, e) {
+         InvBuyFood();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnBucket}", "click", function(sym, e) {
+         InvBuyBucket();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnTablet}", "click", function(sym, e) {
+         InvBuyTablet();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnSoap}", "click", function(sym, e) {
+         InvBuySoap();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnCloseInventory}", "click", function(sym, e) {
+         // insert code for mouse click here
+         // Hide an element 
+         sym.getSymbolElement().hide();
+         sym.getSymbol("InventoryItems").stop(0);
+
+      });
+      //Edge binding end
+
+   })("InventoryItems");
+   //Edge symbol end:'InventoryItems'
+
+   //=========================================================
+
+   //=========================================================
+   
+   //Edge symbol: 'rountBtn'
+   (function(symbolName) {   
+   
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         sym.stop();
+
+      });
+      //Edge binding end
+
+   })("rountBtn_1");
+   //Edge symbol end:'rountBtn_1'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-581531069");
