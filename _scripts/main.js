@@ -425,13 +425,13 @@ function getJob() {
             UpdateUserMessage("You worked hard today and earned 5 Global Bucks. An education would help you get better skills.");
         } else if (player1.ep > 8) {
             player1.gb += 3;
-            UpdateUserMessage("You worked hard today and earned 3 Global Bucks. The freaking burro even earned 4. Go back to school.");
+            UpdateUserMessage("You worked hard today and earned 3 Global Bucks.  Going back to school may get you a higher wage.");
         } else if (player1.ep > 4) {
             player1.gb += 2;
             UpdateUserMessage("You worked hard today and earned 2 Global Bucks. That must be frustrating. Need an education?");
         } else {
             player1.gb += 1;
-            UpdateUserMessage("You worked hard today and earned 1 Global Buck at a menial job requiring no education. It was a smelly job. Please step back a few feet, downwind.");
+            UpdateUserMessage("You worked hard today and earned 1 Global Buck at a menial job due to your lack of education.");
         }
         updateStats();
     }
@@ -714,24 +714,8 @@ function checkCard() {
     
     var square = currentPlayerSquare;
 	//console.log("position arguement sent: " + square);
-	//getChallengeCard(); //TEMP TESTING
-    /*
-    var number = Math.floor((Math.random() * 100) + 1);
-    console.log("Random Card Number: " + number);
-    if (number < 36) {
-        getChallengeCard();
 
-        // DANNY TO: SWAP CARD BACKGROUND TO RED.
-    } else if (number < 56) {
-        getPartnershipCard();
-        // DANNY TO: SWAP CARD BACKGROUND TO GREEN.
-    } else {
-        UpdateUserMessage("uneventful journey");
-    }
-    
-    */
 	// TODO simple version for now, will check vs each destination in future
-	
 	if (square == 2 || square == 7) {
 		getChallengeCard();
 	}
@@ -741,7 +725,6 @@ function checkCard() {
 	else {
 		console.log("empty square");
 	}
-	
 }
 
 // randomly selects challenge card
@@ -916,7 +899,7 @@ function checkPowerUp(powerUp) {
 	// go through the power up list and give them the power
 	switch (powerUp) {
 		case "plumbing":
-			console.log("plumbingp power up");
+			console.log("plumbing power up");
 			player1.wp = 100;
 			break;
 			
@@ -972,10 +955,6 @@ function ExecutePlayerRoll() // called by the dice function.
     }
 
     PassDiceRollToEdge(dice_roll);
-
-    //numberOfRolls += 1;
-    //console.log("number of rolls = " + numberOfRolls);
-    //console.log("YOU ROLLED A " + dice_roll);
 
     // delay doing anything until the dice animation has had time to finish:
     intervalDiceAnimTimeDelay = setInterval(WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal, 1000, dice_roll);
@@ -1104,12 +1083,10 @@ function CalcHowBadlyPlayerDied()
         _messageBucks = "They were buried anonymously in a paupers grave.";
     }
     
-    var factoid = "1,000,000 children die laughing every day. humor. it's just not funny.";
     var _finalMessage = _msgWater + "<br>";
         _finalMessage += _msgHealth + "<br>";
         _finalMessage += _msgEducation + "<br>";
         _finalMessage += _messageBucks + "<br><br>";
-        _finalMessage += "<span style='color:#ffee00'>" + factoid + "</span>";
     
     return _finalMessage;
 }
@@ -1165,7 +1142,6 @@ function checkDiceRoll(diceRoll) {
             intervalDiceButtonFlashes = setInterval(FlashTheDice, 3000);
 			// adjust their stats before passing to VIEW
             travelToll(1);
-            // call DestinationFunction();
         } else {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
@@ -1223,19 +1199,7 @@ function SetHolderFunction(what)
  holderFunction = what;   
 }
 
-function DestinationFunction()
-{
-    console.log("DESTINFUNK:");
-    //holderFunction( holderParam1, holderParam2, holderParam3 );
-    holderFunction();
-   // return function(){
-    //    holderFunction.apply();   
-    //}
-}
-
 function HideDice() {
-    // alert('hiding dice');
-    //  THE_GAME.HideDice();
     THE_GAME.getComposition().getStage().HideDice();
 }
 
@@ -1398,21 +1362,21 @@ function SetInputDifficulty(val) {
     inputDifficulty = val;
     //  alert("difficulty:"+inputDifficulty);
     var bgImage = "";
-    var charImage = "";
+  //  var charImage = "";
     switch (val) {
         case "a":
             bgImage = "url('images/bgA.jpg')";
-            charImage="url('images/asdf.jpg')";
+            //charImage="url('images/asdf.jpg')";
             _message = msgA;
             break;
         case "b":
             bgImage = "url('images/bgB.jpg')";
-            charImage="url('images/asdf.jpg')";
+          //  charImage="url('images/asdf.jpg')";
              _message = msgB;
             break;
         case "c":
             bgImage = "url('images/bgC.jpg')";
-            charImage="url('images/asdf.jpg')";
+           // charImage="url('images/asdf.jpg')";
              _message = msgC;
             break;
         default:
