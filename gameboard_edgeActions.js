@@ -41,6 +41,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // call the destination function for
          // whichever path we're currently on:
          DestinationFunction();
+         console.log('calling DestinationFunction() from Edge');
 
       });
       //Edge binding end
@@ -67,13 +68,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8000, function(sym, e) {
-         if(bStopDice == 8) // 8 is our max steps:
+         if(bStopDice >= 8) // 8 is our max steps:
          {
-         	sym.stop();
          	// show the selection HUD
          	sym.$("hudNextDest").show();
+         	sym.stop();	
+         	sym.ShowHudForNextChoice();
          }
-         stop();
+         
          
          
 
@@ -648,14 +650,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseover", function(sym, e) {
-         sym.getSymbol("rountBtn").stop("over");
+         sym.getSymbol("btnTips").stop("over");
          
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseout", function(sym, e) {
-         sym.getSymbol("rountBtn").stop("out");
+         sym.getSymbol("btnTips").stop("out");
 
       });
       //Edge binding end
@@ -682,31 +684,24 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8096, function(sym, e) {
-         if(bStopDice > 8)
-         {
-         	sym.stop(0);
-         	// show the selection HUD
-         	sym.$("hudNextDest").show();
-         }
-         stop();
-         
+      
+
+      Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "click", function(sym, e) {
+         sym.getSymbol("InventoryItems").play(1);
+         sym.$("InventoryItems").show();
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseover", function(sym, e) {
+         sym.getSymbol("btnInventory").play("over");
          
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "click", function(sym, e) {
-         
-         
-         
-         
-         sym.$("InventoryItems").show();
-         sym.$("InventoryItems").show();
-         sym.getSymbol("InventoryItems").play(0);
-         
-         
-         
+      Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseout", function(sym, e) {
+         sym.getSymbol("btnInventory").play("out");
 
       });
       //Edge binding end
@@ -1422,21 +1417,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 250, function(sym, e) {
-         // insert code here
-         sym.stop();
+      
 
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 712, function(sym, e) {
-         // insert code here
-         sym.stop();
-         // Hide an element 
-         //sym.getComposition().getStage().$("hudNextDest").hide();
-
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${btnFarm}", "mouseover", function(sym, e) {
          UpdateUserMessage("Farms have fresh food.");
@@ -2013,10 +1996,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnCloseInventory}", "click", function(sym, e) {
-         // insert code for mouse click here
-         // Hide an element 
          sym.getSymbolElement().hide();
-         sym.getSymbol("InventoryItems").stop(0);
 
       });
       //Edge binding end

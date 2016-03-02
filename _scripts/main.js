@@ -1145,7 +1145,7 @@ function checkDiceRoll(diceRoll) {
         } else {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
-            msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + "\nRoll Again?";           
+            msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + " of 8.\nRoll Again?";           
             travelToll(1);
             checkCard(); 
             // checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
@@ -1166,9 +1166,7 @@ function checkDiceRoll(diceRoll) {
            // swal('path complete');
              UpdateUserMessage("Congratulations! You FINISHED a path!");
             //HideDice();
-
             THE_GAME.getComposition().getStage().ShowHudForNextChoice();
-
         } else {
             currentPlayerSquare += diceRoll;
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
@@ -1190,7 +1188,13 @@ function checkDiceRoll(diceRoll) {
     }
 }
 
-
+function DestinationFunction()
+{
+    console.log("THIS IS WHERE EDGE CALLS THE DESTINATION FUNCTION, SUCH AS GETJOB()");
+    /*
+    NOTE TO GLEN: This is the function Edge calls when it hits spot 4, the destination tile.
+    */
+}
 
 function SetHolderFunction(what)
 {
@@ -1337,6 +1341,7 @@ function GetCharacterName(_selectedCountry)
 
 function SetCountrySelected(_countrySelected) {
     
+    console.log('SET COUNTRY SELECTED');
     bNameHasBeenEntered = true;    
     bCountryHasBeenSelected = true;
     
