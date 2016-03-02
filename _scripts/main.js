@@ -242,7 +242,7 @@ function HideStartingInstructions() {
 // update the screen displayed game stats
 function updateStats() {
     // this appears to be the replacement candidate for takeTurn() so I'll check for cards here.
-     checkCard();
+    //checkCard(); --- was moved to checkDiceRoll function - its called here to often.
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
     
@@ -1194,6 +1194,7 @@ function DestinationFunction()
     /*
     NOTE TO GLEN: This is the function Edge calls when it hits spot 4, the destination tile.
     */
+    holderFunction();
 }
 
 function SetHolderFunction(what)
