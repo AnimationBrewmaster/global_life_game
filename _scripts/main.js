@@ -95,37 +95,40 @@ function InitGame() {
     createInventory();
 }
 
+/*
+
+*/
 function SetChosenPath(which_path) {
     //var selectedPathEdgeFile; // getMedical, getJob, getStore, getToilet, getfood, getSchool, getWater
 
     switch (which_path) {
         case "medical":
-            pathDescription = "you should get some medical attention.";
+            pathDescription = "Go here to gain health points and cure illnesses. For every Global Buck you spend, you 2 Health Points (max 10 points per visit). You can also purchase 1 dose of medication per visit.";
             break;
         case "job":
-            pathDescription = "to go to work.";
+            pathDescription = "Go to your job to earn money. The higher your education, the more money you earn. You will need Global Bucks to help you buy things and survive the game.";
             break;
         case "store":
-            pathDescription = "to buy something at the market.";
+            pathDescription = "Go here to purchase a variety of items that can help you in your life. (Max 1 item purchased per visit) ";
             break;
         case "toilet":
-            pathDescription = "you had better use a bathroom.";
+            pathDescription = "Go here to gain 2 health points for free. Dispose of your human waste properly to reduce the chance of getting sick. A form of simple sanitation would be a covered hole in the ground yet nearly 1/3 of the planet lives without proper sanitation. ";
             break;
         case "farm":
-            pathDescription = "you should grab some food from the farm.";
+            pathDescription = "Go here to get the health points you need to survive. To determine how many health points you can buy for 1 Global Buck, but be careful – rolling a 1 will get you sick. ";
             break;
         case "school":
-            pathDescription = "to go to school and improve your education.";
+            pathDescription = "Go here to gain education points. The more Education Points you have, the more you get paid when you go to your job. You gain 2 education points for every Global Buck you spend (MAX of 6 points per visit).";
             break;
         case "water":
-            pathDescription = "you could use some clean, cool water.";
+            pathDescription = "Go here to collect the water points you will need to survive. If you have a bucket, you will be able to collect twice as many water points. Be cautious, untreated water can give you a water borne illness. ";
             break;
         default:
             pathDescription = "invalid path selected. see line 104-ish of 'main.js'";
             break;
     }
     // this is where i'll update the field on stage for now.
-    UpdateUserMessage("You've decided " + pathDescription + "!");
+    UpdateUserMessage("" + pathDescription + "!");
     UpdateEdgeStageDestinationTextField(which_path);
     // hide the starting instructions:
     HideStartingInstructions();
@@ -222,19 +225,15 @@ function playerDetails() {
     console.log("Current Stats \n" + this.name + "\nHealth: " + this.hp + "\nWater: " + this.wp + "\nEducation: " + this.ep + "\nGlobal Bucks: " + this.gb);
 }
 
-// hides html placed destination buttons
-function hideGlensButtons() {
-    document.getElementById("glens_nav").style.visibility = "hidden";
-}
-
-// returns html placed button to initial state
-function showGlensButtons() {
-    document.getElementById("glens_nav").style.visibility = "visible";
-}
 
 function HideStartingInstructions() {
     console.log("HideStartingInstructions()");
-    document.getElementById('starting_instructions').style.display = "none";
+    //document.getElementById('starting_instructions').style.display = "none";
+    //document.getElementById('starting_instructions').style.visibility = "hidden";
+ 
+     document.getElementById('Stage').style.position = "absolute";
+    document.getElementById('Stage').style.display = "visible";
+    document.getElementById('Stage').style.zIndex = 100;
 }
 
 // ------- gameplay functions -------
@@ -1354,8 +1353,24 @@ function SetCountrySelected(_countrySelected) {
     // don't start yet. swap the background out.
     //AreWeReadyToStart();
     
-     document.getElementById("startButton").style.display = "block";
+    // hide first two columns:
+    document.getElementById("startButton").style.display = "block";
      document.getElementById("startButton").style.visibility = "visible";
+    
+    
+}
+
+function HideStarterContentAndShowTheGame()
+{
+     document.getElementById("column1").style.display = "none";
+     document.getElementById("column1").style.visibility = "hidden";
+     document.getElementById("column2").style.display = "none";
+     document.getElementById("column2").style.visibility = "hidden";
+    // show third one holding Edge stuff
+     document.getElementById("column3").style.display = "block";
+     document.getElementById("column3").style.visibility = "visible";
+     document.getElementById("Stage").style.display = "block";
+     document.getElementById("Stage").style.visibility = "visible";
 }
 
 function SetInputDifficulty(val) {
@@ -1391,7 +1406,7 @@ function SetInputDifficulty(val) {
             break;
     }
 
-    document.getElementById("game").style.backgroundImage = bgImage;
+    document.getElementById("after").style.backgroundImage = bgImage;
     document.getElementById("choice_description").textContent = _message;
 
     updateStats();
@@ -1402,6 +1417,7 @@ function AreWeReadyToStart() {
         // show the HUD
         ShowDestinations();
         HideStartingInstructions();
+        HideStarterContentAndShowTheGame();
     }
 }
 

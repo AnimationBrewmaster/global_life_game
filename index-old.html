@@ -5,14 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>Global Life Game Engine</title>
 	<link href="_css/main.css" rel="stylesheet" media="screen, projection">
+	<link href="debug.css" rel="stylesheet" media="screen, projection">
 	<script type="text/javascript" charset="utf-8" src="edge_includes/edge.5.0.1.min.js"></script>
+
 	<!-- greensock for testing text animation  - CDN link for the latest TweenMax-->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<!-- prettify any dialog boxes ussing SweetAlert -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
 	<script src="https://use.edgefonts.net/rancho.js"></script>
-    <script src="https://use.edgefonts.net/kotta-one.js"></script> 
+        <script src="https://use.edgefonts.net/kotta-one.js"></script> 
 	<script src="_scripts/main.js"></script>
 	<script src="_scripts/challengeCards.js"></script>
 	<script src="_scripts/partnershipCards.js"></script>
@@ -21,23 +23,26 @@
 	.edgeLoad-EDGE-581531069 
     {
 		visibility: hidden;
-        z-index:-12;
-        display:none;
 	}
     #startButton{
         visibility: hidden;   
-        display:none;
     }
 	</style>
 	</head>
 
 	<body id="game">
-        <div id="after"></div>
-        <div id="top_title_padding">&nbsp;</div>
+
+<!-- debug stuff that will be removed -->
+<div id="my_output" style="display:none">
+      <ol id="debug_text">
+    <!-- former Alert text will get written in here -->
+  </ol>
+    </div>
         
-        <div id="column1">
-     <div class = "welcome_text">
-         <img src="_images/Logo_black_text.png" class="logo">
+<div id="starting_instructions" >
+    
+     <div class = "text">
+         <br><br>
     	<h3>
     		WELCOME TO THE GAME
     	</h3>
@@ -57,65 +62,76 @@
             <li>30 Education Points</li>
             <li>$75 Global Bucks</li>
             <li>A Biosand Filter or Plumbing</li>
-         </ul></p>
-    </div>  
-      <!-- done forms --> 
-    </div>
-    
-    
-<div id="column2">
-   
-        <h3>To begin playing select a difficulty below:</h3>
-         <img src="images/character.png" id="character"> 
+        </ul>
         <br>
+    </div>
+      <div id="gameinstructions" class="form-container">
+          <img src="images/character.png" id="character">
+          <!-- <img src="images/official_logo_smaller.png"> -->
+          <img src="_images/Logo_black_text.png">
+    <!-- img src="_images/icon_avg.png" id="country_type" name="country_type" width="128" height="128" align="right" -->
+   
+    <div id="startMessage">
+          To begin playing select a difficulty below:
           <div id="country_type"> 
         <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"> A </button>
         <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> B </button>
         <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> C </button>
       </div>
-         <div id="choice_description"> 
+        <div id="choice_description"> 
             <ul><li>A = EASIER (Developed Nation)</li>
                 <li>B = CHALLENGING (Emerging Nation)</li>
                 <li>C = DIFFICULT (Developing Nation)</li>
         </ul>
         </div>
 
-        <div id="startButton">
+        <div id="startButton" style="text-align:center;">
         <button type="button" onclick="AreWeReadyToStart();" name="start_button" id="start_button" value="c" class="start-button">START!</button>
         </div>
+        </div>
   </div>
-    
-    <div id="column3">
+      
+      <!-- done forms --> 
+    </div>
 <div id="Stage" class="EDGE-581531069"></div>
+
+<!-- button id="testButton" onclick="AdvanceGamePath()">ROLL A '1'</button -->
+<div style="display:none;visibility:hidden;position:absolute;top:20px;left:20px;" id="manual_controls" title=" (used to show/hide our next destination when game logic stumbles)"> Destinations HUD
+      <button type="button" onclick="ShowDestinations()">Show</button>
+      <button type="button" onclick="HideDestinations();">Hide</button>
+      <br />
+      Market HUD
+      <button type="button" onclick="ShowMarket()">Show</button>
+      <button type="button" onclick="HideMarket();">Hide</button>
+    </div>
+
 <!--Adobe Edge Runtime--> 
 <script>
-
-
-window.onload = function() {
-    
-    AdobeEdge.loadComposition('gameboard', 'EDGE-581531069', {
+AdobeEdge.loadComposition('gameboard', 'EDGE-581531069', {
     scaleToFit: "width",        
     centerStage: "horizontal",
     minW: "0",
-    maxW: "undefined"
+    maxW: "undefined",
+    width: "100%",
+    height: "100%"
     }, {
     dom: []
     }, {
     dom: []
-}                  
-                          
-); 
-    AdobeEdge.bootstrapCallback(function(compId) {     
-    // called when edge loads
-        InitGame();
-        InitGameTips();
-    });   
-    
-    
+    }
+);
+
+    window.onload = function() {
+
+        AdobeEdge.bootstrapCallback(function(compId) {     
+            // called when edge loads
+            InitGame();
+            InitGameTips();
+        });   
 };
+    
+//
 </script> 
 <!--Adobe Edge Runtime End-->
-        
-</div>
 </body>
 </html>
