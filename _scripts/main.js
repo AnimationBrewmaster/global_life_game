@@ -355,7 +355,6 @@ function getFood() {
 }
 
 // actions that take place when water destination is selected
-
 function getwater() {
    // SetChosenPath("water");
     var message = "";
@@ -705,6 +704,20 @@ function rejectTransaction() {
     buyNewStuff();
 }
 
+// TODO - Glen: write this function out
+function checkPowerUp(powerUp) {
+    // go through the power up list and give them the power
+    switch (powerUp) {
+        case "plumbing":
+            console.log("plumbing power up");
+            player1.wp = 100;
+            break;
+            
+        default:
+        console.log("nothing");
+    }
+}
+
 // -------------- card functions ---------------
 
 // checks for action cards and chooses the type
@@ -741,6 +754,7 @@ function getChallengeCard() {
     	specialCards(challengeCards[countryValue][number].special); 	   	
     }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep); // TODO (Glen) - determine if this MUST be called here or if its called ELSEWHERE
     // pass data to console
     console.log("**********CARD DATA**********");
     console.log(_title);
@@ -763,6 +777,7 @@ function getPartnershipCard() {
     	specialCards(partnershipCards[countryValue][number].special); 	   	
     }
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep); // TODO (Glen) - determine if this MUST be called here or if its called ELSEWHERE
     // pass data to console
     console.log("**********CARD DATA**********");
     console.log(_title);
@@ -856,6 +871,7 @@ function modifyEducationLevel(direction){
         }
     }
     updateStats();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
 
@@ -879,33 +895,21 @@ function checkPlayerCondition() {
     // check if player is sick from Challenge Card
     if (sicknessTimer > 1) {
     	sicknessTimer -= 1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     }
     else if (sicknessTimer == 1) {
     	UpdateUserMessage("You didn't get medicine in time, you lost 6 Health Points");
     	player1.hp -= 6;
     	sicknessTimer = -1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     	updateStats();
     }
     else {
     	// reset timer if goes beyond point of impact
     	sicknessTimer = -1;
+    	console.log("sicknessTimer = " + sicknessTimer);
     }
     
-}
-
-// TODO - Glen: write this function out
-function checkPowerUp(powerUp) {
-	// go through the power up list and give them the power
-	switch (powerUp) {
-		case "plumbing":
-			console.log("plumbing power up");
-			player1.wp = 100;
-			break;
-			
-		default:
-		console.log("nothing");
-	}
-	
 }
 
 // updates player stats from sent agruements
@@ -928,8 +932,31 @@ function travelToll(numberOfTurns) {
     impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
     updateStats();
     checkPlayerCondition();
-    checkPowerUp();
+    checkPowerUps();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
+}
+
+// TODO (Glen) - consolidate with checkPowerUp function
+function checkPowerUps() {
+    // some temp functions to make up for loss of inventory control
+    if (player1.food && player1.hp < 2) {
+        console.log("used food");
+        player1.food = false;
+        player1.hp += 4;
+        updateStats();
+        additionalInfo += "<br>You ate some food you were carrying and gained 4 Health Points.";
+    }
+    if (player1.kit && player1.hp < 2) {
+        console.log("used kit");
+        player1.kit = false;
+        player1.hp += 6;
+        updateStats();
+        additionalInfo += "<br>You used your first aid kit and gained 6 Health Points.";
+    }
+    if (player1.plumbing == true) {
+        player1.wp = 100;
+        updateStats();
+    }
 }
 
 function ShowTheDice() {
@@ -1163,7 +1190,7 @@ function checkDiceRoll(diceRoll) {
             currentPlayerSquare = 0;
             // path finished
            // swal('path complete');
-             UpdateUserMessage("Congratulations! You FINISHED a path!");
+            UpdateUserMessage("Congratulations! You FINISHED a path!");
             //HideDice();
             THE_GAME.getComposition().getStage().ShowHudForNextChoice();
         } else {
