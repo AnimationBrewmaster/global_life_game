@@ -1,8 +1,11 @@
 // first array digit is country code (0-2)
 // #3 array is for generic game facts
-// TODO - main.js - will need to initialize multi-dimensional array
-// TODO - main.js - set countryValue to 3 (so we get random game tips at game start)
-// TODO - index.hmtl - add gametips.js file link after main.js link 
+
+// create arrays for each country
+arrGameTips[0] = new Array();
+arrGameTips[1] = new Array();
+arrGameTips[2] = new Array();
+arrGameTips[3] = new Array();
 
 function InitGameTips() {
     console.log("intitializing game tips");
@@ -52,6 +55,6 @@ function InitGameTips() {
     arrGameTips[3][10] = "More people have access to a cell phone then a toilet.";
     
     startingGameTip = Math.floor(Math.random() * arrGameTips[countryValue].length);
-    console.log(startingGameTip);
-    console.log(arrGameTips);
+    console.log("Starting Game Tip = " + startingGameTip);
+    //console.log(arrGameTips);
 }

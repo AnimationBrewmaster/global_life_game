@@ -40,7 +40,7 @@ var my_stage;
 var startingGameTip;
 var arrGameTips = [];
 var getDifficulty;
-var countryValue; // numberic value for country used for card selection
+var countryValue = 3; // numberic value for country used for card selection and serving Country Specific Game Tips (3 means none)
 var _username;
 var bUserInputDisabled = false; // used to disable user changing input after game start
 var additionalInfo = ""; // extra messgae info to concat on dice roll messages
@@ -383,7 +383,6 @@ function getwater() {
 }
 
 // actions that take place when toilet destination is selected
-// TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bonus (free from getting sick for a few turns?)
 function getToilet() {
    // SetChosenPath("toilet");    
     var roll = Math.floor((Math.random() * 6) + 1);
@@ -1283,6 +1282,8 @@ function UpdatePlayerPositionAlongTimeline(num_of_secs) {
     THE_GAME.play();
 }
 
+// moved content to gametips.js
+/*
 function InitGameTips() {
     arrGameTips[0] = "The first thing you should do is buy a bike from the market. The bike will allow you to travel much faster.";
     arrGameTips[1] = "Education points equals more work, and more work equals more money, and more money equals better opportunities.";
@@ -1314,15 +1315,23 @@ function InitGameTips() {
 
     startingGameTip = Math.floor(Math.random() * arrGameTips.length);
 }
+*/
 
 function GetRandomGameTip() {
     // every game will start the tips from a 
     // random position to keep things fresh:
+    /*
     startingGameTip++;
     if (startingGameTip > arrGameTips.length - 1)
         startingGameTip = 0;
 
     swal("Random Game Tip!", arrGameTips[startingGameTip]);
+    */
+    startingGameTip++;
+    if (startingGameTip > arrGameTips[countryValue].length - 1)
+        startingGameTip = 0;
+
+    swal("Random Game Tip!", arrGameTips[countryValue][startingGameTip]);
 }
 
 function MakeBoyOrGirl()
