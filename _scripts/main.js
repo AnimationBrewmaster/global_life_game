@@ -33,6 +33,7 @@ var HOME = 8;
 var inputDifficulty = "a"; // USA! USA! USA!
 var bPlayerIsDead = false;
 var sicknessTimer = -1; // variable that can be used to track timed sickness attacks
+var freeTravel = 0; // variable to track the number of "free" travel turns left
 var bCountryHasBeenSelected = false;
 var bNameHasBeenEntered = false;
 var my_stage;
@@ -112,7 +113,7 @@ function SetChosenPath(which_path) {
             pathDescription = "Go here to purchase a variety of items that can help you in your life. (Max 1 item purchased per visit) ";
             break;
         case "toilet":
-            pathDescription = "Go here to gain 2 health points for free. Dispose of your human waste properly to reduce the chance of getting sick. A form of simple sanitation would be a covered hole in the ground yet nearly 1/3 of the planet lives without proper sanitation. ";
+            pathDescription = "Go here to gain 2 health points for free. Dispose of your human waste properly to reduce the chance of getting sick.";
             break;
         case "farm":
             pathDescription = "Go here to get the health points you need to survive. To determine how many health points you can buy for 1 Global Buck, but be careful – rolling a 1 will get you sick. ";
@@ -245,7 +246,7 @@ function updateStats() {
     // pass to Danny's side:
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
     
-   var inventoryTally = "";
+    var inventoryTally = "";
     
     /*
      var inventoryTally = 
@@ -384,8 +385,16 @@ function getwater() {
 // actions that take place when toilet destination is selected
 // TODO this destination needs more incentive for players to visit.  Pre-Teacher nerf it was already bad, now its not even worth the trip - some other kind of bonus (free from getting sick for a few turns?)
 function getToilet() {
-   // SetChosenPath("toilet");
-    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free.");
+   // SetChosenPath("toilet");    
+    var roll = Math.floor((Math.random() * 6) + 1);
+    freeTravel += roll;
+    if (roll == 1) {
+        var message = "<br>You also get 1 turn of free Travel";
+    }
+    else {
+        var message = "<br>You also get " + roll + " turns of free Travel";
+    } 
+    UpdateUserMessage("You have arrived at the toilet.\nGet 2 Health Points for free.\n" + message);
     player1.hp += 2;
     updateStats();
 }
@@ -928,15 +937,23 @@ function travelToll(numberOfTurns) {
     //numberOfRolls = 0;
     //UpdateUserMessage('hello');
     //UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
-	additionalInfo = "";
-    impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
+    if (freeTravel > 0) {
+        freeTravel -= 1;
+        if (freeTravel == 0) {
+            additionalInfo = "<br>That was your last turn of free Travel.";
+        }        
+    }
+    else {
+    	additionalInfo = "";
+        impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
+    }
     updateStats();
     checkPlayerCondition();
     checkPowerUps();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
-// TODO (Glen) - consolidate with checkPowerUp function
+// TODO (Glen) - Turn into Help Message (when low on health remind them they have options to click)
 function checkPowerUps() {
     // some temp functions to make up for loss of inventory control
     if (player1.food && player1.hp < 2) {
@@ -957,6 +974,29 @@ function checkPowerUps() {
         player1.wp = 100;
         updateStats();
     }
+}
+
+// executes impacts when player uses invetory item and removes item from inventory list
+// send argument of the inveotry item being used (only "food" and "kit" are used by player iteraction)
+function useInventory(item) {
+    // checks argument sent and gives stats boost and removes item from player object
+    switch (item) {
+    case "food":
+        player1.hp += 4;
+        player1.food = false;
+        break;
+        
+    case "kit":
+        player1.hp += 6;
+        player1.kit = false;
+        break;
+               
+    default: 
+        // nothing 
+        break;
+    }
+    displayInventory();    
+    updateStats();
 }
 
 function ShowTheDice() {
