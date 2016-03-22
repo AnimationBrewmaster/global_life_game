@@ -128,7 +128,7 @@ challengeCards[1][3] = challengeCard4B;
 var challengeCard4C = new Object();
 challengeCard4C.title = "Food Quality";
 challengeCard4C.text = "Malnutrition reduces your immunity to disease. You contract diseases easier now.";
-challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks."; // TODO - need to implement this (already part of main game - need to add user feedback)
+challengeCard4C.impact = "Lose 2 health points per turn until you can reach medical aid. Treatment for your sickness will cost you $4 Global Bucks.";
 challengeCard4C.hp = -2;
 challengeCard4C.wp = 0;
 challengeCard4C.ep = 0;
@@ -345,12 +345,11 @@ challengeCard11B.ep = 0;
 challengeCard11B.gb = -3;
 challengeCards[1][10] = challengeCard11B;
 
-// TODO - implement sickness function 
 var challengeCard11C = new Object();
 challengeCard11C.title = "Hygiene and Sanitation";
 challengeCard11C.text = "You get sick with diarrhea because you didn't wash your hands after using the washroom. Without treatment, it could be fatal, but luckily you can purchase medicine for $3 Global Bucks if you make it to the hospital in the next three turns.";
 challengeCard11C.impact = "If not, lose 6 health points.";
-challengeCard11C.hp = -6; // TODO - remove health point loss when "diarrhea" function works implemented 
+challengeCard11C.hp = -6;
 challengeCard11C.wp = 0;
 challengeCard11C.ep = 0;
 challengeCard11C.gb = 0;
@@ -389,6 +388,7 @@ challengeCard12C.hp = 0;
 challengeCard12C.wp = 0;
 challengeCard12C.ep = 0;
 challengeCard12C.gb = 0;
+challengeCard12C.special = "educationBlock";
 challengeCards[2][11] = challengeCard12C;
 
 //card 13
@@ -621,6 +621,7 @@ challengeCard20C.hp = 0;
 challengeCard20C.wp = 0;
 challengeCard20C.ep = 0;
 challengeCard20C.gb = 0;
+challengeCard20C.special = "educationBlock";
 challengeCards[2][18] = challengeCard20C;
 
 // DONE- TEST - remove items (all) from inventory - .special = "createInventory"

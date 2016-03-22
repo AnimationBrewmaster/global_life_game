@@ -44,6 +44,10 @@ var countryValue = 3; // numberic value for country used for card selection and 
 var _username;
 var bUserInputDisabled = false; // used to disable user changing input after game start
 var additionalInfo = ""; // extra messgae info to concat on dice roll messages
+var destBlocked = ""; // destination that will be blocked
+var blockedFunction = ""; // destination function that can not be called 
+var blockedTurns = 0; // number of turns left that userr is blocked from destination
+
 
 var _prevLife = 0;
 var _prevWater = 0;
@@ -712,7 +716,6 @@ function rejectTransaction() {
     buyNewStuff();
 }
 
-// TODO - Glen: write this function out
 function checkPowerUp(powerUp) {
     // go through the power up list and give them the power
     switch (powerUp) {
@@ -729,13 +732,13 @@ function checkPowerUp(powerUp) {
 // -------------- card functions ---------------
 
 // checks for action cards and chooses the type
-// TODO function checkCard(square) - once we get pop-up too start working
+// TODO function checkCard(square) - once we get pop-up to start working
 function checkCard() {
     
     var square = currentPlayerSquare;
 	//console.log("position arguement sent: " + square);
 
-	// TODO simple version for now, will check vs each destination in future
+	// TODO simple version for now, will check vs each destination in future (randomize where they appear?)
 	if (square == 2 || square == 7) {
 		getChallengeCard();
 	}
@@ -819,6 +822,10 @@ function specialCards(fnstring) {
 			gotDiarrhea();
 			break;	
 			
+        case "educationBlock":
+            educationBlock(7);
+            break;  
+			
 		default: 
 			// nothing 
 			break;
@@ -850,6 +857,13 @@ function gotDiarrhea() {
 	// TODO - test this (get medicine in 3 turns or lose 6 health points)
 	sicknessTimer = 3;
 	console.log("you got Diarrhea!");
+}
+
+function educationBlock(val) {
+    destBlocked = "school";
+    blockedFunction = "getSchool";
+    blockedTurns = val;
+    console.log("blocked from Education for" + val + " turns!");
 }
 
 // TODO - test function more fully
@@ -949,6 +963,7 @@ function travelToll(numberOfTurns) {
     updateStats();
     checkPlayerCondition();
     checkPowerUps();
+    checkBlocks();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
 }
 
@@ -972,6 +987,16 @@ function checkPowerUps() {
     if (player1.plumbing == true) {
         player1.wp = 100;
         updateStats();
+    }
+}
+
+function checkBlocks() {
+    if (blockedTurns > 0) {
+        blockedTurns--;
+    }
+    else {
+        destBlocked = "";
+        blockedFunction = "";
     }
 }
 
@@ -1533,9 +1558,8 @@ function UpdateHUD(life, water, glob, edu) {
         });
     }
 
-    if ((glob != "") && (glob != undefined)) { // TODO - I think a bug is here, the HUD not updating when a value zero for that zero value
+    if ((glob != "") && (glob != undefined)) {
         _glob = glob;
-        console.log("_glob = glob");
         TweenLite.to(objGlobal, _mTweenTime, {
             overwrite: "all",
             newScore: _glob,
