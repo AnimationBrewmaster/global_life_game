@@ -564,6 +564,86 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("obit").play(1);
          }
          
+         sym.DisableDestination = function(dest)
+         {
+         
+         	switch(dest){
+         	case "job" : 
+         	sym.getSymbol("hudNextDest").$("btnJob").hide();
+         	break;
+         
+         	case "medical" : 
+         	sym.getSymbol("hudNextDest").$("btnHospital").hide();
+         	break;
+         
+         	case "store" : 
+         	sym.getSymbol("hudNextDest").$("btnMarket").hide();
+         	break;
+         
+         	case "toilet" : 
+         	sym.getSymbol("hudNextDest").$("btnToilet").hide();
+         	break;
+         
+         	case "school" : 
+         	sym.getSymbol("hudNextDest").$("btnSchool").hide();
+         	break;
+         
+         	case "farm" : 
+         	sym.getSymbol("hudNextDest").$("btnFarm").hide();
+         	break;
+         
+         	case "water" : 
+         	sym.getSymbol("hudNextDest").$("btnWater").hide();
+         	break;
+         
+         	default:
+         	console.log("problem in DisableDestination (edge)");
+         	break;
+         	}
+         
+         }
+         
+         sym.EnableDestination = function(dest)
+         {
+         	switch(dest){
+         	case "job" : 
+         	sym.getSymbol("hudNextDest").$("btnJob").show();
+         	break;
+         
+         	case "medical" : 
+         	sym.getSymbol("hudNextDest").$("btnHospital").show();
+         	break;
+         
+         	case "store" : 
+         	sym.getSymbol("hudNextDest").$("btnMarket").show();
+         	break;
+         
+         	case "toilet" : 
+         	sym.getSymbol("hudNextDest").$("btnToilet").show();
+         	break;
+         
+         	case "school" : 
+         	sym.getSymbol("hudNextDest").$("btnSchool").show();
+         	break;
+         
+         	case "farm" : 
+         	sym.getSymbol("hudNextDest").$("btnFarm").show();
+         	break;
+         
+         	case "water" : 
+         	sym.getSymbol("hudNextDest").$("btnWater").show();
+         	break;
+         
+         	default:
+         	Debug.Log("problem in EnableDestination (edge)");
+         	break;
+         
+         	}
+         
+         }
+         
+         
+         
          InvBuyFood = function()
          {
          alert("USE FOOD");
@@ -1073,7 +1153,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "soap";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1089,7 +1169,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "tablet";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1105,7 +1185,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "bucket";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1121,7 +1201,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "food";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1138,7 +1218,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "kit";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $3?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1154,7 +1234,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "filter";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1170,7 +1250,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "plumbing";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $100?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1186,7 +1266,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // set which item we've bought
          stuffBuy = "bike";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
          if(confirmPurchase)
          {
          	buyNewStuff();
@@ -1961,12 +2041,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${btnKit}", "click", function(sym, e) {
          InvBuyKit();
+         useInventory("kit");
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFood}", "click", function(sym, e) {
          InvBuyFood();
+         useInventory("food");
 
       });
       //Edge binding end

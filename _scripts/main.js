@@ -900,6 +900,7 @@ function modifyEducationLevel(direction){
 // --------- turn based functions ------------
 
 function checkPlayerCondition() {
+    // NOTE TO GLEN: THIS IS GIVING ME A NUMBEROFTURNS IS NOT DEFINED ERROR.
 	// check if player is sick from food
     if (sick === true) {
         UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
@@ -1520,11 +1521,15 @@ function AreWeReadyToStart() {
         HideStartingInstructions();
         HideStarterContentAndShowTheGame();
     }
+    
+   
+//EnableDestination("store");
+//job|medical|store|toilet|school|farm|water
 }
 
 function UpdateHUD(life, water, glob, edu) {
     // alert('UpdateHud');
-    console.log(life + " " + water + " " + glob + " " + edu);
+    console.log("UPDATEHUD:"+life + " " + glob + " " + water + " " + edu);
     var _life;
     var _water;
     var _glob;
@@ -1540,41 +1545,41 @@ function UpdateHUD(life, water, glob, edu) {
         _playerLifeStatus = " is super dead. Sorry.";
     }
 
-    if ((life != "") && (life != undefined)) {
+   // if ((life != "") && (life != undefined)) {
         _life = life;
         TweenLite.to(objLife, _mTweenTime, {
             overwrite: "all",
             newScore: _life,
             onUpdate: UpdateLife
         });
-    }
+   // }
 
-    if ((water != "") && (water != undefined)) {
+  //  if ((water != "") && (water != undefined)) {
         _water = water;
         TweenLite.to(objWater, _mTweenTime, {
             overwrite: "all",
             newScore: _water,
             onUpdate: UpdateWater
         });
-    }
+   // }
 
-    if ((glob != "") && (glob != undefined)) {
+  //  if (0==0) {
         _glob = glob;
         TweenLite.to(objGlobal, _mTweenTime, {
             overwrite: "all",
             newScore: _glob,
             onUpdate: UpdateGlobal
         });
-    }
+ //   }
 
-    if ((edu != "") && (edu != undefined)) {
+   // if ((edu != "") && (edu != undefined)) {
         _edu = edu;
         TweenLite.to(objEdu, _mTweenTime, {
             overwrite: "all",
             newScore: _edu,
             onUpdate: UpdateEducation
         });
-    }
+  //  }
 }
 
 
@@ -1588,15 +1593,14 @@ function CallAvatarPositioningFunction() {
 }
 
 function UpdateLife() {
-    THE_GAME.getSymbol("mcHUD").$("labelLife").html(Math.round(objLife.newScore));
+THE_GAME.getSymbol("mcHUD").$("labelLife").html(Math.round(objLife.newScore));
 }
 
-function UpdateWater() {
-    THE_GAME.getSymbol("mcHUD").$("labelWater").html(Math.round(objWater.newScore));
+function UpdateWater() {    THE_GAME.getSymbol("mcHUD").$("labelWater").html(Math.round(objWater.newScore));
 }
 
 function UpdateGlobal() {
-    THE_GAME.getSymbol("mcHUD").$("labelGlobal").html(Math.round(objGlobal.newScore));
+THE_GAME.getSymbol("mcHUD").$("labelGlobal").html(Math.round(objGlobal.newScore));
 }
 
 function UpdateEducation() {
@@ -1624,6 +1628,8 @@ function UpdatePopup(head_txt, body_txt, poptype) {
 
 function ShowDestinations() {
     THE_GAME.getComposition().getStage().ShowHudForNextChoice();
+   // THE_GAME.DisableDestination("medical");
+
 }
 
 function HideDestinations() {
@@ -1633,11 +1639,12 @@ function HideDestinations() {
 
 function ShowMarket() {
     THE_GAME.getComposition().getStage().HideHudAfterSelection();
-    THE_GAME.$("hudMarket").show();
-    
+    THE_GAME.$("hudMarket").show(); 
 }
 
 function HideMarket() {
     //THE_GAME.getComposition().getStage().HideHudAfterSelection();
      THE_GAME.$("hudMarket").hide();
 }
+
+
