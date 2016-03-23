@@ -899,8 +899,8 @@ function modifyEducationLevel(direction){
 
 // --------- turn based functions ------------
 
-function checkPlayerCondition() {
-    // NOTE TO GLEN: THIS IS GIVING ME A NUMBEROFTURNS IS NOT DEFINED ERROR.
+function checkPlayerCondition(numberOfTurns) {
+    // NOTE TO GLEN: THIS IS GIVING ME A NUMBEROFTURNS IS NOT DEFINED ERROR. - FIXED
 	// check if player is sick from food
     if (sick === true) {
         UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
@@ -962,7 +962,7 @@ function travelToll(numberOfTurns) {
         impactStats(-numberOfTurns, -numberOfTurns, 0, 0);
     }
     updateStats();
-    checkPlayerCondition();
+    checkPlayerCondition(numberOfTurns);
     checkPowerUps();
     checkBlocks();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
@@ -1007,13 +1007,23 @@ function useInventory(item) {
     // checks argument sent and gives stats boost and removes item from player object
     switch (item) {
     case "food":
-        player1.hp += 4;
-        player1.food = false;
+        if (player1.food) { 
+            player1.hp += 4;
+            player1.food = false;
+        }
+        else {
+            console.log("user does not have food to use");
+        }
         break;
         
     case "kit":
-        player1.hp += 6;
-        player1.kit = false;
+        if (player1.kit) {
+            player1.hp += 6;
+            player1.kit = false;
+        }
+        else {
+            console.log("user does not have first-aid kit to use");
+        }
         break;
                
     default: 
