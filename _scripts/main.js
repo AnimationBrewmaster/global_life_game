@@ -822,10 +822,38 @@ function specialCards(fnstring) {
 			gotDiarrhea();
 			break;	
 			
-        case "educationBlock":
+        case "educationBlock7":
             educationBlock(7);
+            break; 
+            
+        case "educationBlock5":
+            educationBlock(5);
+            break;
+            
+        case "educationBlock3":
+            educationBlock(3);
+            break;          
+            
+        case "payEducationLevel":
+            payEducationLevel();
             break;  
-			
+         
+         case "educationSchoolMedicalBlock":
+            esmBlock();
+            break;
+            
+          case "payOrBeat":
+            payOrBeat();
+            break; 
+            
+          case "payOrNoWater":
+            payOrNoWater();
+            break; 
+          
+          case "bsfBlock":
+            bsfBlock();
+            break;        
+            
 		default: 
 			// nothing 
 			break;
@@ -853,6 +881,10 @@ function loseEducationLevel() {
 	console.log("lose some education");
 }
 
+function payEducationLevel() {
+    // need to charge for educational level if they have $6, otherwise block from Education for 5 turns
+}
+
 function gotDiarrhea() {
 	// TODO - test this (get medicine in 3 turns or lose 6 health points)
 	sicknessTimer = 3;
@@ -864,6 +896,27 @@ function educationBlock(val) {
     blockedFunction = "getSchool";
     blockedTurns = val;
     console.log("blocked from Education for" + val + " turns!");
+}
+
+// TODO
+function esmBlock() {
+    // block education, medical and market for 3 turns
+    educationBlock(3);
+}
+
+// TODO
+function payOrBeat() {
+    // lose 2 global bucks, if can't pay, lose 4 health points
+}
+
+// TODO
+function payOrNoWater() {
+    // pay $2 Global Bucks for bottled water until the flooding recedes – if you don’t have $2 Global Bucks, lose 2 health points and 2 water points     
+}
+
+// TODO
+function bsfBlock() {
+    // block school until bsf filter is purchased
 }
 
 // TODO - test function more fully

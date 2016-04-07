@@ -388,7 +388,7 @@ challengeCard12C.hp = 0;
 challengeCard12C.wp = 0;
 challengeCard12C.ep = 0;
 challengeCard12C.gb = 0;
-challengeCard12C.special = "educationBlock";
+challengeCard12C.special = "educationBlock7";
 challengeCards[2][11] = challengeCard12C;
 
 //card 13
@@ -434,6 +434,7 @@ challengeCard14A.ep = 0;
 challengeCard14A.gb = 0;
 challengeCards[0][13] = challengeCard14A;
 
+// TODO - how to implement?
 var challengeCard14B = new Object();
 challengeCard14B.title = "Bathroom Break";
 challengeCard14B.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
@@ -553,6 +554,7 @@ challengeCards[2][16] = challengeCard18C;
 // DONE - be able to send extra information beyond the impact stats from the card Object - try sending a string value of the function to preform the additional task 
 
 // DONE - TEST - drop an education level (card #19) - .special = "loseEductionalLevel"
+//card 19
 var challengeCard19A = new Object();
 challengeCard19A.title = "Illness and Education";
 challengeCard19A.text = "You get the flu and miss a field trip that covered half a topic of your class, resulting in a poor test result. Appreciate the fact that you get to go to school. It is estimated that over 770 million people around the world are illiterate and do not have access to education - leaving them trapped in poverty.";
@@ -621,11 +623,303 @@ challengeCard20C.hp = 0;
 challengeCard20C.wp = 0;
 challengeCard20C.ep = 0;
 challengeCard20C.gb = 0;
-challengeCard20C.special = "educationBlock";
+challengeCard20C.special = "educationBlock7";
 challengeCards[2][18] = challengeCard20C;
 
-// DONE- TEST - remove items (all) from inventory - .special = "createInventory"
-//card 30 TODO - when rest of cards are in set array values to correct number
+//card 21
+var challengeCard21A = new Object();
+challengeCard21A.title = "Education";
+challengeCard21A.text = "Your country has great education that is free up to grade 12, but you want to go to college or university which is expensive. You accumulate student loans that take you years to pay off.";
+challengeCard21A.impact = "Lose $10 Global Bucks but gain one education level.";
+challengeCard21A.hp = 0;
+challengeCard21A.wp = 0;
+challengeCard21A.ep = 0;
+challengeCard21A.gb = -10;
+challengeCard21A.special = "gainEducationLevel";
+challengeCards[0][19] = challengeCardXXA;
+
+var challengeCard21B = new Object();
+challengeCard21B.title = "Education";
+challengeCard21B.text = "Your country has good education that is free up to grade 9, but you want to finish high school. This costs money.";
+challengeCard21B.impact = "Lose $6 Global Bucks but gain one education level.";
+challengeCard21B.hp = 0;
+challengeCard21B.wp = 0;
+challengeCard21B.ep = 0;
+challengeCard21B.gb = -6;
+challengeCard21B.special = "gainEducationLevel";
+challengeCards[1][19] = challengeCard21B;
+
+var challengeCard21C = new Object();
+challengeCard21C.title = "Education";
+challengeCard21C.text = "Your country only provides free education up to age 8. To continue on, you must pay.";
+challengeCard21C.impact = "Pay $6 Global Bucks to move up an education level. If you don’t have the money, you aren’t able to go to school for 5 turns.";
+challengeCard21C.hp = 0;
+challengeCard21C.wp = 0;
+challengeCard21C.ep = 0;
+challengeCard21C.gb = 0;
+challengeCard21C.special = "payEducationLevel";
+challengeCards[2][19] = challengeCard21C;
+
+//card 22
+var challengeCard22A = new Object();
+challengeCard22A.title = "Family Illness";
+challengeCard22A.text = "Your parent gets the common cold and you have to cook your own supper.";
+challengeCard22A.impact = "Appreciate that you have food to eat and start helping out around the house more.";
+challengeCard22A.hp = 0;
+challengeCard22A.wp = 0;
+challengeCard22A.ep = 0;
+challengeCard22A.gb = 0;
+challengeCards[0][20] = challengeCard22A;
+
+var challengeCard22B = new Object();
+challengeCard22B.title = "Family Illness";
+challengeCard22B.text = "Your mother gets very ill and you have to start working to help support the family. This causes you to miss some school.";
+challengeCard22B.impact = "You may not go to school for 7 turns.";
+challengeCard22B.hp = 0;
+challengeCard22B.wp = 0;
+challengeCard22B.ep = 0;
+challengeCard22B.gb = 0;
+challengeCard22B.special = "educationBlock7";
+challengeCards[1][20] = challengeCard22B;
+
+var challengeCard22C = new Object();
+challengeCard22C.title = "Family Illness";
+challengeCard22C.text = "Your mother becomes very sick. She is too sick to harvest the crop on your farm. You miss school to harvest the crop.";
+challengeCard22C.impact = "You may not go to school for 5 turns.";
+challengeCard22C.hp = 0;
+challengeCard22C.wp = 0;
+challengeCard22C.ep = 0;
+challengeCard22C.gb = 0;
+challengeCard22C.special = "educationBlock5";
+challengeCards[2][20] = challengeCard22C;
+
+//card 23
+var challengeCard23A = new Object();
+challengeCard23A.title = "Taxation and the Military";
+challengeCard23A.text = "Taxes go up to pay for the military equipment needed for soldiers and peacekeepers who are involved in international operations in other countries.";
+challengeCard23A.impact = "Pay $4 Global Bucks in extra taxes";
+challengeCard23A.hp = 0;
+challengeCard23A.wp = 0;
+challengeCard23A.ep = 0;
+challengeCard23A.gb = -4;
+challengeCards[0][21] = challengeCard23A;
+
+var challengeCard23B = new Object();
+challengeCard23B.title = "Taxation and the Military";
+challengeCard23B.text = "Taxes in your country are raised to pay for military expansion due to ongoing conflict with a nearby nation.";
+challengeCard23B.impact = "Pay $3 Global Bucks in extra taxes";
+challengeCard23B.hp = 0;
+challengeCard23B.wp = 0;
+challengeCard23B.ep = 0;
+challengeCard23B.gb = -3;
+challengeCards[1][21] = challengeCard23B;
+
+var challengeCard23C = new Object();
+challengeCard23C.title = "Taxation and the Military";
+challengeCard23C.text = "The military takes over your country in a coup d’etat. Unfortunately there is a lot of fighting that causes food and water shortages.";
+challengeCard23C.impact = "Lose 2 health points and 2 water points. You also may not go to school, the medical centre, or the market for 3 turns.";
+challengeCard23C.hp = -2;
+challengeCard23C.wp = -2;
+challengeCard23C.ep = 0;
+challengeCard23C.gb = 0;
+challengeCard23C.special = "educationSchoolMedicalBlock";
+challengeCards[2][21] = challengeCard23C;
+
+//card 24
+var challengeCard24A = new Object();
+challengeCard24A.title = "Lack of Transportation";
+challengeCard24A.text = "You are forced to take a detour to work because of road maintenance, making you late.";
+challengeCard24A.impact = "Lose $1 Global Buck";
+challengeCard24A.hp = 0;
+challengeCard24A.wp = 0;
+challengeCard24A.ep = 0;
+challengeCard24A.gb = -1;
+challengeCards[0][22] = challengeCard24A;
+
+var challengeCard24B = new Object();
+challengeCard24B.title = "Lack of Transportation";
+challengeCard24B.text = "Due to deteriorating roads and a lack of mass transportation such as buses and subways, your travel time to work is way longer than it should be. That means you spend less time with your family.";
+challengeCard24B.impact = "Lose 2 health points.";
+challengeCard24B.hp = -2;
+challengeCard24B.wp = 0;
+challengeCard24B.ep = 0;
+challengeCard24B.gb = 0;
+challengeCards[1][22] = challengeCard24B;
+
+var challengeCard24C = new Object();
+challengeCard24C.title = "Lack of Transportation";
+challengeCard24C.text = "The local militia set up a roadblock in the path to your destination.";
+challengeCard24C.impact = "Pay them $2 Global Bucks – if you don’t have $2 Global Bucks, lose 4 health points for the beating you take for not paying.";
+challengeCard24C.hp = 0;
+challengeCard24C.wp = 0;
+challengeCard24C.ep = 0;
+challengeCard24C.gb = 0;
+challengeCard24C.special = "payOrBeat";
+challengeCards[2][22] = challengeCard24C;
+
+//card 25
+var challengeCard25A = new Object();
+challengeCard25A.title = "Weather and Agriculture";
+challengeCard25A.text = "Heavy rains from climate change wash the topsoil on your organic garden away which results in a poor harvest.";
+challengeCard25A.impact = "Lose $4 Global Bucks and 2 health points.";
+challengeCard25A.hp = -2;
+challengeCard25A.wp = 0;
+challengeCard25A.ep = 0;
+challengeCard25A.gb = -4;
+challengeCards[0][23] = challengeCard25A;
+
+var challengeCard25B = new Object();
+challengeCard25B.title = "Weather and Agriculture";
+challengeCard25B.text = "Torrential rain from climate change washes your topsoil away on your garden. This leads to a poor harvest.";
+challengeCard25B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard25B.hp = -2;
+challengeCard25B.wp = 0;
+challengeCard25B.ep = 0;
+challengeCard25B.gb = -2;
+challengeCards[1][23] = challengeCard25B;
+
+var challengeCard25C = new Object();
+challengeCard25C.title = "Weather and Agriculture";
+challengeCard25C.text = "Torrential rain from climate change has caused massive flooding in your village, washing away many of the buildings, agricultural land, and river banks. You are forced to become an environmental refugee. You and your family take whatever you can carry and abandon your house to find safer ground.";
+challengeCard25C.impact = "Lose 2 health points, 2 water points, $2 Global Bucks, and do not attend school for 7 turns. ";
+challengeCard25C.hp = -2;
+challengeCard25C.wp = -2;
+challengeCard25C.ep = 0;
+challengeCard25C.gb = -2;
+challengeCard25C.special = "educationBlock7";
+challengeCards[2][23] = challengeCard25C;
+
+//card 26
+var challengeCard26A = new Object();
+challengeCard26A.title = "Natural Disaster";
+challengeCard26A.text = "There is flooding in your city. You are evacuated in order to stay safe, although no damage is caused to any of your belongings you must spend the night in a hotel. You also must purchase food and bottled water, along with other household necessities you were forced to leave behind.";
+challengeCard26A.impact = "Lose $8 Global Bucks.";
+challengeCard26A.hp = 0;
+challengeCard26A.wp = 0;
+challengeCard26A.ep = 0;
+challengeCard26A.gb = -8;
+challengeCards[0][24] = challengeCard26A;
+
+var challengeCard26B = new Object();
+challengeCard26B.title = "Natural Disaster";
+challengeCard26B.text = "There was flooding in your town and some of the dirt roads were washed out stopping you from getting you to school or work. Also, your local water source is contaminated until your city can get the water treatment plant up and running again.";
+challengeCard26B.impact = "Lose $2 Global Bucks, 2 water points, and do not go to work or school for 3 turns.";
+challengeCard26B.hp = 0;
+challengeCard26B.wp = -2;
+challengeCard26B.ep = 0;
+challengeCard26B.gb = -2;
+challengeCard26B.special = "educationBlock3";
+challengeCards[1][24] = challengeCard26B;
+
+var challengeCard26C = new Object();
+challengeCard26C.title = "Natural Disaster";
+challengeCard26C.text = "There was a flood in your village. Flooding increases the health threat from inadequate drinking water and sanitation systems. Water supplies become contaminated.";
+challengeCard26C.impact = "Pay $2 Global Bucks for bottled water until the flooding recedes – if you don’t have $2 Global Bucks, lose 2 health points and 2 water points.";
+challengeCard26C.hp = 0;
+challengeCard26C.wp = 0;
+challengeCard26C.ep = 0;
+challengeCard26C.gb = 0;
+challengeCard26C.special = "payOrNoWater";
+challengeCards[2][24] = challengeCard26C;
+
+//card 27
+var challengeCard27A = new Object();
+challengeCard27A.title = "Education";
+challengeCard27A.text = "You miss school because you catch the flu from another student who didn’t cough into their elbow like the teacher said and instead coughed into their hands and touched the doorknob without washing their hands.";
+challengeCard27A.impact = "Lose 2 health points and drop one education level.";
+challengeCard27A.hp = -2;
+challengeCard27A.wp = 0;
+challengeCard27A.ep = 0;
+challengeCard27A.gb = 0;
+challengeCard27A.special = "loseEducationLevel";
+challengeCards[0][25] = challengeCard27A;
+
+var challengeCard27B = new Object();
+challengeCard27B.title = "Education";
+challengeCard27B.text = "You miss school because of fighting between the country you live in and a neighbouring country.  This has also prevented food shipments from reaching your area of the country.";
+challengeCard27B.impact = "Lose 2 health points, 1 water point, and drop an education level.";
+challengeCard27B.hp = -2;
+challengeCard27B.wp = -1;
+challengeCard27B.ep = 0;
+challengeCard27B.gb = 0;
+challengeCard27B.special = "loseEducationLevel";
+challengeCards[1][25] = challengeCard27B;
+
+var challengeCard27C = new Object();
+challengeCard27C.title = "Education";
+challengeCard27C.text = "You miss school because you have to walk 5 kilometres to the nearest river to get water for your family several times a day. The water you collect is not clean and could easily get your whole family to sick.";
+challengeCard27C.impact = "Drop 2 health points, 2 water points, and do not go to school until you purchase a biosand filter.";
+challengeCard27C.hp = -2;
+challengeCard27C.wp = -2;
+challengeCard27C.ep = 0;
+challengeCard27C.gb = 0;
+challengeCard27C.special = "bsfBlock";
+challengeCards[2][25] = challengeCard27C;
+
+//card 28
+var challengeCard28A = new Object();
+challengeCard28A.title = "Water";
+challengeCard28A.text = "The water has been turned off in your house due to construction.";
+challengeCard28A.impact = "Lose 1 water point and $1 Global Buck because you had to buy bottled water.";
+challengeCard28A.hp = 0;
+challengeCard28A.wp = -1;
+challengeCard28A.ep = 0;
+challengeCard28A.gb = -1;
+challengeCards[0][26] = challengeCard28A;
+
+var challengeCard28B = new Object();
+challengeCard28B.title = "Water";
+challengeCard28B.text = "The water often goes off in your home because of poor water infrastructure in your city and no money for the government to fix it.";
+challengeCard28B.impact = "Lose 2 health points and 1 water point.";
+challengeCard28B.hp = -2;
+challengeCard28B.wp = -1;
+challengeCard28B.ep = 0;
+challengeCard28B.gb = 0;
+challengeCards[1][26] = challengeCard28B;
+
+var challengeCard28C = new Object();
+challengeCard28C.title = "Water";
+challengeCard28C.text = "There has been a drought in your country. Many people have died as a result and you must walk an extra kilometer to find water";
+challengeCard28C.impact = "Lose 3 water points and 2 health points.";
+challengeCard28C.hp = -2;
+challengeCard28C.wp = -3;
+challengeCard28C.ep = 0;
+challengeCard28C.gb = 0;
+challengeCards[2][26] = challengeCard28C;
+
+//card 29
+var challengeCard29A = new Object();
+challengeCard29A.title = "Family";
+challengeCard29A.text = "You lose a family member due to a car accident involving a distracted/intoxicated driver. You must now make arrangements for a funeral.";
+challengeCard29A.impact = "Lose 2 health points and $5 Global Bucks.";
+challengeCard29A.hp = -2;
+challengeCard29A.wp = 0;
+challengeCard29A.ep = 0;
+challengeCard29A.gb = -5;
+challengeCards[0][27] = challengeCard29A;
+
+var challengeCard29B = new Object();
+challengeCard29B.title = "Family";
+challengeCard29B.text = "A family member has been arrested for speaking out against the government’s horrible Human Rights record. Without their income, your family struggles to make ends meet. You also get the sense the government’s secret police are watching the rest of your family.";
+challengeCard29B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard29B.hp = -2;
+challengeCard29B.wp = 0;
+challengeCard29B.ep = 0;
+challengeCard29B.gb = -2;
+challengeCards[1][27] = challengeCard29B;
+
+var challengeCard29C = new Object();
+challengeCard29C.title = "Family";
+challengeCard29C.text = "You lose a family member to a deadly waterborne disease. You lose a source of income in your household.  There are 1.8 million deaths a year caused by waterborne diseases. 90% of these deaths are children under 12.";
+challengeCard29C.impact = "Lose $2 Global Bucks and don’t go to school for 5 turns.";
+challengeCard29C.hp = 0;
+challengeCard29C.wp = 0;
+challengeCard29C.ep = 0;
+challengeCard29C.gb = -2;
+challengeCard29C.special = "educationBlock5";
+challengeCards[2][27] = challengeCard29C;
+
+//card 30
 var challengeCard30A = new Object();
 challengeCard30A.title = "War";
 challengeCard30A.text = "Your country is involved with a war in a distant country. Many of the returning soldiers suffer from PTSD and struggle to fit back into society. Your government does not seem to support them upon their return. This has a negative impact on the families and communities these soldiers return to. Your country also spends money on this war causing taxes to go up.";
@@ -634,7 +928,7 @@ challengeCard30A.hp = -2;
 challengeCard30A.wp = 0;
 challengeCard30A.ep = 0;
 challengeCard30A.gb = -3;
-challengeCards[0][19] = challengeCard30A;
+challengeCards[0][28] = challengeCard30A;
 
 var challengeCard30B = new Object();
 challengeCard30B.title = "War";
@@ -644,7 +938,7 @@ challengeCard30B.hp = -2;
 challengeCard30B.wp = -2;
 challengeCard30B.ep = 0;
 challengeCard30B.gb = -3;
-challengeCards[1][19] = challengeCard30B;
+challengeCards[1][28] = challengeCard30B;
 
 var challengeCard30C = new Object();
 challengeCard30C.title = "War";
@@ -655,7 +949,83 @@ challengeCard30C.wp = -2;
 challengeCard30C.ep = 0;
 challengeCard30C.gb = -2;
 challengeCard30C.special = "createInventory";
-challengeCards[2][19] = challengeCard30C;
+challengeCards[2][28] = challengeCard30C;
+
+//card 31
+var challengeCard31A = new Object();
+challengeCard31A.title = "Farming";
+challengeCard31A.text = "Your country allows massive agriculture companies to not practice environmentally sustainable farming practices and not use diversified, non-genetically modified crops. That means that everyone who eats this food is less healthy, and the land it is grown on is also becoming less and less able to produce food.";
+challengeCard31A.impact = "Lose 4 health points but gain $1 Global Buck – you get the global buck to show that your country is putting profits before health and the environment.";
+challengeCard31A.hp = -4;
+challengeCard31A.wp = 0;
+challengeCard31A.ep = 0;
+challengeCard31A.gb = 1;
+challengeCards[0][29] = challengeCard31A;
+
+var challengeCard31B = new Object();
+challengeCard31B.title = "Farming";
+challengeCard31B.text = "Your country allows massive agriculture companies to force your farmers to grow only certain crops and only use certain pesticides. This makes it harder and harder for them to make money and also means that there are less types of food available for sale in your country – and that the food that is available is less healthy.";
+challengeCard31B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard31B.hp = -2;
+challengeCard31B.wp = 0;
+challengeCard31B.ep = 0;
+challengeCard31B.gb = -2;
+challengeCards[1][29] = challengeCard31B;
+
+var challengeCard31C = new Object();
+challengeCard31C.title = "Farming";
+challengeCard31C.text = " exploited so that the food you produce can be sold cheaper in Country A nations. You work long hours for little money, and if you complain, you are fired.";
+challengeCard31C.impact = "Gain $1 Global Buck but lose 3 health points.";
+challengeCard31C.hp = 3;
+challengeCard31C.wp = 0;
+challengeCard31C.ep = 0;
+challengeCard31C.gb = 1;
+challengeCards[2][29] = challengeCard31C;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // template for cards
