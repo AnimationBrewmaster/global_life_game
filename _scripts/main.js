@@ -1166,7 +1166,7 @@ function playerDied() {
     gameOver = true;
     UpdateHUD();
     
-    THE_GAME.ShowObituary(_username, CalcHowBadlyPlayerDied());
+    THE_GAME.ShowObituary(_username, getDeathMessage());
 
 }
 
@@ -1180,12 +1180,12 @@ function playerWon() {
     UpdateHUD();
     
     // pop up the tombstone
-   var winMessage = "Congratulations on achieving a sustainable life!<br>Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions!<br> Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";
+   var winMessage = "Congratulations on achieving a sustainable life! Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";
    
    THE_GAME.ShowObituary(_username, winMessage);  
 
 }
-
+/*
 function CalcHowBadlyPlayerDied()
 {
     var _msgWater = "";
@@ -1244,7 +1244,13 @@ function CalcHowBadlyPlayerDied()
     
     return _finalMessage;
 }
+*/
 
+function getDeathMessage()
+{
+ var deathMsg = "We are very sorry to say that your life has come to an end. Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";  
+return deathMsg;
+}
 function alertIt(what) {
     if (what === undefined) {
         alert('nothing defined to alert');
@@ -1492,7 +1498,7 @@ function GetCharacterName(_selectedCountry)
     console.log("CHAR IMAGE IS " + characterImg);
     
     document.getElementById("character").src = characterImg;
-    playername = characterName;
+   // playername = characterName;
     
     // update the large text at the top of the screen. still hoping to do something cool with this.
     UpdatePlayerStageName(playername);
@@ -1507,22 +1513,16 @@ function GetCharacterName(_selectedCountry)
 function SetCountrySelected(_countrySelected) {
     
     console.log('SET COUNTRY SELECTED');
+    
+    // entering new sweetalert to get user name:
+    UserName();   
+    
     bNameHasBeenEntered = true;    
     bCountryHasBeenSelected = true;
     
     SetInputDifficulty(_countrySelected);
-    GetCharacterName(_countrySelected);
-
     // update the stats accordingly:
     updateStats();
-    // don't start yet. swap the background out.
-    //AreWeReadyToStart();
-    
-    // hide first two columns:
-    document.getElementById("startButton").style.display = "block";
-     document.getElementById("startButton").style.visibility = "visible";
-    
-    
 }
 
 function HideStarterContentAndShowTheGame()
@@ -1708,6 +1708,37 @@ function ShowMarket() {
 function HideMarket() {
     //THE_GAME.getComposition().getStage().HideHudAfterSelection();
      THE_GAME.$("hudMarket").hide();
+}
+
+var usernameInput;
+function UserName()
+{
+    if(!usernameInput)
+        usernameInput = "Luke Warmwater";
+var input_name =  swal({   
+    title: "WELCOME!",   
+    text: "YOUR NAME:",   
+    type: "input",   
+    showCancelButton: true,   
+    closeOnConfirm: false,   
+    animation: "slide-from-bottom",   
+    inputPlaceholder: "Luke Warmwater" }, 
+    function(inputValue){   
+        if (inputValue === false) 
+            return false;      
+    
+    if (inputValue === "") 
+    {     
+        swal.showInputError("YOUR NAME *PLEASE*:");     
+        return false;   
+    }      
+    UpdatePlayerName(inputValue.toUpperCase());
+    swal("Welcome to the Global Life Game, " + inputValue, "Make good choices!", "success"); });  
+    
+    // hide first two columns:
+    document.getElementById("startButton").style.display = "block";
+     document.getElementById("startButton").style.visibility = "visible";
+    
 }
 
 
