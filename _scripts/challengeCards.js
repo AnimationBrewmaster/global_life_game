@@ -636,7 +636,7 @@ challengeCard21A.wp = 0;
 challengeCard21A.ep = 0;
 challengeCard21A.gb = -10;
 challengeCard21A.special = "gainEducationLevel";
-challengeCards[0][19] = challengeCardXXA;
+challengeCards[0][19] = challengeCard21A;
 
 var challengeCard21B = new Object();
 challengeCard21B.title = "Education";
@@ -982,6 +982,195 @@ challengeCard31C.ep = 0;
 challengeCard31C.gb = 1;
 challengeCards[2][29] = challengeCard31C;
 
+//card 32
+var challengeCard32A = new Object();
+challengeCard32A.title = "Endangered Species";
+challengeCard32A.text = "Urban sprawl has encroached onto wildlife territory. Your suburban home is constantly threatened by coyotes when you leave out the garbage, and deer are always eating your garden.";
+challengeCard32A.impact = "Lose 2 health points for damaging the environment.";
+challengeCard32A.hp = -2;
+challengeCard32A.wp = 0;
+challengeCard32A.ep = 0;
+challengeCard32A.gb = 0;
+challengeCards[0][3.] = challengeCard32A;
+
+var challengeCard32B = new Object();
+challengeCard32B.title = "Endangered Species";
+challengeCard32B.text = "Along the coast of your country, the fish populations drop so drastically that certain species are now protected. You are no longer allowed to fish for these species and you are now making less money. Even worse, fishing trawlers from other countries continue to fish the endangered species, ignoring the ban which further destroys populations.";
+challengeCard32B.impact = "Lose 2 health points and $2 Global Bucks.";
+challengeCard32B.hp = -2;
+challengeCard32B.wp = 0;
+challengeCard32B.ep = 0;
+challengeCard32B.gb = -2;
+challengeCards[1][30] = challengeCard32B;
+
+var challengeCard32C = new Object();
+challengeCard32C.title = "Endangered Species";
+challengeCard32C.text = "Excessive illegal poaching has ruined your fragile ecosystem. Many of the special animals that used to bring tourists to the region are now extinct in your area.";
+challengeCard32C.impact = "Lose $2 Global Bucks because there are no tourism jobs anymore, and lose 2 health points because you won’t have the money to feed your family properly.";
+challengeCard32C.hp = -2;
+challengeCard32C.wp = 0;
+challengeCard32C.ep = 0;
+challengeCard32C.gb = -2;
+challengeCards[2][30] = challengeCard32C;
+
+//card 33
+var challengeCard33A = new Object();
+challengeCard33A.title = "Discrimination";
+challengeCard33A.text = "Police stop your car based on your skin colour. This is not the first time you have faced discrimination in your country despite the fact you are a law-abiding citizen who works hard, and is a valuable member of your community. This is very frustrating and unfair. ";
+challengeCard33A.impact = "Lose 2 health points.";
+challengeCard33A.hp = -2;
+challengeCard33A.wp = 0;
+challengeCard33A.ep = 0;
+challengeCard33A.gb = 0;
+challengeCards[0][31] = challengeCard33A;
+
+var challengeCard33B = new Object();
+challengeCard33B.title = "Discrimination";
+challengeCard33B.text = "Because you are a woman, you do not have the same rights as men in your country such as voting, working at higher paying jobs, attending school past a certain level, etc.. Because you cannot vote, the government doesn’t pay attention to women’s issues.";
+challengeCard33B.impact = "Lose 2 health points, $2 Global Bucks, and drop an education level.";
+challengeCard33B.hp = -2;
+challengeCard33B.wp = 0;
+challengeCard33B.ep = 0;
+challengeCard33B.gb = -2;
+challengeCard33B.special = "loseEducationLevel";
+challengeCards[1][31] = challengeCard33B;
+
+var challengeCard33C = new Object();
+challengeCard33C.title = "Discrimination";
+challengeCard33C.text = "There are two major ethnic groups in your country. One of those groups has decided to attack the other group. Many of your family members are killed in the genocide that occurs – and the rest of your family must flee for their lives.";
+challengeCard33C.impact = "Lose 2 health points, 2 water points, and $3 Global Bucks.";
+challengeCard33C.hp = -2;
+challengeCard33C.wp = -2;
+challengeCard33C.ep = 0;
+challengeCard33C.gb = -3;
+challengeCards[2][31] = challengeCard33C;
+
+//card 34
+var challengeCard34A = new Object();
+challengeCard34A.title = "Equality for Women";
+challengeCard34A.text = "You likely didn’t get a promotion because you are a woman in a male-dominated industry. This is frustrating because you have the same training, experience, and ability as your male counterparts, yet you are paid less and are constantly passed over for promotions.";
+challengeCard34A.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard34A.hp = -2;
+challengeCard34A.wp = 0;
+challengeCard34A.ep = 0;
+challengeCard34A.gb = -2;
+challengeCards[0][32] = challengeCard34A;
+
+var challengeCard34B = new Object();
+challengeCard34B.title = "Equality for Women";
+challengeCard34B.text = "You are stuck in a low paying job because women in your country are never promoted into managerial roles. You work long hours for poor wages, but because there aren’t many options for women in your country, there isn’t much you can do – especially since you need the money you make to feed your children.";
+challengeCard34B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard34B.hp = -2;
+challengeCard34B.wp = 0;
+challengeCard34B.ep = 0;
+challengeCard34B.gb = -2;
+challengeCards[1][32] = challengeCard34B;
+
+var challengeCard34C = new Object();
+challengeCard34C.title = "Equality for Women";
+challengeCard34C.text = "Women/girls in your country aren’t allowed to go to school, aren’t allowed to drive a car, aren’t allowed to vote, and aren’t allowed to own a business. You work many hours for very little pay.";
+challengeCard34C.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard34C.hp = -2;
+challengeCard34C.wp = 0;
+challengeCard34C.ep = 0;
+challengeCard34C.gb = -2;
+challengeCards[2][32] = challengeCard34C;
+
+//card 35
+var challengeCard35A = new Object();
+challengeCard35A.title = "Government Elections";
+challengeCard35A.text = "The political party you vote for doesn't win. This results in a tax law change that costs you money. You do realize how lucky you are to live in a peaceful country where elections are fair and democratic.";
+challengeCard35A.impact = "Lose $1 Global Buck.";
+challengeCard35A.hp = 0;
+challengeCard35A.wp = 0;
+challengeCard35A.ep = 0;
+challengeCard35A.gb = -1;
+challengeCards[0][33] = challengeCard35A;
+
+var challengeCard35B = new Object();
+challengeCard35B.title = "Government Elections";
+challengeCard35B.text = "The election in your country appears to have been rigged and the current corrupt political party remains in power. As these politicians line their pockets with tax money, things like schools, hospitals, roads, and other things do not get the money they need.";
+challengeCard35B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard35B.hp = -2;
+challengeCard35B.wp = 0;
+challengeCard35B.ep = 0;
+challengeCard35B.gb = -2;
+challengeCards[1][33] = challengeCard35B;
+
+var challengeCard35C = new Object();
+challengeCard35C.title = "Government Elections";
+challengeCard35C.text = "Though the dictator who has run your country for years has finally agreed to hold elections, you realize quite early that these elections are not going to be fair or legitimate. Gangs of thugs are intimidating anyone who dares to support the opposing parties, and many people are afraid to even go out and vote for fear of being beaten or killed by these gangs. It isn’t much of a surprise when the dictator wins with 90% of the vote, though almost everyone knows it wasn’t a real election. Since the dictator won, most of the people in your country will continue to go without proper education, medical treatment, safety, or jobs due to a poor economy.";
+challengeCard35C.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard35C.hp = -2;
+challengeCard35C.wp = 0;
+challengeCard35C.ep = 0;
+challengeCard35C.gb = -2;
+challengeCards[2][33] = challengeCard35C;
+
+//card 36
+var challengeCard36A = new Object();
+challengeCard36A.title = "Power and Electricity";
+challengeCard36A.text = "A tree falls on your power line during a storm you are out of power until it gets repaired.";
+challengeCard36A.impact = "Lose $1 Global Buck and 1 health point.";
+challengeCard36A.hp = -1;
+challengeCard36A.wp = 0;
+challengeCard36A.ep = 0;
+challengeCard36A.gb = -1;
+challengeCards[0][34] = challengeCard36A;
+
+var challengeCard36B = new Object();
+challengeCard36B.title = "Power and Electricity";
+challengeCard36B.text = "A blackout in your neighbourhood occurs as a result of a malfunction in your city's old power grid.";
+challengeCard36B.impact = "Lose $1 Global Buck and 1 health point.";
+challengeCard36B.hp = -1;
+challengeCard36B.wp = 0;
+challengeCard36B.ep = 0;
+challengeCard36B.gb = -1;
+challengeCards[1][34] = challengeCard36B;
+
+var challengeCard36C = new Object();
+challengeCard36C.title = "Power and Electricity";
+challengeCard36C.text = "The price of kerosene goes up and you can no longer afford to buy it therefore you can no longer power your lamp.";
+challengeCard36C.impact = "This makes it impossible for you to study at night. Lose one education level.";
+challengeCard36C.hp = 0;
+challengeCard36C.wp = 0;
+challengeCard36C.ep = 0;
+challengeCard36C.gb = 0;
+challengeCard36C.special = "loseEducationLevel";
+challengeCards[2][34] = challengeCard36C;
+
+//card XX
+/*
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
 //card XX
 var challengeCardXXA = new Object();
 challengeCardXXA.title = "";
@@ -1013,11 +1202,410 @@ challengeCardXXC.ep = 0;
 challengeCardXXC.gb = 0;
 challengeCards[2][QQ] = challengeCardXXC;
 
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
 
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
 
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
 
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
 
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
 
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+//card XX
+var challengeCardXXA = new Object();
+challengeCardXXA.title = "";
+challengeCardXXA.text = "";
+challengeCardXXA.impact = "";
+challengeCardXXA.hp = 0;
+challengeCardXXA.wp = 0;
+challengeCardXXA.ep = 0;
+challengeCardXXA.gb = 0;
+challengeCards[0][QQ] = challengeCardXXA;
+
+var challengeCardXXB = new Object();
+challengeCardXXB.title = "";
+challengeCardXXB.text = "";
+challengeCardXXB.impact = "";
+challengeCardXXB.hp = 0;
+challengeCardXXB.wp = 0;
+challengeCardXXB.ep = 0;
+challengeCardXXB.gb = 0;
+challengeCards[1][QQ] = challengeCardXXB;
+
+var challengeCardXXC = new Object();
+challengeCardXXC.title = "";
+challengeCardXXC.text = "";
+challengeCardXXC.impact = "";
+challengeCardXXC.hp = 0;
+challengeCardXXC.wp = 0;
+challengeCardXXC.ep = 0;
+challengeCardXXC.gb = 0;
+challengeCards[2][QQ] = challengeCardXXC;
+
+*/
 
 
 
