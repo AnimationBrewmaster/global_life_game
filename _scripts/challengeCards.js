@@ -1148,7 +1148,7 @@ challengeCardXXA.impact = "";
 challengeCardXXA.hp = 0;
 challengeCardXXA.wp = 0;
 challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
+challengeCardXXA.gb = 0;22
 challengeCards[0][QQ] = challengeCardXXA;
 
 var challengeCardXXB = new Object();
