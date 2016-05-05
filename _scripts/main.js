@@ -821,6 +821,14 @@ function specialCards(fnstring) {
 		case "gotDiarrhea":
 			gotDiarrhea();
 			break;	
+		
+		case "educationBlockAll":
+            educationBlock(99);
+            break;
+			
+		case "educationBlock20":
+            educationBlock(20);
+            break; 
 			
         case "educationBlock7":
             educationBlock(7);

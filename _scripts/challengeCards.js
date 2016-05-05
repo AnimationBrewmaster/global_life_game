@@ -1139,481 +1139,414 @@ challengeCard36C.gb = 0;
 challengeCard36C.special = "loseEducationLevel";
 challengeCards[2][34] = challengeCard36C;
 
-//card XX
-/*
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;22
-challengeCards[0][QQ] = challengeCardXXA;
+//card 37
+var challengeCard37A = new Object();
+challengeCard37A.title = "Overfishing";
+challengeCard37A.text = "As the world’s oceans continue to be over-fished, the price of fish continues to go up because there are less and less fish to be caught.";
+challengeCard37A.impact = "Eat fish tonight to gain 2 health points but lose $2 Global Bucks.";
+challengeCard37A.hp = 2;
+challengeCard37A.wp = 0;
+challengeCard37A.ep = 0;
+challengeCard37A.gb = -2;
+challengeCards[0][35] = challengeCard37A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard37B = new Object();
+challengeCard37B.title = "Overfishing";
+challengeCard37B.text = "You are a fisherman. You make your living and feed your family by fishing every day. Over the past few years, you have caught less and less fish every time you go out on your boat. This week, you have caught no fish at all.";
+challengeCard37B.impact = "Lost $3 Global Bucks, 1 water point, and 3 health points.";
+challengeCard37B.hp = -3;
+challengeCard37B.wp = -1;
+challengeCard37B.ep = 0;
+challengeCard37B.gb = -3;
+challengeCards[1][35] = challengeCard37B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard37C = new Object();
+challengeCard37C.title = "Overfishing";
+challengeCard37C.text = "Almost the entire population of your country lives along the coast and depends on fish/fishing for food. Over the past few years, fewer and fewer fish are being caught, and on many nights, your family goes hungry. You also aren’t making enough money to send your children to school. On top of that, the water around the coast is full of garbage.";
+challengeCard37C.impact = "Lose $2 Global Bucks, 2 health points, 1 water point, and drop 1 education level.";
+challengeCard37C.hp = -2;
+challengeCard37C.wp = -1;
+challengeCard37C.ep = 0;
+challengeCard37C.gb = -2;
+challengeCard37C.special = "loseEducationLevel";
+challengeCards[2][35] = challengeCard37C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 38
+var challengeCard38A = new Object();
+challengeCard38A.title = "Climate Change";
+challengeCard38A.text = "Climate Change is a huge issue facing all humanity. Climate change will have a much bigger impact on poorer countries than wealthier countries like the one you live in. Still, you will face more erratic weather patterns. It will also be harder to import certain crops from other countries that may be more affected by climate change.";
+challengeCard38A.impact = "Lose $2 Global Bucks and 2 water points.";
+challengeCard38A.hp = 0;
+challengeCard38A.wp = -2;
+challengeCard38A.ep = 0;
+challengeCard38A.gb = -2;
+challengeCards[0][36] = challengeCard38A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard38B = new Object();
+challengeCard38B.title = "Climate Change";
+challengeCard38B.text = "Climate Change is a huge issue facing all humanity. With more erratic weather patterns, you will face things such as flooding and other weather challenges. Climate Change will affect your entire way of life.";
+challengeCard38B.impact = "Lose $2 Global Bucks and 2 water points.";
+challengeCard38B.hp = 0;
+challengeCard38B.wp = -2;
+challengeCard38B.ep = 0;
+challengeCard38B.gb = -2;
+challengeCards[1][36] = challengeCard38B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard38C = new Object();
+challengeCard38C.title = "Climate Change";
+challengeCard38C.text = "Climate Change is a huge issue facing all humanity. Countries that were wet before, will now face flooding. Countries that were dry before, will now face more drought. Low lying countries and islands will have less land due to rising sea levels. Climate Change will force people from their homes, creating millions of environmental refugees.";
+challengeCard38C.impact = "Lose 2 Global Bucks and 2 water points.";
+challengeCard38C.hp = 0;
+challengeCard38C.wp = -2;
+challengeCard38C.ep = 0;
+challengeCard38C.gb = -2;
+challengeCards[2][36] = challengeCard38C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 39
+var challengeCard39A = new Object();
+challengeCard39A.title = "Palm Oil";
+challengeCard39A.text = "Palm oil plantations are now the number one cause of rainforest destruction. Palm oil that is not sustainably sourced causes deforestation and also threatens animal habitat (such as orangutans). Many of the products purchased in your country use unsustainable palm oil. You enjoy the products but don’t realize the destruction it causes.";
+challengeCard39A.impact = "Lose $2 Global Bucks, 2 health points, and drop one level of education.";
+challengeCard39A.hp = -2;
+challengeCard39A.wp = 0;
+challengeCard39A.ep = 0;
+challengeCard39A.gb = -2;
+challengeCard39A.special = "loseEducationLevel";
+challengeCards[0][37] = challengeCard39A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard39B = new Object();
+challengeCard39B.title = "Palm Oil";
+challengeCard39B.text = "Palm oil plantations are now the number one cause of rainforest destruction. Palm oil that is not sustainably sourced causes deforestation and also threatens animal habitat (such as orangutans). Many of the products purchased in your country use unsustainable palm oil. You enjoy the products but don’t realize the destruction it causes.";
+challengeCard39B.impact = "Lose $2 Global Bucks, 2 health points, and drop one level of education.";
+challengeCard39B.hp = -2;
+challengeCard39B.wp = 0;
+challengeCard39B.ep = 0;
+challengeCard39B.gb = -2;
+challengeCard39B.special = "loseEducationLevel";
+challengeCards[1][37] = challengeCard39B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard39C = new Object();
+challengeCard39C.title = "Palm Oil";
+challengeCard39C.text = "In order to feed your family, you are working for a company that is clear cutting palm tree forests in your country. Unfortunately, that is destroying both animal habitat and the native way of life for local tribes. You know that this type of clear cutting is wrong, but you also need a job to feed your family.";
+challengeCard39C.impact = "Gain $2 Global Bucks, but lose 2 health points and 1 water point.";
+challengeCard39C.hp = -2;
+challengeCard39C.wp = -1;
+challengeCard39C.ep = 0;
+challengeCard39C.gb = 2;
+challengeCards[2][37] = challengeCard39C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 42
+var challengeCard42A = new Object();
+challengeCard42A.title = "Injuries and Education";
+challengeCard42A.text = "Your mom is sick and cannot drive you to school.";
+challengeCard42A.impact = "Lose 1 health point.";
+challengeCard42A.hp = -1;
+challengeCard42A.wp = 0;
+challengeCard42A.ep = 0;
+challengeCard42A.gb = 0;
+challengeCards[0][38] = challengeCard42A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard42B = new Object();
+challengeCard42B.title = "Injuries and Education";
+challengeCard42B.text = "Your dad breaks his leg and needs to be in a wheelchair. You have to miss school and stay to work on the farm";
+challengeCard42B.impact = "Lose 3 education points.";
+challengeCard42B.hp = 0;
+challengeCard42B.wp = 0;
+challengeCard42B.ep = -3;
+challengeCard42B.gb = 0;
+challengeCards[1][38] = challengeCard42B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard42C = new Object();
+challengeCard42C.title = "Injuries and Education";
+challengeCard42C.text = "Your mom steps on a land mine and loses her legs. She is alive but unable to take care of your little sister. The responsibility falls on you to take care of your family.";
+challengeCard42C.impact = "Lose 3 education points.";
+challengeCard42C.hp = 0;
+challengeCard42C.wp = 0;
+challengeCard42C.ep = -3;
+challengeCard42C.gb = 0;
+challengeCards[2][38] = challengeCard42C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 44
+var challengeCard44A = new Object();
+challengeCard44A.title = "Working Conditions";
+challengeCard44A.text = "You are a new worker in the workforce and haven’t been fully trained before you begin working. You are injured on the job and miss several days of work.";
+challengeCard44A.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard44A.hp = -2;
+challengeCard44A.wp = 0;
+challengeCard44A.ep = 0;
+challengeCard44A.gb = -2;
+challengeCards[0][39] = challengeCard44A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard44B = new Object();
+challengeCard44B.title = "Working Conditions";
+challengeCard44B.text = "There are few jobs where you live, so you take a job in a factory with unsafe working conditions. You are also underpaid. You are injured on the job and there is no compensation while you are off. ";
+challengeCard44B.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard44B.hp = -2;
+challengeCard44B.wp = 0;
+challengeCard44B.ep = 0;
+challengeCard44B.gb = -2;
+challengeCards[1][39] = challengeCard44B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard44C = new Object();
+challengeCard44C.title = "Working Conditions";
+challengeCard44C.text = "You are forced to work to pay off your family debt. Unfortunately, you only make enough money to cover the interest on the debt, so you never pay any of the debt off. This means you could be working there forever. This is known as indentured servitude or also child slave labour. ";
+challengeCard44C.impact = "Lose 2 health points, 1 water point, and you cannot attend school again.";
+challengeCard44C.hp = -2;
+challengeCard44C.wp = -1;
+challengeCard44C.ep = 0;
+challengeCard44C.gb = 0;
+challengeCard44C.special = "educationBlockAll";
+challengeCards[2][39] = challengeCard44C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 45
+var challengeCard45A = new Object();
+challengeCard45A.title = "Housing";
+challengeCard45A.text = "There is a shortage of affordable housing in your community so you are forced to decide between paying the rent and having enough food to eat. You are lucky that you have a food bank in your city you can access.";
+challengeCard45A.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard45A.hp = 0;
+challengeCard45A.wp = 0;
+challengeCard45A.ep = 0;
+challengeCard45A.gb = 0;
+challengeCards[0][40] = challengeCard45A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard45B = new Object();
+challengeCard45B.title = "Housing";
+challengeCard45B.text = "Due to the high cost of housing, there are several generations of your family, including many aunts, uncles, cousins, etc. forced to all live in one home. It is very crowded.";
+challengeCard45B.impact = "Lose 2 health points.";
+challengeCard45B.hp = 0;
+challengeCard45B.wp = 0;
+challengeCard45B.ep = 0;
+challengeCard45B.gb = 0;
+challengeCards[1][40] = challengeCard45B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard45C = new Object();
+challengeCard45C.title = "Housing";
+challengeCard45C.text = "our country is densely populated. With so many people there is a high demand for farming land to grow crops. Violent outbreaks over food and agricultural land have been happening lately and you do not feel you or your family are safe.";
+challengeCard45C.impact = "Lose $1 Global Buck and 2 health points.";
+challengeCard45C.hp = 0;
+challengeCard45C.wp = 0;
+challengeCard45C.ep = 0;
+challengeCard45C.gb = 0;
+challengeCards[2][40] = challengeCard45C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 46
+var challengeCard46A = new Object();
+challengeCard46A.title = "Global Warming/Climate Change";
+challengeCard46A.text = "You drive a car that creates 5 tonnes of CO2 emissions a year. This adds to high levels of CO2 in the atmosphere which causes the temperature around the world to slightly increase. This also adds to the air pollution in your community where asthma rates are going up every year.";
+challengeCard46A.impact = "Lose 3 health points.";
+challengeCard46A.hp = -3;
+challengeCard46A.wp = 0;
+challengeCard46A.ep = 0;
+challengeCard46A.gb = 0;
+challengeCards[0][41] = challengeCard46A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard46B = new Object();
+challengeCard46B.title = "Global Warming/Climate Change";
+challengeCard46B.text = "Climate change causes flooding in your town and you lose some of your possessions. You are also unable to go to work because the factory where you work has been flooded and will take a while to repair.";
+challengeCard46B.impact = "Lose $3 Global Bucks and 2 health points.";
+challengeCard46B.hp = -2;
+challengeCard46B.wp = 0;
+challengeCard46B.ep = 0;
+challengeCard46B.gb = -3;
+challengeCards[1][41] = challengeCard46B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard46C = new Object();
+challengeCard46C.title = "Global Warming/Climate Change";
+challengeCard46C.text = "Climate Change causes more extreme weather conditions. Because your village was already in a dry region, Climate Change is making it even more dry causing draughts which leads to food scarcity.";
+challengeCard46C.impact = "Lose 2 health points and 2 water points.";
+challengeCard46C.hp = -2;
+challengeCard46C.wp = -2;
+challengeCard46C.ep = 0;
+challengeCard46C.gb = 0;
+challengeCards[2][41] = challengeCard46C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 50
+var challengeCard50A = new Object();
+challengeCard50A.title = "Fisheries decline";
+challengeCard50A.text = "Due to high levels of toxicity in the oceans, and decreasing fish populations worldwide, you reduce the amount of fish you eat even though you know eating fish is healthy.";
+challengeCard50A.impact = "Lose $2 Global Bucks because fish prices are going up, and lose 2 health points because you can’t eat as much fish as you should.";
+challengeCard50A.hp = -2;
+challengeCard50A.wp = 0;
+challengeCard50A.ep = 0;
+challengeCard50A.gb = -2;
+challengeCards[0][42] = challengeCard50A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard50B = new Object();
+challengeCard50B.title = "Fisheries decline";
+challengeCard50B.text = "You used to be a fisherman but you have lost your job because of decreasing fish populations in the oceans. Your government has put a ban on fishing to help the fish populations recover, but massive fishing vessels from other countries continue to fish just offshore in international waters so the fish may never recover.";
+challengeCard50B.impact = "Lose $3 Global Bucks and 2 health points.";
+challengeCard50B.hp = -2;
+challengeCard50B.wp = 0;
+challengeCard50B.ep = 0;
+challengeCard50B.gb = -3;
+challengeCards[1][42] = challengeCard50B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard50C = new Object();
+challengeCard50C.title = "Fisheries decline";
+challengeCard50C.text = "You work on a local fishing vessel. Unfortunately the ocean’s fish populations are going down, so it is harder and harder to catch fish. This means less work and less food for your family. Even worse, much of the fish you catch is shipped to richer countries to be made into pet food. So as your family suffers from hunger, you know people’s pets in richer countries are eating better than your family.";
+challengeCard50C.impact = "Lose $2 Global Bucks and 2 health points.";
+challengeCard50C.hp = -2;
+challengeCard50C.wp = 0;
+challengeCard50C.ep = 0;
+challengeCard50C.gb = -2;
+challengeCards[2][42] = challengeCard50C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 51
+var challengeCard51A = new Object();
+challengeCard51A.title = "Access to power";
+challengeCard51A.text = "You lose access to electricity in your home, this happens for only a short period of time.";
+challengeCard51A.impact = "Lose $1 Global Buck because you had to throw out some food that went bad while your fridge didn’t work.";
+challengeCard51A.hp = 0;
+challengeCard51A.wp = 0;
+challengeCard51A.ep = 0;
+challengeCard51A.gb = -1;
+challengeCards[0][42] = challengeCard51A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard51B = new Object();
+challengeCard51B.title = "Access to power";
+challengeCard51B.text = "Your city's power source is down for a couple of days, you miss school and much of your food goes bad because you have no refrigeration.";
+challengeCard51B.impact = "Lose $2 Global Bucks and do not go to school for 20 dice rolls.";
+challengeCard51B.hp = 0;
+challengeCard51B.wp = 0;
+challengeCard51B.ep = 0;
+challengeCard51B.gb = -2;
+challengeCard44C.special = "educationBlock20";
+challengeCards[1][42] = challengeCard51B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard51C = new Object();
+challengeCard51C.title = "Access to power";
+challengeCard51C.text = "You do not have electricity in your hut, making it impossible to study at night.";
+challengeCard51C.impact = "Drop one education level.";
+challengeCard51C.hp = 0;
+challengeCard51C.wp = 0;
+challengeCard51C.ep = 0;
+challengeCard51C.gb = 0;
+challengeCard51C.special = "loseEducationLevel";
+challengeCards[2][42] = challengeCard51C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 52
+var challengeCard52A = new Object();
+challengeCard52A.title = "Refugees";
+challengeCard52A.text = "Your country’s policies over the past 50 years have caused wars in many other countries which the people living in those countries have had to flee. Also, by not helping other countries rise out of poverty, many people living in poorer countries see their only chance for a better life is to move to your country. As a country, you have a humanitarian responsibility to help people all over the world, as well as help refugees fleeing violence and poverty. You must remember that these refugees want to be in your country and will be valuable and contributing members of society. Many of the young people will appreciate education more than people who were born in your country because they know what life is like without an education.";
+challengeCard52A.impact = "Give $3 Global Bucks to help these people adjust to life in your country. ";
+challengeCard52A.hp = 0;
+challengeCard52A.wp = 0;
+challengeCard52A.ep = 0;
+challengeCard52A.gb = -3;
+challengeCards[0][43] = challengeCard52A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard52B = new Object();
+challengeCard52B.title = "Refugees";
+challengeCard52B.text = "Your small country has thousands of refugees streaming into it as they flee conflict and war in a neighbouring country. Your country wants to help, but it doesn’t have much money and is overwhelmed by the number of refugees arriving.";
+challengeCard52B.impact = "You want to help so you give $1 Global Buck.";
+challengeCard52B.hp = 0;
+challengeCard52B.wp = 0;
+challengeCard52B.ep = 0;
+challengeCard52B.gb = -1;
+challengeCards[1][43] = challengeCard52B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard52C = new Object();
+challengeCard52C.title = "Refugees";
+challengeCard52C.text = "Civil war has been going on in your country for years but the fighting has been getting worse lately. You have lost many friends and family members to the war. With no water, food, education, hospitals or any government services, it is difficult to survive. You fear for the safety of your family, especially your young children who are constantly afraid to go outside. You make the difficult decision to abandon everything you have and make the dangerous journey to another country in hope of a better life for your family.";
+challengeCard52C.impact = "Lose $2 Global Bucks.";
+challengeCard52C.hp = 0;
+challengeCard52C.wp = 0;
+challengeCard52C.ep = 0;
+challengeCard52C.gb = -2;
+challengeCards[2][43] = challengeCard52C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 55
+var challengeCard55A = new Object();
+challengeCard55A.title = "Habitat Destruction";
+challengeCard55A.text = "The city you live in is growing, but instead of building more densely populated areas, your city is experiencing urban sprawl – meaning it just keeps getting bigger and bigger. As the city expands, it takes more farm land and forest animal habitat. The larger the city gets, the more driving people need to do, which adds more pollution. Also, people who have to drive all the time spend less time with their family.";
+challengeCard55A.impact = "Lose 4 health points.";
+challengeCard55A.hp = -4;
+challengeCard55A.wp = 0;
+challengeCard55A.ep = 0;
+challengeCard55A.gb = 0;
+challengeCards[0][44] = challengeCard55A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard55B = new Object();
+challengeCard55B.title = "Habitat Destruction";
+challengeCard55B.text = "To expand business and farming in your country, more and more forest and natural areas have been destroyed. This has led to the loss of much animal habitat.";
+challengeCard55B.impact = "Gain $1 Global Buck but lose 3 health points.";
+challengeCard55B.hp = -3;
+challengeCard55B.wp = 0;
+challengeCard55B.ep = 0;
+challengeCard55B.gb = 1;
+challengeCards[1][44] = challengeCard55B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard55C = new Object();
+challengeCard55C.title = "Habitat Destruction";
+challengeCard55C.text = "In order to heat your home at night, and so you have light, you light a fire every night. Unfortunately, so do all the other people in your village. This constant collecting of fire wood from the nearby natural area has been very destructive to the ecosystem. It has also hurt local tourism, which many people depend on for income.";
+challengeCard55C.impact = "Lose 2 health points and $2 Global Bucks.";
+challengeCard55C.hp = -2;
+challengeCard55C.wp = 0;
+challengeCard55C.ep = 0;
+challengeCard55C.gb = -2;
+challengeCards[2][44] = challengeCard55C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 56
+var challengeCard56A = new Object();
+challengeCard56A.title = "Illegal Animal Trafficking";
+challengeCard56A.text = "Black market medicine made from ivory does not work. Consider getting your medicine through other means.";
+challengeCard56A.impact = "Lose 1 health point.";
+challengeCard56A.hp = -1;
+challengeCard56A.wp = 0;
+challengeCard56A.ep = 0;
+challengeCard56A.gb = 0;
+challengeCards[0][45] = challengeCard56A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard56B = new Object();
+challengeCard56B.title = "Illegal Animal Trafficking";
+challengeCard56B.text = "Black market medicine made from rhino horn does not work (rhino horn is made from the same stuff as your fingernails) – but the illegal poaching/killing of rhinos had them on the endangered species list.";
+challengeCard56B.impact = "Lose $5 Global Bucks for purchasing illegal animal parts that have no medicinal properties. Also lose 2 health points.";
+challengeCard56B.hp = -2;
+challengeCard56B.wp = 0;
+challengeCard56B.ep = 0;
+challengeCard56B.gb = -5;
+challengeCards[1][45] = challengeCard56B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
+var challengeCard56C = new Object();
+challengeCard56C.title = "Illegal Animal Trafficking";
+challengeCard56C.text = "Elephants in the national park near your village are dying because poachers are killing them illegally for their ivory. This hurts the local ecosystem, and also hurts tourism in the area.";
+challengeCard56C.impact = "Lose $3 Global Bucks and 1 health point. ";
+challengeCard56C.hp = -1;
+challengeCard56C.wp = 0;
+challengeCard56C.ep = 0;
+challengeCard56C.gb = -3;
+challengeCards[2][45] = challengeCard56C;
 
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
+//card 59
+var challengeCard59A = new Object();
+challengeCard59A.title = "Shark Finning";
+challengeCard59A.text = "Due to shark finning, there is a reduction of tourism in your country. The tourists stop coming because there are no longer sharks to view.";
+challengeCard59A.impact = "Lose $2 Global Bucks.";
+challengeCard59A.hp = 0;
+challengeCard59A.wp = 0;
+challengeCard59A.ep = 0;
+challengeCard59A.gb = -2;
+challengeCards[0][46] = challengeCard59A;
 
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
+var challengeCard59B = new Object();
+challengeCard59B.title = "Shark Finning";
+challengeCard59B.text = "Healthy shark populations support healthier fish species, like tuna. You lose your job as a fisherman because there is not enough tuna to fish.";
+challengeCard59B.impact = "Lose $2 Global Bucks.";
+challengeCard59B.hp = 0;
+challengeCard59B.wp = 0;
+challengeCard59B.ep = 0;
+challengeCard59B.gb = -2;
+challengeCards[1][46] = challengeCard59B;
 
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
-
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
-
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
-
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
-
-//card XX
-var challengeCardXXA = new Object();
-challengeCardXXA.title = "";
-challengeCardXXA.text = "";
-challengeCardXXA.impact = "";
-challengeCardXXA.hp = 0;
-challengeCardXXA.wp = 0;
-challengeCardXXA.ep = 0;
-challengeCardXXA.gb = 0;
-challengeCards[0][QQ] = challengeCardXXA;
-
-var challengeCardXXB = new Object();
-challengeCardXXB.title = "";
-challengeCardXXB.text = "";
-challengeCardXXB.impact = "";
-challengeCardXXB.hp = 0;
-challengeCardXXB.wp = 0;
-challengeCardXXB.ep = 0;
-challengeCardXXB.gb = 0;
-challengeCards[1][QQ] = challengeCardXXB;
-
-var challengeCardXXC = new Object();
-challengeCardXXC.title = "";
-challengeCardXXC.text = "";
-challengeCardXXC.impact = "";
-challengeCardXXC.hp = 0;
-challengeCardXXC.wp = 0;
-challengeCardXXC.ep = 0;
-challengeCardXXC.gb = 0;
-challengeCards[2][QQ] = challengeCardXXC;
-
-*/
-
-
-
-
-
-
-
-
+var challengeCard59C = new Object();
+challengeCard59C.title = "Shark Finning";
+challengeCard59C.text = "Your village's food supply gets limited due to the oceans unbalanced ecosystem caused by an abundance of sharks being killed for their fins.";
+challengeCard59C.impact = "Lose 3 health points.";
+challengeCard59C.hp = -3;
+challengeCard59C.wp = 0;
+challengeCard59C.ep = 0;
+challengeCard59C.gb = 0;
+challengeCards[2][46] = challengeCard59C;
 
 
 // template for cards
