@@ -1178,86 +1178,29 @@ function playerDied() {
 
 }
 
-function playerWon() {
-    //alert('dead');
-    console.log("player won");
-    UpdateUserMessage("Congratulations! You won!!");
+function playerWon(){
+    
+    UpdateUserMessage("Well Done and Congratulations!!!");
     updateStats();
 
     gameOver = true;
     UpdateHUD();
     
-    // pop up the tombstone
-   var winMessage = "Congratulations on achieving a sustainable life! Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";
-   
-   THE_GAME.ShowObituary(_username, winMessage);  
-
+    THE_GAME.ShowWinMessage(_username, getWinMessage());
+    
+       
 }
-/*
-function CalcHowBadlyPlayerDied()
-{
-    var _msgWater = "";
-    var _msgHealth = "";
-    var _msgEducation = "";
-    var _messageBucks = "";
-    
-    // WATER
-    if(player1.wp > 0)
-    {
-     // had water
-        _msgWater = "Died of ailing health, bad luck and poor choices.";
-        
-    } else {
-        // no water    
-        _msgWater = "Died horribly of thirst and poor planning.";
-    }
-    
-    // HEALTH
-    if(player1.hp > 0)
-    {
-     // had health
-        _msgHealth = "They was just too thirsty for this world.";
-        
-    } else {
-     // no health   
-        _msgHealth = "They died in poor health.";
-    }
-    
-    // EDUCATION
-    if(player1.ep > 10)
-    {
-     // had education
-        _msgEducation = "They tried to better themselves with book learning.";
-        
-    } else {
-        // no education
-        _msgEducation = "They died how they lived, ignorant and uneducated.";
-    }
-    
-    // MONEY:
-    if(player1.gb > 10)
-    {
-     // had money
-        _messageBucks = "They were good money managers.";
-        
-    } else {
-        // no money
-        _messageBucks = "They were buried anonymously in a paupers grave.";
-    }
-    
-    var _finalMessage = _msgWater + "<br>";
-        _finalMessage += _msgHealth + "<br>";
-        _finalMessage += _msgEducation + "<br>";
-        _finalMessage += _messageBucks + "<br><br>";
-    
-    return _finalMessage;
-}
-*/
 
 function getDeathMessage()
 {
  var deathMsg = "We are very sorry to say that your life has come to an end. Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";  
 return deathMsg;
+}
+
+function getWinMessage()
+{
+ var winMsg = "Congratulations on achieving a sustainable life! Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take action! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can get involved, and lesson plans you can use in your school.";   
+    return winMsg;
 }
 function alertIt(what) {
     if (what === undefined) {

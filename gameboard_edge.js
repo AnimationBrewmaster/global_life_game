@@ -727,6 +727,13 @@
                             opacity: '0',
                             fill: ["rgba(192,192,192,1)"],
                             stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'WinMessage',
+                            symbolName: 'WinMessage',
+                            display: 'block',
+                            type: 'rect',
+                            rect: ['0', '0', '474', '597', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -762,6 +769,16 @@
                             "${mcPopup}",
                             '344px',
                             '344px'
+                        ],
+                        [
+                            "eid15055",
+                            "display",
+                            0,
+                            0,
+                            "easeOutElastic",
+                            "${WinMessage}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid311",
@@ -866,76 +883,14 @@
                             '446px'
                         ],
                         [
-                            "eid12184",
-                            "location",
+                            "eid13063",
+                            "display",
                             0,
-                            1000,
+                            0,
                             "linear",
-                            "${avatar_water}",
-                            [[123.22, 564.48, 0, 0, 0, 0,0],[310.49, 429.32, 0, 0, 0, 0,230.95]]
-                        ],
-                        [
-                            "eid12185",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[310.49, 429.32, 0, 0, 0, 0,0],[444.95, 307.92, 0, 0, 0, 0,181.16]]
-                        ],
-                        [
-                            "eid12186",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[444.95, 307.92, 0, 0, 0, 0,0],[403.39, 196.4, 0, 0, 0, 0,119.01]]
-                        ],
-                        [
-                            "eid12187",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[403.39, 196.4, 0, 0, 0, 0,0],[475.54, 136.12, 0, 0, 0, 0,94.02]]
-                        ],
-                        [
-                            "eid12188",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[475.54, 136.12, 0, 0, 0, 0,0],[658.34, 175.3, 0, 0, 0, 0,186.95]]
-                        ],
-                        [
-                            "eid12189",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[658.34, 175.3, 0, 0, 0, 0,0],[712.71, 334.23, 0, 0, 0, 0,167.97]]
-                        ],
-                        [
-                            "eid12190",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[712.71, 334.23, 0, 0, 0, 0,0],[989.94, 434.14, 0, 0, 0, 0,294.68]]
-                        ],
-                        [
-                            "eid12191",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_water}",
-                            [[989.94, 434.14, 0, 0, 0, 0,0],[1158.07, 445.74, 0, 0, 0, 0,168.53]]
+                            "${pathmarkersCopy4}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid5682",
@@ -958,70 +913,14 @@
                             '-1'
                         ],
                         [
-                            "eid554",
-                            "-webkit-transform-origin",
+                            "eid12998",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid15047",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid15048",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid15049",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid15050",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid15051",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
+                            "${mcHUD}",
+                            '70.61%',
+                            '70.61%'
                         ],
                         [
                             "eid13029",
@@ -1034,24 +933,24 @@
                             '1'
                         ],
                         [
-                            "eid5434",
-                            "scaleY",
+                            "eid539",
+                            "left",
                             0,
                             0,
                             "linear",
-                            "${mcHUD}",
-                            '0.84693',
-                            '0.84693'
+                            "${hudNextDest}",
+                            '221px',
+                            '221px'
                         ],
                         [
-                            "eid13021",
-                            "scaleX",
+                            "eid6281",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${avatar_market}",
-                            '1',
-                            '1'
+                            "${mcPopup}",
+                            '13px',
+                            '13px'
                         ],
                         [
                             "eid5914",
@@ -1084,14 +983,70 @@
                             'none'
                         ],
                         [
-                            "eid539",
-                            "left",
+                            "eid554",
+                            "-webkit-transform-origin",
                             0,
                             0,
                             "linear",
-                            "${hudNextDest}",
-                            '221px',
-                            '221px'
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid15126",
+                            "-moz-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid15127",
+                            "-ms-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid15128",
+                            "msTransformOrigin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid15129",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid15130",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
                             "eid14047",
@@ -1104,24 +1059,34 @@
                             '1024px'
                         ],
                         [
-                            "eid6281",
-                            "top",
+                            "eid7115",
+                            "scaleX",
                             0,
                             0,
-                            "linear",
-                            "${mcPopup}",
-                            '13px',
-                            '13px'
+                            "easeOutQuad",
+                            "${mcUserMessage}",
+                            '0.96497',
+                            '0.96497'
                         ],
                         [
-                            "eid13065",
-                            "display",
+                            "eid13081",
+                            "scaleX",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersCopy6}",
-                            'none',
-                            'none'
+                            "${avatar_job}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid13082",
+                            "scaleX",
+                            1048,
+                            0,
+                            "linear",
+                            "${avatar_job}",
+                            '1',
+                            '1'
                         ],
                         [
                             "eid5433",
@@ -1216,78 +1181,6 @@
                             [[886.55, 485.29, 0, 0, 0, 0,0],[1033.76, 770.23, 0, 0, 0, 0,320.72]]
                         ],
                         [
-                            "eid12208",
-                            "location",
-                            0,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[1070.9, 615.73, 0, 0, 0, 0,0],[954.5, 597.5, 0, 0, 0, 0,117.82]]
-                        ],
-                        [
-                            "eid12209",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[954.5, 597.5, 0, 0, 0, 0,0],[922.41, 563.32, -5.13, -4.48, -65.02, -56.83,46.97],[879.5, 519.5, 0, 0, 0, 0,108.3]]
-                        ],
-                        [
-                            "eid12210",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[879.5, 519.5, 0, 0, 0, 0,0],[814.17, 461.81, 0, 0, 0, 0,87.16],[796.5, 449.5, 0, 0, 0, 0,108.69]]
-                        ],
-                        [
-                            "eid12211",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[796.5, 449.5, 0, 0, 0, 0,0],[456.48, 361.04, -157.09, 47.02, -164.38, 49.2,353.31],[569.51, 337.51, 0, 0, 0, 0,490.3]]
-                        ],
-                        [
-                            "eid12212",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[569.51, 337.51, 0, 0, 0, 0,0],[358.39, 396.51, 0, 0, 0, 0,219.21]]
-                        ],
-                        [
-                            "eid12213",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[358.39, 396.51, 0, 0, 0, 0,0],[231.29, 447.18, 0, 0, 0, 0,136.83]]
-                        ],
-                        [
-                            "eid12214",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[231.29, 447.18, 0, 0, 0, 0,0],[171.51, 529.52, 0, 0, 0, 0,101.75]]
-                        ],
-                        [
-                            "eid12215",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_school}",
-                            [[171.51, 529.52, 0, 0, 0, 0,0],[13.83, 671.25, 0, 0, 0, 0,212.02]]
-                        ],
-                        [
                             "eid12081",
                             "location",
                             0,
@@ -1360,6 +1253,16 @@
                             [[1030.2, 328.17, 0, 0, 0, 0,0],[1224.45, 364.93, 0, 0, 0, 0,197.7]]
                         ],
                         [
+                            "eid13065",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${pathmarkersCopy6}",
+                            'none',
+                            'none'
+                        ],
+                        [
                             "eid14643",
                             "display",
                             0,
@@ -1390,14 +1293,76 @@
                             '10px'
                         ],
                         [
-                            "eid7115",
-                            "scaleX",
+                            "eid11924",
+                            "location",
                             0,
-                            0,
-                            "easeOutQuad",
-                            "${mcUserMessage}",
-                            '0.96497',
-                            '0.96497'
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[178.5, 588.79, 0, 0, 0, 0,0],[208.17, 459.29, 0, 0, 0, 0,132.86]]
+                        ],
+                        [
+                            "eid11925",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[207.78, 459, 0, 0, 0, 0,0],[325.14, 355.21, 0, 0, 0, 0,156.67]]
+                        ],
+                        [
+                            "eid11930",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[325.25, 355.41, 0, 0, 0, 0,0],[403.57, 256.1, 0, 0, 0, 0,126.48]]
+                        ],
+                        [
+                            "eid11932",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[403.68, 256.3, 0, 0, 0, 0,0],[516.8, 181.73, 0, 0, 0, 0,135.49]]
+                        ],
+                        [
+                            "eid11933",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[516.91, 181.93, 0, 0, 0, 0,0],[652.33, 282.6, 0, 0, 0, 0,168.74]]
+                        ],
+                        [
+                            "eid11934",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[652.44, 282.8, 0, 0, 0, 0,0],[834.92, 370.87, 0, 0, 0, 0,202.62]]
+                        ],
+                        [
+                            "eid11935",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[835.03, 371.07, 0, 0, 0, 0,0],[1060.54, 475.73, 0, 0, 0, 0,248.61]]
+                        ],
+                        [
+                            "eid11936",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_job}",
+                            [[1060.65, 475.93, 0, 0, 0, 0,0],[1180.55, 502.02, 0, 0, 0, 0,122.71]]
                         ],
                         [
                             "eid11929",
@@ -1420,24 +1385,14 @@
                             '517px'
                         ],
                         [
-                            "eid13081",
-                            "scaleX",
+                            "eid12858",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid13082",
-                            "scaleX",
-                            1048,
-                            0,
-                            "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
+                            "${mcUserMessage}",
+                            '520px',
+                            '520px'
                         ],
                         [
                             "eid12643",
@@ -1532,86 +1487,24 @@
                             'none'
                         ],
                         [
-                            "eid11924",
-                            "location",
-                            0,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[178.5, 588.79, 0, 0, 0, 0,0],[208.17, 459.29, 0, 0, 0, 0,132.86]]
-                        ],
-                        [
-                            "eid11925",
-                            "location",
-                            1000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[207.78, 459, 0, 0, 0, 0,0],[325.14, 355.21, 0, 0, 0, 0,156.67]]
-                        ],
-                        [
-                            "eid11930",
-                            "location",
-                            2000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[325.25, 355.41, 0, 0, 0, 0,0],[403.57, 256.1, 0, 0, 0, 0,126.48]]
-                        ],
-                        [
-                            "eid11932",
-                            "location",
-                            3000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[403.68, 256.3, 0, 0, 0, 0,0],[516.8, 181.73, 0, 0, 0, 0,135.49]]
-                        ],
-                        [
-                            "eid11933",
-                            "location",
-                            4000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[516.91, 181.93, 0, 0, 0, 0,0],[652.33, 282.6, 0, 0, 0, 0,168.74]]
-                        ],
-                        [
-                            "eid11934",
-                            "location",
-                            5000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[652.44, 282.8, 0, 0, 0, 0,0],[834.92, 370.87, 0, 0, 0, 0,202.62]]
-                        ],
-                        [
-                            "eid11935",
-                            "location",
-                            6000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[835.03, 371.07, 0, 0, 0, 0,0],[1060.54, 475.73, 0, 0, 0, 0,248.61]]
-                        ],
-                        [
-                            "eid11936",
-                            "location",
-                            7000,
-                            1000,
-                            "linear",
-                            "${avatar_job}",
-                            [[1060.65, 475.93, 0, 0, 0, 0,0],[1180.55, 502.02, 0, 0, 0, 0,122.71]]
-                        ],
-                        [
-                            "eid374",
-                            "width",
+                            "eid330",
+                            "display",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '176px',
-                            '176px'
+                            "${mcPopup}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid13059",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${pathmarkersMed}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid310",
@@ -1634,36 +1527,6 @@
                             '0.61'
                         ],
                         [
-                            "eid12847",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            '-90px',
-                            '-90px'
-                        ],
-                        [
-                            "eid330",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${mcPopup}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid13059",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${pathmarkersMed}",
-                            'none',
-                            'none'
-                        ],
-                        [
                             "eid5912",
                             "top",
                             0,
@@ -1672,6 +1535,16 @@
                             "${hudNextDest}",
                             '22px',
                             '22px'
+                        ],
+                        [
+                            "eid12847",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            '-90px',
+                            '-90px'
                         ],
                         [
                             "eid14602",
@@ -1684,6 +1557,88 @@
                             'none'
                         ],
                         [
+                            "eid374",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            '176px',
+                            '176px'
+                        ],
+                        [
+                            "eid12208",
+                            "location",
+                            0,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[1070.9, 615.73, 0, 0, 0, 0,0],[954.5, 597.5, 0, 0, 0, 0,117.82]]
+                        ],
+                        [
+                            "eid12209",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[954.5, 597.5, 0, 0, 0, 0,0],[922.41, 563.32, -5.13, -4.48, -65.02, -56.83,46.97],[879.5, 519.5, 0, 0, 0, 0,108.3]]
+                        ],
+                        [
+                            "eid12210",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[879.5, 519.5, 0, 0, 0, 0,0],[814.17, 461.81, 0, 0, 0, 0,87.16],[796.5, 449.5, 0, 0, 0, 0,108.69]]
+                        ],
+                        [
+                            "eid12211",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[796.5, 449.5, 0, 0, 0, 0,0],[672.62, 358.48, -155.49, -52.06, -169.01, -56.58,154.88],[569.51, 337.51, 0, 0, 0, 0,260.3]]
+                        ],
+                        [
+                            "eid12212",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[569.51, 337.51, 0, 0, 0, 0,0],[358.39, 396.51, 0, 0, 0, 0,219.21]]
+                        ],
+                        [
+                            "eid12213",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[358.39, 396.51, 0, 0, 0, 0,0],[231.29, 447.18, 0, 0, 0, 0,136.83]]
+                        ],
+                        [
+                            "eid12214",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[231.29, 447.18, 0, 0, 0, 0,0],[171.51, 529.52, 0, 0, 0, 0,101.75]]
+                        ],
+                        [
+                            "eid12215",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_school}",
+                            [[171.51, 529.52, 0, 0, 0, 0,0],[13.83, 671.25, 0, 0, 0, 0,212.02]]
+                        ],
+                        [
                             "eid12997",
                             "left",
                             0,
@@ -1694,16 +1649,6 @@
                             '11.27%'
                         ],
                         [
-                            "eid12858",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${mcUserMessage}",
-                            '520px',
-                            '520px'
-                        ],
-                        [
                             "eid184",
                             "display",
                             0,
@@ -1712,6 +1657,16 @@
                             "${hudMarket}",
                             'none',
                             'none'
+                        ],
+                        [
+                            "eid5434",
+                            "scaleY",
+                            0,
+                            0,
+                            "linear",
+                            "${mcHUD}",
+                            '0.84693',
+                            '0.84693'
                         ],
                         [
                             "eid364",
@@ -1744,14 +1699,76 @@
                             'none'
                         ],
                         [
-                            "eid12998",
-                            "top",
+                            "eid12184",
+                            "location",
                             0,
-                            0,
+                            1000,
                             "linear",
-                            "${mcHUD}",
-                            '70.61%',
-                            '70.61%'
+                            "${avatar_water}",
+                            [[123.22, 564.48, 0, 0, 0, 0,0],[310.49, 429.32, 0, 0, 0, 0,230.95]]
+                        ],
+                        [
+                            "eid12185",
+                            "location",
+                            1000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[310.49, 429.32, 0, 0, 0, 0,0],[444.95, 307.92, 0, 0, 0, 0,181.16]]
+                        ],
+                        [
+                            "eid12186",
+                            "location",
+                            2000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[444.95, 307.92, 0, 0, 0, 0,0],[403.39, 196.4, 0, 0, 0, 0,119.01]]
+                        ],
+                        [
+                            "eid12187",
+                            "location",
+                            3000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[403.39, 196.4, 0, 0, 0, 0,0],[475.54, 136.12, 0, 0, 0, 0,94.02]]
+                        ],
+                        [
+                            "eid12188",
+                            "location",
+                            4000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[475.54, 136.12, 0, 0, 0, 0,0],[658.34, 175.3, 0, 0, 0, 0,186.95]]
+                        ],
+                        [
+                            "eid12189",
+                            "location",
+                            5000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[658.34, 175.3, 0, 0, 0, 0,0],[712.71, 334.23, 0, 0, 0, 0,167.97]]
+                        ],
+                        [
+                            "eid12190",
+                            "location",
+                            6000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[712.71, 334.23, 0, 0, 0, 0,0],[989.94, 434.14, 0, 0, 0, 0,294.68]]
+                        ],
+                        [
+                            "eid12191",
+                            "location",
+                            7000,
+                            1000,
+                            "linear",
+                            "${avatar_water}",
+                            [[989.94, 434.14, 0, 0, 0, 0,0],[1158.07, 445.74, 0, 0, 0, 0,168.53]]
                         ],
                         [
                             "eid13062",
@@ -1764,14 +1781,14 @@
                             'none'
                         ],
                         [
-                            "eid13063",
-                            "display",
+                            "eid13021",
+                            "scaleX",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersCopy4}",
-                            'none',
-                            'none'
+                            "${avatar_market}",
+                            '1',
+                            '1'
                         ]
                     ]
                 }
@@ -1801,11 +1818,11 @@
                             fill: ['rgba(156,0,0,1.00)']
                         },
                         {
-                            type: 'text',
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: 'CHALLENGE:<br>Your village doesn\'t have an outhouse. People are going wherever they can. In public. It\'s embarrassing, dangerous and very unclean. <br><br>You come into contact with some nasty microbes and get life-threatening diahrrea, just like 1.5 million other kids every year.<br><br>You lose 6 health points. <br>And one pair of clean undies.',
-                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto'],
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
+                            type: 'text',
+                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1847,11 +1864,11 @@
                             fill: ['rgba(97,172,57,1.00)']
                         },
                         {
-                            type: 'text',
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: '<p style=\"margin:0px\">​PARTNERSHIP:</p><p style=\"margin: 0px;\">You partner with T.S.O.P.W.D.T.D.I.F.** to bring clean toilets to your village.</p><p style=\"margin: 0px;\">You no longer get affected by any challenges involving toilets and sanitation. Good Job!</p><p style=\"margin: 0px;\">​</p><p style=\"margin: 0px;\">** The Society of People Who Dont Think Diahrreah Is Funny</p><p style=\"margin: 0px;\">​</p>',
-                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto'],
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
+                            type: 'text',
+                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -1892,10 +1909,10 @@
                             },
                             {
                                 transform: [[], [], [], ['0.61', '0.61']],
-                                type: 'image',
-                                id: 'character_home',
-                                display: 'block',
                                 rect: ['566px', '208px', '145px', '154px', 'auto', 'auto'],
+                                display: 'block',
+                                id: 'character_home',
+                                type: 'image',
                                 fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                             }]
                         }
@@ -1998,22 +2015,22 @@
                             fill: ['rgba(0,0,0,0)', 'images/game_hud_v2.png', '0px', '0px']
                         },
                         {
+                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(255,210,10,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             type: 'text',
-                            rect: ['202px', '148px', '225px', '29px', 'auto', 'auto'],
                             align: 'right',
                             id: 'tPlayerName',
                             text: '<p style=\"margin: 0px;\">​tPlayerName</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(255,210,10,1.00)', '400', 'none', 'normal', 'break-word', '']
+                            rect: ['202px', '148px', '225px', '29px', 'auto', 'auto']
                         },
                         {
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(60,136,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             type: 'text',
-                            rect: ['438px', '146px', '107px', '29px', 'auto', 'auto'],
                             align: 'left',
                             id: 'tPlayerStatus',
                             text: '<p style=\"margin: 0px;\">​IS ALIVE!</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 2],
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(60,136,0,1.00)', '400', 'none', 'normal', 'break-word', '']
+                            rect: ['438px', '146px', '107px', '29px', 'auto', 'auto']
                         },
                         {
                             type: 'text',
@@ -2036,13 +2053,13 @@
                             opacity: '1'
                         },
                         {
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
-                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto'],
                             display: 'none',
                             id: 'headerGlobal',
                             text: '<p style=\"margin: 0px;\">​BUCKS</p>',
                             align: 'center',
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            rect: ['56px', '-66px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             type: 'text',
@@ -2055,22 +2072,22 @@
                             opacity: '1'
                         },
                         {
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
-                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto'],
                             display: 'none',
                             id: 'headerEducation',
                             text: '<p style=\"margin: 0px;\">​EDUCATION</p>',
                             align: 'center',
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            rect: ['141px', '-56px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
-                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto'],
                             display: 'none',
                             id: 'headerWater',
                             text: '<p style=\"margin: 0px;\">​WATER</p>',
                             align: 'center',
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            rect: ['158px', '-126px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             type: 'text',
@@ -2083,13 +2100,13 @@
                             opacity: '1'
                         },
                         {
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             type: 'text',
-                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto'],
                             display: 'none',
                             id: 'headerLife',
                             text: '<p style=\"margin: 0px;\">​HEALTH</p>',
                             align: 'center',
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(39,39,39,0.99)', 'normal', 'none', '', 'break-word', 'nowrap']
+                            rect: ['43px', '-127px', 'auto', 'auto', 'auto', 'auto']
                         },
                         {
                             rect: ['42px', '75px', '45px', '29px', 'auto', 'auto'],
@@ -2138,11 +2155,11 @@
                             type: 'rect'
                         },
                         {
-                            type: 'rect',
-                            id: 'buttonflash',
-                            symbolName: 'buttonflash',
+                            rect: ['564', '20', '259', '110', 'auto', 'auto'],
                             display: 'none',
-                            rect: ['564', '20', '259', '110', 'auto', 'auto']
+                            symbolName: 'buttonflash',
+                            id: 'buttonflash',
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -2246,13 +2263,13 @@
                         },
                         {
                             type: 'text',
-                            font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                            align: 'left',
-                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
+                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto'],
                             id: 'button_text',
-                            textStyle: ['', '', '', '', 'none'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
+                            align: 'left',
                             text: '<p style=\"margin: 0px;\">​CLOSE</p>',
-                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto']
+                            textStyle: ['', '', '', '', 'none'],
+                            font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap']
                         },
                         {
                             rect: ['1px', '0px', '90px', '49px', 'auto', 'auto'],
@@ -2313,11 +2330,11 @@
                             rect: ['0', '0', '384', '480', 'auto', 'auto'],
                             c: [
                             {
-                                type: 'rect',
+                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animation',
                                 symbolName: 'flare_animation',
-                                transform: [[], [], [], ['1.44508', '1.44508']],
-                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto']
+                                type: 'rect',
+                                transform: [[], [], [], ['1.44508', '1.44508']]
                             },
                             {
                                 type: 'image',
@@ -2326,21 +2343,21 @@
                                 fill: ['rgba(0,0,0,0)', 'images/newGreenCard.png', '0px', '0px']
                             },
                             {
-                                type: 'rect',
+                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animationCopy',
                                 symbolName: 'flare_animation',
-                                transform: [[], [], [], ['0.69208', '0.69208']],
-                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto']
+                                type: 'rect',
+                                transform: [[], [], [], ['0.69208', '0.69208']]
                             }]
                         },
                         {
+                            type: 'text',
                             rect: ['48px', '181px', '306px', '331px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
-                            text: '<p style=\"margin: 0px;\">​</p>',
-                            id: 'txtBody',
                             textStyle: ['', '', '', '', 'none'],
+                            id: 'txtBody',
+                            text: '<p style=\"margin: 0px;\">​</p>',
                             align: 'left',
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
                         },
                         {
                             type: 'text',
@@ -2526,11 +2543,11 @@
                                 type: 'text',
                                 align: 'center',
                                 text: '<p style=\"margin:0px\">​CLOSE</p>',
-                                font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
+                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto'],
                                 title: 'CLOSE',
                                 id: 'label',
                                 textShadow: ['rgba(33,33,33,1.00)', 0, -2, 1],
-                                rect: ['-2', '6px', '102%', '27', 'auto', 'auto']
+                                font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
                             }]
                         },
                         {
@@ -2718,14 +2735,14 @@
                             '2px'
                         ],
                         [
-                            "eid98",
-                            "textShadow.color",
+                            "eid96",
+                            "textShadow.offsetH",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            'rgba(33,33,33,1.00)',
-                            'rgba(33,33,33,1.00)'
+                            '0px',
+                            '0px'
                         ],
                         [
                             "eid19",
@@ -2768,14 +2785,14 @@
                             '0px'
                         ],
                         [
-                            "eid96",
-                            "textShadow.offsetH",
+                            "eid98",
+                            "textShadow.color",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            '0px',
-                            '0px'
+                            'rgba(33,33,33,1.00)',
+                            'rgba(33,33,33,1.00)'
                         ],
                         [
                             "eid100",
@@ -2818,13 +2835,13 @@
                             boxShadow: ['inset', '0px', '0px', '43px', '2px', 'rgba(124,156,172,0.60)'],
                             c: [
                             {
+                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', ''],
-                                type: 'text',
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', '1px', '1px', '1px'],
-                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto']
+                                type: 'text'
                             }]
                         },
                         {
@@ -2893,14 +2910,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -2973,44 +3000,24 @@
                             '2px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
-                        ],
-                        [
-                            "eid31",
-                            "left",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid24",
+                            "eid25",
                             "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '0px',
-                            '2px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
+                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3073,14 +3080,24 @@
                             'rgba(255,255,255,1.00)'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
+                            "eid31",
+                            "left",
                             1000,
+                            0,
                             "linear",
-                            "${base_b}",
-                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
-                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid24",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ]
                     ]
                 }
@@ -3113,13 +3130,13 @@
                             boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['-2', '11', '102%', '27', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', ''],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', '']
                             }]
                         },
                         {
@@ -3187,14 +3204,24 @@
                             '11px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ],
                         [
                             "eid29",
@@ -3267,44 +3294,24 @@
                             '2px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
-                        ],
-                        [
-                            "eid31",
-                            "left",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid24",
+                            "eid25",
                             "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '0px',
-                            '2px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3367,14 +3374,24 @@
                             'rgba(255,255,255,1.00)'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
+                            "eid31",
+                            "left",
                             1000,
+                            0,
                             "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid24",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ]
                     ]
                 }
@@ -3446,24 +3463,14 @@
                             '11px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ],
                         [
                             "eid29",
@@ -3536,16 +3543,6 @@
                             '2px'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
-                        ],
-                        [
                             "eid31",
                             "left",
                             1000,
@@ -3564,6 +3561,16 @@
                             "${base_a}",
                             '0px',
                             '2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3626,14 +3633,24 @@
                             '0px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ]
                     ]
                 }
@@ -3665,13 +3682,13 @@
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(92,254,109,0.76)', 51], ['rgba(0,255,3,1.00)', 51]]]],
                             c: [
                             {
+                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', ''],
                                 type: 'text',
-                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', '']
+                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto']
                             }]
                         },
                         {
@@ -3933,15 +3950,15 @@
                             fill: ['rgba(255,201,0,1.00)']
                         },
                         {
-                            id: 'hudMarket2',
                             type: 'image',
+                            id: 'hudMarket2',
                             rect: ['0', '0', '600px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/hudMarket.png', '0px', '0px']
                         },
                         {
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnPlumbing',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3949,8 +3966,8 @@
                         },
                         {
                             rect: ['309px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBike',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3958,8 +3975,8 @@
                         },
                         {
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFilter',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3967,8 +3984,8 @@
                         },
                         {
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnKit',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3976,8 +3993,8 @@
                         },
                         {
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFood',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3985,8 +4002,8 @@
                         },
                         {
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBucket',
                             opacity: '0',
                             cursor: 'pointer',
@@ -3994,8 +4011,8 @@
                         },
                         {
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnTablet',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4003,8 +4020,8 @@
                         },
                         {
                             rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnSoap',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4013,8 +4030,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4267,67 +4283,67 @@
                             fill: ['rgba(0,0,0,0)', 'images/gameboard_2016.jpg', '0px', '0px']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.43719', '1.5']],
-                            rect: ['-94px', '276px', '128', '128', 'auto', 'auto'],
                             id: 'btnFarm',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['-94px', '276px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.438', '1.53641']],
-                            rect: ['-94px', '56px', '128', '128', 'auto', 'auto'],
                             id: 'btnHospital',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['-94px', '56px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.43851', '1.51866']],
-                            rect: ['114px', '57px', '128', '128', 'auto', 'auto'],
                             id: 'btnJob',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['114px', '57px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.43801', '1.52886']],
-                            rect: ['324px', '56px', '128', '128', 'auto', 'auto'],
                             id: 'btnMarket',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['324px', '56px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.44059', '1.53428']],
-                            rect: ['534px', '55px', '128', '128', 'auto', 'auto'],
                             id: 'btnToilet',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['534px', '55px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.43987', '1.52956']],
-                            rect: ['115px', '277px', '128', '128', 'auto', 'auto'],
                             id: 'btnSchool',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['115px', '277px', '128', '128', 'auto', 'auto']
                         },
                         {
+                            type: 'rect',
                             transform: [[], [], [], ['1.43987', '1.53738']],
-                            rect: ['326px', '277px', '128', '128', 'auto', 'auto'],
                             id: 'btnWater',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            type: 'rect'
+                            rect: ['326px', '277px', '128', '128', 'auto', 'auto']
                         },
                         {
-                            transform: [[], [], [], ['-1']],
+                            rect: ['469px', '239px', '161px', '172px', 'auto', 'auto'],
                             tag: 'img',
                             id: 'character',
+                            transform: [[], [], [], ['-1']],
                             type: 'image',
-                            rect: ['469px', '239px', '161px', '172px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                         },
                         {
@@ -4335,8 +4351,8 @@
                             align: 'center',
                             textStyle: ['', '', '', '', 'none'],
                             rect: ['76px', '-39px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['rancho, fantasy', [51, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
+                            font: ['rancho, fantasy', [51, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">CHOOSE A DESTINATION</span></p>'
                         }
@@ -4644,13 +4660,13 @@
                 content: {
                     dom: [
                         {
+                            font: ['bree-serif, sans-serif', [10, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
                             type: 'text',
-                            rect: ['0px', '67px', '202px', '152px', 'auto', 'auto'],
                             align: 'left',
                             id: 'txtScoreMessage',
-                            opacity: '0',
                             text: '<p style=\"margin: 0px; text-align: left;\">​</p>',
-                            font: ['bree-serif, sans-serif', [10, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal']
+                            opacity: '0',
+                            rect: ['0px', '67px', '202px', '152px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -4751,12 +4767,12 @@
                             fill: ['rgba(0,0,0,0)', 'images/dice-resized-v2.png', '0px', '0px', '1024px', '2048px', 'no-repeat']
                         },
                         {
+                            type: 'text',
                             rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap'],
                             id: 'rollagain',
                             text: '<p style=\"margin: 0px;\">ROLL THE DICE</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -4804,16 +4820,6 @@
                             0,
                             "linear",
                             "${bg}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid340",
-                            "display",
-                            1053,
-                            0,
-                            "linear",
-                            "${dice-resized-v2}",
                             'block',
                             'none'
                         ],
@@ -5101,6 +5107,16 @@
                             [-600,-600],
                             [-800,-600],
                             {valueTemplate: '@@0@@px @@1@@px'}
+                        ],
+                        [
+                            "eid340",
+                            "display",
+                            1053,
+                            0,
+                            "linear",
+                            "${dice-resized-v2}",
+                            'block',
+                            'none'
                         ]
                     ]
                 }
@@ -5116,43 +5132,43 @@
                     dom: [
                         {
                             rect: ['-26px', '-20px', '1072px', '692px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
-                            id: 'Rectangle',
                             opacity: '0',
+                            id: 'Rectangle',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
                             fill: ['rgba(192,192,192,1)', [270, [['rgba(99,99,231,1.00)', 0], ['rgba(0,0,0,1.00)', 100]]]]
                         },
                         {
-                            rect: ['271px', '-527px', '377px', '474px', 'auto', 'auto'],
-                            id: 'tombstone',
                             transform: [[], [], [], ['1.14999', '1.14999']],
+                            id: 'tombstone',
                             type: 'image',
+                            rect: ['271px', '-527px', '377px', '474px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/tombstone.png', '0px', '0px']
                         },
                         {
                             type: 'text',
                             id: 'txtNom',
                             textStyle: ['', '', '', '', 'none'],
-                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
-                            align: 'center',
                             font: ['puritan, sans-serif', [20, 'px'], 'rgba(113,113,113,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
+                            rect: ['329px', '166px', '313px', '70px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">nom</p>',
                             opacity: '0',
-                            text: '<p style=\"margin: 0px;\">nom</p>'
+                            align: 'center'
                         },
                         {
                             type: 'text',
                             id: 'txtObit',
                             textStyle: ['', '', '', '', 'none'],
-                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
-                            align: 'left',
                             font: ['puritan, sans-serif', [16, 'px'], 'rgba(88,88,88,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
+                            rect: ['381px', '238px', '195px', '333px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">obit</p>',
                             opacity: '0',
-                            text: '<p style=\"margin: 0px;\">obit</p>'
+                            align: 'left'
                         },
                         {
-                            rect: ['-26px', '-11px', '1088px', '707px', 'auto', 'auto'],
-                            id: 'invisible_button',
                             type: 'image',
+                            id: 'invisible_button',
+                            rect: ['-26px', '-11px', '1088px', '707px', 'auto', 'auto'],
                             cursor: 'default',
                             fill: ['rgba(0,0,0,0)', 'images/invisible_button.png', '0px', '0px']
                         },
@@ -5388,18 +5404,18 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['2.18', '2.18']],
+                            type: 'rect',
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['2.18', '2.18']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         },
                         {
-                            transform: [[], [], [], ['2.71', '2.71']],
+                            type: 'rect',
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['2.71', '2.71']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -5431,18 +5447,8 @@
                             [[227.02, 390.14, 0, 0, 0, 0,0],[227.01, 232.57, 0, 0, 0, 0,157.57]]
                         ],
                         [
-                            "eid168",
+                            "eid172",
                             "scaleY",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
-                        ],
-                        [
-                            "eid171",
-                            "scaleX",
                             0,
                             500,
                             "linear",
@@ -5461,13 +5467,23 @@
                             '1'
                         ],
                         [
-                            "eid172",
-                            "scaleY",
+                            "eid171",
+                            "scaleX",
                             0,
                             500,
                             "linear",
                             "${dice_symbol_2}",
                             '2.71',
+                            '1'
+                        ],
+                        [
+                            "eid168",
+                            "scaleY",
+                            0,
+                            821,
+                            "linear",
+                            "${dice_symbol_1}",
+                            '2.18',
                             '1'
                         ],
                         [
@@ -5989,32 +6005,32 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: ['385px', '64px', '136', '56', 'auto', 'auto'],
                             id: 'shadow1',
                             symbolName: 'shadow',
-                            rect: ['385px', '64px', '136', '56', 'auto', 'auto'],
+                            type: 'rect',
                             opacity: '0'
                         },
                         {
-                            type: 'rect',
+                            rect: ['182px', '8px', '136', '56', 'auto', 'auto'],
                             id: 'shadow2',
                             symbolName: 'shadow',
-                            rect: ['182px', '8px', '136', '56', 'auto', 'auto'],
+                            type: 'rect',
                             opacity: '0'
                         },
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            transform: [[], ['26'], [], ['2.18', '2.18']],
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], ['26'], [], ['2.18', '2.18']]
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            transform: [[], [], [], ['2.71', '2.71']],
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            type: 'rect',
-                            transform: [[], [], [], ['2.71', '2.71']]
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -6068,6 +6084,36 @@
                             '0'
                         ],
                         [
+                            "eid168",
+                            "scaleY",
+                            0,
+                            821,
+                            "linear",
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
+                        ],
+                        [
+                            "eid8207",
+                            "rotateZ",
+                            5500,
+                            0,
+                            "easeInQuad",
+                            "${dice_symbol_1}",
+                            '26deg',
+                            '26deg'
+                        ],
+                        [
+                            "eid8208",
+                            "rotateZ",
+                            5000,
+                            500,
+                            "easeInQuad",
+                            "${dice_symbol_2}",
+                            '0deg',
+                            '-29deg'
+                        ],
+                        [
                             "eid6962",
                             "opacity",
                             0,
@@ -6096,36 +6142,6 @@
                             "${shadow2}",
                             '0.19',
                             '0'
-                        ],
-                        [
-                            "eid8207",
-                            "rotateZ",
-                            5500,
-                            0,
-                            "easeInQuad",
-                            "${dice_symbol_1}",
-                            '26deg',
-                            '26deg'
-                        ],
-                        [
-                            "eid167",
-                            "scaleX",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
-                        ],
-                        [
-                            "eid168",
-                            "scaleY",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
                         ],
                         [
                             "eid144",
@@ -6440,14 +6456,14 @@
                             '1'
                         ],
                         [
-                            "eid8208",
-                            "rotateZ",
-                            5000,
-                            500,
-                            "easeInQuad",
-                            "${dice_symbol_2}",
-                            '0deg',
-                            '-29deg'
+                            "eid167",
+                            "scaleX",
+                            0,
+                            821,
+                            "linear",
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
                         ]
                     ]
                 }
@@ -6478,12 +6494,12 @@
                             fill: ['rgba(53,53,53,1.00)']
                         },
                         {
+                            type: 'text',
                             rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​ROLL DICE</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -6562,16 +6578,6 @@
                             '0.5145769715309143'
                         ],
                         [
-                            "eid5633",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${RoundRect}",
-                            '218px',
-                            '218px'
-                        ],
-                        [
                             "eid5632",
                             "left",
                             0,
@@ -6590,6 +6596,16 @@
                             "${Text}",
                             '23px',
                             '21px'
+                        ],
+                        [
+                            "eid5633",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${RoundRect}",
+                            '218px',
+                            '218px'
                         ],
                         [
                             "eid5634",
@@ -6630,12 +6646,12 @@
                             fill: ['rgba(53,53,53,1)']
                         },
                         {
+                            type: 'text',
                             rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">TIPS</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -6825,61 +6841,61 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['0.5', '0.5']],
-                            rect: ['0px', '-1px', '767px', '394px', 'auto', 'auto'],
                             type: 'rect',
+                            rect: ['0px', '-1px', '767px', '394px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.5', '0.5']],
                             id: 'Rectangle',
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             opacity: '0',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             fill: ['rgba(14,108,139,1.00)']
                         },
                         {
                             type: 'text',
-                            align: 'center',
-                            opacity: '0',
-                            rect: ['288px', '-8px', 'auto', 'auto', 'auto', 'auto'],
+                            id: 'Title',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">Inventory</span></p>',
+                            rect: ['288px', '-8px', 'auto', 'auto', 'auto', 'auto'],
+                            opacity: '0',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [44, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            id: 'Title'
+                            align: 'center'
                         },
                         {
                             type: 'text',
-                            align: 'center',
-                            opacity: '0',
-                            rect: ['232px', '36px', 'auto', 'auto', 'auto', 'auto'],
+                            id: 'Instructions',
                             text: '<p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">Your inventory contains:</span></p>',
+                            rect: ['232px', '36px', 'auto', 'auto', 'auto', 'auto'],
+                            opacity: '0',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [12, 'px'], 'rgba(176,240,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            id: 'Instructions'
+                            align: 'center'
                         },
                         {
                             type: 'text',
-                            align: 'right',
-                            opacity: '0',
-                            rect: ['154px', '73px', '192px', '270px', 'auto', 'auto'],
+                            id: 'InventoryList',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">SOAP</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER TABLET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BUCKET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FOOD</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FIRST AID KIT</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER FILTER</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BIKE</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​PLUMBING</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​MEDICINE</span></p>',
+                            rect: ['154px', '73px', '192px', '270px', 'auto', 'auto'],
+                            opacity: '0',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [12, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            id: 'InventoryList'
+                            align: 'right'
                         },
                         {
                             type: 'text',
-                            align: 'left',
-                            opacity: '0',
-                            rect: ['356px', '73px', '272px', '270px', 'auto', 'auto'],
+                            id: 'InventoryTotals',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">0​</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p>',
+                            rect: ['356px', '73px', '272px', '270px', 'auto', 'auto'],
+                            opacity: '0',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['bree-serif, sans-serif', [21, 'px'], 'rgba(209,255,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            id: 'InventoryTotals'
+                            align: 'left'
                         },
                         {
                             type: 'image',
@@ -6968,17 +6984,17 @@
                             textStyle: ['', '', '', '', 'none'],
                             font: ['bree-serif, sans-serif', [17, 'px'], 'rgba(153,223,253,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             display: 'none',
-                            rect: ['270px', '358px', 'auto', 'auto', 'auto', 'auto'],
                             text: '<p style=\"margin: 0px;\">​[CLOSE INVENTORY]</p>',
+                            rect: ['270px', '358px', 'auto', 'auto', 'auto', 'auto'],
                             align: 'center'
                         },
                         {
-                            transform: [[], [], [], ['1.34775', '0.23438']],
+                            type: 'rect',
                             id: 'btnCloseInventory',
                             display: 'none',
                             symbolName: 'btnInvisible',
                             rect: ['281px', '309px', null, null, 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['1.34775', '0.23438']]
                         }
                     ],
                     style: {
@@ -6992,14 +7008,24 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid14581",
+                            "eid14579",
                             "display",
                             0,
                             0,
                             "easeOutElastic",
-                            "${btnTablet}",
+                            "${btnFood}",
                             'block',
                             'none'
+                        ],
+                        [
+                            "eid14961",
+                            "display",
+                            1750,
+                            0,
+                            "linear",
+                            "${btnFood}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid14577",
@@ -7042,14 +7068,14 @@
                             '1'
                         ],
                         [
-                            "eid14465",
-                            "scaleX",
+                            "eid14472",
+                            "display",
+                            1250,
                             0,
-                            500,
                             "easeOutElastic",
-                            "${Rectangle}",
-                            '0.5',
-                            '1'
+                            "${InventoryTotals}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid14486",
@@ -7082,14 +7108,14 @@
                             '1'
                         ],
                         [
-                            "eid14472",
-                            "display",
-                            1250,
+                            "eid14465",
+                            "scaleX",
                             0,
+                            500,
                             "easeOutElastic",
-                            "${InventoryTotals}",
-                            'none',
-                            'block'
+                            "${Rectangle}",
+                            '0.5',
+                            '1'
                         ],
                         [
                             "eid14575",
@@ -7102,12 +7128,22 @@
                             'none'
                         ],
                         [
-                            "eid14474",
+                            "eid14578",
                             "display",
-                            750,
+                            0,
                             0,
                             "easeOutElastic",
-                            "${Instructions}",
+                            "${btnKit}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid14960",
+                            "display",
+                            1750,
+                            0,
+                            "linear",
+                            "${btnKit}",
                             'none',
                             'block'
                         ],
@@ -7162,24 +7198,14 @@
                             'block'
                         ],
                         [
-                            "eid14579",
+                            "eid14581",
                             "display",
                             0,
                             0,
                             "easeOutElastic",
-                            "${btnFood}",
+                            "${btnTablet}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid14961",
-                            "display",
-                            1750,
-                            0,
-                            "linear",
-                            "${btnFood}",
-                            'none',
-                            'block'
                         ],
                         [
                             "eid14466",
@@ -7202,22 +7228,12 @@
                             '1'
                         ],
                         [
-                            "eid14578",
+                            "eid14474",
                             "display",
-                            0,
+                            750,
                             0,
                             "easeOutElastic",
-                            "${btnKit}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid14960",
-                            "display",
-                            1750,
-                            0,
-                            "linear",
-                            "${btnKit}",
+                            "${Instructions}",
                             'none',
                             'block'
                         ],
@@ -7304,6 +7320,86 @@
                             '24px',
                             '22px'
                         ]
+                    ]
+                }
+            },
+            "WinMessage": {
+                version: "6.0.0",
+                minimumCompatibleVersion: "5.0.0",
+                build: "6.0.0.400",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'WinningMessage',
+                            type: 'group',
+                            rect: ['0px', '0px', '474', '597', 'auto', 'auto'],
+                            c: [
+                            {
+                                rect: ['-26px', '-20px', '1072px', '692px', 'auto', 'auto'],
+                                stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                                id: 'Rectangle',
+                                opacity: '0.82837906504065',
+                                type: 'rect',
+                                fill: ['rgba(192,192,192,1)', [270, [['rgba(255,217,66,1.00)', 0], ['rgba(0,0,0,1.00)', 100]]]]
+                            },
+                            {
+                                rect: ['0', '0', '474px', '597px', 'auto', 'auto'],
+                                id: 'ribbon',
+                                boxShadow: ['', 0, 0, 0, 0, 'rgba(0,0,0,0)'],
+                                type: 'image',
+                                fill: ['rgba(0,0,0,0)', '_images/ribbon.png', '0px', '0px']
+                            }]
+                        },
+                        {
+                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['551px', '73px', '313px', '70px', 'auto', 'auto'],
+                            font: ['puritan, sans-serif', [20, 'px'], 'rgba(113,113,113,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
+                            align: 'center',
+                            id: 'txtNom',
+                            opacity: '0',
+                            text: '<p style=\"margin: 0px;\">nom</p>',
+                            type: 'text'
+                        },
+                        {
+                            textStyle: ['', '', '', '', 'none'],
+                            rect: ['538px', '143px', '474px', '500px', 'auto', 'auto'],
+                            font: ['puritan, sans-serif', [16, 'px'], 'rgba(88,88,88,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
+                            align: 'left',
+                            id: 'txtWinMessage',
+                            opacity: '0',
+                            text: '<p style=\"margin: 0px;\">obit</p>',
+                            type: 'text'
+                        },
+                        {
+                            rect: ['-26px', '-11px', '1088px', '707px', 'auto', 'auto'],
+                            id: 'invisible_button',
+                            type: 'image',
+                            cursor: 'default',
+                            fill: ['rgba(0,0,0,0)', 'images/invisible_button.png', '0px', '0px']
+                        },
+                        {
+                            type: 'rect',
+                            title: 'TRY AGAIN?',
+                            id: 'simpleButton',
+                            symbolName: 'simpleButton',
+                            rect: ['376px', '720px', null, null, 'auto', 'auto']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '474px', '597px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: true,
+                    data: [
+
                     ]
                 }
             }

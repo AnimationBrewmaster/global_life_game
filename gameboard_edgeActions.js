@@ -564,6 +564,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("obit").play(1);
          }
          
+         sym.ShowWinMessage = function(nom, winmessage)
+         {
+         	sym.getSymbol("WinMessage").$("txtNom").html(nom);
+         	sym.getSymbol("WinMessage").$("txtWinMessage").html(winmessage);
+         
+         	// now unhide it and play the animation:
+         	sym.$("obit").show();
+         	sym.getSymbol("obit").play(1);
+         }
+         
          sym.DisableDestination = function(dest)
          {
          
@@ -2101,5 +2111,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("rountBtn_1");
    //Edge symbol end:'rountBtn_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'WinMessage'
+   (function(symbolName) {   
+   
+   })("WinMessage");
+   //Edge symbol end:'WinMessage'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-581531069");
