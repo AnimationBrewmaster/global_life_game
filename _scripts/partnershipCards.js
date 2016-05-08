@@ -543,7 +543,133 @@ partnershipCard20C.ep = 0;
 partnershipCard20C.gb = 0;
 partnershipCards[2][16] = partnershipCard20C;
 
+// card 21
+var partnershipCard21A = new Object();
+partnershipCard21A.title = "National Education";
+partnershipCard21A.text = "Your government invests more in education and as a result class sizes decrease. You now have more one on one time with the teacher which helps you learn more.";
+partnershipCard21A.impact = "Add 1 Education level.";
+partnershipCard21A.hp = 0;
+partnershipCard21A.wp = 0;
+partnershipCard21A.ep = 0;
+partnershipCard21A.gb = 0;
+partnershipCard21A.special = "gainEducationLevel";
+partnershipCards[0][17] = partnershipCard21A;
 
+var partnershipCard21B = new Object();
+partnershipCard21B.title = "National Education";
+partnershipCard21B.text = "Your government standardizes their education and now other countries will recognize your diploma, meaning you will be able to study abroad if you achieve good grades. This benefits both you and your country since having more citizens with a better education will improve all aspects of life.";
+partnershipCard21B.impact = "Add 1 Education level.";
+partnershipCard21B.hp = 0;
+partnershipCard21B.wp = 0;
+partnershipCard21B.ep = 0;
+partnershipCard21B.gb = 0;
+partnershipCard21B.special = "gainEducationLevel";
+partnershipCards[1][17] = partnershipCard21B;
+
+var partnershipCard21C = new Object();
+partnershipCard21C.title = "National Education";
+partnershipCard21C.text = "An NGO visits your city and offers to teach English for free. You are now able to help your parents do business with foreigners in english. You have now helped your family earn more income.";
+partnershipCard21C.impact = "Add 2 Education levels.";
+partnershipCard21C.hp = 0;
+partnershipCard21C.wp = 0;
+partnershipCard21C.ep = 0;
+partnershipCard21C.gb = 0;
+partnershipCard21C.special = "gain2EducationLevels";
+partnershipCards[2][17] = partnershipCard21C;
+
+// card 23
+var partnershipCard23A = new Object();
+partnershipCard23A.title = "Military";
+partnershipCard23A.text = "The military comes and assists your community during a disaster. They provide supplies and services to make it easier for you to recover from the disaster.";
+partnershipCard23A.impact = "Gain 1 Health Point.";
+partnershipCard23A.hp = 1;
+partnershipCard23A.wp = 0;
+partnershipCard23A.ep = 0;
+partnershipCard23A.gb = 0;
+partnershipCards[0][18] = partnershipCard23A;
+
+var partnershipCard23B = new Object();
+partnershipCard23B.title = "Military";
+partnershipCard23B.text = "There aren't many jobs in your country but the large military force provides a large variety of employment opportunities.";
+partnershipCard23B.impact = "Gain 1 Global Buck.";
+partnershipCard23B.hp = 0;
+partnershipCard23B.wp = 0;
+partnershipCard23B.ep = 0;
+partnershipCard23B.gb = 1;
+partnershipCards[1][18] = partnershipCard23B;
+
+var partnershipCard23C = new Object();
+partnershipCard23C.title = "Military";
+partnershipCard23C.text = "The military in your country puts a stop to civil war for the first time in many years. This allows you to have a stable life and grow crops without worrying about your safety.";
+partnershipCard23C.impact = "Gain 1 Health Point and 2 Global Bucks.";
+partnershipCard23C.hp = 1;
+partnershipCard23C.wp = 0;
+partnershipCard23C.ep = 0;
+partnershipCard23C.gb = 2;
+partnershipCards[2][18] = partnershipCard23C;
+
+// card 24
+var partnershipCard24A = new Object();
+partnershipCard24A.title = "Transportation";
+partnershipCard24A.text = "You are given a new bike for Christmas which allows you to get places in an environmentally friendly and healthy way.";
+partnershipCard24A.impact = "Gain 1 Health Point.";
+partnershipCard24A.hp = 1;
+partnershipCard24A.wp = 0;
+partnershipCard24A.ep = 0;
+partnershipCard24A.gb = 0;
+partnershipCards[0][19] = partnershipCard24A;
+
+var partnershipCard24B = new Object();
+partnershipCard24B.title = "Transportation";
+partnershipCard24B.text = "The new government in your country upgrades the road system. You now spend less money on gas, allowing you to use the money on food and other necessities.";
+partnershipCard24B.impact = "Gain 1 Global Buck.";
+partnershipCard24B.hp = 0;
+partnershipCard24B.wp = 0;
+partnershipCard24B.ep = 0;
+partnershipCard24B.gb = 1;
+partnershipCards[1][19] = partnershipCard24B;
+
+var partnershipCard24C = new Object();
+partnershipCard24C.title = "Transportation";
+partnershipCard24C.text = "Congratulations! Bicycles for Humanity has delivered a shipping container of bicycles to your community. With a bicycle, you can get places faster and easier. That means you can get to the river to get water for your house and still go to school all day which increases your education level. You can also access things like medical care in the next village. They also train several locals to fix bicycles which creates jobs in your community.";
+partnershipCard24C.impact = "Gain 2 Health Points and go up 1 education level. Plus you get a bike!!!";
+partnershipCard24C.hp = 2;
+partnershipCard24C.wp = 0;
+partnershipCard24C.ep = 0;
+partnershipCard24C.gb = 0;
+partnershipCard21C.special = "getABikeEducation";
+partnershipCards[2][19] = partnershipCard24C;
+
+// card 25
+var partnershipCard25A = new Object();
+partnershipCard25A.title = "Weather/Agriculture";
+partnershipCard25A.text = "Scientists from your country have discovered a new, eco-friendly, and more efficient way to grow crops which can survive with a small amount of water, meaning you use water more efficiently.";
+partnershipCard25A.impact = "Add 1 Health Point.";
+partnershipCard25A.hp = 1;
+partnershipCard25A.wp = 0;
+partnershipCard25A.ep = 0;
+partnershipCard25A.gb = 0;
+partnershipCards[0][20] = partnershipCard25A;
+
+var partnershipCard25B = new Object();
+partnershipCard25B.title = "Weather/Agriculture";
+partnershipCard25B.text = "An international partner supplies your town with tractors. This allows you to build more farms providing your town with more local food. Your town also has begun to build a stock of food in case of a natural disaster.";
+partnershipCard25B.impact = "Add 2 Health Points.";
+partnershipCard25B.hp = 2;
+partnershipCard25B.wp = 0;
+partnershipCard25B.ep = 0;
+partnershipCard25B.gb = 0;
+partnershipCards[1][20] = partnershipCard25B;
+
+var partnershipCard25C = new Object();
+partnershipCard25C.title = "Weather/Agriculture";
+partnershipCard25C.text = "An international organization has provided your town with seeds to grow a diversified number of crops. This will help the farmers in your town recover after the recent flood.";
+partnershipCard25C.impact = "Add 3 Health Points.";
+partnershipCard25C.hp = 3;
+partnershipCard25C.wp = 0;
+partnershipCard25C.ep = 0;
+partnershipCard25C.gb = 0;
+partnershipCards[2][20] = partnershipCard25C;
 
 
 //TODO - add the 55 other cards....

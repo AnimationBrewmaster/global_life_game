@@ -47,7 +47,9 @@ var additionalInfo = ""; // extra messgae info to concat on dice roll messages
 var destBlocked = ""; // destination that will be blocked
 var blockedFunction = ""; // destination function that can not be called 
 var blockedTurns = 0; // number of turns left that userr is blocked from destination
-
+var turnNumber = 0; // number of turns played (currently only used for debugging)
+var winVal = 99; // DANNY - change this value to the turn # you want the win condition triggered
+var loseVal = 99; // DANNY - change this value to the turn # you want the lose condition triggered
 
 var _prevLife = 0;
 var _prevWater = 0;
@@ -810,6 +812,11 @@ function specialCards(fnstring) {
 			gainEducationLevel();
 			break;
 			
+        case "gain2EductionalLevels":
+            gainEducationLevel();
+            gainEducationLevel();
+            break;	
+			
 		case "loseEducationLevel": 
 			loseEducationLevel();
 			break;
@@ -860,7 +867,13 @@ function specialCards(fnstring) {
           
           case "bsfBlock":
             bsfBlock();
-            break;        
+            break;   
+            
+          case "getABikeEducation":
+            gainEducationLevel();
+            player1.bike = true;
+            THE_GAME.ShowAllBikes();
+            break;      
             
 		default: 
 			// nothing 
@@ -1027,6 +1040,7 @@ function travelToll(numberOfTurns) {
     checkPowerUps();
     checkBlocks();
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
+    turnNumber++; // updates turn number    
 }
 
 // TODO (Glen) - Turn into Help Message (when low on health remind them they have options to click)
@@ -1150,6 +1164,20 @@ function checkGameOver() {
     if (playerWins()) {
     	playerWon();
     }
+    // check debug variable 
+    if (turnNumber >= winVal) {
+        console.log("playerW wins via debug val of " + winVal);
+        playerWon();       
+    }
+    else if (turnNumber >= loseVal) {
+        console.log("player loses via debug val of " + loseVal);
+        playerDied();
+        
+    }
+    else {
+        console.log("turn Number = " + turnNumber);
+    }
+    
 }
 
 // checks for win condition
