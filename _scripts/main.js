@@ -48,8 +48,16 @@ var destBlocked = ""; // destination that will be blocked
 var blockedFunction = ""; // destination function that can not be called 
 var blockedTurns = 0; // number of turns left that userr is blocked from destination
 var turnNumber = 0; // number of turns played (currently only used for debugging)
+var bDest = {}; // dictionary to hold blocked destinations
+var bsfBlocked = false; // varaible for special card case requiring tracking
+
+// DEBUGGING VARIABLES
 var winVal = 99; // DANNY - change this value to the turn # you want the win condition triggered
 var loseVal = 99; // DANNY - change this value to the turn # you want the lose condition triggered
+var pCard = -1; // set to partnership card value you want to test (-1 value for random card)
+var cCard = -1; // set to challenge card value you want to test (-1 value for random card)
+var setRoll = -1; // set dice roll value (-1 is ignored and random dice roll is generated)
+// end debuggibg variables
 
 var _prevLife = 0;
 var _prevWater = 0;
@@ -97,14 +105,23 @@ var characterName = "";
 
 var currentPathFunctionHolder; //used to delay the main game functions (getjob, gettoilet) until the user rolls.
 
+// setting blocked destinations dictionary
+bDest['job'] = 0;
+bDest['medical'] = 0;
+bDest['store'] = 0;
+bDest['toilet'] = 0;
+bDest['school'] = 0;
+bDest['farm'] = 0;
+bDest['water'] = 0;
+console.log(bDest);
+//checkBlocks();
+
 function InitGame() {
     THE_GAME = AdobeEdge.getComposition('EDGE-581531069').getStage();
     createInventory();
 }
 
-/*
 
-*/
 function SetChosenPath(which_path) {
     //var selectedPathEdgeFile; // getMedical, getJob, getStore, getToilet, getfood, getSchool, getWater
 
@@ -164,6 +181,7 @@ function getDifficulty(value) {
             player1.gb = 12;
             countryValue = 1;
             break;
+        /*
         case "c":
             player1.hp = 20;
             player1.wp = 20;
@@ -171,7 +189,8 @@ function getDifficulty(value) {
             player1.gb = 7;
             countryValue = 1;
             break;
-        case "d":
+        */
+        case "c":
             player1.hp = 15;
             player1.wp = 15;
             player1.ep = 3;
@@ -653,6 +672,7 @@ function buyNewStuff() {
             if (checkout("filter", spent, itemMessage)) {
                 player1.filter = true;
                 updateStats();
+                checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them if sick, feed them if hungry, etc.)
             } else {
                 rejectTransaction();
             }
@@ -679,6 +699,7 @@ function buyNewStuff() {
             if (checkout("plumbing", spent, itemMessage)) {
                 player1.plumbing = true;
                 updateStats();
+                checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them if sick, feed them if hungry, etc.)
             } else {
                 rejectTransaction();
             }
@@ -695,7 +716,7 @@ function buyNewStuff() {
             OpenMarketHud(); // TODO: does not appear to re-open the market - continues on with the game
             break;
     }
-    checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them idf sick, feed them if hungry, etc.)
+    
 }
 
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
@@ -724,6 +745,15 @@ function checkPowerUp(powerUp) {
         case "plumbing":
             console.log("plumbing power up");
             player1.wp = 100;
+            break;
+            
+        case "filter":
+            // TODO - this will wipe all education blocks, even if not tied to bsfBlock card - fix if time permits (incidince is extremely rare)
+            if (bsfBlocked) {
+                bDest["school"] = 0;
+                bsfBlocked = false;
+                console.log("education available");
+            }
             break;
             
         default:
@@ -756,6 +786,16 @@ function checkCard() {
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
+    // debug to test specific cards
+    if (cCard != -1) {
+        if (cCard >= challengeCards[countryValue].length) {
+            console.log("cCard value out of bounds!!");
+        }
+        else {
+            number = cCard;
+            console.log("debugging specific card");
+        }
+    }
     console.log("Challenge Card! : " + number);
    // UpdateUserMessage("Challenge Card!\n\n" + challengeCards[number].title + "\n" + challengeCards[number].text + "\n" + challengeCards[number].impact);
     var _title = challengeCards[countryValue][number].title;
@@ -767,7 +807,7 @@ function getChallengeCard() {
     	specialCards(challengeCards[countryValue][number].special); 	   	
     }
     impactStats(challengeCards[countryValue][number].hp, challengeCards[countryValue][number].wp, challengeCards[countryValue][number].ep, challengeCards[countryValue][number].gb);
-    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep); // TODO (Glen) - determine if this MUST be called here or if its called ELSEWHERE
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
     // pass data to console
     console.log("**********CARD DATA**********");
     console.log(_title);
@@ -780,6 +820,16 @@ function getChallengeCard() {
 function getPartnershipCard() {
     var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
+    // debug to test specific cards
+    if (pCard != -1) {
+        if (pCard >= partnershipCards[countryValue].length) {
+            console.log("pCard value out of bounds!!");
+        }
+        else {
+            number = pCard;
+            console.log("debugging specific card");
+        }
+    }
     console.log("Partnership Card! - " + number);
    // UpdateUserMessage("Partnership Card!\n\n" + partnershipCards[number].title + "\n" + partnershipCards[number].text + "\n" + partnershipCards[number].impact);
    	var _title = partnershipCards[countryValue][number].title;
@@ -790,11 +840,11 @@ function getPartnershipCard() {
     	specialCards(partnershipCards[countryValue][number].special); 	   	
     }
     impactStats(partnershipCards[countryValue][number].hp, partnershipCards[countryValue][number].wp, partnershipCards[countryValue][number].ep, partnershipCards[countryValue][number].gb);
-    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep); // TODO (Glen) - determine if this MUST be called here or if its called ELSEWHERE
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);
     // pass data to console
     console.log("**********CARD DATA**********");
     console.log(_title);
-    console.log(challengeCards[countryValue][number].impact);
+    console.log(partnershipCards[countryValue][number].impact);
     console.log(specialMsg);
     console.log("*****************************");
 }
@@ -830,23 +880,28 @@ function specialCards(fnstring) {
 			break;	
 		
 		case "educationBlockAll":
-            educationBlock(99);
+		    blockDestination("school", 99);
+            //educationBlock(99);
             break;
 			
 		case "educationBlock20":
-            educationBlock(20);
+		    blockDestination("school", 20);
+            //educationBlock(20);
             break; 
 			
         case "educationBlock7":
-            educationBlock(7);
+            blockDestination("school", 7);
+            //educationBlock(7);
             break; 
             
         case "educationBlock5":
-            educationBlock(5);
+            blockDestination("school", 5);
+            //educationBlock(5);
             break;
             
         case "educationBlock3":
-            educationBlock(3);
+            blockDestination("school", 3);
+            //educationBlock(3);
             break;          
             
         case "payEducationLevel":
@@ -854,7 +909,10 @@ function specialCards(fnstring) {
             break;  
          
          case "educationSchoolMedicalBlock":
-            esmBlock();
+            blockDestination("school", 3);
+            blockDestination("medical", 3);
+            blockDestination("store", 3);
+            //esmBlock();
             break;
             
           case "payOrBeat":
@@ -902,8 +960,19 @@ function loseEducationLevel() {
 	console.log("lose some education");
 }
 
+// TODO - test
 function payEducationLevel() {
     // need to charge for educational level if they have $6, otherwise block from Education for 5 turns
+    if (player1.gb >= 6) {
+        glayer1.gb -= 6;
+        gainEducationLevel();
+    }
+    else {
+        blockDestination("school", 5);
+        console.log("you couldn't pay for more school");
+    }
+    updateStats();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);  
 }
 
 function gotDiarrhea() {
@@ -912,32 +981,56 @@ function gotDiarrhea() {
 	console.log("you got Diarrhea!");
 }
 
-function educationBlock(val) {
-    destBlocked = "school";
-    blockedFunction = "getSchool";
-    blockedTurns = val;
-    console.log("blocked from Education for" + val + " turns!");
-}
-
-// TODO
-function esmBlock() {
-    // block education, medical and market for 3 turns
-    educationBlock(3);
-}
-
-// TODO
+// TODO - test
 function payOrBeat() {
     // lose 2 global bucks, if can't pay, lose 4 health points
+    if (player1.gb >= 2) {
+        player1.gb -= 2;
+        console.log("you paid the 2 global bucks");    
+    }
+    else {
+        player1.hp -= 4;
+        console.log("you didn't have enough to pay, lost 4 health points");
+    }
+    updateStats();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);   
 }
 
-// TODO
+// TODO - test
 function payOrNoWater() {
-    // pay $2 Global Bucks for bottled water until the flooding recedes – if you don’t have $2 Global Bucks, lose 2 health points and 2 water points     
+    // pay $2 Global Bucks for bottled water until the flooding recedes – if you don’t have $2 Global Bucks, lose 2 health points and 2 water points
+    if (player1.gb >= 2) {
+        player1.gb -= 2;
+        console.log("you paid 2 global bucks for water");    
+    }
+    else {
+        player1.hp -= 2;
+        player1.wp -= 2;
+        console.log("you didn't have enough to buy water, lost 2 health points and 2 water points");
+    }
+    updateStats();
+    UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);      
 }
 
-// TODO
+// TODO - test
 function bsfBlock() {
     // block school until bsf filter is purchased
+    if (player1.filter) {
+        console.log("You already have a filter, there is no effect");
+    }
+    else {
+        blockDestination("school", 99);
+        console.log("blocked from school until you buy a filter");
+        bsfBlocked = true;
+    }
+}
+
+// TODO - test
+function blockDestination(dest, val){
+    console.log(bDest);
+    bDest[dest] += val;
+    console.log(dest + " blocked for " + val + " turns!");
+    console.log(bDest);
 }
 
 // TODO - test function more fully
@@ -974,7 +1067,6 @@ function modifyEducationLevel(direction){
 // --------- turn based functions ------------
 
 function checkPlayerCondition(numberOfTurns) {
-    // NOTE TO GLEN: THIS IS GIVING ME A NUMBEROFTURNS IS NOT DEFINED ERROR. - FIXED
 	// check if player is sick from food
     if (sick === true) {
         UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
@@ -1066,14 +1158,29 @@ function checkPowerUps() {
     }
 }
 
+//TODO - full testing required
 function checkBlocks() {
-    if (blockedTurns > 0) {
-        blockedTurns--;
+    // TODO - this should work but is quite inefficient - should only unblock when we know it was positive earlier
+    for (var key in bDest) {
+        var value = bDest[key];
+        //console.log(key);
+        //console.log(value);
+        if (value > 0) {
+            // block 'key'
+            disableDestination(key);
+            // make value -1;
+            bDest[key]--;
+            //value--;
+            // redefine value of key
+            //bDest[key] = value;
+        }
+        else {
+            // unblock 'key'
+            enableDestination(key);
+        }       
     }
-    else {
-        destBlocked = "";
-        blockedFunction = "";
-    }
+    
+    console.log(bDest); 
 }
 
 // executes impacts when player uses invetory item and removes item from inventory list
@@ -1129,7 +1236,14 @@ function ExecutePlayerRoll() // called by the dice function.
     } else {
         dice_roll = Math.floor((Math.random() * 6) + 1);
     }
-
+    
+    //debug code
+    if (setRoll > 0) {
+        dice_roll = setRoll;
+        console.log("DEBUG: setting dice roll to " + dice_roll);
+    }
+    // end debug code
+    
     PassDiceRollToEdge(dice_roll);
 
     // delay doing anything until the dice animation has had time to finish:
@@ -1356,51 +1470,10 @@ function UpdatePlayerPositionAlongTimeline(num_of_secs) {
     THE_GAME.play();
 }
 
-// moved content to gametips.js
-/*
-function InitGameTips() {
-    arrGameTips[0] = "The first thing you should do is buy a bike from the market. The bike will allow you to travel much faster.";
-    arrGameTips[1] = "Education points equals more work, and more work equals more money, and more money equals better opportunities.";
-    arrGameTips[2] = "As Country A, the game is much easier than in Country B or C.";
-    arrGameTips[3] = "The second thing you should do is buy education. Go back and forth from education to job to make lots of money.";
-    arrGameTips[4] = "Once you have reached an Intelligence level of 31 or more, start saving for indoor plumbing.";
-    arrGameTips[5] = "Don’t underestimate the importance of education.";
-    arrGameTips[6] = "Compared to the others, seeking sanitation is not as important in County A.";
-    arrGameTips[7] = "Getting medical help is still important. Buy medicine or soap just in case you get sick.";
-    arrGameTips[8] = "If you are running low on water and have enough money, buy a Biosand Filter. This will allow you to get clean water safely.";
-    arrGameTips[9] = "Only if you get below 10 health and/or water points should you then go to the farm or river.";
-    arrGameTips[10] = "Although you can’t do so in the game, try to donate money and resources to actual people living in developing countries.";
-    arrGameTips[11] = "Prioritize getting your food and water levels up.";
-    arrGameTips[12] = "Get to the market to buy any essential supplies.";
-    arrGameTips[13] = "One you have enough health and water for the next couple of turns, try to get some education points.";
-    arrGameTips[14] = "Your survival should be your priority. Prioritize getting health, water, and medicine instead of education or things from the market.";
-    arrGameTips[15] = "Purchase a bar of soap and a water purification tablet from the store. These things can save your life.";
-    arrGameTips[16] = "Buying a bucket is very useful if you are low on water.";
-    arrGameTips[17] = "If you are low on health points and money, you can go to the toilet to get some free health points.";
-    arrGameTips[18] = "Once you have sustainable health points and water points, start working on your education. ";
-    arrGameTips[19] = "After you make enough money, buying a bike can help you get food and water faster.";
-    arrGameTips[20] = "Buying a biosand filter can really help you stay healthy and get lots of clean water.";
-    arrGameTips[21] = "Seeing how much help a biosand filter can be, consider how much a biosand filter would help people in real life that need clean water.";
-    arrGameTips[22] = "You must always have an eye on your health and water for it can drop quite fast with any waterborne diseases. Especially when you are far away from water or food.";
-    arrGameTips[23] = "Buying a cheap water sanitation tablet can save you from sickness.";
-    arrGameTips[24] = "An education is less important than proper sanitation, medicine and food.";
-    arrGameTips[25] = "Don’t underestimate the crippling power of diseases and parasites.";
-    arrGameTips[26] = "A stable job is the gateway to a better quality of life. ";
-
-    startingGameTip = Math.floor(Math.random() * arrGameTips.length);
-}
-*/
 
 function GetRandomGameTip() {
     // every game will start the tips from a 
     // random position to keep things fresh:
-    /*
-    startingGameTip++;
-    if (startingGameTip > arrGameTips.length - 1)
-        startingGameTip = 0;
-
-    swal("Random Game Tip!", arrGameTips[startingGameTip]);
-    */
     startingGameTip++;
     if (startingGameTip > arrGameTips[countryValue].length - 1)
         startingGameTip = 0;
@@ -1628,6 +1701,17 @@ function UpdateHUD(life, water, glob, edu) {
 /*
 STICK ALL FUNCTIONS THAT TALK TO EDGE AFTER THIS:
 */
+
+// Glen Added
+function disableDestination(dest) {
+    THE_GAME.DisableDestination(dest);
+}
+
+// Glen Added
+function enableDestination(dest) {
+    THE_GAME.EnableDestination(dest);
+}
+
 
 function CallAvatarPositioningFunction() {
     clearInterval(_varSetInterval);
