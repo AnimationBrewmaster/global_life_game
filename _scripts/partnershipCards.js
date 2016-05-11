@@ -1049,729 +1049,733 @@ partnershipCard37C.ep = 0;
 partnershipCard37C.gb = 0;
 partnershipCards[2][32] = partnershipCard37C;
 
-
-/*
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-
-// card XX
-var partnershipCardXXA = new Object();
-partnershipCardXXA.title = "";
-partnershipCardXXA.text = "";
-partnershipCardXXA.impact = "";
-partnershipCardXXA.hp = 0;
-partnershipCardXXA.wp = 0;
-partnershipCardXXA.ep = 0;
-partnershipCardXXA.gb = 0;
-partnershipCards[0][QQ] = partnershipCardXXA;
-
-var partnershipCardXXB = new Object();
-partnershipCardXXB.title = "";
-partnershipCardXXB.text = "";
-partnershipCardXXB.impact = "";
-partnershipCardXXB.hp = 0;
-partnershipCardXXB.wp = 0;
-partnershipCardXXB.ep = 0;
-partnershipCardXXB.gb = 0;
-partnershipCards[1][QQ] = partnershipCardXXB;
-
-var partnershipCardXXC = new Object();
-partnershipCardXXC.title = "";
-partnershipCardXXC.text = "";
-partnershipCardXXC.impact = "";
-partnershipCardXXC.hp = 0;
-partnershipCardXXC.wp = 0;
-partnershipCardXXC.ep = 0;
-partnershipCardXXC.gb = 0;
-partnershipCards[2][QQ] = partnershipCardXXC;
-*/
-
-
-
-
-
-//TODO - add the 55 other cards....
-
-// TODO - gain an education level (card #21) - .special = "gainEductionalLevel" - see challengeCards.js - COMPELTE - REQUIRES FULL TEST
+// card 38
+var partnershipCard38A = new Object();
+partnershipCard38A.title = "Environment";
+partnershipCard38A.text = "A local organization has visited your school to educate your class on the importance of saving energy/water and recycling. You now know how to help protect the environment as well as how to save money on resources.";
+partnershipCard38A.impact = "Add 2 Global Bucks and 2 Water Points.";
+partnershipCard38A.hp = 0;
+partnershipCard38A.wp = 2;
+partnershipCard38A.ep = 0;
+partnershipCard38A.gb = 2;
+partnershipCards[0][33] = partnershipCard38A;
+
+var partnershipCard38B = new Object();
+partnershipCard38B.title = "Environment";
+partnershipCard38B.text = "A recycling program has been put into action in your town. Not only will this keep your town cleaner, it will also decrease the amount of pollution in the streets and local river.";
+partnershipCard38B.impact = "Add 1 Global Buck and 3 Water Points.";
+partnershipCard38B.hp = 0;
+partnershipCard38B.wp = 3;
+partnershipCard38B.ep = 0;
+partnershipCard38B.gb = 1;
+partnershipCards[1][33] = partnershipCard38B;
+
+var partnershipCard38C = new Object();
+partnershipCard38C.title = "Environment";
+partnershipCard38C.text = "A major oil company is planning on drilling for oil under a nearby forest. Your village comes together to form a petition and protest along with the help of an international partner. In the end, the company is denied the right to drill and your forest is saved.";
+partnershipCard38C.impact = "Add 3 Health Points.";
+partnershipCard38C.hp = 3;
+partnershipCard38C.wp = 0;
+partnershipCard38C.ep = 0;
+partnershipCard38C.gb = 0;
+partnershipCards[2][33] = partnershipCard38C;
+
+// card 39
+var partnershipCard39A = new Object();
+partnershipCard39A.title = "Forestry";
+partnershipCard39A.text = "A tree planting program has been started after an early snow storm caused a lot of damage to many trees across the city. This will help reduce carbon dioxide emissions as you now have more trees than you did even before the snow. Trees in a city are 12 times more effective at taking carbon out of atmosphere than rural trees.";
+partnershipCard39A.impact = "Add 3 Health Points.";
+partnershipCard39A.hp = 3;
+partnershipCard39A.wp = 0;
+partnershipCard39A.ep = 0;
+partnershipCard39A.gb = 0;
+partnershipCards[0][34] = partnershipCard39A;
+
+var partnershipCard39B = new Object();
+partnershipCard39B.title = "Forestry";
+partnershipCard39B.text = "Your government stops removing deadwood from forests and allows the ecosystem to develop. This allows new plants to grow and reproduce in a natural way that doesn’t waste resources.";
+partnershipCard39B.impact = "Add 3 Health Points.";
+partnershipCard39B.hp = 3;
+partnershipCard39B.wp = 0;
+partnershipCard39B.ep = 0;
+partnershipCard39B.gb = 0;
+partnershipCards[1][34] = partnershipCard39B;
+
+var partnershipCard39C = new Object();
+partnershipCard39C.title = "Forestry";
+partnershipCard39C.text = "Rainforest concern has purchased the majority of the rainforest around your village with money from donors in developed nations so that they can ensure the protection of the ecosystem.";
+partnershipCard39C.impact = "Add 3 Health Points.";
+partnershipCard39C.hp = 3;
+partnershipCard39C.wp = 0;
+partnershipCard39C.ep = 0;
+partnershipCard39C.gb = 0;
+partnershipCards[2][34] = partnershipCard39C;
+
+// card 40
+var partnershipCard40A = new Object();
+partnershipCard40A.title = "Bullying";
+partnershipCard40A.text = "Your school shows a presentation educating you about bullying. Afterwards, students begin to take action and stand up for those being bullied.  By stopping the abusers in a nonviolent manner, bullying in your school reduces by 50% making school a healthier place for everyone.";
+partnershipCard40A.impact = "Add 2 Health Points and go up one education level.";
+partnershipCard40A.hp = 2;
+partnershipCard40A.wp = 0;
+partnershipCard40A.ep = 0;
+partnershipCard40A.gb = 0;
+partnershipCard40A.special = "gainEducationLevel";
+partnershipCards[0][35] = partnershipCard40A;
+
+var partnershipCard40B = new Object();
+partnershipCard40B.title = "Bullying";
+partnershipCard40B.text = "You tell your parents that you are being bullied and they bring up the situation with the school counselor who speaks to you and the bully in an effort to understand and resolve the conflict.  Now you can go to school without the fear of being bullied.";
+partnershipCard40B.impact = "Add 2 Health Points and go up one education level.";
+partnershipCard40B.hp = 2;
+partnershipCard40B.wp = 0;
+partnershipCard40B.ep = 0;
+partnershipCard40B.gb = 0;
+partnershipCard40B.special = "gainEducationLevel";
+partnershipCards[1][35] = partnershipCard40B;
+
+var partnershipCard40C = new Object();
+partnershipCard40C.title = "Bullying";
+partnershipCard40C.text = "Right to Play presents your village with sports equipment, and uses play to educate and empower children and youth to overcome the effects of poverty, conflict and disease in disadvantaged communities.";
+partnershipCard40C.impact = "Add 2 Health Points and go up one education level.";
+partnershipCard40C.hp = 2;
+partnershipCard40C.wp = 0;
+partnershipCard40C.ep = 0;
+partnershipCard40C.gb = 0;
+partnershipCard40C.special = "gainEducationLevel";
+partnershipCards[2][35] = partnershipCard40C;
+
+// card 41
+var partnershipCard41A = new Object();
+partnershipCard41A.title = "Lack Of Education/Experience";
+partnershipCard41A.text = "A guest speaker comes into your school that teaches you about people who live in developing nations and what you can do to support them in having a better quality of life.";
+partnershipCard41A.impact = "Add 1 Education level and 2 Global Bucks.";
+partnershipCard41A.hp = 0;
+partnershipCard41A.wp = 0;
+partnershipCard41A.ep = 0;
+partnershipCard41A.gb = 2;
+partnershipCard41A.special = "gainEducationLevel";
+partnershipCards[0][36] = partnershipCard41A;
+
+var partnershipCard41B = new Object();
+partnershipCard41B.title = "Lack Of Education/Experience";
+partnershipCard41B.text = "An organization comes into your country, teaching you about the human rights that you and everyone around you are entitled to. As a result, people are better able to demand better treatment from their government.";
+partnershipCard41B.impact = "Add 1 Education Level and 3 Global Bucks.";
+partnershipCard41B.hp = 0;
+partnershipCard41B.wp = 0;
+partnershipCard41B.ep = 0;
+partnershipCard41B.gb = 3;
+partnershipCard41B.special = "gainEducationLevel";
+partnershipCards[1][36] = partnershipCard41B;
+
+var partnershipCard41C = new Object();
+partnershipCard41C.title = "Lack Of Education/Experience";
+partnershipCard41C.text = "An organization comes into your village and teaches your community how to maintain a well. This improves your access to clean water along with your sanitation and hydration. Because everyone in the village is healthier and get sick less often, they are able to attend work and school more.";
+partnershipCard41C.impact = "Add 1 Education Level and 3 Health Points.";
+partnershipCard41C.hp = 3;
+partnershipCard41C.wp = 0;
+partnershipCard41C.ep = 0;
+partnershipCard41C.gb = 0;
+partnershipCard41C.special = "gainEducationLevel";
+partnershipCards[2][36] = partnershipCard41C;
+
+// card 42
+var partnershipCard42A = new Object();
+partnershipCard42A.title = "Injuries/Work";
+partnershipCard42A.text = "Your mom gets an infection which requires her to go on a leave from work. Her free health care allowed her doctor to prescribe her antibiotics which enable her to return to work and help support and care for her family.";
+partnershipCard42A.impact = "Add 2 Health Points.";
+partnershipCard42A.hp = 2;
+partnershipCard42A.wp = 0;
+partnershipCard42A.ep = 0;
+partnershipCard42A.gb = 0;
+partnershipCards[0][37] = partnershipCard42A;
+
+var partnershipCard42B = new Object();
+partnershipCard42B.title = "Injuries/Work";
+partnershipCard42B.text = "Your father breaks his leg at his work at the shipping yard and he can no longer handle his physically demanding job. While recovering he gets an office job that he can do while he has a broken leg. This allows your mother to continue taking care of your younger sister instead of going to work and you can freely go to school.";
+partnershipCard42B.impact = "Add 3 Health Points.";
+partnershipCard42B.hp = 3;
+partnershipCard42B.wp = 0;
+partnershipCard42B.ep = 0;
+partnershipCard42B.gb = 0;
+partnershipCards[1][37] = partnershipCard42B;
+
+var partnershipCard42C = new Object();
+partnershipCard42C.title = "Injuries/Work";
+partnershipCard42C.text = "The UN comes in to help improve workplace conditions. The mine your father works in is now safe and you can go to school without worrying for his well-being.";
+partnershipCard42C.impact = "Add 3 Health Points.";
+partnershipCard42C.hp = 3;
+partnershipCard42C.wp = 0;
+partnershipCard42C.ep = 0;
+partnershipCard42C.gb = 0;
+partnershipCards[2][37] = partnershipCard42C;
+
+// card 43
+var partnershipCard43A = new Object();
+partnershipCard43A.title = "Palm Oil";
+partnershipCard43A.text = "Your teacher alerts your class about a petition that is protecting an endangered rain forest from being destructed and used as a palm oil plantation. You sign the petition, along with many of the kids in your class. You also make sure your family only buys products that either use sustainable palm oil or no palm oil at all.";
+partnershipCard43A.impact = "Add 2 Health Points.";
+partnershipCard43A.hp = 2;
+partnershipCard43A.wp = 0;
+partnershipCard43A.ep = 0;
+partnershipCard43A.gb = 0;
+partnershipCards[0][38] = partnershipCard43A;
+
+var partnershipCard43B = new Object();
+partnershipCard43B.title = "Palm Oil";
+partnershipCard43B.text = "A major corporation is planning on tearing down a large area of rainforest for palm oil development. This rainforest is home to many endangered species. You decide to start a letter writing campaign to alert the government and major corporations about the importance of these rainforests.";
+partnershipCard43B.impact = "Add 3 Health Points.";
+partnershipCard43B.hp = 3;
+partnershipCard43B.wp = 0;
+partnershipCard43B.ep = 0;
+partnershipCard43B.gb = 0;
+partnershipCards[1][38] = partnershipCard43B;
+
+var partnershipCard43C = new Object();
+partnershipCard43C.title = "Palm Oil";
+partnershipCard43C.text = "A large company is planning on the destruction of a nearby forest for the production of palm oil. Not only will this harm your village, everyone will be forced to evacuate. You start a local association that is working hard to raise global awareness about the destruction of rainforests for palm oil. Because you are organized, and the media is covering the situation, your government is forced to act.";
+partnershipCard43C.impact = "Add 2 Global Bucks and 2 Health Points. ";
+partnershipCard43C.hp = 2;
+partnershipCard43C.wp = 0;
+partnershipCard43C.ep = 0;
+partnershipCard43C.gb = 2;
+partnershipCards[2][38] = partnershipCard43C;
+
+// card 44
+var partnershipCard44A = new Object();
+partnershipCard44A.title = "Working Conditions";
+partnershipCard44A.text = "A workplace safety official comes into your office and inspects safety regulations. They find faulty wiring throughout the building.  In order to remain operational, your employer is forced to hire an electrician to replace the potentially life threatening wiring.  After the safety regulations are fulfilled, your workplace is now a safer place to do business.";
+partnershipCard44A.impact = "Add 2 Health Points and 1 Global Buck.";
+partnershipCard44A.hp = 2;
+partnershipCard44A.wp = 0;
+partnershipCard44A.ep = 0;
+partnershipCard44A.gb = 1;
+partnershipCards[0][39] = partnershipCard44A;
+
+var partnershipCard44B = new Object();
+partnershipCard44B.title = "Working Conditions";
+partnershipCard44B.text = "For years you have been growing coffee beans for a company that pays you very poorly, but you continue because it is the only source of income for your family.  A different Fair Trade certified company recognizes your struggle and offers a new partnership with you where they pay you a fair wage for your coffee beans, allowing you to support your family.";
+partnershipCard44B.impact = "Add 5 Global Bucks.";
+partnershipCard44B.hp = 0;
+partnershipCard44B.wp = 0;
+partnershipCard44B.ep = 0;
+partnershipCard44B.gb = 5;
+partnershipCards[1][39] = partnershipCard44B;
+
+var partnershipCard44C = new Object();
+partnershipCard44C.title = "Working Conditions";
+partnershipCard44C.text = "You run a farming operation in your town which provides food for most of the people in your community.  An organization gives you safer farming equipment which allows you to work more safely and efficiently by producing enough food to meet the needs of those around you.";
+partnershipCard44C.impact = "Add 3 Global Bucks and 2 Health Points.";
+partnershipCard44C.hp = 2;
+partnershipCard44C.wp = 0;
+partnershipCard44C.ep = 0;
+partnershipCard44C.gb = 3;
+partnershipCards[2][39] = partnershipCard44C;
+
+// card 45
+var partnershipCard45A = new Object();
+partnershipCard45A.title = "Housing";
+partnershipCard45A.text = "After you lose your job and end up on the streets, a very generous charity gives you a new home to live in so that you are no longer homeless. This will give you a second chance at life. You can now have time to do more work or even get a better education.";
+partnershipCard45A.impact = "Add 4 Global Bucks and 2 Health Points.";
+partnershipCard45A.hp = 2;
+partnershipCard45A.wp = 0;
+partnershipCard45A.ep = 0;
+partnershipCard45A.gb = 4;
+partnershipCards[0][40] = partnershipCard45A;
+
+var partnershipCard45B = new Object();
+partnershipCard45B.title = "Housing";
+partnershipCard45B.text = "You live in an area that is at high risk for an earthquake. An organization comes into your community and reinforces many of the homes, making them more stable if an earthquake were to hit.";
+partnershipCard45B.impact = "Add 3 Global Bucks and 2 Health Points.";
+partnershipCard45B.hp = 2;
+partnershipCard45B.wp = 0;
+partnershipCard45B.ep = 0;
+partnershipCard45B.gb = 3;
+partnershipCards[1][40] = partnershipCard45B;
+
+var partnershipCard45C = new Object();
+partnershipCard45C.title = "Housing";
+partnershipCard45C.text = "There was a tsunami on the coast of your country and your house has been completely washed away. Both organizations and developed nations send supplies and people to help you and your country recover from this natural disaster.";
+partnershipCard45C.impact = "Add 2 Global Bucks and 2 Health Points.";
+partnershipCard45C.hp = 2;
+partnershipCard45C.wp = 0;
+partnershipCard45C.ep = 0;
+partnershipCard45C.gb = 2;
+partnershipCards[2][40] = partnershipCard45C;
+
+// card 46
+var partnershipCard46A = new Object();
+partnershipCard46A.title = "Global Warming/Climate Change";
+partnershipCard46A.text = "Your government takes Climate Change as a very serious threat to the planet. They attend an international summit on Climate Change and, working with industry and environmental groups, design a plan to reduce carbon emissions while keeping your country’s economy strong.";
+partnershipCard46A.impact = "Add 3 Health Points and 3 Water Points.";
+partnershipCard46A.hp = 3;
+partnershipCard46A.wp = 3;
+partnershipCard46A.ep = 0;
+partnershipCard46A.gb = 0;
+partnershipCards[0][41] = partnershipCard46A;
+
+var partnershipCard46B = new Object();
+partnershipCard46B.title = "Global Warming/Climate Change";
+partnershipCard46B.text = "Your government takes environmental action by putting a new law into effect that holds industries that cause pollution accountable for the damage they are doing to the environment.  Enforcing fines and substantially increased taxes, it encourages the companies who pollute to find more sustainable options and reduce their emissions.";
+partnershipCard46B.impact = "Add 3 Health Points and 3 Water Points.";
+partnershipCard46B.hp = 3;
+partnershipCard46B.wp = 3;
+partnershipCard46B.ep = 0;
+partnershipCard46B.gb = 0;
+partnershipCards[1][41] = partnershipCard46B;
+
+var partnershipCard46C = new Object();
+partnershipCard46C.title = "Global Warming/Climate Change";
+partnershipCard46C.text = "Your government creates a new law where companies are only allowed to output a certain amount of greenhouse gases every year. This law creates a positive impact towards becoming a healthier and more developed nation.";
+partnershipCard46C.impact = "Add 3 Health Points and 3 Water Points.";
+partnershipCard46C.hp = 3;
+partnershipCard46C.wp = 3;
+partnershipCard46C.ep = 0;
+partnershipCard46C.gb = 0;
+partnershipCards[2][41] = partnershipCard46C;
+
+// card 47
+var partnershipCard47A = new Object();
+partnershipCard47A.title = "Family Abuse";
+partnershipCard47A.text = "You go to see a therapist to help you recover from a childhood of abuse. This helps you move on from the past and live a happier life in the future.";
+partnershipCard47A.impact = "Add 3 Health Points.";
+partnershipCard47A.hp = 3;
+partnershipCard47A.wp = 0;
+partnershipCard47A.ep = 0;
+partnershipCard47A.gb = 0;
+partnershipCards[0][42] = partnershipCard47A;
+
+var partnershipCard47B = new Object();
+partnershipCard47B.title = "Family Abuse";
+partnershipCard47B.text = "Your school teacher has recently noticed scars and bruises on your arm and she contacts the police. The police protect you from your abusive parents and place you in a safe home.";
+partnershipCard47B.impact = "Add 5 Health Points.";
+partnershipCard47B.hp = 5;
+partnershipCard47B.wp = 0;
+partnershipCard47B.ep = 0;
+partnershipCard47B.gb = 0;
+partnershipCards[1][42] = partnershipCard47B;
+
+var partnershipCard47C = new Object();
+partnershipCard47C.title = "Family Abuse";
+partnershipCard47C.text = "Your father has been having problems at work lately and he has taken some of it out on you. You seek refuge with another family who takes you in with open arms. You join their family business and earn enough money to support you and your new family.";
+partnershipCard47C.impact = "Add 3 Global Bucks and 3 Health Points. ";
+partnershipCard47C.hp = 3;
+partnershipCard47C.wp = 0;
+partnershipCard47C.ep = 0;
+partnershipCard47C.gb = 3;
+partnershipCards[2][42] = partnershipCard47C;
+
+// card 48
+var partnershipCard48A = new Object();
+partnershipCard48A.title = "Lack of Resources";
+partnershipCard48A.text = "You get loans from a microfinance organization called Kiva and are now able to purchase the supplies you need to expand your business. Over time this will allow you to create a better income for yourself and you will have access to all the resources you need to keep improving your sales.";
+partnershipCard48A.impact = "Add 4 Global Bucks.";
+partnershipCard48A.hp = 0;
+partnershipCard48A.wp = 0;
+partnershipCard48A.ep = 0;
+partnershipCard48A.gb = 4;
+partnershipCards[0][43] = partnershipCard48A;
+
+var partnershipCard48B = new Object();
+partnershipCard48B.title = "Lack of Resources";
+partnershipCard48B.text = "Your country enters a trade agreement with another developed country and now you are able to purchase the supplies needed to start up your own jewelry business and support you and your family with a steady income.";
+partnershipCard48B.impact = "Add 4 Global Bucks.";
+partnershipCard48B.hp = 0;
+partnershipCard48B.wp = 0;
+partnershipCard48B.ep = 0;
+partnershipCard48B.gb = 4;
+partnershipCards[1][43] = partnershipCard48B;
+
+var partnershipCard48C = new Object();
+partnershipCard48C.title = "Lack of Resources";
+partnershipCard48C.text = "You get loans from a microfinance organization called Kiva and are now able to purchase the supplies you need to expand your business. Over time this will allow you to create a better income for yourself and you will have access to all the resources you need to keep improving your sales.";
+partnershipCard48C.impact = "Add 4 Global Bucks.";
+partnershipCard48C.hp = 0;
+partnershipCard48C.wp = 0;
+partnershipCard48C.ep = 0;
+partnershipCard48C.gb = 4;
+partnershipCards[2][43] = partnershipCard48C;
+
+// card 49
+var partnershipCard49A = new Object();
+partnershipCard49A.title = "Invasive Species";
+partnershipCard49A.text = "The ISSG (Invasive Species Specialists Group) comes to your region to rehabilitate all of the local species. Without invasive species and pests farmers have an easier time to grow food and do not need to rely on pesticides and other unhealthy farming practices. ";
+partnershipCard49A.impact = "Add 5 Health Points.";
+partnershipCard49A.hp = 5;
+partnershipCard49A.wp = 0;
+partnershipCard49A.ep = 0;
+partnershipCard49A.gb = 0;
+partnershipCards[0][44] = partnershipCard49A;
+
+var partnershipCard49B = new Object();
+partnershipCard49B.title = "Invasive Species";
+partnershipCard49B.text = "The National Strategy Plan for Invasive Species has come to your region and are rehabilitating your local species. Without pests farmers have an easier time to grow food and do not need to rely on pesticides and other unhealthy farming practices.";
+partnershipCard49B.impact = "Add 4 Health Points.";
+partnershipCard49B.hp = 4;
+partnershipCard49B.wp = 0;
+partnershipCard49B.ep = 0;
+partnershipCard49B.gb = 0;
+partnershipCards[1][44] = partnershipCard49B;
+
+var partnershipCard49C = new Object();
+partnershipCard49C.title = "Invasive Species";
+partnershipCard49C.text = "The organization GISP (Global Invasive Species Programme) came to your village and are helping relocate your local invasive species. Without pests farmers have an easier time to grow food and do not need to rely on pesticides and other unhealthy farming practices.";
+partnershipCard49C.impact = "Add 5 Health Points.";
+partnershipCard49C.hp = 5;
+partnershipCard49C.wp = 0;
+partnershipCard49C.ep = 0;
+partnershipCard49C.gb = 0;
+partnershipCards[2][44] = partnershipCard49C;
+
+// card 50
+var partnershipCard50A = new Object();
+partnershipCard50A.title = "Fisheries Decline";
+partnershipCard50A.text = "Your local grocery store is purchasing fish that comes from sustainably managed fishing industries that are certified by the Marine Stewardship Council. You are supporting sustainable fish populations and a healthy ocean. This improves your quality of water and seafood.";
+partnershipCard50A.impact = "Add 3 Health Points and 3 Water Points.";
+partnershipCard50A.hp = 3;
+partnershipCard50A.wp = 3;
+partnershipCard50A.ep = 0;
+partnershipCard50A.gb = 0;
+partnershipCards[0][45] = partnershipCard50A;
+
+var partnershipCard50B = new Object();
+partnershipCard50B.title = "Fisheries Decline";
+partnershipCard50B.text = "With corporations respecting protected marine zones, populations of fish nearby are increasing which raises your countries’ local businesses’ fish quotas.";
+partnershipCard50B.impact = "Add 3 Global Bucks and 2 Health Points.";
+partnershipCard50B.hp = 2;
+partnershipCard50B.wp = 0;
+partnershipCard50B.ep = 0;
+partnershipCard50B.gb = 3;
+partnershipCards[1][45] = partnershipCard50B;
+
+var partnershipCard50C = new Object();
+partnershipCard50C.title = "Fisheries Decline";
+partnershipCard50C.text = "Due to an international agreement to not catch endangered fish populations on your country's coastline, your tourism industry for diving and sea exploration has rebounded and you can earn an income.";
+partnershipCard50C.impact = "Add 4 Global Bucks and 2 Water points.";
+partnershipCard50C.hp = 0;
+partnershipCard50C.wp = 2;
+partnershipCard50C.ep = 0;
+partnershipCard50C.gb = 4;
+partnershipCards[2][45] = partnershipCard50C;
+
+// card 51
+var partnershipCard51A = new Object();
+partnershipCard51A.title = "Access to power";
+partnershipCard51A.text = "Your community gains access to hydro and solar power in combination with natural gas resources. Because of the new options for clean power you can rely less upon fossil fuels and you can make a positive impact on pollution.";
+partnershipCard51A.impact = "Add 1 Global Buck and 2 Health Points.";
+partnershipCard51A.hp = 2;
+partnershipCard51A.wp = 0;
+partnershipCard51A.ep = 0;
+partnershipCard51A.gb = 1;
+partnershipCards[0][46] = partnershipCard51A;
+
+var partnershipCard51B = new Object();
+partnershipCard51B.title = "Access to power";
+partnershipCard51B.text = "You get a new power grid in your community and can now access electricity in a cheaper and more efficient manner.";
+partnershipCard51B.impact = "Add 2 Global Bucks.";
+partnershipCard51B.hp = 0;
+partnershipCard51B.wp = 0;
+partnershipCard51B.ep = 0;
+partnershipCard51B.gb = 2;
+partnershipCards[1][46] = partnershipCard51B;
+
+var partnershipCard51C = new Object();
+partnershipCard51C.title = "Access to power";
+partnershipCard51C.text = "An international aid organization provides every home in your village with solar powered lights. This allows students to study at night so they can advance faster at school. It is also much safer, healthier, and more environmentally friendly than the kerosene lamps people in the village were burning previously.";
+partnershipCard51C.impact = "Add 3 Global Bucks and go up 1 education level.";
+partnershipCard51C.hp = 0;
+partnershipCard51C.wp = 0;
+partnershipCard51C.ep = 0;
+partnershipCard51C.gb = 3;
+partnershipCard51C.special = "gainEducationLevel";
+partnershipCards[2][46] = partnershipCard51C;
+
+// card 52
+var partnershipCard52A = new Object();
+partnershipCard52A.title = "Refugees";
+partnershipCard52A.text = "Your country has designed a model for incorporating refugees which is admired by other countries. Although it is not simple, your country has improved the lives of thousand of immigrants fleeing violence, conflict, human rights violations, and persecution.";
+partnershipCard52A.impact = "Add 2 Health Points and 2 Global Bucks.";
+partnershipCard52A.hp = 2;
+partnershipCard52A.wp = 0;
+partnershipCard52A.ep = 0;
+partnershipCard52A.gb = 2;
+partnershipCards[0][47] = partnershipCard52A;
+
+var partnershipCard52B = new Object();
+partnershipCard52B.title = "Refugees";
+partnershipCard52B.text = "Your country has received funding and volunteers from the UN to build better refugee camps in order to adequately house the refugee population that is in your country.";
+partnershipCard52B.impact = "Add 2 Health points and 2 Global Bucks.";
+partnershipCard52B.hp = 2;
+partnershipCard52B.wp = 0;
+partnershipCard52B.ep = 0;
+partnershipCard52B.gb = 2;
+partnershipCards[1][47] = partnershipCard52B;
+
+var partnershipCard52C = new Object();
+partnershipCard52C.title = "Refugees";
+partnershipCard52C.text = "You are able to move back to your home after a civil war reaches a peaceful end. You reconnect with your family that was separated years ago.";
+partnershipCard52C.impact = "Add 2 Health Points and 2 Global Bucks.";
+partnershipCard52C.hp = 2;
+partnershipCard52C.wp = 0;
+partnershipCard52C.ep = 0;
+partnershipCard52C.gb = 2;
+partnershipCards[2][47] = partnershipCard52C;
+
+// card 53
+var partnershipCard53A = new Object();
+partnershipCard53A.title = "Vaccination Access";
+partnershipCard53A.text = "Your country has a universal healthcare system and pays for all of its citizens’ vaccinations. This helps save money on hospital resources in the future. You are safe from contracting many diseases now that you are vaccinated.";
+partnershipCard53A.impact = "Add 4 Health Points.";
+partnershipCard53A.hp = 4;
+partnershipCard53A.wp = 0;
+partnershipCard53A.ep = 0;
+partnershipCard53A.gb = 0;
+partnershipCards[0][48] = partnershipCard53A;
+
+var partnershipCard53B = new Object();
+partnershipCard53B.title = "Vaccination Access";
+partnershipCard53B.text = "Your country is beginning to subsidize vaccinations for children. This improves overall life expectancy and helps the children avoid getting sick so they can go to school more frequently, improving their quality of life. It also reduces demands on your already over-taxed medical system.";
+partnershipCard53B.impact = "Add 4 Health Points.";
+partnershipCard53B.hp = 4;
+partnershipCard53B.wp = 0;
+partnershipCard53B.ep = 0;
+partnershipCard53B.gb = 0;
+partnershipCards[1][48] = partnershipCard53B;
+
+var partnershipCard53C = new Object();
+partnershipCard53C.title = "Vaccination Access";
+partnershipCard53C.text = "A NGO (Non-Government Organization) comes to your community and gives free vaccinations for diphtheria and it is now rare for somebody to contract the illness. Health is at an all-time high in your community. This also means people are sick less often and can attend work and school more frequently. Because of this, they earn more money and advance their education faster.";
+partnershipCard53C.impact = "Add 4 Health Points, 2 Global Bucks, and go up 1 education level.";
+partnershipCard53C.hp = 4;
+partnershipCard53C.wp = 0;
+partnershipCard53C.ep = 0;
+partnershipCard53C.gb = 2;
+partnershipCard53C.special = "gainEducationLevel";
+partnershipCards[2][48] = partnershipCard53C;
+
+// card 54
+var partnershipCard54A = new Object();
+partnershipCard54A.title = "Obesity/Recreation";
+partnershipCard54A.text = "Your country implements a program promoting physical activity to improve the health and lifestyle of the general population. This means everyone is getting enough exercise to have an elevated heart rate for a minimum of 150 minutes per week (at least 20 minutes per day).";
+partnershipCard54A.impact = "Add 3 Health Points.";
+partnershipCard54A.hp = 3;
+partnershipCard54A.wp = 0;
+partnershipCard54A.ep = 0;
+partnershipCard54A.gb = 0;
+partnershipCards[0][49] = partnershipCard54A;
+
+var partnershipCard54B = new Object();
+partnershipCard54B.title = "Obesity/Recreation";
+partnershipCard54B.text = "Your country implements a program promoting physical activity to improve the health and lifestyle of the general population. This means everyone is getting enough exercise to have an elevated heart rate for a minimum of 150 minutes per week (at least 20 minutes per day).";
+partnershipCard54B.impact = "Add 3 Health Points.";
+partnershipCard54B.hp = 3;
+partnershipCard54B.wp = 0;
+partnershipCard54B.ep = 0;
+partnershipCard54B.gb = 0;
+partnershipCards[1][49] = partnershipCard54B;
+
+var partnershipCard54C = new Object();
+partnershipCard54C.title = "Obesity/Recreation";
+partnershipCard54C.text = "Right to Play use play to educate and empower children and youth to overcome the effects of poverty, conflict and disease in disadvantaged communities. This makes the young people in your community healthier, happier, and better able to cope with life.";
+partnershipCard54C.impact = "Add 3 Health Points and go up 1 education level.";
+partnershipCard54C.hp = 3;
+partnershipCard54C.wp = 0;
+partnershipCard54C.ep = 0;
+partnershipCard54C.gb = 0;
+partnershipCard54C.special = "gainEducationLevel";
+partnershipCards[2][49] = partnershipCard54C;
+
+// card 55
+var partnershipCard55A = new Object();
+partnershipCard55A.title = "Habitat Destruction";
+partnershipCard55A.text = "Your government has just secured a large plot of land that will be used as a nature reserve. This allows a native species near extinction to regain a healthy population.";
+partnershipCard55A.impact = "Add 3 Health Points.";
+partnershipCard55A.hp = 3;
+partnershipCard55A.wp = 0;
+partnershipCard55A.ep = 0;
+partnershipCard55A.gb = 0;
+partnershipCards[0][50] = partnershipCard55A;
+
+var partnershipCard55B = new Object();
+partnershipCard55B.title = "Habitat Destruction";
+partnershipCard55B.text = "Your government enacts a policy that regulates how many wolves can be hunted. Now, with healthy populations of wolves in the forests, they help balance other species to create a healthy ecosystem. This alsoprevents huge numbers of deer from eating your crops or starving to death.";
+partnershipCard55B.impact = "Add 3 Health Points.";
+partnershipCard55B.hp = 3;
+partnershipCard55B.wp = 0;
+partnershipCard55B.ep = 0;
+partnershipCard55B.gb = 0;
+partnershipCards[1][50] = partnershipCard55B;
+
+var partnershipCard55C = new Object();
+partnershipCard55C.title = "Habitat Destruction";
+partnershipCard55C.text = "A transnational corporation has agreed to plant a tree belt to combat desertification in exchange for using local resources. This has a verypositive effect. More nature for wildlife to live which increases tourism to the region, a healthier environment for the people who live in the area, and a steady income for your community.";
+partnershipCard55C.impact = "Add 3 Global Bucks and 2 Health Points.";
+partnershipCard55C.hp = 2;
+partnershipCard55C.wp = 0;
+partnershipCard55C.ep = 0;
+partnershipCard55C.gb = 3;
+partnershipCards[2][50] = partnershipCard55C;
+
+// card 56
+var partnershipCard56A = new Object();
+partnershipCard56A.title = "Ivory Trade";
+partnershipCard56A.text = "The World Wildlife Fund chapter in your country has produced advertisements about how ivory products lead to the endangerment of elephant populations. You are now better informed about the product and its negative effect in the world.";
+partnershipCard56A.impact = "Add 1 Education Level and 2 Global Bucks.";
+partnershipCard56A.hp = 0;
+partnershipCard56A.wp = 0;
+partnershipCard56A.ep = 0;
+partnershipCard56A.gb = 2;
+partnershipCard56A.special = "gainEducationLevel";
+partnershipCards[0][51] = partnershipCard56A;
+
+var partnershipCard56B = new Object();
+partnershipCard56B.title = "Ivory Trade";
+partnershipCard56B.text = "Your country’s trade enforcement agency acquires better funding. Now the trade of ivory products is halted throughout your country which improves your country’s international reputation and provides more jobs within the legal trading business.";
+partnershipCard56B.impact = "Add 3 Global Bucks.";
+partnershipCard56B.hp = 0;
+partnershipCard56B.wp = 0;
+partnershipCard56B.ep = 0;
+partnershipCard56B.gb = 3;
+partnershipCards[1][51] = partnershipCard56B;
+
+var partnershipCard56C = new Object();
+partnershipCard56C.title = "Ivory Trade";
+partnershipCard56C.text = "The international community has strengthened its trade policies and enforcement. Now poachers are not able to transport ivory across your country's borders. This leads to a long term increase in elephant populations, which helps your community’s tourism income.";
+partnershipCard56C.impact = "Add 3 Global Bucks.";
+partnershipCard56C.hp = 0;
+partnershipCard56C.wp = 0;
+partnershipCard56C.ep = 0;
+partnershipCard56C.gb = 3;
+partnershipCards[2][51] = partnershipCard56C;
+
+// card 57
+var partnershipCard57A = new Object();
+partnershipCard57A.title = "Overpopulation";
+partnershipCard57A.text = "Family’s in your community plan to have smaller, healthier families. This stable population means that things like education and health care are able to be provided for everyone. It also means that more of the issues in the community can be dealt with.";
+partnershipCard57A.impact = "Add 4 Health Points.";
+partnershipCard57A.hp = 4;
+partnershipCard57A.wp = 0;
+partnershipCard57A.ep = 0;
+partnershipCard57A.gb = 0;
+partnershipCards[0][52] = partnershipCard57A;
+
+var partnershipCard57B = new Object();
+partnershipCard57B.title = "Overpopulation";
+partnershipCard57B.text = "Family’s in your community plan to have smaller, healthier families. This stable population means that things like education and health care are able to be provided for everyone. It also means that more of the issues in the community can be dealt with.";
+partnershipCard57B.impact = "Add 4 Health Points.";
+partnershipCard57B.hp = 4;
+partnershipCard57B.wp = 0;
+partnershipCard57B.ep = 0;
+partnershipCard57B.gb = 0;
+partnershipCards[1][52] = partnershipCard57B;
+
+var partnershipCard57C = new Object();
+partnershipCard57C.title = "Overpopulation";
+partnershipCard57C.text = "Family’s in your community plan to have smaller, healthier families. This stable population means that things like education and health care are able to be provided for everyone. It also means that more of the issues in the community can be dealt with.";
+partnershipCard57C.impact = "Add 4 Health Points.";
+partnershipCard57C.hp = 4;
+partnershipCard57C.wp = 0;
+partnershipCard57C.ep = 0;
+partnershipCard57C.gb = 0;
+partnershipCards[2][52] = partnershipCard57C;
+
+// card 58
+var partnershipCard58A = new Object();
+partnershipCard58A.title = "Education Funding";
+partnershipCard58A.text = "Your school uses its budget to cut down class sizes and make more learning resources available to you. This allows you to get more help from teachers, to understand concepts more easily, and you get distracted less than you used to.";
+partnershipCard58A.impact = "Add 1 Education Level.";
+partnershipCard58A.hp = 0;
+partnershipCard58A.wp = 0;
+partnershipCard58A.ep = 0;
+partnershipCard58A.gb = 0;
+partnershipCard58A.special = "gainEducationLevel";
+partnershipCards[0][53] = partnershipCard58A;
+
+var partnershipCard58B = new Object();
+partnershipCard58B.title = "Education Funding";
+partnershipCard58B.text = "An international aid organization gives your school enough money to open another classroom and higher another teacher. Your previously very large class is split in two so that it isn’t as crowded. This allows you to get more help from teachers and you get distracted less often.";
+partnershipCard58B.impact = "Add 1 Education Level.";
+partnershipCard58B.hp = 0;
+partnershipCard58B.wp = 0;
+partnershipCard58B.ep = 0;
+partnershipCard58B.gb = 0;
+partnershipCard58B.special = "gainEducationLevel";
+partnershipCards[1][53] = partnershipCard58B;
+
+var partnershipCard58C = new Object();
+partnershipCard58C.title = "Education Funding";
+partnershipCard58C.text = "An anonymous donorinternational aid organization gives your school enough money to open another classroom and higher another teacher. Your previously very large class is split in two so that it isn’t as crowded. This allows you to get more help from teachers and you get distracted less often.";
+partnershipCard58C.impact = "Add 2 Education Levels.";
+partnershipCard58C.hp = 0;
+partnershipCard58C.wp = 0;
+partnershipCard58C.ep = 0;
+partnershipCard58C.gb = 0;
+partnershipCard58C.special = "gain2EductionalLevels";
+partnershipCards[2][53] = partnershipCard58C;
+
+// card 59
+var partnershipCard59A = new Object();
+partnershipCard59A.title = "Shark Finning";
+partnershipCard59A.text = "You join an organization working to ban shark finning. You begin going to schools, educating students on the consequences of shark finning so they understand why it’s important to protect sharks and the oceans.";
+partnershipCard59A.impact = "Add 3 Water Points and 1 Education Level.";
+partnershipCard59A.hp = 0;
+partnershipCard59A.wp = 3;
+partnershipCard59A.ep = 0;
+partnershipCard59A.gb = 0;
+partnershipCard59A.special = "gainEducationLevel";
+partnershipCards[0][54] = partnershipCard59A;
+
+var partnershipCard59B = new Object();
+partnershipCard59B.title = "Shark Finning";
+partnershipCard59B.text = "You join an organization working to ban against shark finning. Y and you begin going to schools, educating students on the consequences of shark finning so they understand why it’s wrong to purchase fins.important to protect sharks and the oceans.";
+partnershipCard59B.impact = "Add 3 Water Points and 1 Education Level.";
+partnershipCard59B.hp = 0;
+partnershipCard59B.wp = 3;
+partnershipCard59B.ep = 0;
+partnershipCard59B.gb = 0;
+partnershipCard59B.special = "gainEducationLevel";
+partnershipCards[1][54] = partnershipCard59B;
+
+var partnershipCard59C = new Object();
+partnershipCard59C.title = "Shark Finning";
+partnershipCard59C.text = "Shark finning is banned in your country and the ocean's ecosystem is rebalanced, producing more fish for your fisherman to catch, so they can provide more food for your village.";
+partnershipCard59C.impact = "Add 3 Water Points and 3 Health Points.";
+partnershipCard59C.hp = 3;
+partnershipCard59C.wp = 3;
+partnershipCard59C.ep = 0;
+partnershipCard59C.gb = 0;
+partnershipCards[2][54] = partnershipCard59C;
+
+// card 60
+var partnershipCard60A = new Object();
+partnershipCard60A.title = "Ocean Acidification";
+partnershipCard60A.text = "Your country’s government has made industries reduce their carbon dioxide production through subsidizing carbon capture programs. Now the air quality is better, and in addition, this helps slow down acidification within the world’s oceans. With healthier oceans comes healthier food sources.";
+partnershipCard60A.impact = "Add 3 Health Points and 3 Water Points.";
+partnershipCard60A.hp = 3;
+partnershipCard60A.wp = 3;
+partnershipCard60A.ep = 0;
+partnershipCard60A.gb = 0;
+partnershipCards[0][55] = partnershipCard60A;
+
+var partnershipCard60B = new Object();
+partnershipCard60B.title = "Ocean Acidification";
+partnershipCard60B.text = "To lower carbon dioxide production, your government has proactively invested in a good public transport system. Now you don’t have to buy a car. Another side effect is that this has helped slow ocean acidification, which helps create and maintain healthier oceans.";
+partnershipCard60B.impact = "Add 2 Global Bucks and 2 Health Points.";
+partnershipCard60B.hp = 2;
+partnershipCard60B.wp = 0;
+partnershipCard60B.ep = 0;
+partnershipCard60B.gb = 2;
+partnershipCards[1][55] = partnershipCard60B;
+
+var partnershipCard60C = new Object();
+partnershipCard60C.title = "Ocean Acidification";
+partnershipCard60C.text = "Through international agreements made possible with the UN, countries have been reducing their carbon dioxide output. This has slowed the process of ocean acidification. That progress made an impact of directly increasing fish population numbers near your country, therefore helping the fishing industry.";
+partnershipCard60C.impact = "Add 4 health points.";
+partnershipCard60C.hp = 4;
+partnershipCard60C.wp = 0;
+partnershipCard60C.ep = 0;
+partnershipCard60C.gb = 0;
+partnershipCards[2][55] = partnershipCard60C;
 
 // template for partnership cards
 /*
