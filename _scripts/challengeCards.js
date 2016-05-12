@@ -379,7 +379,6 @@ challengeCard12B.gb = 0;
 challengeCard12B.special = "loseEducationLevel";
 challengeCards[1][11] = challengeCard12B;
 
-// TODO - block user from a destination for # of turns - use countdown variable to send an unblock message
 var challengeCard12C = new Object();
 challengeCard12C.title = "Illness and Education";
 challengeCard12C.text = "One of your family members dies of HIV/AIDS. You cannot go to school and must stay home to run the family business.";
@@ -434,7 +433,6 @@ challengeCard14A.ep = 0;
 challengeCard14A.gb = 0;
 challengeCards[0][13] = challengeCard14A;
 
-// TODO - how to implement?
 var challengeCard14B = new Object();
 challengeCard14B.title = "Bathroom Break";
 challengeCard14B.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
@@ -588,11 +586,6 @@ challengeCard19C.gb = 0;
 challengeCard19C.special = "loseEducationLevel";
 challengeCards[2][17] = challengeCard19C;
 
-
-// TODO - block user from a destination until power up is gained - check when power-up is purchased for all timed losses
-
-//TODO - add the other cards....
-
 //card 20
 var challengeCard20A = new Object();
 challengeCard20A.title = "Family Illness";
@@ -614,7 +607,6 @@ challengeCard20B.ep = 0;
 challengeCard20B.gb = -6;
 challengeCards[1][18] = challengeCard20B;
 
-// TODO - block user from a destination for # of turns - use countdown variable a send an unblock message
 var challengeCard20C = new Object();
 challengeCard20C.title = "Family Illness";
 challengeCard20C.text = "Your country has great education that is free up to grade 12, but you want to go to college or university which is expensive. You accumulate student loans that take you years to pay off.";

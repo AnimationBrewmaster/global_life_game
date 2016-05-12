@@ -1135,9 +1135,10 @@ function travelToll(numberOfTurns) {
     turnNumber++; // updates turn number    
 }
 
-// TODO (Glen) - Turn into Help Message (when low on health remind them they have options to click)
+// TODO  - Test
 function checkPowerUps() {
     // some temp functions to make up for loss of inventory control
+    /*
     if (player1.food && player1.hp < 2) {
         console.log("used food");
         player1.food = false;
@@ -1151,11 +1152,19 @@ function checkPowerUps() {
         player1.hp += 6;
         updateStats();
         additionalInfo += "<br>You used your first aid kit and gained 6 Health Points.";
-    }
+    */
     if (player1.plumbing == true) {
         player1.wp = 100;
         updateStats();
     }
+    if (player1.food && player1.hp < 8) {
+        console.log("used food?");
+        UpdateUserMessage += "<br>You are running low on Health, try eating some food to gain 4 Health Points.";
+    }
+    if (player1.kit && player1.hp < 8) {
+        console.log("used kit?");
+        UpdateUserMessage += "<br>You are running low on Health, use your first aid kit to gain 6 Health Points.";
+    }       
 }
 
 //TODO - full testing required
@@ -1163,23 +1172,14 @@ function checkBlocks() {
     // TODO - this should work but is quite inefficient - should only unblock when we know it was positive earlier
     for (var key in bDest) {
         var value = bDest[key];
-        //console.log(key);
-        //console.log(value);
         if (value > 0) {
-            // block 'key'
             disableDestination(key);
-            // make value -1;
             bDest[key]--;
-            //value--;
-            // redefine value of key
-            //bDest[key] = value;
         }
         else {
-            // unblock 'key'
             enableDestination(key);
         }       
     }
-    
     console.log(bDest); 
 }
 
