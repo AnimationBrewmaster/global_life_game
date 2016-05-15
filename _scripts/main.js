@@ -71,6 +71,9 @@ var holderParam1;
 var holderParam2;
 var holderParam3;
 
+var characterImg; // our main player image
+var characterBike; // our main player, on a bike
+
 // create our pause intervals so the player can finish moving
 // before the game play moves ahead:
 var intervalDiceAnimTimeDelay;
@@ -121,6 +124,16 @@ function InitGame() {
     createInventory();
 }
 
+function CallDebugFunctions()
+{
+    //alert('debug');
+     // DEBUG STUFF
+    // force bike:
+   
+    //THE_GAME.ShowAllBikes();
+     //document.getElementById("character").src = characterBike;
+}
+
 
 function SetChosenPath(which_path) {
     //var selectedPathEdgeFile; // getMedical, getJob, getStore, getToilet, getfood, getSchool, getWater
@@ -160,6 +173,8 @@ function SetChosenPath(which_path) {
     // and show the correct background.    
     THE_GAME.getComposition().getStage().ShowNewBackground(which_path);
     FlashTheDice();
+    
+    CallDebugFunctions();
 }
 
 // sets player onject stats based on user input choice of country card
@@ -685,7 +700,11 @@ function buyNewStuff() {
                 player1.bike = true;
                 // call the show bike function inside the Adobe Edge doc:
                 // THE_GAME.getComposition().getStage().ShowBike();
-                THE_GAME.ShowAllBikes();
+                document.getElementById("character").src = characterBike;
+                characterImg = characterBike;
+                
+                 UpdatePlayerAvatar(characterImg);
+               // THE_GAME.ShowAllBikes();
                 console.log("BIKE SHOWN");
                 updateStats();
             } else {
@@ -1497,67 +1516,43 @@ function MakeBoyOrGirl()
     return playerSex;
 }
 
-var characterImg;
-var characterBike;
 
-function GetCharacterName(_selectedCountry)
+
+function UpdateNameStuff()
 {
     
-    console.log("SELECTED COUNTRY IS " + _selectedCountry);
-    switch(_selectedCountry)
-    {
-        case "a" :       
-            arrPotentialCharNamesMale = new Array("Arthur_Anderson", "Aaron_Albertson", "Albert_Aduna");
-            arrPotentialCharNamesFemale = new Array("Anne Archer", "Anita Anderson", "Allison Arno");
-            break;
-            
-         case "b" :       
-            arrPotentialCharNamesMale = new Array("Bob_Butcher", "Bill_Banker", "Ben_Barkowitz");
-            arrPotentialCharNamesFemale = new Array("Betty_Blue", "Bjorna_Banksty", "Breanne_Bennett");
-            break;    
-        
-         case "c" :       
-            arrPotentialCharNamesMale = new Array("Charlie_Cho", "Chad_Charger", "Champ_Chowdah");
-            arrPotentialCharNamesFemale = new Array("Carey_Cash", "Coraline_Collins", "Chevy_Chase");
-            break;
-            
-        default:
-            console.log('bad switch');
-    }
-    
-    var randNum = Math.ceil(Math.random() * arrPotentialCharNamesMale.length - 1); // give us a 0, 1 or 2
+    var randNum = Math.ceil(Math.random() * 3);
     var _sex = MakeBoyOrGirl();
     var _ethnix = Math.round(Math.random()); // females start at +2;
+    
+    _selectedCountry = inputDifficulty; // grab whether user clicked a, b or c and swap the player image accordingly.
     
     switch(_sex)
     {
         case "MALE" :
-            characterName = arrPotentialCharNamesMale[randNum];
             characterImg = "images/character_" + _selectedCountry + "_" + _ethnix + ".png"; 
             characterBike = "images/character_" + _selectedCountry + "_" + _ethnix + "_bike.png"; 
             //onsole.log("CHAR NAME: " + characterName);
             break;
                 
         case "FEMALE" :
-            characterName = arrPotentialCharNamesFemale[randNum];
             characterImg = "images/character_" + _selectedCountry + "_" + Number(_ethnix + 2) + ".png"; 
             characterBike = "images/character_" + _selectedCountry + "_" + Number(_ethnix + 2) + "_bike.png"; 
             break;
     }
     
-    console.log("CHAR NAME IS " + characterName + " and randNum was " + randNum);
     console.log("CHAR BIKE IS " + characterBike + " and randNum was " + randNum);
     console.log("CHAR IMAGE IS " + characterImg);
     
-    document.getElementById("character").src = characterImg;
-   // playername = characterName;
+   // characterImg = characterBike;
     
-    // update the large text at the top of the screen. still hoping to do something cool with this.
-    UpdatePlayerStageName(playername);
+    document.getElementById("character").src = characterImg;
+    //document.getElementById("character").src = characterBike;
+    
+   
     // update all the avatars to the current pick (inside EDGE):
-    UpdatePlayerAvatar(characterImg,characterBike);
-    // also update the text at the very bottom of the HUD that states whether the user is alive or dead:
-    UpdatePlayerName(playername.toUpperCase());
+    UpdatePlayerAvatar(characterImg);
+    
     
 }
 
@@ -1575,6 +1570,14 @@ function SetCountrySelected(_countrySelected) {
     SetInputDifficulty(_countrySelected);
     // update the stats accordingly:
     updateStats();
+    HideButtonChoices();
+}
+
+function HideButtonChoices()
+{
+     document.getElementById("column2").style.display = "none";
+     document.getElementById("column2").style.visibility = "hidden";
+
 }
 
 function HideStarterContentAndShowTheGame()
@@ -1588,6 +1591,7 @@ function HideStarterContentAndShowTheGame()
      document.getElementById("column3").style.visibility = "visible";
      document.getElementById("Stage").style.display = "block";
      document.getElementById("Stage").style.visibility = "visible";
+    document.getElementById("startButton").style.visibility = "hidden";
 }
 
 function SetInputDifficulty(val) {
@@ -1627,6 +1631,7 @@ function SetInputDifficulty(val) {
     document.getElementById("choice_description").textContent = _message;
 
     updateStats();
+    UpdateNameStuff();
 }
 
 function AreWeReadyToStart() {
@@ -1730,7 +1735,7 @@ THE_GAME.getSymbol("mcHUD").$("labelGlobal").html(Math.round(objGlobal.newScore)
 }
 
 function UpdateEducation() {
-    THE_GAME.getSymbol("mcHUD").$("labelEducation").html(Math.round(objEdu.newScore));
+ THE_GAME.getSymbol("mcHUD").$("labelEducation").html(Math.round(objEdu.newScore));
 }
 
 function UpdatePlayerName(playername) {
@@ -1738,6 +1743,8 @@ function UpdatePlayerName(playername) {
     var _playerName = playername;
     // output it:
     THE_GAME.getSymbol("mcHUD").$("tPlayerName").html(_playerName);
+     // update the large text at the top of the screen.
+    UpdatePlayerStageName(playername.toUpperCase());
 }
 
 function UpdateEdgeStageDestinationTextField(destination) {

@@ -194,7 +194,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          }
          
-         UpdatePlayerAvatar = function(avtr, bike)
+         UpdatePlayerAvatar = function(avtr)
          {
          	console.log('UpdatePlayerAvatar; called from EDGE:' + avtr);
          	//_bike = avtr = "_bike"
@@ -208,6 +208,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("charFarm").attr("src", avtr);
          	sym.getSymbol("hudNextDest").$("character").attr("src", avtr);
          	// and the bike versions:
+         	/*
          	sym.$("bikeJob").attr("src", bike);
          	sym.$("bikeMed").attr("src", bike);
          	sym.$("bikeMarket").attr("src", bike);
@@ -215,6 +216,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("bikeWater").attr("src", bike);
          	sym.$("bikeSchool").attr("src", bike);
          	sym.$("bikeFarm").attr("src", bike);
+         	*/
          }
          
          UpdateUserMessage = function(msg)
