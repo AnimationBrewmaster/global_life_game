@@ -572,8 +572,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("WinMessage").$("txtWinMessage").html(winmessage);
          
          	// now unhide it and play the animation:
-         	sym.$("obit").show();
-         	sym.getSymbol("obit").play(1);
+         	sym.$("WinMessage").show();
+         	sym.getSymbol("WinMessage").play(1);
          }
          
          sym.DisableDestination = function(dest)

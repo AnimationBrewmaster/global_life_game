@@ -36,6 +36,7 @@ var sicknessTimer = -1; // variable that can be used to track timed sickness att
 var freeTravel = 0; // variable to track the number of "free" travel turns left
 var bCountryHasBeenSelected = false;
 var bNameHasBeenEntered = false;
+var _playerName;
 var my_stage;
 var startingGameTip;
 var arrGameTips = [];
@@ -79,6 +80,7 @@ var characterBike; // our main player, on a bike
 var intervalDiceAnimTimeDelay;
 var intervalDiceButtonFlashes;
 
+var usernameInput = "Luke Warmwater";
 
 // holds all the game text
 var objGameText = {};
@@ -1335,7 +1337,7 @@ function playerDied() {
     gameOver = true;
     UpdateHUD();
     
-    THE_GAME.ShowObituary(_username, getDeathMessage());
+    THE_GAME.ShowObituary(_playerName, getDeathMessage());
 
 }
 
@@ -1347,7 +1349,7 @@ function playerWon(){
     gameOver = true;
     UpdateHUD();
     
-    THE_GAME.ShowWinMessage(_username, getWinMessage());
+    THE_GAME.ShowWinMessage(_playerName + " WINS!", getWinMessage());
     
        
 }
@@ -1570,7 +1572,7 @@ function SetCountrySelected(_countrySelected) {
     SetInputDifficulty(_countrySelected);
     // update the stats accordingly:
     updateStats();
-    HideButtonChoices();
+    //HideButtonChoices();
 }
 
 function HideButtonChoices()
@@ -1657,14 +1659,14 @@ function UpdateHUD(life, water, glob, edu) {
     var _playerLifeStatus;
 
     var _mTweenTime = 1;
-
+/*
     // check for player death        
     if (gameOver != true) {
         _playerLifeStatus = " is alive and well-ish.";
     } else {
         _playerLifeStatus = " is super dead. Sorry.";
     }
-
+*/
    // if ((life != "") && (life != undefined)) {
         _life = life;
         TweenLite.to(objLife, _mTweenTime, {
@@ -1740,7 +1742,7 @@ function UpdateEducation() {
 
 function UpdatePlayerName(playername) {
     // alert('UpdateHud');
-    var _playerName = playername;
+    _playerName = playername;
     // output it:
     THE_GAME.getSymbol("mcHUD").$("tPlayerName").html(_playerName);
      // update the large text at the top of the screen.
@@ -1780,12 +1782,10 @@ function HideMarket() {
      THE_GAME.$("hudMarket").hide();
 }
 
-var usernameInput;
+
 function UserName()
 {
-    if(!usernameInput)
-        usernameInput = "Luke Warmwater";
-var input_name =  swal({   
+    var input_name =  swal({   
     title: "WELCOME!",   
     text: "YOUR NAME:",   
     type: "input",   
@@ -1797,18 +1797,19 @@ var input_name =  swal({
         if (inputValue === false) 
             return false;      
     
-    if (inputValue === "") 
-    {     
-        swal.showInputError("YOUR NAME *PLEASE*:");     
-        return false;   
-    }      
-    UpdatePlayerName(inputValue.toUpperCase());
-    swal("Welcome to the Global Life Game, " + inputValue, "Make good choices!", "success"); });  
-    
-    // hide first two columns:
-    document.getElementById("startButton").style.display = "block";
-     document.getElementById("startButton").style.visibility = "visible";
-    
+        if (inputValue === "") 
+        {     
+            swal.showInputError("YOUR NAME *** PRETTY PLEASE ***:");     
+            return false;   
+        } else {
+            // hide first two columns:
+            UpdatePlayerName(inputValue.toUpperCase());
+            swal("Welcome to the Global Life Game, " + inputValue.toUpperCase(), "Make good choices!", "success");
+            document.getElementById("startButton").style.display = "block";
+            document.getElementById("startButton").style.visibility = "visible";   
+            HideButtonChoices();
+        }
+    });   
 }
 
 
