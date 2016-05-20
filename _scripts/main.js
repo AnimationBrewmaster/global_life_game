@@ -58,6 +58,8 @@ var loseVal = 99; // DANNY - change this value to the turn # you want the lose c
 var pCard = -1; // set to partnership card value you want to test (-1 value for random card)
 var cCard = -1; // set to challenge card value you want to test (-1 value for random card)
 var setRoll = -1; // set dice roll value (-1 is ignored and random dice roll is generated)
+var hitCcard = false; // set to true to "land" on a Challenge card with first roll (resets to false after 1st card)
+var hitPcard = false; // set to true to "land" on a Partnership vard with first roll (resets to false after 1st card)
 // end debuggibg variables
 
 var _prevLife = 0;
@@ -497,10 +499,29 @@ function getMedical() {
                 UpdateUserMessage("You've been cured by the Medicine you bought.");
                 updateStats();
             }
-        } else {
+            else {
+            	UpdateUserMessage("You chose not to buy medicine for your sickness");
+            	buyMedicine();
+            }   
+        } 
+        else {
             UpdateUserMessage("You are very sick but don't have enough money for the cure.");
         }
-    } else {
+    } 
+    else if (sicknessTimer > 0 && player1.gb > 2) {
+    	if (confirm("You have diarrhea, buy medicine for $3?")) {
+            impactStats(0, 0, 0, -3);
+            sicknessTimer = -1;
+            UpdateUserMessage("You've been cured by the Medicine you bought.");
+            updateStats();
+        }
+        else {
+            UpdateUserMessage("You chose not to buy medicine for your diarrhea.");
+            buyMedicine();
+        }
+    	
+    }
+    else {
         if (player1.gb > 0) {
             buyMedicine();
         } else {
@@ -792,7 +813,16 @@ function checkCard() {
 	//console.log("position arguement sent: " + square);
 
 	// TODO simple version for now, will check vs each destination in future (randomize where they appear?)
-	if (square == 2 || square == 7) {
+	// TODO remove first to conditionals once testng done
+	if (hitCcard) {
+		hitCcard = false;
+		getChallengeCard();
+	}
+	else if (hitPcard) {
+		hitPcard = false;
+		getPartnershipCard();
+	}
+	else if (square == 2 || square == 7) {
 		getChallengeCard();
 	}
 	else if (square == 5) {
@@ -981,11 +1011,10 @@ function loseEducationLevel() {
 	console.log("lose some education");
 }
 
-// TODO - test
 function payEducationLevel() {
     // need to charge for educational level if they have $6, otherwise block from Education for 5 turns
     if (player1.gb >= 6) {
-        glayer1.gb -= 6;
+        player1.gb -= 6;
         gainEducationLevel();
     }
     else {
@@ -997,12 +1026,10 @@ function payEducationLevel() {
 }
 
 function gotDiarrhea() {
-	// TODO - test this (get medicine in 3 turns or lose 6 health points)
-	sicknessTimer = 3;
+	sicknessTimer = 4;
 	console.log("you got Diarrhea!");
 }
 
-// TODO - test
 function payOrBeat() {
     // lose 2 global bucks, if can't pay, lose 4 health points
     if (player1.gb >= 2) {
