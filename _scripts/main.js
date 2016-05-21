@@ -44,7 +44,7 @@ var getDifficulty;
 var countryValue = 3; // numberic value for country used for card selection and serving Country Specific Game Tips (3 means none)
 var _username;
 var bUserInputDisabled = false; // used to disable user changing input after game start
-var additionalInfo = ""; // extra messgae info to concat on dice roll messages
+var additionalInfo = ""; // extra message info to concat on dice roll messages
 var destBlocked = ""; // destination that will be blocked
 var blockedFunction = ""; // destination function that can not be called 
 var blockedTurns = 0; // number of turns left that userr is blocked from destination
@@ -803,17 +803,17 @@ function checkPowerUp(powerUp) {
     }
 }
 
+
 // -------------- card functions ---------------
 
 // checks for action cards and chooses the type
-// TODO function checkCard(square) - once we get pop-up to start working
+// TODO function checkCard(square) - simple version for now, will check vs each destination in future (randomize where they appear?)
 function checkCard() {
     
     var square = currentPlayerSquare;
 	//console.log("position arguement sent: " + square);
 
-	// TODO simple version for now, will check vs each destination in future (randomize where they appear?)
-	// TODO remove first to conditionals once testng done
+	// TODO remove first two conditionals once testing done
 	if (hitCcard) {
 		hitCcard = false;
 		getChallengeCard();
@@ -924,6 +924,7 @@ function specialCards(fnstring) {
 			
 		case "createInventory": 
 			createInventory();
+			updateStats();
 			break;
 			
 		case "gotDiarrhea":
@@ -1044,7 +1045,6 @@ function payOrBeat() {
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);   
 }
 
-// TODO - test
 function payOrNoWater() {
     // pay $2 Global Bucks for bottled water until the flooding recedes – if you don’t have $2 Global Bucks, lose 2 health points and 2 water points
     if (player1.gb >= 2) {
@@ -1060,7 +1060,6 @@ function payOrNoWater() {
     UpdateHUD(player1.hp, player1.wp, player1.gb, player1.ep);      
 }
 
-// TODO - test
 function bsfBlock() {
     // block school until bsf filter is purchased
     if (player1.filter) {
@@ -1073,7 +1072,6 @@ function bsfBlock() {
     }
 }
 
-// TODO - test
 function blockDestination(dest, val){
     console.log(bDest);
     bDest[dest] += val;
@@ -1159,12 +1157,8 @@ function impactStats(hp, wp, ep, gb) {
 }
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
-// TODO - needs to add power ups and down turn impacts
+// TODO - needs to add power ups and down turn impacts - done?
 function travelToll(numberOfTurns) {
-    // resetting number of rolls global variable
-    //numberOfRolls = 0;
-    //UpdateUserMessage('hello');
-    //UpdateUserMessage("this trip cost you:\n" + numberOfTurns + " health and water points");
     if (freeTravel > 0) {
         freeTravel -= 1;
         if (freeTravel == 0) {
@@ -1183,39 +1177,25 @@ function travelToll(numberOfTurns) {
     turnNumber++; // updates turn number    
 }
 
-// TODO  - Test
 function checkPowerUps() {
-    // some temp functions to make up for loss of inventory control
-    /*
-    if (player1.food && player1.hp < 2) {
-        console.log("used food");
-        player1.food = false;
-        player1.hp += 4;
-        updateStats();
-        additionalInfo += "<br>You ate some food you were carrying and gained 4 Health Points.";
-    }
-    if (player1.kit && player1.hp < 2) {
-        console.log("used kit");
-        player1.kit = false;
-        player1.hp += 6;
-        updateStats();
-        additionalInfo += "<br>You used your first aid kit and gained 6 Health Points.";
-    */
     if (player1.plumbing == true) {
         player1.wp = 100;
         updateStats();
     }
-    if (player1.food && player1.hp < 8) {
-        console.log("used food?");
-        UpdateUserMessage += "<br>You are running low on Health, try eating some food to gain 4 Health Points.";
-    }
     if (player1.kit && player1.hp < 8) {
         console.log("used kit?");
-        UpdateUserMessage += "<br>You are running low on Health, use your first aid kit to gain 6 Health Points.";
-    }       
+        additionalInfo += "<br>You are running low on Health, use your first aid kit to gain 6 Health Points.";
+    } 
+    else if (player1.food && player1.hp < 8) {
+        console.log("used food?");
+        additionalInfo += "<br>You are running low on Health, try eating some food to gain 4 Health Points.";
+    }
+    else {
+    	console.log("no powerup message");
+    }
+          
 }
 
-//TODO - full testing required
 function checkBlocks() {
     // TODO - this should work but is quite inefficient - should only unblock when we know it was positive earlier
     for (var key in bDest) {
@@ -1420,7 +1400,7 @@ function FlashTheDice()
 }
 
 function checkDiceRoll(diceRoll) {
-    
+    var cardYes = false;
     // see if they're still alive:
     checkGameOver();
     
@@ -1429,7 +1409,7 @@ function checkDiceRoll(diceRoll) {
     }
   
     //THE_GAME.HideDiceButton();
-    UpdateUserMessage("YOU JUST ROLLED A " + diceRoll);
+    UpdateUserMessage("YOU JUST ROLLED A " + diceRoll + ".");
     var msgDiceRoll = "";
     // check to see if we're on the first leg
     if (currentPlayerSquare < 4) {
@@ -1448,8 +1428,7 @@ function checkDiceRoll(diceRoll) {
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "You rolled a " + diceRoll + ". Player is now at position " + currentPlayerSquare + " of 8.\nRoll Again?";           
             travelToll(1);
-            checkCard(); 
-            // checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
+            cardYes = true;         
             FlashTheDice();
         }
 
@@ -1473,19 +1452,21 @@ function checkDiceRoll(diceRoll) {
             // goto, or at least stop at, currentPlayerSquare * 1000ms.
             msgDiceRoll = "Player is now at position " + currentPlayerSquare + "\nRoll Again?";
             travelToll(1);
-            checkCard(); 
-            
-            //checkCard(currentPlayerSquare); - TODO - use once we can sort out why pop-up is not displaying
+            cardYes = true;
             FlashTheDice();
         }
     }
     // move player to currentplayersquare:
-    UpdatePlayerPositionAlongTimeline(Number(currentPlayerSquare));
-
-    // alert the correct message. i moved the alerts here so they wouldn't stop time and halt player movement:
+    UpdatePlayerPositionAlongTimeline(Number(currentPlayerSquare));	
+    // alert the correct message. i moved the alerts here so they wouldn't stop time and halt player movement:    
     if (msgDiceRoll !== "") {
         //        alert("checkDiceRoll: "+msgDiceRoll);
-        UpdateUserMessage(msgDiceRoll+additionalInfo);
+        UpdateUserMessage(msgDiceRoll + additionalInfo + ".");
+    }
+    // if card square was hit, wait 1.5 seconds then call the card function to determine the card and pop-up the card graphic
+    if (cardYes) {
+    	setTimeout(checkCard, 1500);
+    	//checkCard(currentPlayerSquare); - TODO use this for randomized card squares
     }
 }
 
