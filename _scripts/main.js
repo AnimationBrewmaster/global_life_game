@@ -32,6 +32,7 @@ var DESTINATION = 4;
 var HOME = 8;
 var inputDifficulty = "a"; // USA! USA! USA!
 var bPlayerIsDead = false;
+var bPlayerHasBike = false;
 var sicknessTimer = -1; // variable that can be used to track timed sickness attacks
 var freeTravel = 0; // variable to track the number of "free" travel turns left
 var bCountryHasBeenSelected = false;
@@ -74,8 +75,8 @@ var holderParam1;
 var holderParam2;
 var holderParam3;
 
-var characterImg; // our main player image
-var characterBike; // our main player, on a bike
+var characterImg = "images/character_a_0.png";
+var characterBike = "images/character_a_0_bike.png";
 
 // create our pause intervals so the player can finish moving
 // before the game play moves ahead:
@@ -112,6 +113,39 @@ var characterName = "";
 
 var currentPathFunctionHolder; //used to delay the main game functions (getjob, gettoilet) until the user rolls.
 
+// used to allow user to choose avatar
+// at beginning of game:
+var bCharacterWasChosen = false;
+var bCharIndex = 0;
+
+var cc = new Array(); // cc = chosen character
+    cc.push("character_a_0.png");
+    cc.push("character_a_1.png");
+    cc.push("character_a_2.png");
+    cc.push("character_a_3.png");
+    cc.push("character_b_0.png");
+    cc.push("character_b_1.png");
+    cc.push("character_b_2.png");
+    cc.push("character_b_3.png");
+    cc.push("character_c_0.png");
+    cc.push("character_c_1.png");
+    cc.push("character_c_2.png");
+    cc.push("character_c_3.png");
+
+var cb = new Array(); // cb = character bike
+    cb.push("character_a_0_bike.png");
+    cb.push("character_a_1_bike.png");
+    cb.push("character_a_2_bike.png");
+    cb.push("character_a_3_bike.png");
+    cb.push("character_b_0_bike.png");
+    cb.push("character_b_1_bike.png");
+    cb.push("character_b_2_bike.png");
+    cb.push("character_b_3_bike.png");
+    cb.push("character_c_0_bike.png");
+    cb.push("character_c_1_bike.png");
+    cb.push("character_c_2_bike.png");
+    cb.push("character_c_3_bike.png");
+
 // setting blocked destinations dictionary
 bDest['job'] = 0;
 bDest['medical'] = 0;
@@ -126,16 +160,25 @@ console.log(bDest);
 function InitGame() {
     THE_GAME = AdobeEdge.getComposition('EDGE-581531069').getStage();
     createInventory();
+    
+    // make our character clickable
+    document.getElementById("character").addEventListener("click", function(){
+        ChooseCharacter();
+    });
 }
 
 function CallDebugFunctions()
 {
-    //alert('debug');
-     // DEBUG STUFF
-    // force bike:
-   
-    //THE_GAME.ShowAllBikes();
-     //document.getElementById("character").src = characterBike;
+    
+    player1.bike = true;
+     // DEBUG STUFF. CALLED AS SOON AS USER CHOOSES A COUNTRY.
+    if(bCharacterWasChosen == true)
+    {
+        document.getElementById("character").src = characterBike;
+    } else {
+        // they get the default bike:
+        document.getElementById("character").src = "images/character_a_0_bike.png";
+    }
 }
 
 
@@ -177,8 +220,6 @@ function SetChosenPath(which_path) {
     // and show the correct background.    
     THE_GAME.getComposition().getStage().ShowNewBackground(which_path);
     FlashTheDice();
-    
-    CallDebugFunctions();
 }
 
 // sets player onject stats based on user input choice of country card
@@ -200,7 +241,8 @@ function getDifficulty(value) {
             player1.gb = 12;
             countryValue = 1;
             break;
-        /*
+        /* DANNY THINKS THESE ARE THE ACTUAL DEBUG VALUES THAT HE HAS LOWERED IN ORDER
+        TO MAKE IT EASIER TO DIE FOR TESTING, ETC.
         case "c":
             player1.hp = 20;
             player1.wp = 20;
@@ -270,13 +312,21 @@ function playerDetails() {
     console.log("Current Stats \n" + this.name + "\nHealth: " + this.hp + "\nWater: " + this.wp + "\nEducation: " + this.ep + "\nGlobal Bucks: " + this.gb);
 }
 
+function DoesPlayerHaveABike()
+{
+   
+    
+    if(player1.bike == true){
+        bPlayerHasBike = true;
+    } else {
+        bPlayerHasBike = false;
+    }
+    return bPlayerHasBike;
+}
 
 function HideStartingInstructions() {
     console.log("HideStartingInstructions()");
-    //document.getElementById('starting_instructions').style.display = "none";
-    //document.getElementById('starting_instructions').style.visibility = "hidden";
- 
-     document.getElementById('Stage').style.position = "absolute";
+    document.getElementById('Stage').style.position = "absolute";
     document.getElementById('Stage').style.display = "visible";
     document.getElementById('Stage').style.zIndex = 100;
 }
@@ -721,13 +771,9 @@ function buyNewStuff() {
             itemMessage = "bike message";
             if (checkout("bike", spent, itemMessage)) {
                 player1.bike = true;
-                // call the show bike function inside the Adobe Edge doc:
-                // THE_GAME.getComposition().getStage().ShowBike();
                 document.getElementById("character").src = characterBike;
                 characterImg = characterBike;
-                
                  UpdatePlayerAvatar(characterImg);
-               // THE_GAME.ShowAllBikes();
                 console.log("BIKE SHOWN");
                 updateStats();
             } else {
@@ -758,7 +804,6 @@ function buyNewStuff() {
             OpenMarketHud(); // TODO: does not appear to re-open the market - continues on with the game
             break;
     }
-    
 }
 
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
@@ -790,7 +835,8 @@ function checkPowerUp(powerUp) {
             break;
             
         case "filter":
-            // TODO - this will wipe all education blocks, even if not tied to bsfBlock card - fix if time permits (incidince is extremely rare)
+            // TODO - this will wipe all education blocks, even if not tied to bsfBlock card - fix if 
+            // time permits (incidince is extremely rare)
             if (bsfBlocked) {
                 bDest["school"] = 0;
                 bsfBlocked = false;
@@ -1256,34 +1302,37 @@ function ExecutePlayerRoll() // called by the dice function.
 {   
     // hide the dice so it can't be clicked again:
      THE_GAME.HideDiceButtons();
-    var dice_roll = 0;
+    var dice_roll_1 = 0;
+    var dice_roll_2 = 0;
 
-    if (player1.bike) {
-        dice_roll = Math.floor((Math.random() * 6) + 1);
-        dice_roll += Math.floor((Math.random() * 6) + 1);
-    } else {
-        dice_roll = Math.floor((Math.random() * 6) + 1);
+    // set first dice value:
+    dice_roll_1 = Math.floor((Math.random() * 6) + 1);
+    // do they have a bike, thus a second dice?
+    if (player1.bike == true) {
+        dice_roll_2 = Math.floor((Math.random() * 6) + 1);
     }
     
-    //debug code
+    //debug code, allows us to manually set the roll:
     if (setRoll > 0) {
         dice_roll = setRoll;
-        console.log("DEBUG: setting dice roll to " + dice_roll);
     }
     // end debug code
     
-    PassDiceRollToEdge(dice_roll);
-
     // delay doing anything until the dice animation has had time to finish:
-    intervalDiceAnimTimeDelay = setInterval(WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal, 1000, dice_roll);
+    intervalDiceAnimTimeDelay = setInterval( WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal, 750, dice_roll_1, dice_roll_2 );
 }
 
 
-function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal(dice_roll) {
+function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal( dice_roll_1 , dice_roll_2 ) {
+    // reset the interval
     clearInterval(intervalDiceAnimTimeDelay);
-    checkDiceRoll(dice_roll);
+    // check 
+    checkDiceRoll(dice_roll_1 + dice_roll_2);
+    
+    var bHasBike = player1.bike;
     // pass it to the new dice:
-    THE_GAME.ShowDiceBasedOnGlensValue(dice_roll);
+    console.log("PASSING VALUES TO SDBOGV: " + dice_roll_1 + "," + dice_roll_2 + "," + bHasBike);
+    THE_GAME.ShowDiceBasedOnGlensValue( dice_roll_1, dice_roll_2, bHasBike);
 }
 
 
@@ -1291,7 +1340,6 @@ function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal(dice_roll) {
 function checkGameOver() {
     
     var _gameOver = true;
-    console.log("CHECK GAME OVER. player1.hp = " + player1.hp);
 
     if (player1.hp < 1) {
      
@@ -1319,7 +1367,6 @@ function checkGameOver() {
     else {
         console.log("turn Number = " + turnNumber);
     }
-    
 }
 
 // checks for win condition
@@ -1345,7 +1392,6 @@ function playerDied() {
     UpdateHUD();
     
     THE_GAME.ShowObituary(_playerName, getDeathMessage());
-
 }
 
 function playerWon(){
@@ -1356,9 +1402,7 @@ function playerWon(){
     gameOver = true;
     UpdateHUD();
     
-    THE_GAME.ShowWinMessage(_playerName + " WINS!", getWinMessage());
-    
-       
+    THE_GAME.ShowWinMessage(_playerName + " WINS!", getWinMessage());  
 }
 
 function getDeathMessage()
@@ -1407,8 +1451,7 @@ function checkDiceRoll(diceRoll) {
     if(gameOver){
         return;   
     }
-  
-    //THE_GAME.HideDiceButton();
+
     UpdateUserMessage("YOU JUST ROLLED A " + diceRoll + ".");
     var msgDiceRoll = "";
     // check to see if we're on the first leg
@@ -1491,10 +1534,7 @@ function HideDice() {
 }
 
 function UpdatePlayerPositionAlongTimeline(num_of_secs) {
-    // alert('UpdatePlayerPositionAlongTimeline:' + num_of_secs);
     var _currentTimelineMilliseconds = num_of_secs * 1000;
-    // alert("seconds:" + _currentTimelineMilliseconds);
-    //THE_GAME.stop(_currentTimelineMilliseconds);
     THE_GAME.getComposition().getStage().SetNewTimelineStopPosition(num_of_secs);
     THE_GAME.play();
 }
@@ -1509,7 +1549,7 @@ function GetRandomGameTip() {
 
     swal("Random Game Tip!", arrGameTips[countryValue][startingGameTip]);
 }
-
+/* not used any more
 function MakeBoyOrGirl()
 {
     var playerSex = null;
@@ -1525,12 +1565,12 @@ function MakeBoyOrGirl()
     console.log('PLAYER SEX IS ' + playerSex);
     return playerSex;
 }
+*/
 
 
-
-function UpdateNameStuff()
+function UpdateNameStuff() // not called any more. let them click the avatar to choose one.
 {
-    
+    /*
     var randNum = Math.ceil(Math.random() * 3);
     var _sex = MakeBoyOrGirl();
     var _ethnix = Math.round(Math.random()); // females start at +2;
@@ -1557,37 +1597,36 @@ function UpdateNameStuff()
    // characterImg = characterBike;
     
     document.getElementById("character").src = characterImg;
-    //document.getElementById("character").src = characterBike;
+    document.getElementById("character").src = characterBike; // DANNY TODO:
     
    
     // update all the avatars to the current pick (inside EDGE):
     UpdatePlayerAvatar(characterImg);
-    
+    */
     
 }
 
 
 function SetCountrySelected(_countrySelected) {
-    
-    console.log('SET COUNTRY SELECTED');
-    
+  
     // entering new sweetalert to get user name:
     UserName();   
     
     bNameHasBeenEntered = true;    
     bCountryHasBeenSelected = true;
+    bCharacterWasChosen = true;
     
     SetInputDifficulty(_countrySelected);
     // update the stats accordingly:
     updateStats();
     //HideButtonChoices();
+    CallDebugFunctions();
 }
 
 function HideButtonChoices()
 {
      document.getElementById("column2").style.display = "none";
      document.getElementById("column2").style.visibility = "hidden";
-
 }
 
 function HideStarterContentAndShowTheGame()
@@ -1612,23 +1651,19 @@ function SetInputDifficulty(val) {
     
     getDifficulty(val);
     inputDifficulty = val;
-    //  alert("difficulty:"+inputDifficulty);
     var bgImage = "";
   //  var charImage = "";
     switch (val) {
         case "a":
             bgImage = "url('images/bgA.jpg')";
-            //charImage="url('images/asdf.jpg')";
             _message = msgA;
             break;
         case "b":
             bgImage = "url('images/bgB.jpg')";
-          //  charImage="url('images/asdf.jpg')";
              _message = msgB;
             break;
         case "c":
             bgImage = "url('images/bgC.jpg')";
-           // charImage="url('images/asdf.jpg')";
              _message = msgC;
             break;
         default:
@@ -1637,11 +1672,9 @@ function SetInputDifficulty(val) {
             break;
     }
 
-    document.getElementById("after").style.backgroundImage = bgImage;
+    //document.getElementById("after").style.backgroundImage = bgImage; // not swapping to background as we don't have rights to it
     document.getElementById("choice_description").textContent = _message;
-
     updateStats();
-    UpdateNameStuff();
 }
 
 function AreWeReadyToStart() {
@@ -1651,10 +1684,6 @@ function AreWeReadyToStart() {
         HideStartingInstructions();
         HideStarterContentAndShowTheGame();
     }
-    
-   
-//EnableDestination("store");
-//job|medical|store|toilet|school|farm|water
 }
 
 function UpdateHUD(life, water, glob, edu) {
@@ -1770,9 +1799,10 @@ function UpdatePopup(head_txt, body_txt, poptype) {
 }
 
 function ShowDestinations() {
+     
     THE_GAME.getComposition().getStage().ShowHudForNextChoice();
    // THE_GAME.DisableDestination("medical");
-
+    UpdatePlayerAvatar(characterBike);
 }
 
 function HideDestinations() {
@@ -1786,21 +1816,39 @@ function ShowMarket() {
 }
 
 function HideMarket() {
-    //THE_GAME.getComposition().getStage().HideHudAfterSelection();
      THE_GAME.$("hudMarket").hide();
 }
 
-
+function ChooseCharacter()
+{
+    // grab the next character image from our array
+    // of possible images:
+    bCharIndex++;
+    if(bCharIndex > cc.length - 1)
+    {
+        bCharIndex = 0;
+    }
+    
+    if(bCharacterWasChosen == false){
+     // advance to next   
+        characterImg = "images/" + cc[bCharIndex];
+        characterBike = "images/" + cb[bCharIndex];
+        
+        document.getElementById("character").src = characterImg;
+    }
+     UpdatePlayerAvatar(characterImg);
+}
+     
 function UserName()
 {
     var input_name =  swal({   
     title: "WELCOME!",   
-    text: "YOUR NAME:",   
+    text: "PLEASE ENTER YOUR NAME:",   
     type: "input",   
     showCancelButton: true,   
     closeOnConfirm: false,   
     animation: "slide-from-bottom",   
-    inputPlaceholder: "Luke Warmwater" }, 
+    inputPlaceholder: "Player One" }, 
     function(inputValue){   
         if (inputValue === false) 
             return false;      
@@ -1815,6 +1863,7 @@ function UserName()
             swal("Welcome to the Global Life Game, " + inputValue.toUpperCase(), "Make good choices!", "success");
             document.getElementById("startButton").style.display = "block";
             document.getElementById("startButton").style.visibility = "visible";   
+            UpdatePlayerAvatar(characterImg);
             HideButtonChoices();
         }
     });   

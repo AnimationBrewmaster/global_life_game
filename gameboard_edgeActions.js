@@ -16,21 +16,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
          if(bStopDice == 1)
          sym.stop();
-
+      
       });
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2000, function(sym, e) {
          if(bStopDice == 2)
          sym.stop();
-
+      
       });
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3000, function(sym, e) {
          if(bStopDice == 3)
          sym.stop();
-
+      
       });
       //Edge binding end
       
@@ -42,28 +42,28 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // whichever path we're currently on:
          DestinationFunction();
          console.log('calling DestinationFunction() from Edge');
-
+      
       });
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5000, function(sym, e) {
          if(bStopDice == 5)
          sym.stop();
-
+      
       });
       //Edge binding end
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 6000, function(sym, e) {
          if(bStopDice == 6)
          sym.stop();
-
+      
       });
       //Edge binding end
       
         Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7000, function(sym, e) {
          if(bStopDice == 7)
          sym.stop();
-
+      
       });
       //Edge binding end
       
@@ -75,10 +75,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.stop();	
          	sym.ShowHudForNextChoice();
          }
-         
-         
-         
-
+      
+      
+      
+      
       });
       //Edge binding end
       
@@ -89,16 +89,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       
-
+      
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          if(bStopDice < 1)
          sym.stop();
-
+         if(DoesPlayerHaveABike == true)
+         {
+         	// make sure we show the bike
+         	document.getElementById("character").src = characterBike;
+            characterImg = characterBike;
+      
+            // also make sure we are showing the second dice
+            ShowSecondDice();
+         }
+      
       });
       //Edge binding end
-
       
-
+      
+      
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
          // COMP READY:
          // bStopDice is the var we check against to stop the dice rolling on the correct number.
@@ -148,7 +157,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		break;
          	}
          
-         	console.log('sym.showPopup from Edge compready');
+         	//console.log('sym.showPopup from Edge compready');
          	sym.$("mcPopup").show(); 
          	sym.getSymbol("mcPopup").play();
          
@@ -156,7 +165,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.ShowHudForNextChoice = function()
          {
-         	console.log('sym.ShowHudForNextChoice() from Edge compready');
+         	//console.log('sym.ShowHudForNextChoice() from Edge compready');
          	sym.$("hudNextDest").show();
          	sym.getSymbol("hudNextDest").play(0);
          }
@@ -164,25 +173,25 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.HideHudAfterSelection = function()
          {
-         	console.log('sym.HideHudAfterSelection from Edge compready');
+         	//console.log('sym.HideHudAfterSelection from Edge compready');
          	sym.getSymbol("hudNextDest").play(300);
          }
          
          sym.ShowMarket = function()
          {
-         	console.log('ShowMarket from Edge compready');
+         	//console.log('ShowMarket from Edge compready');
          	sym.$("hudMarket").show(); 
          }
          
          sym.HideMarket = function()
          {
-         	console.log('HideMarket from Edge compready');
+         	//console.log('HideMarket from Edge compready');
          	sym.$("hudMarket").hide(); 
          }
          
          UpdatePlayerStageName = function(nom)
          {
-         	console.log('UpdatePlayerStageName from Edge compready');
+         	//console.log('UpdatePlayerStageName from Edge compready');
          	// this is the big version
          	sym.$("txtUsername").html(nom);	
          	// and the name/status at the very bottom too:
@@ -190,13 +199,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          	// update obit text too
          	sym.getSymbol("obit").$("txtObit").html(nom + " died. RIP.");
-         
-         
          }
          
          UpdatePlayerAvatar = function(avtr)
          {
-         	console.log('UpdatePlayerAvatar; called from EDGE:' + avtr);
+         	//console.log('EA.UpdatePlayerAvatar; called from EDGE:' + avtr);
          	//_bike = avtr = "_bike"
          	//sym.$("").src = avtr;
          	sym.$("charJob").attr("src", avtr);
@@ -207,16 +214,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.$("charSchool").attr("src", avtr);
          	sym.$("charFarm").attr("src", avtr);
          	sym.getSymbol("hudNextDest").$("character").attr("src", avtr);
-         	// and the bike versions:
-         	/*
-         	sym.$("bikeJob").attr("src", bike);
-         	sym.$("bikeMed").attr("src", bike);
-         	sym.$("bikeMarket").attr("src", bike);
-         	sym.$("bikeToilet").attr("src", bike);
-         	sym.$("bikeWater").attr("src", bike);
-         	sym.$("bikeSchool").attr("src", bike);
-         	sym.$("bikeFarm").attr("src", bike);
-         	*/
          }
          
          UpdateUserMessage = function(msg)
@@ -227,17 +224,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getSymbol("mcUserMessage").play(0);
          }
          
-         // write to our global bStopDice
-         sym.SetNumberDiceShouldStopOn = function(newrollamt)
-         {
-         	//console.log('SetNumberDiceShouldStopOn:' + newrollamt);
-         	sym.ShowDiceBasedOnGlensValue(newrollamt);
-         	//StartDice();
-         }
-         
          sym.SetNewTimelineStopPosition = function(val)
          {
-         	//console.log('SetNewTimelineStopPosition');
+         	console.log('EA.SetNewTimelineStopPosition');
          	bStopDice = val;
          }
          
@@ -293,7 +282,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		default :
          		_nextBg = undefined;
          		break;
-         
          	}
          
          	if(_nextBg != undefined){
@@ -301,159 +289,120 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	}	
          }
          
-         
-         
          // figure out what numbers to show based on what they rolled
-         sym.ShowDiceBasedOnGlensValue = function(val)
+         sym.ShowDiceBasedOnGlensValue = function( dice1, dice2, bPlayerHasBike )
          {
+         //console.log("EA.ShowDiceBasedOnGlensValue() - DICE 1 IS " + dice1 + ", DICE 2 IS " + dice2 + ", AND bPlayerHasBike IS " + bPlayerHasBike);
+         	var _dice1 = dice1;
+         	var _dice2 = dice2;
          
-         //alert('ShowDiceBasedOnGlensValue:' + val);
-         
-         	var diceTotal = val;
+         	var diceTotal = _dice1 + _dice2;
+         	console.log("USER ROLLED: " + diceTotal);
          	var _diceStopsAt1 = "zero"; // zero is hidden
          	var _diceStopsAt2 = "zero";
          
-         	// these next bools are used to show an alternate dice roll, ie if they roll an 8 we use
-         	// this to show them a 3+5 one time and a 4+4 another, then switch it back next time they roll it
-         	var b7 = false;
-         	var b8 = false;
-         	var b9 = false;
-         	var b10 = false;
-         	var b11 = false;
-         	var b12 = false;
+         	/*
+         	if we have a bike we need to show a second dice for these values
+         	2,3,4,5,6,7,8,9,10,11,12
          
-         	switch(diceTotal){
-         		case 1: 
+         	if not we need to show one dice for these values
+         	1,2,3,4,5,6
+         	*/	
          
-         		// set the rollto number for the first one
+         	if(bPlayerHasBike == true)
+         	{
+         	console.log("EDGE THINKS PLAYER HAS BIKE RIGHT NOW");
+         		switch(diceTotal){
+         			case 2 :
+         			_diceStopsAt1 = "one";
+         			_diceStopsAt2 = "one";
+         			break;
+         
+         			case 3 :
+         			_diceStopsAt1 = "two";
+         			_diceStopsAt2 = "one";
+         			break;
+         
+         			case 4 :
+         			_diceStopsAt1 = "two";
+         			_diceStopsAt2 = "two";
+         			break;
+         
+         			case 5 :
+         			_diceStopsAt1 = "two";
+         			_diceStopsAt2 = "three";
+         			break;
+         
+         			case 6 :
+         			_diceStopsAt1 = "three";
+         			_diceStopsAt2 = "three";
+         			break;
+         
+         			case 7 :
+         			_diceStopsAt1 = "four";
+         			_diceStopsAt2 = "three";
+         			break;
+         
+         			case 8 :
+         			_diceStopsAt1 = "three";
+         			_diceStopsAt2 = "five";
+         			break;
+         
+         			case 9 :
+         			_diceStopsAt1 = "four";
+         			_diceStopsAt2 = "five";
+         			break;
+         
+         			case 10 :
+         			_diceStopsAt1 = "six";
+         			_diceStopsAt2 = "four";
+         			break;
+         
+         			case 11 :
+         			_diceStopsAt1 = "five";
+         			_diceStopsAt2 = "six";
+         			break;
+         
+         			case 12 :
+         			_diceStopsAt1 = "six";
+         			_diceStopsAt2 = "six";
+         			break;
+         
+                    default :
+                    console.log("BAD SWITCH IN EA.ShowDiceBasedOnGlensValue");
+                    break;
+         		}
+         	} else {
+         	// else player has no bike, only one dice used:
+         		HideSecondDice();
+         		console.log("EDGE THINKS PLAYER HAS NO BIKE RIGHT NOW");
+         
+         		switch(diceTotal){
+         		case 1 :
          		_diceStopsAt1 = "one";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 2: 
-         		// set the rollto number for the first one
+         		case 2 :
          		_diceStopsAt1 = "two";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 3: 
-         		// set the rollto number for the first one
+         		case 3 :
          		_diceStopsAt1 = "three";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 4: 
-         		// set the rollto number for the first one
+         		case 4 :
          		_diceStopsAt1 = "four";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 5: 
-         		// set the rollto number for the first one
+         		case 5 :
          		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 6: 
-         		// set the rollto number for the first one
+         		case 6 :
          		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "zero";
-         		HideSecondDice();
          		break;
          
-         		case 7: 
-         		ShowSecondDice();
-         		// set the rollto number for the first one
-         		if(b7){
-         		_diceStopsAt1 = "three";
-         		_diceStopsAt2 = "four";
-         		b7 = false;
-         		} else {
-         		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "two";
-         		b7 = true;
          		}
-         		break;
-         
-         		case 8: 
-         		ShowSecondDice();
-         		// set the rollto number for the first one
-         		if(b8){
-         		_diceStopsAt1 = "four";
-         		_diceStopsAt2 = "four";
-         		b8 = false;
-         		} else {
-         		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "three";
-         		b8 = true;
-         		}
-         		break;
-         
-         		case 9: 
-         		ShowSecondDice();
-         		// set the rollto number for the first one
-         		if(b9){
-         		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "four";
-         		b9 = false;
-         		} else {
-         		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "three";
-         		b9 = true;
-         		}
-         		break;
-         
-         		case 10: 
-         		ShowSecondDice();
-         		// set the rollto number for the first one
-         		if(b10){
-         		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "five";
-         		b10 = false;
-         		} else {
-         		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "four";
-         		b10 = true;
-         		}
-         		break;
-         
-         		case 11: 
-         		ShowSecondDice();
-         		// set the rollto number for the first one
-         		if(b11){
-         		_diceStopsAt1 = "five";
-         		_diceStopsAt2 = "six";
-         		b11 = false;
-         		} else {
-         		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "five";
-         		b11 = true;
-         		}
-         		break;
-         
-         		case 12: 
-         		ShowSecondDice();
-         		// set the rollto number for both. redundant in this case but
-         		// that never stopped me before.
-         		if(b12){
-         		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "six";
-         		b12 = false;
-         		} else {
-         		_diceStopsAt1 = "six";
-         		_diceStopsAt2 = "six";
-         		b12 = true;
-         		}
-         		break;
-         
-         		default:
-         		alert(this + 'recd a weird value in a switch statement, look into it then find a way to blame on Glen.');
-         		break;
          	}
          	sym.setVariable("diceStopsAt1", _diceStopsAt1);
          	sym.setVariable("diceStopsAt2", _diceStopsAt2); 
@@ -461,16 +410,14 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          HideSecondDice = function() // not a sym.function because it gets called locally in this file
          {
-         //	console.log("SHOULD BE HIDING 2ND DICE RIGHT NOW");
-         
+         	console.log("EA.SHOULD BE HIDING 2ND DICE RIGHT NOW");
          	sym.getSymbol("dicePair").$("dice_symbol_2").hide();
          	sym.getSymbol("dicePair").$("shadow2").hide();
-         
-         //	console.log("2ND should be hidden now");
          }
          // same as above:
          ShowSecondDice = function()
          {
+         	console.log("SHOW SECOND DICE");
          	sym.getSymbol("dicePair").$("dice_symbol_2").show();
          	sym.getSymbol("dicePair").$("shadow2").show();
          }
@@ -517,14 +464,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.HideAllBikes = function()
          {
-         	// Hide all the bikes
-         	sym.$("bikeJob").hide();
-         	sym.$("bikeMed").hide();
-         	sym.$("bikeMarket").hide();
-         	sym.$("bikeToilet").hide();
-         	sym.$("bikeWater").hide();
-         	sym.$("bikeSchool").hide();
-         	sym.$("bikeFarm").hide();
          	// and SHOW the avatar
          	sym.$("charJob").show();
          	sym.$("charMed").show();
@@ -537,14 +476,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          sym.ShowAllBikes = function()
          {
-         	// Hide all the bikes
-         	sym.$("bikeJob").show();
-         	sym.$("bikeMed").show();
-         	sym.$("bikeMarket").show();
-         	sym.$("bikeToilet").show();
-         	sym.$("bikeWater").show();
-         	sym.$("bikeSchool").show();
-         	sym.$("bikeFarm").show();
          	// now that we're showing Bike Avatar we need 
          	// to hide the old avatar
          	sym.$("charJob").hide();
@@ -651,62 +582,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	break;
          
          	}
-         
-         }
-         
-         
-         
-         InvBuyFood = function()
-         {
-         alert("USE FOOD");
-         }
-         
-         InvBuySoap = function()
-         {
-         	alert("USE SOAP");
-         }
-         
-         InvBuyTablet = function()
-         {
-         	alert("USE TABLET");
-         }
-         
-         InvBuyBucket = function()
-         {
-         	alert("USE BUCKET");
-         }
-         
-         InvBuyKit = function()
-         {
-         	alert("USE KIT");
-         }
-         
-         InvBuyFilter = function()
-         {
-         	alert("USE FILTER");
-         }
-         
-         InvBuyBike = function()
-         {
-         	alert("USE BIKE");
-         }
-         
-         InvBuyPlumbing = function()
-         {
-         	alert("USE PLUMBING");
-         }
-         
-         InvBuyMedicine = function()
-         {
-         	alert("USE MEDICINE");
          }
          
          InvUpdateInventory = function(inventoryTotals)
          {
          	sym.getSymbol("InventoryItems").$("InventoryTotals").html(inventoryTotals);
          }
-         
-         
          
          // don't let the dice roll yet:
          sym.StopDice();
@@ -715,86 +596,86 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          // hide the dice button so it can't be clicked
          sym.HideDiceButtons();
          //sym.ShowAllBikes();
-         sym.HideAllBikes();
+         //sym.HideAllBikes();
          //HideSecondDice();
 
       });
       //Edge binding end
-
       
-
       
-
       
-
       
-
+      
+      
+      
+      
+      
       Symbol.bindElementAction(compId, symbolName, "${clicker}", "click", function(sym, e) {
          // rewind the clip so it plays:
          sym.getSymbol("dicePair").getSymbol("dice_symbol_1").play(0);
          sym.getSymbol("dicePair").getSymbol("dice_symbol_2").play(0);
          sym.getSymbol("dicePair").play(0);
-         
+      
          ExecutePlayerRoll();
          //sym.StartDice();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseover", function(sym, e) {
          sym.getSymbol("btnTips").stop("over");
-         
-
+      
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "mouseout", function(sym, e) {
          sym.getSymbol("btnTips").stop("out");
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "click", function(sym, e) {
          GetRandomGameTip();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${clicker}", "mouseover", function(sym, e) {
          sym.getSymbol("mcHUD").getSymbol("rectButton").stop("over");
-         
-
+      
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${clicker}", "mouseout", function(sym, e) {
          // NOTE: clicker is a transparent clip placed over the rectangular dice button, NOT THE RED BUTTON ITSELF.
          // crappy fix to solve issue with button text getting selected during clicks, irritating.
          sym.getSymbol("mcHUD").getSymbol("rectButton").stop("out");
          sym.StopFlashDiceButton();
-
+      
       });
       //Edge binding end
-
       
-
+      
+      
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "click", function(sym, e) {
          sym.getSymbol("InventoryItems").play(1);
          sym.$("InventoryItems").show();
-
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseover", function(sym, e) {
          sym.getSymbol("btnInventory").play("over");
-         
-
+      
+      
       });
       //Edge binding end
-
+      
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseout", function(sym, e) {
          sym.getSymbol("btnInventory").play("out");
-
+      
       });
       //Edge binding end
 
@@ -1914,17 +1795,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 931, function(sym, e) {
          //alert(4);
          //alert("DSA:"+diceStopsAt1);
-         //alert('stopping dice 1 at ' + sym.getParentSymbol().getVariable("diceStopsAt1"));
-         //alert('stopping dice 2 at ' + sym.getParentSymbol().getVariable("diceStopsAt2"));
+         console.log('stopping dice 1 at ' + sym.getParentSymbol().getVariable("diceStopsAt1"));
+         console.log('stopping dice 2 at ' + sym.getParentSymbol().getVariable("diceStopsAt2"));
          
          sym.stop();
          var _stopOn1 = sym.getParentSymbol().getVariable("diceStopsAt1");
          var _stopOn2 = sym.getParentSymbol().getVariable("diceStopsAt2");
          
-         //alert(typeof(_stopOn1)); // numner
-         
-         //alert(_stopOn1 + "/" + _stopOn2);
-         // this is bad data.
          sym.getSymbol("dice_symbol_1").stop( _stopOn1 );
          sym.getSymbol("dice_symbol_2").stop( _stopOn2 );
          sym.play();

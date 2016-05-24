@@ -69,14 +69,20 @@
          <img src="images/character.png" id="character"> 
         <br>
           <div id="country_type"> 
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a">A (Zimbabwe) </button>
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> B (Syria)</button>
-        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> C (Afghanistan)</button>
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"><span class="reddish">A</span> (Zimbabwe) </button>
+        
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> <span class="yellowish">B</span> (Syria)</button>
+        
+        <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> <span class="greenish">C</span> (Afghanistan)</button>
+        
       </div>
          <div id="choice_description"> 
-            <ul><li>A = EASIER (Developed Nation)</li>
-                <li>B = CHALLENGING (Emerging Nation)</li>
-                <li>C = DIFFICULT (Developing Nation)</li>
+            <ul><li class="reddish">A = EASIER (Developed Nation)
+                <div class="start_description">Health:30 | Water:30 | Education:14 | Game Bucks:$25</div>
+                </li>
+                <li class="yellowish">B = CHALLENGING (Emerging Nation)
+                <div class="start_description">Health:20 | Water:20 | Education:10 | Game Bucks:$12</div></li>
+                <li class="greenish">C = DIFFICULT (Developing Nation)<div class="start_description">Health:15 | Water:15 | Education:3 | Game Bucks:$2</div></li>
         </ul>
     </div>
   </div>

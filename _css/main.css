@@ -268,8 +268,8 @@ styles for the Start Game form:
 .start-button {
     padding:40px;
     margin:40px;
-	border: 1px solid #ff0000;
-	background: #ff0000;
+	border: 1px solid #26e626;
+	background: #12bc12;
 	color: white;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -281,4 +281,43 @@ styles for the Start Game form:
 	padding: 8.5px 18px;
 	font-size: 400%;
 	text-decoration: none;
+}
+
+#character{
+    cursor: pointer;    
+}
+#choice_description{
+    font-color:#599bb3;
+    font-weight: bold;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.7;
+}
+#choice_description ul li{
+    padding-bottom:12px;   
+}
+
+.reddish{
+    color:red;
+}
+.yellowish{
+    color:yellow;
+}
+.greenish{
+    color:forestgreen;
+}
+
+.start_description{
+    font-size:12px;
+    color:white;
+    font-color:#ccc;
+    opacity: 80%;
+    padding:6px;
+    margin:0px;
+    width:360px;
+    border:1px solid #FFF;
+    background-color:#599bb3;
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
