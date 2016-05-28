@@ -50,6 +50,7 @@ var destBlocked = ""; // destination that will be blocked
 var blockedFunction = ""; // destination function that can not be called 
 var blockedTurns = 0; // number of turns left that userr is blocked from destination
 var turnNumber = 0; // number of turns played (currently only used for debugging)
+var destinationBlocked = false; // set to true if one or more destination are being blocked
 var bDest = {}; // dictionary to hold blocked destinations
 var bsfBlocked = false; // varaible for special card case requiring tracking
 
@@ -644,7 +645,6 @@ function getSchool() {
 }
 
 // gets and checks user input for schooling spending and updates player stats
-// TODO - have function call EDGE interface, send possbile values and recieve players input
 function buySchool() {
     var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?", Math.round(Math.random() * 3));
     var bucksSpent = parseInt(schoolBuy);
@@ -693,8 +693,7 @@ function buyNewStuff() {
     // our global called stuffBuy holds anything the user has clicked in the market
     if (stuffBuy === "") {
         UpdateUserMessage('nothing chosen to buy');
-        
-        // TODO: get it to reopen the window? will this ever get called empty? - set stuffBuy to "" when transaction rejected to avoid infinite recursion loop
+
         return;
     }
 
@@ -799,9 +798,10 @@ function buyNewStuff() {
             UpdateUserMessage("You bought nothing and spent 0 Global Bucks.\n" + itemMessage);
             break;
 
+		// Does this get called?
         default:
             UpdateUserMessage("Bad input, please try again");
-            OpenMarketHud(); // TODO: does not appear to re-open the market - continues on with the game
+            OpenMarketHud(); 
             break;
     }
 }
@@ -823,7 +823,9 @@ function checkout(item, value, message) {
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
     stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
-    buyNewStuff();
+    
+    stuffBuy(); // TODO - this doesn't work - it loops out to game play cycle - can't return to store if transaction rejected due to current game loop design.
+    console.log("return to buy screen");
 }
 
 function checkPowerUp(powerUp) {
@@ -955,11 +957,12 @@ function specialCards(fnstring) {
 			gotSick();
 			break;
 			
-		case "gainEductionalLevel":
+		case "gainEducationLevel":
+			console.log("gaining education level - please stand by");
 			gainEducationLevel();
 			break;
 			
-        case "gain2EductionalLevels":
+        case "gain2EducationLevels":
             gainEducationLevel();
             gainEducationLevel();
             break;	
@@ -999,6 +1002,7 @@ function specialCards(fnstring) {
             
         case "educationBlock3":
             blockDestination("school", 3);
+            blockDestination("job", 3);
             //educationBlock(3);
             break;          
             
@@ -1119,14 +1123,15 @@ function bsfBlock() {
 }
 
 function blockDestination(dest, val){
+	destinationBlocked = true;
     console.log(bDest);
     bDest[dest] += val;
     console.log(dest + " blocked for " + val + " turns!");
     console.log(bDest);
 }
 
-// TODO - test function more fully
 function modifyEducationLevel(direction){
+	console.log("modifying Education Level - please standby");
 	if (player1.ep > 30) {
         if (direction < 0) {
         	player1.ep = 29;
@@ -1203,7 +1208,6 @@ function impactStats(hp, wp, ep, gb) {
 }
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
-// TODO - needs to add power ups and down turn impacts - done?
 function travelToll(numberOfTurns) {
     if (freeTravel > 0) {
         freeTravel -= 1;
@@ -1243,16 +1247,23 @@ function checkPowerUps() {
 }
 
 function checkBlocks() {
-    // TODO - this should work but is quite inefficient - should only unblock when we know it was positive earlier
-    for (var key in bDest) {
-        var value = bDest[key];
-        if (value > 0) {
-            disableDestination(key);
-            bDest[key]--;
-        }
-        else {
-            enableDestination(key);
-        }       
+    if (destinationBlocked) {
+    	console.log("destination is blocked - checking for unblocks");
+    	destinationBlocked = false;
+	    for (var key in bDest) {
+	        var value = bDest[key];
+	        if (value > 0) {
+	            disableDestination(key);
+	            bDest[key]--;
+	            destinationBlocked = true;
+	        }
+	        else {
+	            enableDestination(key);
+	        }       
+	    }
+    }
+    else {
+    	console.log("no blocked destination - no checking required");
     }
     console.log(bDest); 
 }
@@ -1597,8 +1608,7 @@ function UpdateNameStuff() // not called any more. let them click the avatar to 
    // characterImg = characterBike;
     
     document.getElementById("character").src = characterImg;
-    document.getElementById("character").src = characterBike; // DANNY TODO:
-    
+    document.getElementById("character").src = characterBike;
    
     // update all the avatars to the current pick (inside EDGE):
     UpdatePlayerAvatar(characterImg);
@@ -1620,7 +1630,7 @@ function SetCountrySelected(_countrySelected) {
     // update the stats accordingly:
     updateStats();
     //HideButtonChoices();
-    CallDebugFunctions();
+    //CallDebugFunctions();
 }
 
 function HideButtonChoices()
