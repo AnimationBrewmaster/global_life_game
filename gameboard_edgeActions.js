@@ -139,6 +139,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		case "red" :
          		// hide the green div
          
+         		// Play an audio track 
+         		//sym.$("home02")[0].play();
+         
          		// Hide an element 
          		sym.getSymbol("mcPopup").$("mcGreen").hide();
          		sym.getSymbol("mcPopup").$("mcRed").show();
@@ -149,6 +152,9 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          		// hide the red div
          		sym.getSymbol("mcPopup").$("mcRed").hide();
          		sym.getSymbol("mcPopup").$("mcGreen").show();
+         
+         		// happy audio
+         		//sym.$("challenge01")[0].play();
          		// then play
          		break;
          
@@ -792,11 +798,51 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          // insert code here
+         sym.getComposition().getStage().$("challenge01")[0].play();
+
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${SCRIM}", "click", function(sym, e) {
          return;
+
+      });
+      //Edge binding end
+
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
+         // insert code to be run at timeline play here
+         // Play an audio track 
+         // mute all sounds
+         //$("audio").prop("muted", true);
+         // Pause all audio tracks. the hud buttons will start them again as pressed.
+         sym.getComposition().getStage().$("farm01")[0].pause();
+         sym.getComposition().getStage().$("farm02")[0].pause();
+         sym.getComposition().getStage().$("home01")[0].pause();
+         sym.getComposition().getStage().$("home02")[0].pause();
+         sym.getComposition().getStage().$("job01")[0].pause();
+         sym.getComposition().getStage().$("medical01")[0].pause();
+         sym.getComposition().getStage().$("partnership01")[0].pause();
+         sym.getComposition().getStage().$("partnership02")[0].pause();
+         sym.getComposition().getStage().$("school01")[0].pause();
+         sym.getComposition().getStage().$("school02")[0].pause();
+         sym.getComposition().getStage().$("store01")[0].pause();
+         sym.getComposition().getStage().$("store02")[0].pause();
+         sym.getComposition().getStage().$("store03")[0].pause();
+         sym.getComposition().getStage().$("store04")[0].pause();
+         sym.getComposition().getStage().$("toilet01")[0].pause();
+         sym.getComposition().getStage().$("toilet02")[0].pause();
+         sym.getComposition().getStage().$("water01")[0].pause();
+         sym.getComposition().getStage().$("water02")[0].pause();
+         sym.getComposition().getStage().$("challenge01")[0].pause();
+         // play challenge audio:
+         sym.getComposition().getStage().$("challenge01")[0].play(0);
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${simpleButton2}", "click", function(sym, e) {
+         sym.getComposition().getStage().$("challenge01")[0].pause();
+         sym.getSymbolElement().hide();
 
       });
       //Edge binding end
@@ -1415,6 +1461,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("farm");
          SetHolderFunction(getFood);
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("farm01")[0].play();
 
       });
       //Edge binding end
@@ -1440,6 +1488,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("school");
          SetHolderFunction(getSchool);
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("school01")[0].play();
 
       });
       //Edge binding end
@@ -1462,6 +1512,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${btnWater}", "click", function(sym, e) {
          //getWater();
+         
+         // play dedicated sound:
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("water01")[0].play();
+         
          sym.getSymbolElement().hide();
           SetChosenPath("water");
          SetHolderFunction(getwater);
@@ -1492,6 +1547,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("medical");
          SetHolderFunction(getMedical);
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("medical01")[0].play();
 
       });
       //Edge binding end
@@ -1516,6 +1573,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
           SetChosenPath("job");
          SetHolderFunction(getJob);
          
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("job01")[0].play();
 
       });
       //Edge binding end
@@ -1542,7 +1601,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("store");
          SetHolderFunction(getStore);
-         
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("store01")[0].play();
 
       });
       //Edge binding end
@@ -1568,6 +1628,37 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbolElement().hide();
           SetChosenPath("toilet");
          SetHolderFunction(getToilet);
+         $("audio").prop("muted", false);
+         sym.getComposition().getStage().$("toilet01")[0].play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
+         // mute all sounds
+         $("audio").prop("muted", true);
+         // Pause all audio tracks. the hud buttons will start them again as pressed.
+         sym.getComposition().getStage().$("challenge01")[0].pause();
+         sym.getComposition().getStage().$("farm01")[0].pause();
+         sym.getComposition().getStage().$("farm02")[0].pause();
+         sym.getComposition().getStage().$("home01")[0].pause();
+         sym.getComposition().getStage().$("home02")[0].pause();
+         sym.getComposition().getStage().$("job01")[0].pause();
+         sym.getComposition().getStage().$("medical01")[0].pause();
+         sym.getComposition().getStage().$("partnership01")[0].pause();
+         sym.getComposition().getStage().$("partnership02")[0].pause();
+         sym.getComposition().getStage().$("school01")[0].pause();
+         sym.getComposition().getStage().$("school02")[0].pause();
+         sym.getComposition().getStage().$("store01")[0].pause();
+         sym.getComposition().getStage().$("store02")[0].pause();
+         sym.getComposition().getStage().$("store03")[0].pause();
+         sym.getComposition().getStage().$("store04")[0].pause();
+         sym.getComposition().getStage().$("toilet01")[0].pause();
+         sym.getComposition().getStage().$("toilet02")[0].pause();
+         sym.getComposition().getStage().$("water01")[0].pause();
+         sym.getComposition().getStage().$("water02")[0].pause();
+         
+         
          
 
       });

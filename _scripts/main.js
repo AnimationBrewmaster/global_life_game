@@ -425,7 +425,7 @@ function updateStats() {
         inventoryTally += "NO";
     }
     
-    InvUpdateInventory(inventoryTally);
+    //InvUpdateInventory(inventoryTally); // GLEN, THIS WAS CAUSING AN ERROR.
 }
 
 
@@ -1773,18 +1773,19 @@ function CallAvatarPositioningFunction() {
 }
 
 function UpdateLife() {
-THE_GAME.getSymbol("mcHUD").$("labelLife").html(Math.round(objLife.newScore));
+    THE_GAME.getSymbol("mcHUD").$("labelLife").html(Math.round(objLife.newScore));
 }
 
-function UpdateWater() {    THE_GAME.getSymbol("mcHUD").$("labelWater").html(Math.round(objWater.newScore));
+function UpdateWater() {
+    THE_GAME.getSymbol("mcHUD").$("labelWater").html(Math.round(objWater.newScore));
 }
 
 function UpdateGlobal() {
-THE_GAME.getSymbol("mcHUD").$("labelGlobal").html(Math.round(objGlobal.newScore));
+    THE_GAME.getSymbol("mcHUD").$("labelGlobal").html(Math.round(objGlobal.newScore));
 }
 
 function UpdateEducation() {
- THE_GAME.getSymbol("mcHUD").$("labelEducation").html(Math.round(objEdu.newScore));
+    THE_GAME.getSymbol("mcHUD").$("labelEducation").html(Math.round(objEdu.newScore));
 }
 
 function UpdatePlayerName(playername) {
@@ -1812,7 +1813,7 @@ function ShowDestinations() {
      
     THE_GAME.getComposition().getStage().ShowHudForNextChoice();
    // THE_GAME.DisableDestination("medical");
-    UpdatePlayerAvatar(characterBike);
+    UpdatePlayerAvatar(characterImg);
 }
 
 function HideDestinations() {
