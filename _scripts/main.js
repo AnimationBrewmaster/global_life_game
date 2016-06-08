@@ -159,8 +159,6 @@ console.log(bDest);
 //checkBlocks();
 
 function InitGame() {
-    
-    console.log("MAINJS.InitGame");
     THE_GAME = AdobeEdge.getComposition('EDGE-581531069').getStage();
     createInventory();
     
@@ -172,7 +170,7 @@ function InitGame() {
 
 function CallDebugFunctions()
 {
-    console.log("MAINJS.CallDebugFunctions");
+    
     player1.bike = true;
      // DEBUG STUFF. CALLED AS SOON AS USER CHOOSES A COUNTRY.
     if(bCharacterWasChosen == true)
@@ -187,7 +185,7 @@ function CallDebugFunctions()
 
 function SetChosenPath(which_path) {
     //var selectedPathEdgeFile; // getMedical, getJob, getStore, getToilet, getfood, getSchool, getWater
-console.log("MAINJS.SetChosenPath");
+
     switch (which_path) {
         case "medical":
             pathDescription = "Go here to gain health points and cure illnesses. For every Global Buck you spend, you 2 Health Points (max 10 points per visit). You can also purchase 1 dose of medication per visit.";
@@ -227,7 +225,6 @@ console.log("MAINJS.SetChosenPath");
 
 // sets player onject stats based on user input choice of country card
 function getDifficulty(value) {
-    console.log("MAINJS.getDifficulty");
     //inputDifficulty = inputDifficulty.toLowerCase();
     switch (value) {
 
@@ -284,7 +281,6 @@ function getDifficulty(value) {
 
 // creates blank inventory
 function createInventory() {
-    console.log("MAINJS.createInventory");
     player1.soap = false;
     player1.tablet = false;
     player1.bucket = false;
@@ -298,7 +294,7 @@ function createInventory() {
 
 // goes through inventory list and displays items that are held
 function displayInventory() {
-    console.log("MAINJS.displayInventory");
+    console.log("displaying inventory");
     var currentItems = [];
     for (var key in player1) {
         if (player1[key]) {
@@ -314,13 +310,12 @@ function displayInventory() {
 // sends player stats to console
 function playerDetails() {
     // display information about player
-    console.log("MAINJS.playerDetails");
     console.log("Current Stats \n" + this.name + "\nHealth: " + this.hp + "\nWater: " + this.wp + "\nEducation: " + this.ep + "\nGlobal Bucks: " + this.gb);
 }
 
 function DoesPlayerHaveABike()
 {
-   console.log("MAINJS.DoesPlayerHaveABike");
+   
     
     if(player1.bike == true){
         bPlayerHasBike = true;
@@ -331,7 +326,6 @@ function DoesPlayerHaveABike()
 }
 
 function HideStartingInstructions() {
-    console.log("MAINJS.HideStartingInstructions");
     console.log("HideStartingInstructions()");
     document.getElementById('Stage').style.position = "absolute";
     document.getElementById('Stage').style.display = "visible";
@@ -342,7 +336,6 @@ function HideStartingInstructions() {
 
 // update the screen displayed game stats
 function updateStats() {
-    console.log("MAINJS.updateStats");
     // this appears to be the replacement candidate for takeTurn() so I'll check for cards here.
     //checkCard(); --- was moved to checkDiceRoll function - its called here to often.
     // pass to Danny's side:
@@ -440,7 +433,6 @@ function updateStats() {
 
 // actions that take place when food destination is selected
 function getFood() {
-    console.log("MAINJS.getFood");
    // SetChosenPath("farm");
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
@@ -460,7 +452,6 @@ function getFood() {
 
 // actions that take place when water destination is selected
 function getwater() {
-    console.log("MAINJS.getwater");
    // SetChosenPath("water");
     var message = "";
     var roll = Math.floor((Math.random() * 6) + 1);
@@ -488,7 +479,6 @@ function getwater() {
 
 // actions that take place when toilet destination is selected
 function getToilet() {
-    console.log("MAINJS.getToilet");
    // SetChosenPath("toilet");    
     var roll = Math.floor((Math.random() * 6) + 1);
     freeTravel += roll;
@@ -505,7 +495,6 @@ function getToilet() {
 
 // actions that take place when job destination is selected
 function getJob() {
-    console.log("MAINJS.getJob");
    // SetChosenPath("job");
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
@@ -551,7 +540,6 @@ function getJob() {
 
 // actions that take place when medical destination is selected
 function getMedical() {
-    console.log("MAINJS.getMedical");
     //SetChosenPath("medical");
     if (sick || sickWater) {
         if (player1.gb > 9) {
@@ -595,7 +583,7 @@ function getMedical() {
 
 // get and check user input for buying medicine and then update player stats
 function buyMedicine() {
-console.log("MAINJS.buyMedicine");
+
     var medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
     medicineBuy = Number(medicineBuy);
 
@@ -648,7 +636,6 @@ console.log("MAINJS.buyMedicine");
 
 // actions that take place when school destination is selected
 function getSchool() {
-    console.log("MAINJS.getSchool");
    // SetChosenPath("school");
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy an education.";
@@ -659,7 +646,6 @@ function getSchool() {
 
 // gets and checks user input for schooling spending and updates player stats
 function buySchool() {
-    console.log("MAINJS.buySchool");
     var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?", Math.round(Math.random() * 3));
     var bucksSpent = parseInt(schoolBuy);
     if (bucksSpent == NaN) {
@@ -682,7 +668,6 @@ function buySchool() {
 
 // actions that take place when store destination is selected
 function getStore() {
-    console.log("MAINJS.getStore");
   //  SetChosenPath("store");
     if (player1.gb <= 0) {
         message = "Unfortunately you have no money to buy anything at the Market.";
@@ -694,17 +679,14 @@ function getStore() {
 }
 
 function OpenMarketHud() {
-    console.log("MAINJS.OpenMarketHud");
     ShowMarket();
 }
 
 function CloseMarketHud() {
-    console.log("MAINJS.CloseMarketHud");
     HideMarket();
 }
 
 function buyNewStuff() {
-    console.log("MAINJS.buyNewStuff");
     var spent = 0;
     var itemMessage = "";
 
@@ -826,7 +808,6 @@ function buyNewStuff() {
 
 // checks to see if you have money for transaction and then completes transaction, displays purchse confirmation message
 function checkout(item, value, message) {
-    console.log("MAINJS.checkout");
     if (player1.gb < value) {
         console.log("checkout false");
         return false;
@@ -840,7 +821,6 @@ function checkout(item, value, message) {
 
 // displays message when you don;t have enough money, sends you back to the store
 function rejectTransaction() {
-    console.log("MAINJS.rejectTransaction");
     UpdateUserMessage("You don't have enough money for that, please try again");
     stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
     
@@ -849,7 +829,6 @@ function rejectTransaction() {
 }
 
 function checkPowerUp(powerUp) {
-    console.log("MAINJS.checkPowerUp");
     // go through the power up list and give them the power
     switch (powerUp) {
         case "plumbing":
@@ -878,7 +857,7 @@ function checkPowerUp(powerUp) {
 // checks for action cards and chooses the type
 // TODO function checkCard(square) - simple version for now, will check vs each destination in future (randomize where they appear?)
 function checkCard() {
-    console.log("MAINJS.checkCard");
+    
     var square = currentPlayerSquare;
 	//console.log("position arguement sent: " + square);
 
@@ -904,7 +883,6 @@ function checkCard() {
 
 // randomly selects challenge card
 function getChallengeCard() {
-    console.log("MAINJS.getChallengeCard");
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
     // debug to test specific cards
@@ -939,7 +917,6 @@ function getChallengeCard() {
 
 // randomly selects partnership card
 function getPartnershipCard() {
-    console.log("MAINJS.getPartnershipCard");
     var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
     // debug to test specific cards
@@ -973,7 +950,6 @@ function getPartnershipCard() {
 
 // special card function that get agruements from challengeCards.js
 function specialCards(fnstring) {
-    console.log("MAINJS.specialCards");
 	// one way - makes sense to me
 	console.log("activating special case function: " + fnstring);
 	switch (fnstring) {
@@ -1072,19 +1048,16 @@ function specialCards(fnstring) {
 
 // functions to handle special effects inroduced by Challenge or Partnership Cards
 function gotSick() {
-    console.log("MAINJS.gotSick");
 	sick = true;
 	console.log("you got sick!!");
 }
 
 function gainEducationLevel() {
-    console.log("MAINJS.gainEducationLevel");
 	modifyEducationLevel(1);
 	console.log("gain some education");
 }	
 
 function loseEducationLevel() {
-    console.log("MAINJS.loseEducationLevel");
 	modifyEducationLevel(-1);
 	console.log("lose some education");
 }
@@ -1158,7 +1131,6 @@ function blockDestination(dest, val){
 }
 
 function modifyEducationLevel(direction){
-     console.log("MAINJS.modifyeducationlevel");
 	console.log("modifying Education Level - please standby");
 	if (player1.ep > 30) {
         if (direction < 0) {
@@ -1192,7 +1164,6 @@ function modifyEducationLevel(direction){
 // --------- turn based functions ------------
 
 function checkPlayerCondition(numberOfTurns) {
-     console.log("MAINJS.checkplayercondition");
 	// check if player is sick from food
     if (sick === true) {
         UpdateUserMessage("You are still sick from eating contaminated food, you lost " + 2 * numberOfTurns + " Health Points.");
@@ -1229,7 +1200,6 @@ function checkPlayerCondition(numberOfTurns) {
 
 // updates player stats from sent agruements
 function impactStats(hp, wp, ep, gb) {
-     console.log("MAINJS.impactstats");
     player1.hp += hp;
     player1.wp += wp;
     player1.ep += ep;
@@ -1239,7 +1209,6 @@ function impactStats(hp, wp, ep, gb) {
 
 // determines stats decay based on number of rolls in the turn and player held power ups and/or power downs
 function travelToll(numberOfTurns) {
-     console.log("MAINJS.traveltoll");
     if (freeTravel > 0) {
         freeTravel -= 1;
         if (freeTravel == 0) {
@@ -1259,7 +1228,6 @@ function travelToll(numberOfTurns) {
 }
 
 function checkPowerUps() {
-    console.log("MAINJS.checkPowerUps");
     if (player1.plumbing == true) {
         player1.wp = 100;
         updateStats();
@@ -1279,7 +1247,6 @@ function checkPowerUps() {
 }
 
 function checkBlocks() {
-    console.log("MAINJS.checkBlocks");
     if (destinationBlocked) {
     	console.log("destination is blocked - checking for unblocks");
     	destinationBlocked = false;
@@ -1304,7 +1271,6 @@ function checkBlocks() {
 // executes impacts when player uses invetory item and removes item from inventory list
 // send argument of the inveotry item being used (only "food" and "kit" are used by player iteraction)
 function useInventory(item) {
-     console.log("MAINJS.useInventory");
     // checks argument sent and gives stats boost and removes item from player object
     switch (item) {
     case "food":
@@ -1336,18 +1302,15 @@ function useInventory(item) {
 }
 
 function ShowTheDice() {
-    console.log("MAINJS.ShowTheDice");
     THE_GAME.getComposition().getStage().ShowDice();
 }
 
 function HideTheDice() {
-    console.log("MAINJS.HideTheDice");
     THE_GAME.getComposition().getStage().HideDice();
 }
 
 function ExecutePlayerRoll() // called by the dice function.
 {   
-    console.log("MAINJS.ExecutePlayerRoll");
     // hide the dice so it can't be clicked again:
      THE_GAME.HideDiceButtons();
     var dice_roll_1 = 0;
@@ -1372,7 +1335,6 @@ function ExecutePlayerRoll() // called by the dice function.
 
 
 function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal( dice_roll_1 , dice_roll_2 ) {
-    console.log("MAINJS.WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal");
     // reset the interval
     clearInterval(intervalDiceAnimTimeDelay);
     // check 
@@ -1387,7 +1349,7 @@ function WaitUntilDiceAnimationPlaysBeforeAddingNewDiceTotal( dice_roll_1 , dice
 
 // checks to see if player has died
 function checkGameOver() {
-    console.log("MAINJS.checkGameOver");
+    
     var _gameOver = true;
 
     if (player1.hp < 1) {
@@ -1420,7 +1382,6 @@ function checkGameOver() {
 
 // checks for win condition
 function playerWins() {
-    console.log("MAINJS.playerWins");
 	//return true;
 	if (player1.hp >= 50 && player1.wp >= 50 && player1.ep >= 30 && player1.gb >= 75 && (player1.filter == true || player1.plumbing == true)) {
 		console.log("players wins = true");
@@ -1434,7 +1395,6 @@ function playerWins() {
 
 // updates game once player has died
 function playerDied() {
-    console.log("MAINJS.playerDied");
     //alert('dead');
     UpdateUserMessage("You'd better sit down for this...");
     updateStats();
@@ -1446,7 +1406,7 @@ function playerDied() {
 }
 
 function playerWon(){
-    console.log("MAINJS.playerWon");
+    
     UpdateUserMessage("Well Done and Congratulations!!!");
     updateStats();
 
@@ -1458,14 +1418,12 @@ function playerWon(){
 
 function getDeathMessage()
 {
-    console.log("MAINJS.getDeathMessage");
  var deathMsg = "We are very sorry to say that your life has come to an end. Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take actions! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can take action, and lesson plans you can use in your school.";  
 return deathMsg;
 }
 
 function getWinMessage()
 {
-    console.log("MAINJS.getWinMessage");
  var winMsg = "Congratulations on achieving a sustainable life! Hopefully you have learned about some of the global issues people face around the world – and even more importantly, this will inspire you to take action! Please visit the ACTIONS YOU CAN TAKE page to read more about global issues, get ideas for how you can get involved, and lesson plans you can use in your school.";   
     return winMsg;
 }
@@ -1482,7 +1440,6 @@ function alertIt(what) {
 }
 
 function PassDiceRollToEdge(_roll) {
-    console.log("MAINJS.PassDiceRollToEdge");
     // write it to the global
     diceRoll = _roll;
     THE_GAME.SetNumberDiceShouldStopOn(diceRoll);
@@ -1490,7 +1447,6 @@ function PassDiceRollToEdge(_roll) {
 
 function FlashTheDice()
 {
-    console.log("MAINJS.FlashTheDice");
     // clear the interval if it needs it:
      clearInterval(intervalDiceButtonFlashes);
   //local caller of FlashDice
@@ -1499,7 +1455,6 @@ function FlashTheDice()
 }
 
 function checkDiceRoll(diceRoll) {
-    console.log("MAINJS.checkDiceRoll");
     var cardYes = false;
     // see if they're still alive:
     checkGameOver();
@@ -1571,7 +1526,6 @@ function checkDiceRoll(diceRoll) {
 
 function DestinationFunction()
 {
-    console.log("MAINJS.DestinationFunction");
     console.log("THIS IS WHERE EDGE CALLS THE DESTINATION FUNCTION, SUCH AS GETJOB()");
     /*
     NOTE TO GLEN: This is the function Edge calls when it hits spot 4, the destination tile.
@@ -1581,19 +1535,16 @@ function DestinationFunction()
 
 function SetHolderFunction(what)
 {
-    console.log("MAINJS.SetHolderFunction");
     holderFunction = null;
    // alert(what);
  holderFunction = what;   
 }
 
 function HideDice() {
-    console.log("MAINJS.HideDice");
     THE_GAME.getComposition().getStage().HideDice();
 }
 
 function UpdatePlayerPositionAlongTimeline(num_of_secs) {
-    console.log("MAINJS.UpdatePlayerPositionAlongTimeline");
     var _currentTimelineMilliseconds = num_of_secs * 1000;
     THE_GAME.getComposition().getStage().SetNewTimelineStopPosition(num_of_secs);
     THE_GAME.play();
@@ -1601,7 +1552,6 @@ function UpdatePlayerPositionAlongTimeline(num_of_secs) {
 
 
 function GetRandomGameTip() {
-    console.log("MAINJS.GetRandomGameTip");
     // every game will start the tips from a 
     // random position to keep things fresh:
     startingGameTip++;
@@ -1685,14 +1635,12 @@ function SetCountrySelected(_countrySelected) {
 
 function HideButtonChoices()
 {
-    console.log("MAINJS.HideButtonChoices");
      document.getElementById("column2").style.display = "none";
      document.getElementById("column2").style.visibility = "hidden";
 }
 
 function HideStarterContentAndShowTheGame()
 {
-    console.log("MAINJS.HideStarterContentAndShowTheGame");
      document.getElementById("column1").style.display = "none";
      document.getElementById("column1").style.visibility = "hidden";
      document.getElementById("column2").style.display = "none";
@@ -1706,7 +1654,7 @@ function HideStarterContentAndShowTheGame()
 }
 
 function SetInputDifficulty(val) {
-    console.log("MAINJS.SetInputDifficulty");
+    
     var msgA = "Welcome to easy street. Country A gives you easy access to healthcare, food and plenty of options. Make good choices and life should be a breeze.";
     var msgB = "Be careful. To live in Country B you need to make good choices, have luck on your side and be able to get yourself out of a jam. Medicine and water are your friend. So is a bicycle! Put your mettle to the pedal.";
     var msgC = "You are brave. Life is HARD in Country C. You live at the mercy of warlords and disease, famine and - dear lord, what is that SMELL? Oh yeah, no bathrooms. Only your wits can save you now. Make great choices!";
@@ -1740,7 +1688,6 @@ function SetInputDifficulty(val) {
 }
 
 function AreWeReadyToStart() {
-    console.log("MAINJS.AreWeReadyToStart");
     if ((bCountryHasBeenSelected) && (bNameHasBeenEntered)) {
         // show the HUD
         ShowDestinations();
@@ -1750,7 +1697,6 @@ function AreWeReadyToStart() {
 }
 
 function UpdateHUD(life, water, glob, edu) {
-    console.log("MAINJS.UpdateHUD");
     // alert('UpdateHud');
     console.log("UPDATEHUD:"+life + " " + glob + " " + water + " " + edu);
     var _life;
@@ -1812,19 +1758,16 @@ STICK ALL FUNCTIONS THAT TALK TO EDGE AFTER THIS:
 
 // Glen Added
 function disableDestination(dest) {
-    console.log("MAINJS.disableDestination");
     THE_GAME.DisableDestination(dest);
 }
 
 // Glen Added
 function enableDestination(dest) {
-    console.log("MAINJS.enableDestination");
     THE_GAME.EnableDestination(dest);
 }
 
 
 function CallAvatarPositioningFunction() {
-    console.log("MAINJS.CallAvatarPositioningFunction");
     clearInterval(_varSetInterval);
     THE_GAME.TrackAvatar();
 }
@@ -1856,38 +1799,34 @@ function UpdatePlayerName(playername) {
 
 function UpdateEdgeStageDestinationTextField(destination) {
     // output it:
-    console.log("MAINJS.UpdateEdgeStageDestinationTextField");
     THE_GAME.$("txtDestination").html(destination);
 
 }
 
 function UpdatePopup(head_txt, body_txt, poptype) {
-    console.log("MAINJS.UpdatePopup");
     THE_GAME.getSymbol("mcPopup").$("txtHeading").html(head_txt);
     THE_GAME.getSymbol("mcPopup").$("txtBody").html(body_txt);
     THE_GAME.getComposition().getStage().ShowPopup(poptype);
 }
 
 function ShowDestinations() {
-     console.log("MAINJS.ShowDestinations");
+     
     THE_GAME.getComposition().getStage().ShowHudForNextChoice();
    // THE_GAME.DisableDestination("medical");
     UpdatePlayerAvatar(characterImg);
 }
 
 function HideDestinations() {
-console.log("MAINJS.HideDestinations");
+
     THE_GAME.getComposition().getStage().HideHudAfterSelection();
 }
 
 function ShowMarket() {
-    console.log("MAINJS.ShowMarket");
     THE_GAME.getComposition().getStage().HideHudAfterSelection();
     THE_GAME.$("hudMarket").show(); 
 }
 
 function HideMarket() {
-    console.log("MAINJS.HideMarket");
      THE_GAME.$("hudMarket").hide();
 }
 
