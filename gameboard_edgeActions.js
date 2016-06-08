@@ -621,10 +621,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbol("dicePair").getSymbol("dice_symbol_1").play(0);
          sym.getSymbol("dicePair").getSymbol("dice_symbol_2").play(0);
          sym.getSymbol("dicePair").play(0);
-      
+         
+         // Play an audio track 
+         // button sound:
+         sym.$("click")[0].play();
+         
+         
          ExecutePlayerRoll();
          //sym.StartDice();
-      
+
       });
       //Edge binding end
       
@@ -668,7 +673,12 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "click", function(sym, e) {
          sym.getSymbol("InventoryItems").play(1);
          sym.$("InventoryItems").show();
-      
+         
+         // button sound:
+         sym.$("click")[0].play();
+         
+         
+
       });
       //Edge binding end
       
@@ -682,6 +692,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseout", function(sym, e) {
          sym.getSymbol("btnInventory").play("out");
       
+      });
+      //Edge binding end
+
+      
+
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
+         // Play an audio track 
+         sym.$("song")[0].play(0);
+
       });
       //Edge binding end
 
@@ -843,6 +862,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${simpleButton2}", "click", function(sym, e) {
          sym.getComposition().getStage().$("challenge01")[0].pause();
          sym.getSymbolElement().hide();
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1100,6 +1121,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
+         
+         
 
       });
       //Edge binding end
@@ -1116,6 +1141,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1132,6 +1159,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1147,6 +1176,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	// close the window if we're done, else they can click again.
          	sym.getSymbolElement().hide();
          }
+         // button sound:
+         sym.$("click")[0].play();
          
          
 
@@ -1165,6 +1196,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1181,6 +1214,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1197,6 +1232,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1214,6 +1251,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          
          }
          
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -1785,6 +1824,15 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
+         // insert code to be run at timeline play here
+         // Play an audio track 
+         sym.getComposition().getStage().$("sad")[0].play();
+         
+
+      });
+      //Edge binding end
+
    })("obit");
    //Edge symbol end:'obit'
 
@@ -2059,6 +2107,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       Symbol.bindElementAction(compId, symbolName, "${btnCloseInventory}", "click", function(sym, e) {
          sym.getSymbolElement().hide();
+         // button sound:
+         sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -2087,6 +2137,21 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'WinMessage'
    (function(symbolName) {   
    
+      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
+         // insert code to be run at timeline play here
+         
+         
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 98, function(sym, e) {
+         // insert code here// Play an audio track 
+         sym.getComposition().getStage().$("cheer")[0].play();
+
+      });
+      //Edge binding end
+
    })("WinMessage");
    //Edge symbol end:'WinMessage'
 
