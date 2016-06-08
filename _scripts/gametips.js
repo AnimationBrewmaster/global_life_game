@@ -2,13 +2,14 @@
 // #3 array is for generic game facts
 
 // create arrays for each country
-arrGameTips[0] = new Array();
-arrGameTips[1] = new Array();
-arrGameTips[2] = new Array();
-arrGameTips[3] = new Array();
+var arrGameTips = [0,1,2,3];
+   // arrGameTips[0] = [];
+   // arrGameTips[1] = [];
+   // arrGameTips[2] = [];
+   // arrGameTips[3] = [];
 
 function InitGameTips() {
-    console.log("intitializing game tips");
+    console.log("initializing script gametips.js");
     arrGameTips[0][0] = "The first thing you should do is buy a bike from the market. The bike will allow you to travel much faster.";
     arrGameTips[0][1] = "Education points equals more work, and more work equals more money, and more money equals better opportunities.";
     arrGameTips[0][2] = "As County A, the game is much easier than in Country B or C.";
