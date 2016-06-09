@@ -11,7 +11,7 @@ var player1 = {
 };
 
 var gameOver = false;
-var sick = false;
+var sick = true;
 var sickWater = false;
 var playerStats;
 var message;
@@ -541,8 +541,10 @@ function getJob() {
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
+    var cancelMedicine = false;
     if (sick || sickWater) {
         if (player1.gb > 9) {
+        	
             if (confirm("You are very sick, buy medicine for $10?")) {
                 impactStats(0, 0, 0, -10);
                 sick = false;
@@ -553,12 +555,41 @@ function getMedical() {
             else {
             	UpdateUserMessage("You chose not to buy medicine for your sickness");
             	buyMedicine();
-            }   
-        } 
+            }
+            
+           /*
+           swal({
+           	title: "You are sick!",
+           	text: "But medicine for 10 Global Bucks?",
+           	type: "warning",
+           	showCancelButton: true,
+           	confrimButtonText: "Buy",
+           	closeOnConfirm: true,
+           	closeOnCancel: true,
+           },
+           function(isConfirm){
+           	if(isConfirm){
+           		impactStats(0, 0, 0, -10);
+                sick = false;
+                sickWater = false;
+                UpdateUserMessage("You've been cured by the Medicine you bought.");
+                updateStats();
+           	}
+           	else{
+           		UpdateUserMessage("You chose not to buy medicine for your sickness");
+            	cancelMedicine = true;
+            	console.log("cancelling medicine");
+           	} 
+           });
+           */   
+        }
+        
         else {
             UpdateUserMessage("You are very sick but don't have enough money for the cure.");
         }
+        
     } 
+    
     else if (sicknessTimer > 0 && player1.gb > 2) {
     	if (confirm("You have diarrhea, buy medicine for $3?")) {
             impactStats(0, 0, 0, -3);
@@ -568,7 +599,8 @@ function getMedical() {
         }
         else {
             UpdateUserMessage("You chose not to buy medicine for your diarrhea.");
-            buyMedicine();
+            cancelMedicine = true;
+            console.log("cancelling medicine");
         }
     	
     }
@@ -579,7 +611,13 @@ function getMedical() {
             UpdateUserMessage("Unfortunately you have no money to buy medicine.");
         }
     }
+    if (cancelMedicine) {
+    	console.log("medicine cancelled - buying other stuff");
+    	cancelMedicine = false;
+    	buyMedicine();
+    }
 }
+
 
 // get and check user input for buying medicine and then update player stats
 function buyMedicine() {
