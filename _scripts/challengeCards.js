@@ -983,7 +983,7 @@ challengeCard32A.hp = -2;
 challengeCard32A.wp = 0;
 challengeCard32A.ep = 0;
 challengeCard32A.gb = 0;
-challengeCards[0][3.] = challengeCard32A;
+challengeCards[0][30] = challengeCard32A;
 
 var challengeCard32B = new Object();
 challengeCard32B.title = "Endangered Species";
