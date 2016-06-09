@@ -11,7 +11,7 @@ var player1 = {
 };
 
 var gameOver = false;
-var sick = true;
+var sick = false;
 var sickWater = false;
 var playerStats;
 var message;
@@ -1277,6 +1277,24 @@ function checkPowerUps() {
     else if (player1.food && player1.hp < 8) {
         console.log("used food?");
         additionalInfo += "<br>You are running low on Health, try eating some food to gain 4 Health Points.";
+    }
+    else {
+    	console.log("no powerup message");
+    }
+    // auto use of power ups TODO - remove after inventory bug solved
+    if (player1.kit && player1.hp < 4) {
+        console.log("using kit");
+        additionalInfo += "<br>You usde your first aid kit to gain 6 Health Points.";
+        player1.kit = false;
+        player1.hp += 6;
+        updateStats();
+    } 
+    else if (player1.food && player1.hp < 4) {
+        console.log("using food");
+        additionalInfo += "<br>You ate your food and gained 4 Health Points.";
+        player1.food = false;
+        player1.hp += 4;
+        updateStats();
     }
     else {
     	console.log("no powerup message");
