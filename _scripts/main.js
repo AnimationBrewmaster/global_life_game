@@ -2,6 +2,10 @@
 /* @author Glen (THIS IS THE MERGED VERSION V2) */
 // V 11.01.01
 
+// not used any more
+alert('not used');
+return;
+
 var player1 = {
     name: "",
     hp: 30,
@@ -543,6 +547,34 @@ function getMedical() {
     //SetChosenPath("medical");
     if (sick || sickWater) {
         if (player1.gb > 9) {
+            
+            
+            var buyMeds = swal(
+                {   
+                title: "Buy Medicine?",   
+                text: "You are very sick, buy medicine for $10?",   
+                type: "warning",   
+                showCancelButton: true,   
+                confirmButtonColor: "#DD6B55",   
+                confirmButtonText: "Purchase",   
+                cancelButtonText: "Cancel",   
+                closeOnConfirm: false,   
+                closeOnCancel: false }, 
+                function(isConfirm){   
+                    if (isConfirm) {     
+                        swal("Congratulations!", "You've been cured by the Medicine you bought.", "success");  
+                        impactStats(0, 0, 0, -10);
+                        sick = false;
+                        sickWater = false;
+                        UpdateUserMessage("You've been cured by the Medicine you bought.");
+                        updateStats();
+                    } else {    
+                        swal("Cancelled", "You chose not to buy medicine for your sickness.", "error");  
+                        UpdateUserMessage("You are very sick but don't have enough money for the cure.");
+                    } 
+                });
+            
+            /* switched to above
             if (confirm("You are very sick, buy medicine for $10?")) {
                 impactStats(0, 0, 0, -10);
                 sick = false;
@@ -552,10 +584,15 @@ function getMedical() {
             }
             else {
             	UpdateUserMessage("You chose not to buy medicine for your sickness");
-            	buyMedicine();
+            	buyMedicine(); // GLEN, DOES THIS NEED TO GET ADDED UP ABOVE AGAIN?
             }   
+            */
+            
+            
         } 
         else {
+            // else they didn't have enough money for the cure. thanks obama :) .
+            swal("Unfortunate!", "You are very sick but don't have enough money for the cure.", "error");  
             UpdateUserMessage("You are very sick but don't have enough money for the cure.");
         }
     } 
@@ -584,7 +621,44 @@ function getMedical() {
 // get and check user input for buying medicine and then update player stats
 function buyMedicine() {
 
-    var medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
+    var medicineBuy;
+    var suggestedSpendAmount = Math.round(Math.random() * 4 + 1);
+    //medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
+   
+    // GLEN, WHAT IF SOMEONE ENTERS $20, DOES THE EXTRA MONEY JUST GET TAKEN OR DO THEY GET APPROPRIATE BENEFITS?
+    
+    medicineBuy = swal(
+        {   
+        title: "Buy Medicine?",   
+        text: "For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10",   
+        type: "input",   
+        showCancelButton: true,   
+        closeOnConfirm: false,   
+        animation: "slide-from-top",   
+        inputPlaceholder: suggestedSpendAmount 
+        }, 
+            function(inputValue){
+                // if they don't type
+                if (inputValue === false){
+                    return false;    
+                }
+                
+                // if they don't type enough
+                if (inputValue > player1.gb){
+                      swal.showInputError("You don't have that much money!?");   
+                    return false;
+                }
+                
+                // if it's empty:
+                if (inputValue === "") 
+                {
+                    swal.showInputError("Invalid Amount, enter SOMETHING!");     
+                    return false   
+                }      
+                
+                swal("Purchase Successful!", "You bought medicine to carry with you in case you get sick for $" + inputValue, "success"); 
+        });
+   
     medicineBuy = Number(medicineBuy);
 
     if (parseInt(medicineBuy) == NaN) {
@@ -625,6 +699,8 @@ function buyMedicine() {
             case 10:
             	player1.medicine = true;
             	UpdateUserMessage("You bought medicine to carry with you in case you get sick.");    
+                break; // this was missing so default was getting called as well
+                
             default:
                 UpdateUserMessage("Bad input, please try again");
                 break;
@@ -1857,6 +1933,7 @@ function UserName()
     text: "PLEASE ENTER YOUR NAME:",   
     type: "input",   
     showCancelButton: true,   
+    confirmButtonColor: "#12bc12",
     closeOnConfirm: false,   
     animation: "slide-from-bottom",   
     inputPlaceholder: "Player One" }, 
@@ -1872,10 +1949,12 @@ function UserName()
             // hide first two columns:
             UpdatePlayerName(inputValue.toUpperCase());
             swal("Welcome to the Global Life Game, " + inputValue.toUpperCase(), "Make good choices!", "success");
-            document.getElementById("startButton").style.display = "block";
-            document.getElementById("startButton").style.visibility = "visible";   
+            // skipping the start button
+            //document.getElementById("startButton").style.display = "block";
+            //document.getElementById("startButton").style.visibility = "visible";   
             UpdatePlayerAvatar(characterImg);
             HideButtonChoices();
+            AreWeReadyToStart();
         }
     });   
 }

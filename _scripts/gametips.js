@@ -1,13 +1,16 @@
 // first array digit is country code (0-2)
 // #3 array is for generic game facts
 
-// create arrays for each country
-arrGameTips[0] = new Array();
-arrGameTips[1] = new Array();
-arrGameTips[2] = new Array();
-arrGameTips[3] = new Array();
 
 function InitGameTips() {
+	
+	// create arrays for each country
+var arrGameTips = [];
+	arrGameTips[0] = [];
+	arrGameTips[1] = [];
+	arrGameTips[2] = [];
+	arrGameTips[3] = [];
+	
     console.log("intitializing game tips");
     arrGameTips[0][0] = "The first thing you should do is buy a bike from the market. The bike will allow you to travel much faster.";
     arrGameTips[0][1] = "Education points equals more work, and more work equals more money, and more money equals better opportunities.";
@@ -54,7 +57,7 @@ function InitGameTips() {
     arrGameTips[3][9] = "165 million people worldwide suffer from childhood malnutrition.";
     arrGameTips[3][10] = "More people have access to a cell phone then a toilet.";
     
-    startingGameTip = Math.floor(Math.random() * arrGameTips[countryValue].length);
+    var startingGameTip = Math.round(Math.random() * arrGameTips[0].length-1);
     console.log("Starting Game Tip = " + startingGameTip);
     //console.log(arrGameTips);
 }

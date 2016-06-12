@@ -144,8 +144,8 @@ button {
 	color: #ffffff;
 	font-size: 24px;
 	font-weight: bold;
-	padding: 10px;
-	margin: 10px;
+	padding: 4px;
+	margin: 4px;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #3d768a;
 }
@@ -305,6 +305,10 @@ styles for the Start Game form:
 }
 .greenish{
     color:forestgreen;
+}
+.highlighted_word{
+    background-color:white;
+    color:black;
 }
 
 .start_description{
