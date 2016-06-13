@@ -529,7 +529,7 @@ function getMedical() {
     if (sick || sickWater) {
         if (player1.gb > 9) {
             
-            
+           /* 
             var buyMeds = swal(
                 {   
                 title: "Buy Medicine?",   
@@ -554,8 +554,8 @@ function getMedical() {
                         UpdateUserMessage("You are very sick but don't have enough money for the cure.");
                     } 
                 });
-            
-            /* switched to above
+            */
+            /* switched to above */
             if (confirm("You are very sick, buy medicine for $10?")) {
                 impactStats(0, 0, 0, -10);
                 sick = false;
@@ -567,7 +567,7 @@ function getMedical() {
             	UpdateUserMessage("You chose not to buy medicine for your sickness");
             	buyMedicine(); // GLEN, DOES THIS NEED TO GET ADDED UP ABOVE AGAIN?
             }   
-            */
+            
             
             
         } 
@@ -578,7 +578,7 @@ function getMedical() {
         }
     } 
     else if (sicknessTimer > 0 && player1.gb > 2) {
-        /*
+       
     	if (confirm("You have diarrhea, buy medicine for $3?")) {
             impactStats(0, 0, 0, -3);
             sicknessTimer = -1;
@@ -589,8 +589,8 @@ function getMedical() {
             UpdateUserMessage("You chose not to buy medicine for your diarrhea.");
             buyMedicine();
         }
-        */
-        
+       
+        /*
         var buyMeds = swal(
                 {   
                 title: "Buy Medicine?",   
@@ -613,7 +613,7 @@ function getMedical() {
                         swal("Cancelled", "You chose not to buy medicine for your diarrhea.", "error");  
                         UpdateUserMessage("You are very sick but don't have enough money for the cure.");
                     } 
-                });
+                }); */
     	
     }
     else {
@@ -630,10 +630,10 @@ function buyMedicine() {
 
     var medicineBuy;
     var suggestedSpendAmount = Math.round(Math.random() * 4 + 1);
-    //medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
+    medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
    
     // GLEN, WHAT IF SOMEONE ENTERS $20, DOES THE EXTRA MONEY JUST GET TAKEN OR DO THEY GET APPROPRIATE BENEFITS?
-    
+    /*
     medicineBuy = swal(
         {   
         title: "Buy Medicine?",   
@@ -665,6 +665,8 @@ function buyMedicine() {
                 
                 swal("Purchase Successful!", "You bought medicine to carry with you in case you get sick for $" + inputValue, "success"); 
         });
+        
+        */
    
     medicineBuy = Number(medicineBuy);
 
@@ -1383,7 +1385,7 @@ function useInventory(item) {
     displayInventory();    
     updateStats();
 }
-
+/*
 function ShowTheDice() { // UNUSED FUNCTION ? ////
    // THE_GAME.getComposition().getStage().ShowDice();
 }
@@ -1391,7 +1393,7 @@ function ShowTheDice() { // UNUSED FUNCTION ? ////
 function HideTheDice() { // UNUSED FUNCTION ? ////
    // THE_GAME.getComposition().getStage().HideDice();
 }
-
+*/
 function ExecutePlayerRoll() // called by the dice function.
 {   
     // hide the dice so it can't be clicked again:
@@ -2072,28 +2074,27 @@ console.log("seven seconds");
 
       
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
-         console.log("0ms A");
-         /*
+         console.log("TRIGGER 0ms");
          if((bStopDice == undefined) || (bStopDice == "")){
          	sym.stop();
          	console.log("stopped Edge at first frame because bStopDice wasn't defined correctly");
          }
-         console.log("0ms B");
+         
          if(bStopDice < 1){
          	alert('no dice roll');
          	sym.stop();
          }
-         console.log("0ms C");
+         
          if(DoesPlayerHaveABike == true)
          {
+             console.log("player has bike, showing it and second dice");
          	// make sure we show the bike
          	document.getElementById("character").src = characterBike;
             characterImg = characterBike;
             // also make sure we are showing the second dice
             ShowSecondDice();
          }
-         */
-         console.log("0ms D");
+         
          console.log("zero ms");
 
       });
@@ -2316,6 +2317,8 @@ console.log("seven seconds");
          
          	if(bPlayerHasBike === true)
          	{
+                
+                ShowSecondDice();
          	console.log("EDGE THINKS PLAYER HAS BIKE RIGHT NOW");
          		switch(diceTotal){
          			case 2 :
@@ -2613,7 +2616,11 @@ console.log("seven seconds");
          sym.getSymbol("dicePair").getSymbol("dice_symbol_1").play(0);
          sym.getSymbol("dicePair").getSymbol("dice_symbol_2").play(0);
          sym.getSymbol("dicePair").play(0);
-
+          
+            // hide the buttn flashing clip:
+            sym.getSymbol("mcHUD").$("buttonflash").hide();
+            sym.getSymbol("mcHUD").getSymbol("buttonflash").stop(0);
+          
          // button sound:
          sym.$("click")[0].play();
          ExecutePlayerRoll();
@@ -3493,21 +3500,14 @@ console.log("seven seconds");
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${invisible_button}", "click", function(sym, e) {
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${simpleButton}", "click", function(sym, e) {
          location.reload(true);
       });
       //Edge binding end
 
-      Symbol.bindTimelineAction(compId, symbolName, "Default Timeline", "play", function(sym, e) {
-         // insert code to be run at timeline play here
-         // Play an audio track 
-         sym.getComposition().getStage().$("sad")[0].play();
-      });
-      //Edge binding end
+      
 
    })("obit");
    //Edge symbol end:'obit'
@@ -3571,7 +3571,14 @@ console.log("seven seconds");
          var stopAt2 = diceFacePos[randomNumber2];
          //alert(stopAt);
          sym.getSymbol("dice_symbol_1").stop(stopAt);
-         sym.getSymbol("dice_symbol_2").stop(stopAt2);
+            if(player1.bike === true){
+                sym.getSymbol("dice_symbol_2").stop(stopAt2);
+                sym.getSymbol("dice_symbol_2").show();
+               	sym.getSymbol("dicePair").$("shadow2").show();
+            } else {
+                 sym.getSymbol("dice_symbol_2").stop(0);
+                sym.getSymbol("dicePair").$("shadow2").hide();
+            }
       });
       //Edge binding end
 
@@ -3594,25 +3601,53 @@ console.log("seven seconds");
    (function(symbolName) {   
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 931, function(sym, e) {
-         //alert(4);
-         //alert("DSA:"+diceStopsAt1);
-         console.log('stopping dice 1 at ' + sym.getParentSymbol().getVariable("diceStopsAt1"));
-         console.log('stopping dice 2 at ' + sym.getParentSymbol().getVariable("diceStopsAt2"));
-         
-         sym.stop();
-         var _stopOn1 = sym.getParentSymbol().getVariable("diceStopsAt1");
-         var _stopOn2 = sym.getParentSymbol().getVariable("diceStopsAt2");
-         
-         sym.getSymbol("dice_symbol_1").stop( _stopOn1 );
-         sym.getSymbol("dice_symbol_2").stop( _stopOn2 );
-         sym.play();
-         // stop them BEFORE the slide while testing:
+        sym.stop();
+        
+        var _stopOn1 = sym.getParentSymbol().getVariable("diceStopsAt1");
+        console.log('ea. stopping dice 1 at ' + _stopOn1);
+        sym.getSymbol("dice_symbol_1").stop( _stopOn1 );
+        
+        if(player1.bike === true)
+        {
+        	var _stopOn2 = sym.getParentSymbol().getVariable("diceStopsAt2");
+        	console.log('ea. stopping dice 2 at ' + _stopOn2);
+        	sym.getSymbol("dice_symbol_2").stop( _stopOn2 );
+           
+        }
+        
+        sym.play();
+
       });
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5500, function(sym, e) {
          // insert code here
          sym.stop();
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
+         
+         /*
+         if(player.bike === true)
+         {
+         	ShowSecondDice();
+         } else {
+         	HideSecondDice();
+         }
+         */
+         
+         
+          
+         if(player1.bike===true){
+         	 sym.getSymbol("dicePair").$("dice_symbol_2").show();
+             sym.getSymbol("dicePair").$("shadow2").show();
+           } else {
+         	 sym.getSymbol("dicePair").$("dice_symbol_2").hide();
+         	 sym.getSymbol("dicePair").$("shadow2").hide();    
+           }
+          // stop them BEFORE the slide while testing:
+
       });
       //Edge binding end
 
