@@ -1624,10 +1624,11 @@ function SetHolderFunction(what)
    // alert(what);
  holderFunction = what;   
 }
-
+/*
 function HideDice() { // UNUSED FUNCTION ? ////
     THE_GAME.getComposition().getStage().HideDice();
 }
+*/
 
 function UpdatePlayerPositionAlongTimeline(num_of_secs) {
     var _currentTimelineMilliseconds = num_of_secs * 1000;
@@ -1778,7 +1779,7 @@ function AreWeReadyToStart() {
   //  if ((bCountryHasBeenSelected) && (bNameHasBeenEntered)) {
         // show the HUD
         ShowDestinations();
-        HideStartingInstructions();
+        //HideStartingInstructions();
         HideStarterContentAndShowTheGame();
   //  }
 }
@@ -1897,7 +1898,6 @@ function UpdatePopup(head_txt, body_txt, poptype) {
 }
 
 function ShowDestinations() {
-     
     THE_GAME.getComposition().getStage().ShowHudForNextChoice();
    // THE_GAME.DisableDestination("medical");
     UpdatePlayerAvatar(characterImg);
@@ -2085,6 +2085,7 @@ console.log("seven seconds");
          	sym.stop();
          }
          
+          
          if(DoesPlayerHaveABike == true)
          {
              console.log("player has bike, showing it and second dice");
@@ -2317,9 +2318,6 @@ console.log("seven seconds");
          
          	if(bPlayerHasBike === true)
          	{
-                
-                ShowSecondDice();
-         	console.log("EDGE THINKS PLAYER HAS BIKE RIGHT NOW");
          		switch(diceTotal){
          			case 2 :
          			_diceStopsAt1 = "one";
@@ -2381,9 +2379,6 @@ console.log("seven seconds");
                     break;
          		}
          	} else {
-         	// else player has no bike, only one dice used:
-         		HideSecondDice();
-         		console.log("EDGE THINKS PLAYER HAS NO BIKE RIGHT NOW");
          
          		switch(diceTotal){
          		case 1 :
@@ -2415,34 +2410,35 @@ console.log("seven seconds");
          	sym.setVariable("diceStopsAt1", _diceStopsAt1);
          	sym.setVariable("diceStopsAt2", _diceStopsAt2); 
          };
-         
+        
          HideSecondDice = function() // not a sym.function because it gets called locally in this file
          {
-         	console.log("EA.SHOULD BE HIDING 2ND DICE RIGHT NOW");
-         	sym.getSymbol("dicePair").$("dice_symbol_2").hide();
-         	sym.getSymbol("dicePair").$("shadow2").hide();
+         	console.log("EA. HIDE SECOND DICE");
+         	sym.getSymbol("TheDice").$("dice_symbol_2").hide();
+         	sym.getSymbol("TheDice").$("shadow2").hide();
          };
          // same as above:
          ShowSecondDice = function()
          {
-         	console.log("SHOW SECOND DICE");
-         	sym.getSymbol("dicePair").$("dice_symbol_2").show();
-         	sym.getSymbol("dicePair").$("shadow2").show();
+         	console.log("EA. SHOW SECOND DICE");
+         	sym.getSymbol("TheDice").$("dice_symbol_2").show();
+         	sym.getSymbol("TheDice").$("shadow2").show();
          };
          
          sym.StopDice = function()
          {
-         //	console.log("sym.stopDice called");
-         	sym.getSymbol("dicePair").getSymbol("dice_symbol_1").stop(0);
-         	sym.getSymbol("dicePair").getSymbol("dice_symbol_2").stop(0);
-         	sym.getSymbol("dicePair").stop(0);
+         	console.log("sym.stopDice called");
+         	sym.getSymbol("TheDice").getSymbol("dice_symbol_1").stop(0);
+         	sym.getSymbol("TheDice").getSymbol("dice_symbol_2").stop(0);
+         	sym.getSymbol("TheDice").stop(0);
          };
          
          sym.StartDice = function()
          {
-         	sym.getSymbol("dicePair").getSymbol("dice_symbol_1").play(0);
-         	sym.getSymbol("dicePair").getSymbol("dice_symbol_2").play(0);
-         	sym.getSymbol("dicePair").play(0);
+             console.log("sym.StartDice called");
+         	sym.getSymbol("TheDice").getSymbol("dice_symbol_1").play(0);
+         	sym.getSymbol("TheDice").getSymbol("dice_symbol_2").play(0);
+         	sym.getSymbol("TheDice").play(0);
          }
          ;
          sym.FlashDiceButton = function()
@@ -2613,9 +2609,9 @@ console.log("seven seconds");
       
       Symbol.bindElementAction(compId, symbolName, "${clicker}", "click", function(sym, e) {
          // rewind the clip so it plays:
-         sym.getSymbol("dicePair").getSymbol("dice_symbol_1").play(0);
-         sym.getSymbol("dicePair").getSymbol("dice_symbol_2").play(0);
-         sym.getSymbol("dicePair").play(0);
+         sym.getSymbol("TheDice").getSymbol("dice_symbol_1").play(0);
+         sym.getSymbol("TheDice").getSymbol("dice_symbol_2").play(0);
+         sym.getSymbol("TheDice").play(0);
           
             // hide the buttn flashing clip:
             sym.getSymbol("mcHUD").$("buttonflash").hide();
@@ -3556,7 +3552,7 @@ console.log("seven seconds");
 
    //=========================================================
    
-   //Edge symbol: 'dicePair'
+   //Edge symbol: 'TheDice'
    (function(symbolName) {   
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
       });
@@ -3572,18 +3568,19 @@ console.log("seven seconds");
          //alert(stopAt);
          sym.getSymbol("dice_symbol_1").stop(stopAt);
             if(player1.bike === true){
-                sym.getSymbol("dice_symbol_2").stop(stopAt2);
+               
                 sym.getSymbol("dice_symbol_2").show();
-               	sym.getSymbol("dicePair").$("shadow2").show();
+               	sym.getSymbol("TheDice").$("shadow2").show();
+                 sym.getSymbol("dice_symbol_2").stop(stopAt2);
             } else {
                  sym.getSymbol("dice_symbol_2").stop(0);
-                sym.getSymbol("dicePair").$("shadow2").hide();
+                sym.getSymbol("TheDice").$("shadow2").hide();
             }
       });
       //Edge binding end
 
-   })("dicePair");
-   //Edge symbol end:'dicePair'
+   })("TheDice");
+   //Edge symbol end:'TheDice'
 
    //=========================================================
    
@@ -3601,7 +3598,8 @@ console.log("seven seconds");
    (function(symbolName) {   
    
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 931, function(sym, e) {
-        sym.stop();
+        
+        console.log("TheDice > 931ms: running dice logic");
         
         var _stopOn1 = sym.getParentSymbol().getVariable("diceStopsAt1");
         console.log('ea. stopping dice 1 at ' + _stopOn1);
@@ -3612,41 +3610,24 @@ console.log("seven seconds");
         	var _stopOn2 = sym.getParentSymbol().getVariable("diceStopsAt2");
         	console.log('ea. stopping dice 2 at ' + _stopOn2);
         	sym.getSymbol("dice_symbol_2").stop( _stopOn2 );
-           
-        }
         
-        sym.play();
+        }
 
       });
       //Edge binding end
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 5500, function(sym, e) {
-         // insert code here
-         sym.stop();
-      });
-      //Edge binding end
+      
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 0, function(sym, e) {
          
-         /*
-         if(player.bike === true)
+         
+         if(player1.bike === true)
          {
          	ShowSecondDice();
          } else {
          	HideSecondDice();
          }
-         */
          
-         
-          
-         if(player1.bike===true){
-         	 sym.getSymbol("dicePair").$("dice_symbol_2").show();
-             sym.getSymbol("dicePair").$("shadow2").show();
-           } else {
-         	 sym.getSymbol("dicePair").$("dice_symbol_2").hide();
-         	 sym.getSymbol("dicePair").$("shadow2").hide();    
-           }
-          // stop them BEFORE the slide while testing:
 
       });
       //Edge binding end
