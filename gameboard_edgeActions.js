@@ -242,8 +242,8 @@ function getDifficulty(value) {
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 7;
-            player1.gb = 7;
-            countryValue = 1;
+            player1.gb = 17;
+            countryValue = 2;
             break;
 
         default:
@@ -484,7 +484,8 @@ function getJob() {
     // random roll to see if there is work.
     var roll = Math.floor((Math.random() * 6) + 1);
     if (roll === 1) {
-        alertIt("There is no work today, try again tomorrow.");
+        //alert("There is no work today, try again tomorrow.");
+        UpdateUserMessage("There is no work today, try again tomorrow.");
     } else {
         // award them points based on the education they got.
         // more education is a good investment
@@ -526,9 +527,16 @@ function getJob() {
 // actions that take place when medical destination is selected
 function getMedical() {
     //SetChosenPath("medical");
-    if (sick || sickWater) {
-        if (player1.gb > 9) {
-            
+    
+    // TODO - this won't work - need to create a chain of function check each circumstance and asking for a yes or no.
+    // if yes send to the transaction function, otherwise continue train of functions
+    if (player1.gb < 1) {
+    	swal("You don't have enough money to buy any medicine");
+    }
+    else {
+    	getMedicalCure();
+    }
+      
            /* 
             var buyMeds = swal(
                 {   
@@ -556,6 +564,7 @@ function getMedical() {
                 });
             */
             /* switched to above */
+/*        
             if (confirm("You are very sick, buy medicine for $10?")) {
                 impactStats(0, 0, 0, -10);
                 sick = false;
@@ -573,11 +582,12 @@ function getMedical() {
         } 
         else {
             // else they didn't have enough money for the cure. thanks obama :) .
-            swal("Unfortunate!", "You are very sick but don't have enough money for the cure.", "error");  
+            //swal("Unfortunate!", "You are very sick but don't have enough money for the cure.", "error");  
             UpdateUserMessage("You are very sick but don't have enough money for the cure.");
         }
-    } 
-    else if (sicknessTimer > 0 && player1.gb > 2) {
+    }
+     
+    if (sicknessTimer > 0 && player1.gb > 2) {
        
     	if (confirm("You have diarrhea, buy medicine for $3?")) {
             impactStats(0, 0, 0, -3);
@@ -589,7 +599,7 @@ function getMedical() {
             UpdateUserMessage("You chose not to buy medicine for your diarrhea.");
             buyMedicine();
         }
-       
+*/     
         /*
         var buyMeds = swal(
                 {   
@@ -614,8 +624,9 @@ function getMedical() {
                         UpdateUserMessage("You are very sick but don't have enough money for the cure.");
                     } 
                 }); */
-    	
-    }
+               
+/*    	
+	}
     else {
         if (player1.gb > 0) {
             buyMedicine();
@@ -623,98 +634,167 @@ function getMedical() {
             UpdateUserMessage("You are very sick but don't have enough money for the cure.");            
         }
     }
+*/    
 }
 
-// get and check user input for buying medicine and then update player stats
-function buyMedicine() {
+function getMedicalCure() {
+	if (sick || sickWater && player1.gb > 9) {
+		var buyMeds = swal(
+                {   
+                title: "Buy Medicine?",   
+                text: "You are very sick, buy medicine for $10?",   
+                type: "warning",   
+                showCancelButton: true,   
+                confirmButtonColor: "#DD6B55",   
+                confirmButtonText: "Purchase",   
+                cancelButtonText: "Cancel",   
+                closeOnConfirm: false,   
+                closeOnCancel: false }, 
+                function(isConfirm){   
+                    if (isConfirm) {     
+                        swal("Congratulations!", "You've been cured by the Medicine you bought.", "success");  
+                        buyMedicine(100);
+                    } else {    
+                        swal("Cancelled", "You chose not to buy medicine for your sickness.", "error"); 
+                        getMedicalDiarrhea();                        
+                    } 
+                });	
+	}
+	else {
+		getMedicalDiarrhea();
+	}
+}
 
-    var medicineBuy;
-    var suggestedSpendAmount = Math.round(Math.random() * 4 + 1);
-    medicineBuy = prompt("For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10", Math.round(Math.random() * 4) + 1);
+
+
+function getMedicalDiarrhea() {
+	if (sicknessTimer > 0 && player1.gb > 2) {
+		var buyMeds = swal(
+                {   
+                title: "Buy Medicine?",   
+                text: "You have diarrhea, buy medicine for $3?",   
+                type: "warning",   
+                showCancelButton: true,   
+                confirmButtonColor: "#DD6B55",   
+                confirmButtonText: "Purchase",   
+                cancelButtonText: "Cancel",   
+                closeOnConfirm: false,   
+                closeOnCancel: false }, 
+                function(isConfirm){   
+                    if (isConfirm) {     
+                        swal("Congratulations!", "You've been cured by the Medicine you bought.", "success");  
+                        buyMedicine(30);
+                    } else {    
+                        swal("Cancelled", "You chose not to buy medicine for your diarrhea.", "error");
+                        getMedicalMessage();                        
+                    } 
+                });	
+	}
+	else {
+		getMedicalMessage();
+	}
+}
+
+function getMedicalMessage() {
+	var suggestedSpendAmount = Math.round(Math.random() * 4 + 1);
+	var returnedAmount = 0;
+	swal({
+	  title: "Get Well",
+	  text: "For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10",
+	  type: "input",
+	  showCancelButton: true,
+	  closeOnConfirm: false,
+	  animation: "slide-from-top",
+	  inputPlaceholder: suggestedSpendAmount
+	},
+	function(inputValue){
+		console.log(inputValue);
+		console.log(inputValue.type);
+	  if (inputValue === false) return false;
+	  
+	  if (inputValue === "") {
+	    swal.showInputError("You need to write something!");
+	    return false;
+	   }
+	  if (inputValue > player1.gb) {
+	  	swal.showInputError("You don't have that much money");
+	  	return false;
+	  	}
+	  if (isNaN(inputValue)) {
+	  	swal.showInputError("That's not a valid amount");
+	  	return false;
+	  }	
+	  if (inputValue > 5 && inputValue != 10 || inputValue < 0) {
+	  	swal.showInputError("That's not a valid amount");
+	  	return false;
+	  }	
+	     
+  swal("Nice!", "You spent " + inputValue, "success");
+  buyMedicine(inputValue);
+});
+		
+}
+
+
+// get and check user input for buying medicine and then update player stats
+function buyMedicine(medicineBuy) {
    
     // GLEN, WHAT IF SOMEONE ENTERS $20, DOES THE EXTRA MONEY JUST GET TAKEN OR DO THEY GET APPROPRIATE BENEFITS?
-    /*
-    medicineBuy = swal(
-        {   
-        title: "Buy Medicine?",   
-        text: "For every Global Buck you spend on medicine you get 2 Health Points.\nHow many Global Bucks do you want to spend on medicine? (Maximum 5 Global Bucks)\nOr you can buy medicine to take with you for $10",   
-        type: "input",   
-        showCancelButton: true,   
-        closeOnConfirm: false,   
-        animation: "slide-from-top",   
-        inputPlaceholder: suggestedSpendAmount 
-        }, 
-            function(inputValue){
-                // if they don't type
-                if (inputValue === false){
-                    return false;    
-                }
-                
-                // if they don't type enough
-                if (inputValue > player1.gb){
-                      swal.showInputError("You don't have that much money!?");   
-                    return false;
-                }
-                
-                // if it's empty:
-                if (inputValue === "") 
-                {
-                    swal.showInputError("Invalid Amount, enter SOMETHING!");     
-                    return false;   
-                }      
-                
-                swal("Purchase Successful!", "You bought medicine to carry with you in case you get sick for $" + inputValue, "success"); 
-        });
-        
-        */
+    // switch statement only allow for values of 1-5 or 10.  Any other amount trigger bad input response.
+
    
     medicineBuy = Number(medicineBuy);
 
-    if ( isNan(parseInt(medicineBuy))) {
-        UpdateUserMessage("Bad input, please try again");
-        buyMedicine();
-    } else if (medicineBuy > player1.gb) {
-        UpdateUserMessage("You don't have that much money, try buying a little less");
-        buyMedicine();
-
-    } else {
-
-        switch (medicineBuy) {
-            case 1:
-                impactStats(2, 0, 0, -1);
-                updateStats();
-                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
-                break;
-            case 2:
-                impactStats(4, 0, 0, -2);
-                updateStats();
-                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
-                break;
-            case 3:
-                impactStats(6, 0, 0, -3);
-                updateStats();
-                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
-                break;
-            case 4:
-                impactStats(8, 0, 0, -4);
-                updateStats();
-                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
-                break;
-            case 5:
-                impactStats(10, 0, 0, -5);
-                updateStats();
-                UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
-                break;
-            case 10:
-            	player1.medicine = true;
-            	UpdateUserMessage("You bought medicine to carry with you in case you get sick.");    
-                break; // this was missing so default was getting called as well
-                
-            default:
-                UpdateUserMessage("Bad input, please try again");
-                break;
+    switch (medicineBuy) {
+    	case 0:
+    		UpdateUserMessage("You chose to buy no medicine");
+        case 1:
+            impactStats(2, 0, 0, -1);
+            updateStats();
+            UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+            break;
+        case 2:
+            impactStats(4, 0, 0, -2);
+            updateStats();
+            UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+            break;
+        case 3:
+            impactStats(6, 0, 0, -3);
+            updateStats();
+            UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+            break;
+        case 4:
+            impactStats(8, 0, 0, -4);
+            updateStats();
+            UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+            break;
+        case 5:
+            impactStats(10, 0, 0, -5);
+            updateStats();
+            UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
+            break;
+        case 10:
+        	player1.medicine = true;
+        	UpdateUserMessage("You bought medicine to carry with you in case you get sick.");    
+            break; // this was missing so default was getting called as well
+        case 30:
+        	impactStats(0, 0, 0, -3);
+            sicknessTimer = -1;
+            UpdateUserMessage("You've been cured by the Medicine you bought.");
+            updateStats();
+        	break;
+    	case 100:
+    		impactStats(0, 0, 0, -10);
+            sick = false;
+            sickWater = false;
+            UpdateUserMessage("You've been cured by the Medicine you bought.");
+            updateStats();
+    		break;                   
+        default:
+            UpdateUserMessage("Error");
+            break;
         }
-    }
+//    }
     //UpdateUserMessage("You spent " + medicineBuy + " Global Bucks and gained " + 2 * medicineBuy + " Health Points.");
 
 }
@@ -1410,7 +1490,7 @@ function ExecutePlayerRoll() // called by the dice function.
     
     //debug code, allows us to manually set the roll:
     if (setRoll > 0) {
-        dice_roll = setRoll;
+        dice_roll_1 = setRoll;
     }
     // end debug code
     
