@@ -50,7 +50,8 @@ var additionalInfo = ""; // extra message info to concat on dice roll messages
 var turnNumber = 0; // number of turns played (currently only used for debugging)
 var destinationBlocked = false; // set to true if one or more destination are being blocked
 var bDest = {}; // dictionary to hold blocked destinations
-var bsfBlocked = false; // varaible for special card case requiring tracking
+var bsfBlocked = false; // variable for special card case requiring tracking
+var rejected = false; // variable to show rejected transaction in Market
 // DEBUGGING VARIABLES
 var winVal = 99; // DANNY - change this value to the turn # you want the win condition triggered
 var loseVal = 99; // DANNY - change this value to the turn # you want the lose condition triggered
@@ -239,10 +240,10 @@ function getDifficulty(value) {
             break;
 			
         case "c":
-            player1.hp = 20;
-            player1.wp = 20;
-            player1.ep = 7;
-            player1.gb = 7;
+            player1.hp = 15;
+            player1.wp = 15;
+            player1.ep = 3;
+            player1.gb = 2;
             countryValue = 2;
             break;
 
@@ -878,7 +879,6 @@ function buyNewStuff() {
                 checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them if sick, feed them if hungry, etc.)
             } else {
                 rejectTransaction();
-                console.log("Rejecting Transactions");
             }
             break;
 
@@ -905,6 +905,7 @@ function checkout(item, value, message) {
         console.log("checkout true");
         player1.gb -= value;
         UpdateUserMessage("You just bought " + item + " for " + value + " Global Bucks.\n"); // "+ message" for more context
+        rejected = false; 
         return true;
     }
 }
@@ -912,10 +913,9 @@ function checkout(item, value, message) {
 // displays message when you don;t have enough money, sends you back to the store
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
+    rejected = true;
     stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
-    console.log("return to buy screen? - Trying....");
-    //stuffBuy(); // TODO - this doesn't work - it loops out to game play cycle - can't return to store if transaction rejected due to current game loop design.
-    
+    console.log("REJECTED!");    
 }
 
 function checkPowerUp(powerUp) {
@@ -3010,12 +3010,18 @@ console.log("seven seconds");
          closeOnConfirm: false,   
          closeOnCancel: true }, 
          function(isConfirm){   
-             if (isConfirm) {     
-                swal("Congratulations!", "You've bought soap.", "success");  
-                buyNewStuff();
-         		// close the window if we're done, else they can click again.
-         		sym.getComposition().getStage().$("hudMarket").hide();
-             } else {    
+             if (isConfirm) { 
+             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for soap.", "error");
+                	}
+                else {	    
+	                swal("Congratulations!", "You've bought soap.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } 
+             else {    
                 //swal("Cancelled", "You chose not to buy soap.", "error");                       
              } 
          });
@@ -3036,13 +3042,42 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "tablet";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
+		var confirmPurchase = swal(
+         {   
+         title: "Buy Tablet?",   
+         text: "Buy water purification tablet for 1 Global Buck?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {  
+             	buyNewStuff();
+             	if (rejected) {
+             		swal("Sorry", "You don't have enough money for a tablet.", "error");
+             	}   
+             	else {
+	                swal("Congratulations!", "You've bought a water purification tablet.", "success");  
+	                sym.getComposition().getStage().$("hudMarket").hide();
+                }
+         		// close the window if we're done, else they can click again.
+             } 
+             else {    
+                //swal("Cancelled", "You chose not to buy tablet.", "error");                       
+             } 
+         });
+ 		/*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
+        */
          // button sound:
          //sym.$("click")[0].play();
 
@@ -3053,13 +3088,42 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "bucket";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy Bucket?",   
+         text: "Buy a water bucket for 2 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {
+             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for a bucket.", "error");
+                	}
+                else {	     
+	                swal("Congratulations!", "You've bought a bucket.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } 
+             else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
+         */
          // button sound:
          //sym.$("click")[0].play();
 
@@ -3070,13 +3134,42 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "food";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $2?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy Food?",   
+         text: "Buy food to take with you for 2 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {
+             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for food.", "error");
+                	} 
+            	else {    
+	                swal("Congratulations!", "You've bought food.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } 
+             else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getSymbolElement().hide();
          }
+         */
          // button sound:
          //sym.$("click")[0].play();   
       });
@@ -3086,13 +3179,42 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "kit";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $3?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $3?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy First Aid Kit?",   
+         text: "Buy a first aid kit to carry with you for 3 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {
+ 	             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for a first aid kit.", "error");
+                	}
+            	else {     
+	                swal("Congratulations!", "You've bought a first aid kit.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } 
+             else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
-         }        
+         } 
+         */       
          // button sound:
          //sym.$("click")[0].play();
 
@@ -3103,13 +3225,43 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "filter";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy Biosand Filter?",   
+         text: "Buy a biosand filter for 20 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) { 
+             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for a biosand filter.", "error");
+                	}
+                else {
+                	swal("Congratulations!", "You've bought a biosand filter.", "success");
+                	sym.getComposition().getStage().$("hudMarket").hide();               	
+                	}	 
+                //buyNewStuff();
+         		// close the window if we're done, else they can click again.
+         		
+             } else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
-         }         
+         } 
+         */        
          // button sound:
          //sym.$("click")[0].play();
 
@@ -3120,14 +3272,41 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "plumbing";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $100?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $100?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy Plumbing?",   
+         text: "Buy plumbing for 100 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {
+ 	             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for plumbing.", "error");
+                	}
+            	else {     
+	                swal("Congratulations!", "You've bought plumbing.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
-         
+         */
          // button sound:
          //sym.$("click")[0].play();
 
@@ -3138,13 +3317,41 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "bike";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $20?");
+   		var confirmPurchase = swal(
+         {   
+         title: "Buy Bike?",   
+         text: "Buy a bicycle for 20 Global Bucks?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {
+             	buyNewStuff();
+             	if (rejected) {    
+                	swal("Sorry", "You don't have enough money for a bike.", "error");
+                	}
+            	else {     
+	                swal("Congratulations!", "You've bought a bike.", "success");  
+	         		// close the window if we're done, else they can click again.
+	         		sym.getComposition().getStage().$("hudMarket").hide();
+         		}
+             } else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+         /*
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
-         }        
+         } 
+         */       
          // button sound:
          //sym.$("click")[0].play();
       });
@@ -3188,7 +3395,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "bucket";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
@@ -3201,7 +3408,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "food";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
@@ -3214,7 +3421,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "kit";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
@@ -3227,7 +3434,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "filter";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
@@ -3240,7 +3447,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "plumbing";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
@@ -3253,7 +3460,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "bike";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
