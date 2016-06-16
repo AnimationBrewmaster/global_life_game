@@ -537,6 +537,7 @@ function getMedical() {
                 
 }
 
+// checks if player avatar is sick
 function getMedicalCure() {
 	if (sick || sickWater && player1.gb > 9) {
 		var buyMeds = swal(
@@ -565,8 +566,7 @@ function getMedicalCure() {
 	}
 }
 
-
-
+// checks if player avatar has diarrhea
 function getMedicalDiarrhea() {
 	if (sicknessTimer > 0 && player1.gb > 2) {
 		var buyMeds = swal(
@@ -595,6 +595,7 @@ function getMedicalDiarrhea() {
 	}
 }
 
+// asks user for value to spend at Medical Destination 
 function getMedicalMessage() {
 	var suggestedSpendAmount = Math.round(Math.random() * 4 + 1);
 	var returnedAmount = 0;
@@ -610,8 +611,8 @@ function getMedicalMessage() {
 	function(inputValue){
 		console.log(inputValue);
 		console.log(inputValue.type);
-	  if (inputValue === false) return false;
-	  
+	  if (inputValue === false) 
+	  	return false;	  
 	  if (inputValue === "") {
 	    swal.showInputError("You need to write something!");
 	    return false;
@@ -625,7 +626,7 @@ function getMedicalMessage() {
 	  	return false;
 	  }	
 	  if (inputValue > 5 && inputValue != 10 || inputValue < 0) {
-	  	swal.showInputError("That's not a valid amount");
+	  	swal.showInputError("Please input a value between 0 and 5, or 10");
 	  	return false;
 	  }	
 	     
@@ -641,8 +642,7 @@ function buyMedicine(medicineBuy) {
    
     // GLEN, WHAT IF SOMEONE ENTERS $20, DOES THE EXTRA MONEY JUST GET TAKEN OR DO THEY GET APPROPRIATE BENEFITS?
     // switch statement only allow for values of 1-5 or 10.  Any other amount trigger bad input response.
-
-   
+  
     medicineBuy = Number(medicineBuy);
 
     switch (medicineBuy) {
@@ -703,7 +703,7 @@ function buyMedicine(medicineBuy) {
 function getSchool() {
    // SetChosenPath("school");
     if (player1.gb <= 0) {
-        message = "Unfortunately you have no money to buy an education.";
+        swal("Unfortunately you have no money to buy an education.");
     } else {
         buySchool();
     }
@@ -711,31 +711,55 @@ function getSchool() {
 
 // gets and checks user input for schooling spending and updates player stats
 function buySchool() {
-    var schoolBuy = prompt("For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?", Math.round(Math.random() * 3));
-    var bucksSpent = parseInt(schoolBuy);
-    if ( isNan(bucksSpent) ) {
-        UpdateUserMessage("Bad input, please try again");
-        buySchool();
-    } else if (bucksSpent > 3) {
-    	UpdateUserMessage("That amount is above the maximum allowed, please choose a value of 3 or less");
-        buySchool();
-    } 
-    else if (bucksSpent > player1.gb) {
-        UpdateUserMessage("You don't have that much money, try buying a little less");
-        buySchool();
-        
-    } else {
-        impactStats(0, 0, 2 * bucksSpent, -bucksSpent);
-        updateStats();
-        UpdateUserMessage("You spent " + schoolBuy + " Global Bucks and gained " + 2 * schoolBuy + " Education Points.");
-    }
+	var suggestedSpendAmount = Math.round(Math.random() * 3);
+	var bucksSpent = 0;
+    swal({
+		title: "Get Educated",
+		text: "For every Global Buck you spend on schooling you get 2 Education Points.\nHow many Global Bucks do you want to spend on Education (Maximum 3 Global Bucks)?",
+		type: "input",
+		showCancelButton: true,
+		closeOnConfirm: false,
+		animation: "slide-from-top",
+		inputPlaceholder: suggestedSpendAmount
+	},
+	function(inputValue){
+		console.log(inputValue);
+		console.log(inputValue.type);
+		if (inputValue === false) 
+		  	return false;	  
+		if (inputValue === "") {
+		    swal.showInputError("You need to write something!");
+		    return false;
+		}
+		if (inputValue > player1.gb) {
+		  	swal.showInputError("You don't have that much money, try buying less.");
+		  	return false;
+		}
+		if (isNaN(inputValue)) {
+		  	swal.showInputError("That's not a valid amount");
+		  	return false;
+		}
+		if (inputValue < 0) {
+		  	swal.showInputError("Please input a value between 0 and 3.");
+		  	return false;
+		}	
+		if (inputValue > 3) {
+		  	swal.showInputError("That's more than the maximum allowed.<br>Please input a value between 0 and 3.");
+		  	return false;
+		}		     
+  	swal("Nice!", "You spent " + inputValue, "success");
+  	bucksSpent = Number(inputValue);
+  	impactStats(0, 0, 2 * bucksSpent, -bucksSpent);
+    updateStats();
+    UpdateUserMessage("You spent " + bucksSpent + " Global Bucks and gained " + 2 * bucksSpent + " Education Points.");
+	});
 }
 
 // actions that take place when store destination is selected
 function getStore() {
-  //  SetChosenPath("store");
+  //  SetChosenPath("store");30
     if (player1.gb <= 0) {
-        message = "Unfortunately you have no money to buy anything at the Market.";
+        swal("Unfortunately you have no money to buy anything at the Market.");
         UpdateUserMessage(message);
     } else {
         OpenMarketHud();
@@ -844,7 +868,7 @@ function buyNewStuff() {
                 rejectTransaction();
             }
             break;
-
+            
         case "plumbing":
             spent = 100;
             itemMessage = "plumbing message";
@@ -854,6 +878,7 @@ function buyNewStuff() {
                 checkPowerUp(stuffBuy); // checks the item to give player the bonus (heal them if sick, feed them if hungry, etc.)
             } else {
                 rejectTransaction();
+                console.log("Rejecting Transactions");
             }
             break;
 
@@ -888,9 +913,9 @@ function checkout(item, value, message) {
 function rejectTransaction() {
     UpdateUserMessage("You don't have enough money for that, please try again");
     stuffBuy = ""; // added this variable reset to stop infinte recursion if player tries to buy something they don't have enough money for (keeps passing same item chosen)
+    console.log("return to buy screen? - Trying....");
+    //stuffBuy(); // TODO - this doesn't work - it loops out to game play cycle - can't return to store if transaction rejected due to current game loop design.
     
-    stuffBuy(); // TODO - this doesn't work - it loops out to game play cycle - can't return to store if transaction rejected due to current game loop design.
-    console.log("return to buy screen");
 }
 
 function checkPowerUp(powerUp) {
@@ -2958,15 +2983,38 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "soap";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + " for $1?");
+  		var confirmPurchase = swal(
+         {   
+         title: "Buy Soap?",   
+         text: "Buy soap for 1 Global Buck?",   
+         type: "warning",   
+         showCancelButton: true,   
+         confirmButtonColor: "#DD6B55",   
+         confirmButtonText: "Purchase",   
+         cancelButtonText: "Cancel",   
+         closeOnConfirm: false,   
+         closeOnCancel: true }, 
+         function(isConfirm){   
+             if (isConfirm) {     
+                swal("Congratulations!", "You've bought soap.", "success");  
+                buyNewStuff();
+         		// close the window if we're done, else they can click again.
+         		sym.getComposition().getStage().$("hudMarket").hide();
+             } else {    
+                //swal("Cancelled", "You chose not to buy soap.", "error");                       
+             } 
+         });
+/*         	
          if(confirmPurchase)
          {
          	buyNewStuff();
          	// close the window if we're done, else they can click again.
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
+*/
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
       });
       //Edge binding end
 
@@ -2982,7 +3030,7 @@ console.log("seven seconds");
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -2999,7 +3047,7 @@ console.log("seven seconds");
          	sym.getComposition().getStage().$("hudMarket").hide();
          }
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -3016,7 +3064,7 @@ console.log("seven seconds");
          	sym.getSymbolElement().hide();
          }
          // button sound:
-         sym.$("click")[0].play();   
+         //sym.$("click")[0].play();   
       });
       //Edge binding end
 
@@ -3032,7 +3080,7 @@ console.log("seven seconds");
          	sym.getComposition().getStage().$("hudMarket").hide();
          }        
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -3049,7 +3097,7 @@ console.log("seven seconds");
          	sym.getComposition().getStage().$("hudMarket").hide();
          }         
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -3067,7 +3115,7 @@ console.log("seven seconds");
          }
          
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
 
       });
       //Edge binding end
@@ -3084,7 +3132,7 @@ console.log("seven seconds");
          	sym.getComposition().getStage().$("hudMarket").hide();
          }        
          // button sound:
-         sym.$("click")[0].play();
+         //sym.$("click")[0].play();
       });
       //Edge binding end
 
@@ -3098,12 +3146,14 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "soap";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
          	sym.getSymbolElement().hide();
          }
+
       });
          //Edge binding end
 
@@ -3111,7 +3161,7 @@ console.log("seven seconds");
          // set which item we've bought
          stuffBuy = "tablet";
          // confirm the purchase
-         var confirmPurchase = confirm("Buy " + stuffBuy + "?");
+         //var confirmPurchase = confirm("Buy " + stuffBuy + "?");
          if(confirmPurchase)
          {
          	// close the window if we're done, else they can click again.
