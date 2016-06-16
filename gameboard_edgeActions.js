@@ -242,7 +242,7 @@ function getDifficulty(value) {
             player1.hp = 20;
             player1.wp = 20;
             player1.ep = 7;
-            player1.gb = 17;
+            player1.gb = 7;
             countryValue = 2;
             break;
 
@@ -528,113 +528,13 @@ function getJob() {
 function getMedical() {
     //SetChosenPath("medical");
     
-    // TODO - this won't work - need to create a chain of function check each circumstance and asking for a yes or no.
-    // if yes send to the transaction function, otherwise continue train of functions
     if (player1.gb < 1) {
     	swal("You don't have enough money to buy any medicine");
     }
     else {
     	getMedicalCure();
     }
-      
-           /* 
-            var buyMeds = swal(
-                {   
-                title: "Buy Medicine?",   
-                text: "You are very sick, buy medicine for $10?",   
-                type: "warning",   
-                showCancelButton: true,   
-                confirmButtonColor: "#DD6B55",   
-                confirmButtonText: "Purchase",   
-                cancelButtonText: "Cancel",   
-                closeOnConfirm: false,   
-                closeOnCancel: false }, 
-                function(isConfirm){   
-                    if (isConfirm) {     
-                        swal("Congratulations!", "You've been cured by the Medicine you bought.", "success");  
-                        impactStats(0, 0, 0, -10);
-                        sick = false;
-                        sickWater = false;
-                        UpdateUserMessage("You've been cured by the Medicine you bought.");
-                        updateStats();
-                    } else {    
-                        swal("Cancelled", "You chose not to buy medicine for your sickness.", "error");  
-                        UpdateUserMessage("You are very sick but don't have enough money for the cure.");
-                    } 
-                });
-            */
-            /* switched to above */
-/*        
-            if (confirm("You are very sick, buy medicine for $10?")) {
-                impactStats(0, 0, 0, -10);
-                sick = false;
-                sickWater = false;
-                UpdateUserMessage("You've been cured by the Medicine you bought.");
-                updateStats();
-            }
-            else {
-            	UpdateUserMessage("You chose not to buy medicine for your sickness");
-            	buyMedicine(); // GLEN, DOES THIS NEED TO GET ADDED UP ABOVE AGAIN?
-            }   
-            
-            
-            
-        } 
-        else {
-            // else they didn't have enough money for the cure. thanks obama :) .
-            //swal("Unfortunate!", "You are very sick but don't have enough money for the cure.", "error");  
-            UpdateUserMessage("You are very sick but don't have enough money for the cure.");
-        }
-    }
-     
-    if (sicknessTimer > 0 && player1.gb > 2) {
-       
-    	if (confirm("You have diarrhea, buy medicine for $3?")) {
-            impactStats(0, 0, 0, -3);
-            sicknessTimer = -1;
-            UpdateUserMessage("You've been cured by the Medicine you bought.");
-            updateStats();
-        }
-        else {
-            UpdateUserMessage("You chose not to buy medicine for your diarrhea.");
-            buyMedicine();
-        }
-*/     
-        /*
-        var buyMeds = swal(
-                {   
-                title: "Buy Medicine?",   
-                text: "You have diarrhea, buy medicine for $3?",   
-                type: "warning",   
-                showCancelButton: true,   
-                confirmButtonColor: "#DD6B55",   
-                confirmButtonText: "Purchase",   
-                cancelButtonText: "Cancel",   
-                closeOnConfirm: false,   
-                closeOnCancel: false }, 
-                function(isConfirm){   
-                    if (isConfirm) {     
-                        swal("Congratulations!", "You've been cured by the Medicine you bought.", "success");  
-                        impactStats(0, 0, 0, -3);
-                        sicknessTimer = -1;
-                        UpdateUserMessage("You've been cured by the Medicine you bought.");
-                        updateStats();
-                    } else {    
-                        swal("Cancelled", "You chose not to buy medicine for your diarrhea.", "error");  
-                        UpdateUserMessage("You are very sick but don't have enough money for the cure.");
-                    } 
-                }); */
-               
-/*    	
-	}
-    else {
-        if (player1.gb > 0) {
-            buyMedicine();
-        } else {
-            UpdateUserMessage("You are very sick but don't have enough money for the cure.");            
-        }
-    }
-*/    
+                
 }
 
 function getMedicalCure() {
