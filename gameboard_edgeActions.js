@@ -1817,6 +1817,20 @@ function UpdateHUD(life, water, glob, edu) {
             onUpdate: UpdateEducation
         });
   //  }
+    
+    // warn the player if their water or health is in the danger zone
+    var dangerzone = 3;
+    if(_water <= dangerzone){     
+        THE_GAME.getSymbol("mcHUD").$("warningWater").show();
+    } else {
+        THE_GAME.getSymbol("mcHUD").$("warningWater").hide();
+    }
+    
+    if(_life <= dangerzone){     
+        THE_GAME.getSymbol("mcHUD").$("warningHealth").show();
+    } else {
+        THE_GAME.getSymbol("mcHUD").$("warningHealth").hide(); 
+    }
 }
 
 
