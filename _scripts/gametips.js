@@ -5,7 +5,7 @@
 function InitGameTips() {
 	
 	// create arrays for each country
-var arrGameTips = [];
+	//arrGameTips = [];
 	arrGameTips[0] = [];
 	arrGameTips[1] = [];
 	arrGameTips[2] = [];
@@ -57,7 +57,7 @@ var arrGameTips = [];
     arrGameTips[3][9] = "165 million people worldwide suffer from childhood malnutrition.";
     arrGameTips[3][10] = "More people have access to a cell phone then a toilet.";
     
-    var startingGameTip = Math.round(Math.random() * arrGameTips[0].length-1);
+    startingGameTip = Math.round(Math.random() * arrGameTips[0].length-1);
     console.log("Starting Game Tip = " + startingGameTip);
     //console.log(arrGameTips);
 }

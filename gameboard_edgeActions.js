@@ -410,7 +410,7 @@ function updateStats() {
         inventoryTally += "NO";
     }
     
-    //InvUpdateInventory(inventoryTally); // GLEN, THIS WAS CAUSING AN ERROR.
+    InvUpdateInventory(inventoryTally); // GLEN, THIS WAS CAUSING AN ERROR. - seems ok now
 }
 
 
@@ -1644,8 +1644,9 @@ function UpdatePlayerPositionAlongTimeline(num_of_secs) {
 
 function GetRandomGameTip() {
     // every game will start the tips from a 
-    // random position to keep things fresh:
+    // random position to keep things fresh:   
     startingGameTip++;
+
     if (startingGameTip > arrGameTips[countryValue].length - 1)
 	{
         startingGameTip = 0;
