@@ -1358,7 +1358,7 @@ function checkBlocks() {
     console.log(bDest); 
 }
 
-// executes impacts when player uses invetory item and removes item from inventory list
+// executes impacts when player uses inventory item and removes item from inventory list
 // send argument of the inveotry item being used (only "food" and "kit" are used by player iteraction)
 function useInventory(item) {
     // checks argument sent and gives stats boost and removes item from player object
@@ -3011,16 +3011,24 @@ console.log("seven seconds");
          closeOnConfirm: false,   
          closeOnCancel: true }, 
          function(isConfirm){   
-             if (isConfirm) { 
-             	buyNewStuff();
-             	if (rejected) {    
+             if (isConfirm) {
+             	if (player1.soap) {
+             		console.log("you got soap");
+            		swal("Oops", "You already have soap.", "error");
+            	}
+            	else { 
+            		console.log("sending to buyStuff function");
+             		buyNewStuff();
+             		if (rejected) {    
                 	swal("Sorry", "You don't have enough money for soap.", "error");
                 	}
-                else {	    
-	                swal("Congratulations!", "You've bought soap.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
-         		}
+	                else {	    
+		                swal("Congratulations!", "You've bought soap.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
+             	}		
+             	
              } 
              else {    
                 //swal("Cancelled", "You chose not to buy soap.", "error");                       
@@ -3056,15 +3064,20 @@ console.log("seven seconds");
          closeOnConfirm: false,   
          closeOnCancel: true }, 
          function(isConfirm){   
-             if (isConfirm) {  
-             	buyNewStuff();
-             	if (rejected) {
-             		swal("Sorry", "You don't have enough money for a tablet.", "error");
-             	}   
-             	else {
-	                swal("Congratulations!", "You've bought a water purification tablet.", "success");  
-	                sym.getComposition().getStage().$("hudMarket").hide();
-                }
+             if (isConfirm) {             	
+             	if (player1.tablet) {
+            		swal("Oops", "You already have a tablet.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {
+	             		swal("Sorry", "You don't have enough money for a tablet.", "error");
+	             	}   
+	             	else {
+		                swal("Congratulations!", "You've bought a water purification tablet.", "success");  
+		                sym.getComposition().getStage().$("hudMarket").hide();
+	                }
+               }
          		// close the window if we're done, else they can click again.
              } 
              else {    
@@ -3103,14 +3116,19 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) {
-             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for a bucket.", "error");
-                	}
-                else {	     
-	                swal("Congratulations!", "You've bought a bucket.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
+             	if (player1.bucket) {
+            		swal("Oops", "You already have a bucket.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for a bucket.", "error");
+	                	}
+	                else {	     
+		                swal("Congratulations!", "You've bought a bucket.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
          		}
              } 
              else {    
@@ -3149,14 +3167,19 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) {
-             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for food.", "error");
-                	} 
-            	else {    
-	                swal("Congratulations!", "You've bought food.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
+             	if (player1.food) {
+            		swal("Oops", "You already have food.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for food.", "error");
+	                	} 
+	            	else {    
+		                swal("Congratulations!", "You've bought food.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
          		}
              } 
              else {    
@@ -3194,14 +3217,19 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) {
- 	             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for a first aid kit.", "error");
-                	}
-            	else {     
-	                swal("Congratulations!", "You've bought a first aid kit.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
+             	if (player1.kit) {
+            		swal("Oops", "You already have a kit.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for a first aid kit.", "error");
+	                	}
+	            	else {     
+		                swal("Congratulations!", "You've bought a first aid kit.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
          		}
              } 
              else {    
@@ -3240,17 +3268,21 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) { 
-             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for a biosand filter.", "error");
-                	}
-                else {
-                	swal("Congratulations!", "You've bought a biosand filter.", "success");
-                	sym.getComposition().getStage().$("hudMarket").hide();               	
-                	}	 
+             	if (player1.filter) {
+            		swal("Oops", "You already have a filter.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for a biosand filter.", "error");
+	                	}
+	                else {
+	                	swal("Congratulations!", "You've bought a biosand filter.", "success");
+	                	sym.getComposition().getStage().$("hudMarket").hide();               	
+	                	}	 
                 //buyNewStuff();
          		// close the window if we're done, else they can click again.
-         		
+         		}
              } else {    
                 //swal("Cancelled", "You chose not to buy soap.", "error");                       
              } 
@@ -3287,14 +3319,19 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) {
- 	             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for plumbing.", "error");
-                	}
-            	else {     
-	                swal("Congratulations!", "You've bought plumbing.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
+             	if (player1.plumbing) {
+            		swal("Oops", "You already have plumbing.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for plumbing.", "error");
+	                	}
+	            	else {     
+		                swal("Congratulations!", "You've bought plumbing.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
          		}
              } else {    
                 //swal("Cancelled", "You chose not to buy soap.", "error");                       
@@ -3332,14 +3369,19 @@ console.log("seven seconds");
          closeOnCancel: true }, 
          function(isConfirm){   
              if (isConfirm) {
-             	buyNewStuff();
-             	if (rejected) {    
-                	swal("Sorry", "You don't have enough money for a bike.", "error");
-                	}
-            	else {     
-	                swal("Congratulations!", "You've bought a bike.", "success");  
-	         		// close the window if we're done, else they can click again.
-	         		sym.getComposition().getStage().$("hudMarket").hide();
+             	if (player1.bike) {
+            		swal("Oops", "You already have a bike.", "error");
+            	}
+            	else {
+            		buyNewStuff();
+	             	if (rejected) {    
+	                	swal("Sorry", "You don't have enough money for a bike.", "error");
+	                	}
+	            	else {     
+		                swal("Congratulations!", "You've bought a bike.", "success");  
+		         		// close the window if we're done, else they can click again.
+		         		sym.getComposition().getStage().$("hudMarket").hide();
+	         		}
          		}
              } else {    
                 //swal("Cancelled", "You chose not to buy soap.", "error");                       
