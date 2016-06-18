@@ -3985,13 +3985,13 @@ console.log("seven seconds");
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnKit}", "click", function(sym, e) {
-         InvBuyKit();
+         //InvBuyKit();
          useInventory("kit");
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFood}", "click", function(sym, e) {
-         InvBuyFood();
+         //InvBuyFood();
          useInventory("food");
       });
       //Edge binding end
