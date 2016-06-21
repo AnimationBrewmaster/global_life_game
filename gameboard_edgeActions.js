@@ -1264,7 +1264,7 @@ function checkPlayerCondition(numberOfTurns) {
     // check if player is sick from water
     if (sickWater === true) {
         UpdateUserMessage("You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points");
-        additionalInfo = "<br>You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points";
+        additionalInfo = "<br>You are still sick from drinking contaminated water, you lost " + 2 * numberOfTurns + " Health Points and Water Points.";
         impactStats(-2 * numberOfTurns, -2 * numberOfTurns, 0, 0);
         updateStats();
     }
@@ -1605,7 +1605,8 @@ function checkDiceRoll(diceRoll) {
     // alert the correct message. i moved the alerts here so they wouldn't stop time and halt player movement:    
     if (msgDiceRoll !== "") {
         //        alert("checkDiceRoll: "+msgDiceRoll);
-        UpdateUserMessage(msgDiceRoll + additionalInfo + ".");
+        //UpdateUserMessage(msgDiceRoll + additionalInfo + ".");
+        UpdateUserMessage(msgDiceRoll + additionalInfo);
     }
     // if card square was hit, wait 1.5 seconds then call the card function to determine the card and pop-up the card graphic
     if (cardYes) {
