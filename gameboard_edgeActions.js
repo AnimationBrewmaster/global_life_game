@@ -975,6 +975,10 @@ function checkCard() {
 function getChallengeCard() {
     var number = Math.floor(Math.random() * challengeCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
+    
+    // challenge sound:
+    THE_GAME.$("sad")[0].play();
+    
     // debug to test specific cards
     if (cCard !== -1) {
         if (cCard >= challengeCards[countryValue].length) {
@@ -1009,6 +1013,11 @@ function getChallengeCard() {
 function getPartnershipCard() {
     var number = Math.floor(Math.random() * partnershipCards[countryValue].length);
     var specialMsg = ""; //TEMP TESTING
+    
+     // partnership sound:
+    THE_GAME.$("cheer")[0].play();
+    
+    
     // debug to test specific cards
     if (pCard !== -1) {
         if (pCard >= partnershipCards[countryValue].length) {
@@ -1816,6 +1825,12 @@ function UpdateHUD(life, water, glob, edu) {
             newScore: _life,
             onUpdate: UpdateLife
         });
+    if(_life < 5){
+        TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelLife"), _mTweenTime, {color:"#FF0000"});
+    } else {
+         TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelLife"), _mTweenTime, {color:"#000000"});
+    }
+    
    // }
 
   //  if ((water != "") && (water != undefined)) {
@@ -1825,6 +1840,12 @@ function UpdateHUD(life, water, glob, edu) {
             newScore: _water,
             onUpdate: UpdateWater
         });
+    
+     if(_water < 5){
+        TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelWater"), _mTweenTime, {color:"#FF0000"});
+    } else {
+         TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelWater"), _mTweenTime, {color:"#000000"});
+    }
    // }
 
   //  if (0==0) {
@@ -1834,6 +1855,12 @@ function UpdateHUD(life, water, glob, edu) {
             newScore: _glob,
             onUpdate: UpdateGlobal
         });
+    
+     if(_glob < 5){
+        TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelGlobal"), _mTweenTime, {color:"#FF0000"});
+    } else {
+         TweenLite.to(THE_GAME.getSymbol("mcHUD").$("labelGlobal"), _mTweenTime, {color:"#000000"});
+    }
  //   }
 
    // if ((edu != "") && (edu != undefined)) {
@@ -2655,7 +2682,11 @@ console.log("seven seconds");
       //Edge binding end
       
       Symbol.bindElementAction(compId, symbolName, "${btnTips}", "click", function(sym, e) {
-         GetRandomGameTip();      
+         GetRandomGameTip();     
+         
+         // click sound:
+         sym.$("click")[0].play();
+
       });
       //Edge binding end
       
@@ -2669,7 +2700,7 @@ console.log("seven seconds");
          // crappy fix to solve issue with button text getting selected during clicks, irritating.
          sym.getSymbol("mcHUD").getSymbol("rectButton").stop("out");
          sym.StopFlashDiceButton();
-         console.log('clicker clicked');
+
       });
       //Edge binding end
       
@@ -2691,6 +2722,22 @@ console.log("seven seconds");
       
       Symbol.bindElementAction(compId, symbolName, "${btnInventory}", "mouseout", function(sym, e) {
          sym.getSymbol("btnInventory").play("out");
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 120, function(sym, e) {
+         // insert code here
+         // Play an audio track 
+         sym.$("song")[0].play();
+
+      });
+      //Edge binding end
+
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 7877, function(sym, e) {
+         // stop the audio before we leave:
+         sym.$("song")[0].pause();
+
       });
       //Edge binding end
 
@@ -3515,57 +3562,6 @@ console.log("seven seconds");
 
       })("hud_MARKET");
    //Edge symbol end:'hud_MARKET'
-
-   //=========================================================
-   
-   //Edge symbol: 'hudNextDest_1'
-   (function(symbolName) {   
-   
-      Symbol.bindElementAction(compId, symbolName, "${btnHospital}", "click", function(sym, e) {
-         getMedical();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnEmployment}", "click", function(sym, e) {
-         //alert('btnHospital be clicked');
-         getJob();
-         sym.getSymbolElement().hide();   
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnMarket}", "click", function(sym, e) { 
-         getStore();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnBathroom}", "click", function(sym, e) {
-         getToilet();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnFarm}", "click", function(sym, e) {
-         getfood();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnSchool}", "click", function(sym, e) {
-         getSchool();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${btnWater}", "click", function(sym, e) {
-         getWater();
-         sym.getSymbolElement().hide();
-      });
-      //Edge binding end
-
-   })("hudNextDest_1");
-   //Edge symbol end:'hudNextDest_1'
    //=========================================================
    //Edge symbol: 'hudNextDest_2'
    (function(symbolName) {      

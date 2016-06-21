@@ -81,15 +81,18 @@ body {
 
 /*main article styles*/
 h1 {
-	font-size: 2.8em;
+	font-size: 3.8em;
+    font-family: passion-one, sans-serif;
 }
 h2 {
-	font-size: 1.8em;
+	font-size: 2.8em;
+    font-family: passion-one, sans-serif;
 }
 h3 {
-	font-size: 1.5em;
+	font-size: 2.5em;
 	text-transform: uppercase;
 	padding-bottom: 10px;
+    font-family: passion-one, sans-serif;
 }
 #column1 {
 	width: 50%;
@@ -309,6 +312,7 @@ styles for the Start Game form:
 .highlighted_word{
     background-color:white;
     color:black;
+    padding-bottom:12px;   
 }
 
 .start_description{
