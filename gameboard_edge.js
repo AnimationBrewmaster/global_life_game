@@ -689,7 +689,7 @@
                             symbolName: 'hudNextDest',
                             display: 'none',
                             type: 'rect',
-                            rect: ['214px', '113px', '600', '405', 'auto', 'auto'],
+                            rect: ['214px', '73px', '600', '405', 'auto', 'auto'],
                             filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(67,67,67,1.00)", 0, 2, 2]
                         },
                         {
@@ -705,15 +705,17 @@
                         {
                             id: 'hudNextDest',
                             symbolName: 'hudNextDest_2',
+                            display: 'none',
                             type: 'rect',
                             rect: ['221px', '22px', '600', '405', 'auto', 'auto'],
+                            opacity: '0.98',
                             filter: [0, 0, 1, 1, 0, 0, 0, 0, "rgba(67,67,67,1.00)", 0, 2, 2]
                         },
                         {
                             id: 'mcHUD',
                             symbolName: 'mcHUD',
                             type: 'rect',
-                            rect: ['11.3%', '70.6%', '763', '248', 'auto', 'auto'],
+                            rect: ['13.4%', '80.9%', '763', '248', 'auto', 'auto'],
                             transform: [[],[],[],['0.84693','0.84693']]
                         },
                         {
@@ -727,14 +729,15 @@
                             id: 'btnInventory',
                             symbolName: 'rountBtn_1',
                             type: 'rect',
-                            rect: ['76px', '517px', 'undefined', 'undefined', 'auto', 'auto'],
-                            cursor: 'pointer'
+                            rect: ['648px', '555px', 'undefined', 'undefined', 'auto', 'auto'],
+                            cursor: 'pointer',
+                            transform: [[],[],[],['0.906','0.906']]
                         },
                         {
                             id: 'btnTips',
                             symbolName: 'rountBtn',
                             type: 'rect',
-                            rect: ['884px', '517px', '95', '94', 'auto', 'auto'],
+                            rect: ['741px', '553px', '95', '94', 'auto', 'auto'],
                             cursor: 'pointer',
                             transform: [[],[],[],['0.68','0.68']]
                         },
@@ -751,8 +754,7 @@
                             id: 'mcUserMessage',
                             symbolName: 'mcUserMessage',
                             type: 'rect',
-                            rect: ['446px', '520px', '211', '233', 'auto', 'auto'],
-                            transform: [[],[],[],['0.96497','0.96497']]
+                            rect: ['366px', '507px', '211', '233', 'auto', 'auto']
                         },
                         {
                             id: 'mcPopup',
@@ -771,7 +773,7 @@
                         {
                             id: 'clicker',
                             type: 'ellipse',
-                            rect: ['656px', '517px', '217px', '91px', 'auto', 'auto'],
+                            rect: ['630px', '478px', '217px', '91px', 'auto', 'auto'],
                             cursor: 'pointer',
                             borderRadius: ["50%", "50%", "50%", "50%"],
                             opacity: '0',
@@ -801,14 +803,14 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid5867",
+                            "eid16635",
                             "left",
                             0,
                             0,
                             "linear",
                             "${btnTips}",
-                            '884px',
-                            '884px'
+                            '741px',
+                            '741px'
                         ],
                         [
                             "eid6280",
@@ -939,18 +941,8 @@
                             0,
                             "easeOutQuad",
                             "${mcUserMessage}",
-                            '446px',
-                            '446px'
-                        ],
-                        [
-                            "eid13059",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${pathmarkersMed}",
-                            'none',
-                            'none'
+                            '366px',
+                            '366px'
                         ],
                         [
                             "eid16435",
@@ -963,12 +955,12 @@
                             'none'
                         ],
                         [
-                            "eid13063",
+                            "eid13061",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${pathmarkersCopy4}",
+                            "${pathmarkersMarket}",
                             'none',
                             'none'
                         ],
@@ -993,80 +985,44 @@
                             '-1'
                         ],
                         [
-                            "eid554",
-                            "-webkit-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid16564",
-                            "-moz-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid16565",
-                            "-ms-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid16566",
-                            "msTransformOrigin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid16567",
-                            "-o-transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid16568",
-                            "transform-origin",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            [53,90],
-                            [53,90],
-                            {valueTemplate: '@@0@@% @@1@@%'}
-                        ],
-                        [
-                            "eid6281",
+                            "eid16626",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${mcPopup}",
-                            '13px',
-                            '13px'
+                            "${mcHUD}",
+                            '80.91%',
+                            '80.91%'
+                        ],
+                        [
+                            "eid13059",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${pathmarkersMed}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid184",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${hudMarket}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid13063",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${pathmarkersCopy4}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid12184",
@@ -1141,26 +1097,6 @@
                             [[984.5, 412.51, 0, 0, 0, 0,0],[1158.07, 445.74, 0, 0, 0, 0,176.72]]
                         ],
                         [
-                            "eid13061",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${pathmarkersMarket}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid5681",
-                            "scaleX",
-                            0,
-                            0,
-                            "linear",
-                            "${btnTips}",
-                            '0.68',
-                            '0.68'
-                        ],
-                        [
                             "eid539",
                             "left",
                             0,
@@ -1171,24 +1107,24 @@
                             '221px'
                         ],
                         [
-                            "eid13021",
-                            "scaleX",
+                            "eid6281",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${avatar_market}",
-                            '1',
-                            '1'
+                            "${mcPopup}",
+                            '13px',
+                            '13px'
                         ],
                         [
-                            "eid5914",
+                            "eid16672",
                             "top",
                             0,
                             0,
                             "linear",
                             "${hudMarket}",
-                            '113px',
-                            '113px'
+                            '73px',
+                            '73px'
                         ],
                         [
                             "eid16398",
@@ -1261,14 +1197,14 @@
                             '1'
                         ],
                         [
-                            "eid7115",
+                            "eid5681",
                             "scaleX",
                             0,
                             0,
-                            "easeOutQuad",
-                            "${mcUserMessage}",
-                            '0.96497',
-                            '0.96497'
+                            "linear",
+                            "${btnTips}",
+                            '0.68',
+                            '0.68'
                         ],
                         [
                             "eid13060",
@@ -1281,14 +1217,14 @@
                             'none'
                         ],
                         [
-                            "eid309",
-                            "left",
+                            "eid14602",
+                            "display",
                             0,
                             0,
-                            "linear",
-                            "${obit}",
-                            '-6px',
-                            '-6px'
+                            "easeOutElastic",
+                            "${InventoryItems}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid14047",
@@ -1341,14 +1277,14 @@
                             '0.84693'
                         ],
                         [
-                            "eid14602",
-                            "display",
+                            "eid309",
+                            "left",
                             0,
                             0,
-                            "easeOutElastic",
-                            "${InventoryItems}",
-                            'none',
-                            'none'
+                            "linear",
+                            "${obit}",
+                            '-6px',
+                            '-6px'
                         ],
                         [
                             "eid12155",
@@ -1453,24 +1389,14 @@
                             'block'
                         ],
                         [
-                            "eid16424",
-                            "display",
-                            3500,
+                            "eid364",
+                            "height",
+                            0,
                             0,
                             "linear",
-                            "${fg_school}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid16425",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${fg_school}",
-                            'block',
-                            'none'
+                            "${charJob}",
+                            '188px',
+                            '188px'
                         ],
                         [
                             "eid16441",
@@ -1503,14 +1429,14 @@
                             '22px'
                         ],
                         [
-                            "eid364",
-                            "height",
+                            "eid16634",
+                            "top",
                             0,
                             0,
                             "linear",
-                            "${charJob}",
-                            '188px',
-                            '188px'
+                            "${btnTips}",
+                            '553px',
+                            '553px'
                         ],
                         [
                             "eid11929",
@@ -1523,14 +1449,54 @@
                             '-15px'
                         ],
                         [
-                            "eid5869",
+                            "eid16424",
+                            "display",
+                            3500,
+                            0,
+                            "linear",
+                            "${fg_school}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid16425",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${fg_school}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid16378",
+                            "display",
+                            3750,
+                            0,
+                            "linear",
+                            "${avatar_med}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid16379",
+                            "display",
+                            4250,
+                            0,
+                            "linear",
+                            "${avatar_med}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid16688",
                             "top",
                             0,
                             0,
                             "linear",
-                            "${btnTips}",
-                            '517px',
-                            '517px'
+                            "${mcUserMessage}",
+                            '507px',
+                            '507px'
                         ],
                         [
                             "eid12228",
@@ -1605,36 +1571,6 @@
                             [[1047.51, 434.51, 199.22, -52.84, 0, 0,0],[1166.36, 492.77, 0, 0, 0, 0,140.22]]
                         ],
                         [
-                            "eid12858",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${mcUserMessage}",
-                            '520px',
-                            '520px'
-                        ],
-                        [
-                            "eid16378",
-                            "display",
-                            3750,
-                            0,
-                            "linear",
-                            "${avatar_med}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid16379",
-                            "display",
-                            4250,
-                            0,
-                            "linear",
-                            "${avatar_med}",
-                            'none',
-                            'block'
-                        ],
-                        [
                             "eid5986",
                             "display",
                             0,
@@ -1663,6 +1599,56 @@
                             "${mcHUD}",
                             '0.84693',
                             '0.84693'
+                        ],
+                        [
+                            "eid13081",
+                            "scaleX",
+                            0,
+                            0,
+                            "linear",
+                            "${avatar_job}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid13082",
+                            "scaleX",
+                            1048,
+                            0,
+                            "linear",
+                            "${avatar_job}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid374",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            '176px',
+                            '176px'
+                        ],
+                        [
+                            "eid363",
+                            "scaleY",
+                            4000,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            '0.61',
+                            '0.61'
+                        ],
+                        [
+                            "eid12847",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            '-90px',
+                            '-90px'
                         ],
                         [
                             "eid12208",
@@ -1735,36 +1721,6 @@
                             "linear",
                             "${avatar_school}",
                             [[171.51, 529.52, 0, 0, 0, 0,0],[13.83, 671.25, 0, 0, 0, 0,212.02]]
-                        ],
-                        [
-                            "eid363",
-                            "scaleY",
-                            4000,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            '0.61',
-                            '0.61'
-                        ],
-                        [
-                            "eid374",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            '176px',
-                            '176px'
-                        ],
-                        [
-                            "eid12847",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${charJob}",
-                            '-90px',
-                            '-90px'
                         ],
                         [
                             "eid11924",
@@ -1858,34 +1814,14 @@
                             '-4px'
                         ],
                         [
-                            "eid13081",
-                            "scaleX",
-                            0,
-                            0,
-                            "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid13082",
-                            "scaleX",
-                            1048,
-                            0,
-                            "linear",
-                            "${avatar_job}",
-                            '1',
-                            '1'
-                        ],
-                        [
                             "eid12997",
                             "left",
                             0,
                             0,
                             "linear",
                             "${mcHUD}",
-                            '11.27%',
-                            '11.27%'
+                            '13.38%',
+                            '13.38%'
                         ],
                         [
                             "eid16396",
@@ -1918,12 +1854,12 @@
                             '1'
                         ],
                         [
-                            "eid184",
+                            "eid16183",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${hudMarket}",
+                            "${WinMessage}",
                             'none',
                             'none'
                         ],
@@ -2010,24 +1946,80 @@
                             [[1030.2, 328.17, 0, 0, 0, 0,0],[1224.45, 364.93, 0, 0, 0, 0,197.7]]
                         ],
                         [
-                            "eid16183",
-                            "display",
+                            "eid13021",
+                            "scaleX",
                             0,
                             0,
                             "linear",
-                            "${WinMessage}",
-                            'none',
-                            'none'
+                            "${avatar_market}",
+                            '1',
+                            '1'
                         ],
                         [
-                            "eid12998",
-                            "top",
+                            "eid554",
+                            "-webkit-transform-origin",
                             0,
                             0,
                             "linear",
-                            "${mcHUD}",
-                            '70.61%',
-                            '70.61%'
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid16689",
+                            "-moz-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid16690",
+                            "-ms-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid16691",
+                            "msTransformOrigin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid16692",
+                            "-o-transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
+                        ],
+                        [
+                            "eid16693",
+                            "transform-origin",
+                            0,
+                            0,
+                            "linear",
+                            "${charJob}",
+                            [53,90],
+                            [53,90],
+                            {valueTemplate: '@@0@@% @@1@@%'}
                         ],
                         [
                             "eid13062",
@@ -2077,11 +2069,11 @@
                             fill: ['rgba(156,0,0,1.00)']
                         },
                         {
-                            type: 'text',
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: 'CHALLENGE:<br>Your village doesn\'t have an outhouse. People are going wherever they can. In public. It\'s embarrassing, dangerous and very unclean. <br><br>You come into contact with some nasty microbes and get life-threatening diahrrea, just like 1.5 million other kids every year.<br><br>You lose 6 health points. <br>And one pair of clean undies.',
-                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto'],
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [18, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
+                            type: 'text',
+                            rect: ['300px', '198px', '471px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -2123,11 +2115,11 @@
                             fill: ['rgba(97,172,57,1.00)']
                         },
                         {
-                            type: 'text',
+                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                             id: 'Text',
                             text: '<p style=\"margin:0px\">​PARTNERSHIP:</p><p style=\"margin: 0px;\">You partner with T.S.O.P.W.D.T.D.I.F.** to bring clean toilets to your village.</p><p style=\"margin: 0px;\">You no longer get affected by any challenges involving toilets and sanitation. Good Job!</p><p style=\"margin: 0px;\">​</p><p style=\"margin: 0px;\">** The Society of People Who Dont Think Diahrreah Is Funny</p><p style=\"margin: 0px;\">​</p>',
-                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto'],
-                            font: ['Trebuchet MS, Arial, Helvetica, sans-serif', [20, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', '']
+                            type: 'text',
+                            rect: ['334px', '266px', '451px', '31px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -2167,11 +2159,11 @@
                                 fill: ['rgba(0,0,0,0)', 'images/gameboard_home.jpg', '0px', '0px']
                             },
                             {
-                                type: 'image',
-                                transform: [[], [], [], ['0.61', '0.61']],
-                                display: 'block',
                                 rect: ['566px', '208px', '145px', '154px', 'auto', 'auto'],
+                                transform: [[], [], [], ['0.61', '0.61']],
                                 id: 'character_home',
+                                type: 'image',
+                                display: 'block',
                                 fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                             }]
                         }
@@ -2268,30 +2260,32 @@
                 content: {
                     dom: [
                         {
-                            id: 'game_hud_v2',
+                            id: 'hud_v3',
                             type: 'image',
-                            rect: ['23px', '14px', '810px', '145px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/game_hud_v2.png', '0px', '0px']
+                            rect: ['-51px', '-83px', '810px', '250px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', '_images/hud_v3.png', '0px', '0px']
                         },
                         {
-                            rect: ['202px', '148px', '225px', '29px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'tPlayerName',
-                            text: '<p style=\"margin: 0px;\">​tPlayerName</p>',
+                            rect: ['-154px', '140px', '225px', '29px', 'auto', 'auto'],
+                            font: ['bree-serif, sans-serif', [14, 'px'], 'rgba(50,28,9,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             align: 'right',
+                            id: 'tPlayerName',
+                            opacity: '0',
+                            text: '<p style=\"margin: 0px;\">​tPlayerName</p>',
                             type: 'text'
                         },
                         {
-                            rect: ['432px', '147px', '107px', '29px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(69,254,222,1.00)', '400', 'none', 'normal', 'break-word', ''],
-                            id: 'tPlayerStatus',
-                            text: '<p style=\"margin: 0px;\">​IS ALIVE!</p>',
+                            rect: ['76px', '141px', '107px', '29px', 'auto', 'auto'],
+                            font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(48,36,14,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             align: 'left',
+                            id: 'tPlayerStatus',
+                            opacity: '0',
+                            text: '<p style=\"margin: 0px;\">​IS ALIVE!</p>',
                             type: 'text'
                         },
                         {
                             text: '<p style=\"margin: 0px;\">​00</p>',
-                            rect: ['238px', '79px', '47px', '31px', 'auto', 'auto'],
+                            rect: ['81px', '55px', '71px', '31px', 'auto', 'auto'],
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             align: 'center',
                             id: 'labelEducation',
@@ -2301,7 +2295,7 @@
                         },
                         {
                             text: '<p style=\"margin: 0px;\">​00</p>',
-                            rect: ['108px', '79px', '47px', '31px', 'auto', 'auto'],
+                            rect: ['82px', '-29px', '65px', '31px', 'auto', 'auto'],
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             align: 'center',
                             id: 'labelGlobal',
@@ -2320,7 +2314,7 @@
                         },
                         {
                             text: '<p style=\"margin: 0px;\">00</p>',
-                            rect: ['173px', '79px', '47px', '31px', 'auto', 'auto'],
+                            rect: ['-2px', '55px', '67px', '31px', 'auto', 'auto'],
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             align: 'center',
                             id: 'labelWater',
@@ -2347,8 +2341,8 @@
                             type: 'text'
                         },
                         {
-                            text: '<p style=\"margin: 0px;\">​00</p>',
-                            rect: ['42px', '78px', '47px', '31px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​999</p>',
+                            rect: ['-4px', '-29px', '69px', '31px', 'auto', 'auto'],
                             font: ['Verdana, Geneva, sans-serif', [26, 'px'], 'rgba(0,0,0,0.99)', 'normal', 'none', '', 'break-word', ''],
                             align: 'center',
                             id: 'labelLife',
@@ -2366,39 +2360,39 @@
                             type: 'text'
                         },
                         {
-                            rect: ['42px', '75px', '45px', '29px', 'auto', 'auto'],
+                            rect: ['-1px', '-31px', '64px', '33px', 'auto', 'auto'],
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
                             id: 'gloss',
-                            opacity: '0.49428353658537',
+                            opacity: '1',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
-                            rect: ['108px', '75px', '45px', '29px', 'auto', 'auto'],
+                            rect: ['84px', '-31px', '62px', '29px', 'auto', 'auto'],
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
                             id: 'glossCopy',
-                            opacity: '0.49428353658537',
+                            opacity: '1',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
-                            rect: ['174px', '75px', '46px', '29px', 'auto', 'auto'],
+                            rect: ['0px', '53px', '62px', '29px', 'auto', 'auto'],
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
                             id: 'glossCopy2',
-                            opacity: '0.49428353658537',
+                            opacity: '1',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
-                            rect: ['240px', '75px', '45px', '29px', 'auto', 'auto'],
+                            rect: ['87px', '52px', '59px', '29px', 'auto', 'auto'],
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
                             id: 'glossCopy3',
-                            opacity: '0.49428353658537',
+                            opacity: '1',
                             type: 'rect',
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
-                            rect: ['321px', '34px', '244px', '58px', 'auto', 'auto'],
+                            rect: ['194px', '-67px', '330px', '158px', 'auto', 'auto'],
                             stroke: [0, 'rgb(255, 255, 255)', 'none'],
                             id: 'glossCopy4',
                             opacity: '0.49428353658537',
@@ -2406,32 +2400,35 @@
                             fill: ['rgba(0,0,0,0)', [270, [['rgba(255,255,255,1.00)', 0], ['rgba(255,255,255,0.00)', 85]]]]
                         },
                         {
+                            type: 'rect',
                             id: 'rectButton',
                             symbolName: 'rectButton',
-                            rect: ['575px', '35px', '237', '90', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['0.872', '0.872']],
+                            rect: ['520px', '-74px', '237', '90', 'auto', 'auto']
                         },
                         {
                             type: 'rect',
+                            transform: [[], [], [], ['0.86873', '0.92713']],
+                            opacity: '0.40485264227642',
                             display: 'none',
                             symbolName: 'buttonflash',
-                            rect: ['564', '20', '259', '110', 'auto', 'auto'],
+                            rect: ['507px', '-88px', '259', '110', 'auto', 'auto'],
                             id: 'buttonflash'
                         },
                         {
                             type: 'rect',
-                            transform: [[], [], [], ['0.19305', '0.53803']],
+                            transform: [[], [], [], ['0.27793', '0.53803']],
                             display: 'block',
                             symbolName: 'buttonflash',
-                            rect: ['68px', '39px', null, null, 'auto', 'auto'],
+                            rect: ['-99px', '-69px', null, null, 'auto', 'auto'],
                             id: 'warningWater'
                         },
                         {
                             type: 'rect',
-                            transform: [[], [], [], ['0.19305', '0.53803']],
+                            transform: [[], [], [], ['0.27793', '0.53803']],
                             display: 'block',
                             symbolName: 'buttonflash',
-                            rect: ['-64px', '40px', null, null, 'auto', 'auto'],
+                            rect: ['-98px', '15px', null, null, 'auto', 'auto'],
                             id: 'warningHealth'
                         }
                     ],
@@ -2463,8 +2460,8 @@
                             0,
                             "linear",
                             "${rectButton}",
-                            '35px',
-                            '35px'
+                            '-74px',
+                            '-74px'
                         ],
                         [
                             "eid5472",
@@ -2487,14 +2484,14 @@
                             'none'
                         ],
                         [
-                            "eid5824",
-                            "left",
+                            "eid5475",
+                            "display",
                             0,
                             0,
                             "linear",
-                            "${rectButton}",
-                            '575px',
-                            '575px'
+                            "${headerLife}",
+                            'none',
+                            'none'
                         ],
                         [
                             "eid5473",
@@ -2527,14 +2524,14 @@
                             'none'
                         ],
                         [
-                            "eid5475",
-                            "display",
+                            "eid5824",
+                            "left",
                             0,
                             0,
                             "linear",
-                            "${headerLife}",
-                            'none',
-                            'none'
+                            "${rectButton}",
+                            '520px',
+                            '520px'
                         ]
                     ]
                 }
@@ -2556,13 +2553,13 @@
                             fill: ['rgba(0,0,0,0)', '_images/button_red.png', '0px', '0px']
                         },
                         {
-                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
-                            text: '<p style=\"margin: 0px;\">​CLOSE</p>',
-                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
-                            align: 'left',
+                            rect: ['15px', '7px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
+                            filter: [0, 0, 1, 1, 0, 0, 0, 0, 'rgba(0,0,0,1.00)', 0, -1, 0],
                             id: 'button_text',
+                            text: '<p style=\"margin: 0px;\">​CLOSE</p>',
+                            align: 'left',
                             type: 'text'
                         },
                         {
@@ -2624,11 +2621,11 @@
                             type: 'group',
                             c: [
                             {
-                                type: 'rect',
+                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animation',
                                 symbolName: 'flare_animation',
-                                transform: [[], [], [], ['1.44508', '1.44508']],
-                                rect: ['-46px', '-43px', '132', '131', 'auto', 'auto']
+                                type: 'rect',
+                                transform: [[], [], [], ['1.44508', '1.44508']]
                             },
                             {
                                 rect: ['0', '0', '384px', '480px', 'auto', 'auto'],
@@ -2637,19 +2634,19 @@
                                 fill: ['rgba(0,0,0,0)', 'images/newGreenCard.png', '0px', '0px']
                             },
                             {
-                                type: 'rect',
+                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto'],
                                 id: 'flare_animationCopy',
                                 symbolName: 'flare_animation',
-                                transform: [[], [], [], ['0.69208', '0.69208']],
-                                rect: ['-46px', '-47px', '132', '131', 'auto', 'auto']
+                                type: 'rect',
+                                transform: [[], [], [], ['0.69208', '0.69208']]
                             }]
                         },
                         {
                             type: 'text',
-                            align: 'left',
+                            id: 'txtBody',
                             text: '<p style=\"margin: 0px;\">​<span style=\"font-weight: 100; font-size: 10px;\">this is some text.</span></p>',
                             rect: ['20px', '173px', '343px', '234px', 'auto', 'auto'],
-                            id: 'txtBody',
+                            align: 'left',
                             overflow: 'auto',
                             textStyle: ['', '', '', '', 'none'],
                             font: ['bree-serif, sans-serif', [15, 'px'], 'rgba(0,0,0,1.00)', '400', 'none', 'normal', 'break-word', 'normal'],
@@ -2840,9 +2837,9 @@
                                 type: 'text',
                                 align: 'center',
                                 text: '<p style=\"margin:0px\">​CLOSE</p>',
-                                font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
-                                title: 'CLOSE',
                                 rect: ['-2', '6px', '102%', '27', 'auto', 'auto'],
+                                title: 'CLOSE',
+                                font: ['bree-serif, sans-serif', [19, 'px'], 'rgba(255,255,255,1.00)', 'normal', 'none', '', 'break-word', ''],
                                 textShadow: ['rgba(33,33,33,1.00)', 0, -2, 1],
                                 id: 'label'
                             }]
@@ -3002,14 +2999,14 @@
                             '2px'
                         ],
                         [
-                            "eid96",
-                            "textShadow.offsetH",
+                            "eid98",
+                            "textShadow.color",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            '0px',
-                            '0px'
+                            'rgba(33,33,33,1.00)',
+                            'rgba(33,33,33,1.00)'
                         ],
                         [
                             "eid31",
@@ -3032,14 +3029,14 @@
                             '2px'
                         ],
                         [
-                            "eid98",
-                            "textShadow.color",
+                            "eid96",
+                            "textShadow.offsetH",
                             0,
                             0,
                             "linear",
                             "${label}",
-                            'rgba(33,33,33,1.00)',
-                            'rgba(33,33,33,1.00)'
+                            '0px',
+                            '0px'
                         ],
                         [
                             "eid17",
@@ -3132,13 +3129,13 @@
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(165,255,0,0.59)', 51], ['rgba(221,255,99,1.00)', 51]]]],
                             c: [
                             {
+                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto'],
                                 font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', '', ''],
-                                type: 'text',
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', '1px', '1px', '1px'],
-                                rect: [-2, 11, '102.04%', 27, 'auto', 'auto']
+                                type: 'text'
                             }]
                         },
                         {
@@ -3207,24 +3204,14 @@
                             '11px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ],
                         [
                             "eid29",
@@ -3297,16 +3284,6 @@
                             '2px'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
-                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
-                        ],
-                        [
                             "eid31",
                             "left",
                             1000,
@@ -3325,6 +3302,16 @@
                             "${base_a}",
                             '0px',
                             '2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(165,255,0,0.59)',51],['rgba(221,255,99,1.00)',51]]],
+                            [270,[['rgba(140,140,140,0.50)',51],['rgba(173,173,173,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3387,14 +3374,24 @@
                             '0px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ]
                     ]
                 }
@@ -3427,13 +3424,13 @@
                             fill: ['rgba(192,192,192,0.00)', [270, [['rgba(254,200,19,0.73)', 51], ['rgba(204,152,0,1.00)', 51]]]],
                             c: [
                             {
+                                type: 'text',
                                 rect: ['-2', '11', '102%', '27', 'auto', 'auto'],
-                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', ''],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                type: 'text'
+                                font: ['Arial, Helvetica, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', 'normal', 'none', '', 'break-word', '']
                             }]
                         },
                         {
@@ -3501,24 +3498,14 @@
                             '11px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ],
                         [
                             "eid29",
@@ -3591,16 +3578,6 @@
                             '2px'
                         ],
                         [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
-                        ],
-                        [
                             "eid31",
                             "left",
                             1000,
@@ -3619,6 +3596,16 @@
                             "${base_a}",
                             '0px',
                             '2px'
+                        ],
+                        [
+                            "eid40",
+                            "background-image",
+                            0,
+                            1000,
+                            "linear",
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ],
                         [
                             "eid33",
@@ -3681,14 +3668,24 @@
                             '0px'
                         ],
                         [
-                            "eid25",
-                            "left",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
+                            "${base_a}",
+                            '2px',
+                            '0px'
                         ]
                     ]
                 }
@@ -3760,24 +3757,14 @@
                             '11px'
                         ],
                         [
-                            "eid18",
-                            "boxShadow.offsetV",
-                            1000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '2px',
-                            '2px'
-                        ],
-                        [
-                            "eid21",
-                            "boxShadow.offsetV",
+                            "eid25",
+                            "left",
                             2000,
                             0,
                             "linear",
-                            "${base_a}",
-                            '2px',
-                            '0px'
+                            "${label}",
+                            '-2px',
+                            '-2px'
                         ],
                         [
                             "eid29",
@@ -3850,24 +3837,44 @@
                             '2px'
                         ],
                         [
-                            "eid25",
+                            "eid18",
+                            "boxShadow.offsetV",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '2px'
+                        ],
+                        [
+                            "eid21",
+                            "boxShadow.offsetV",
+                            2000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '2px',
+                            '0px'
+                        ],
+                        [
+                            "eid31",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${base_a}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid24",
                             "left",
                             2000,
                             0,
                             "linear",
-                            "${label}",
-                            '-2px',
-                            '-2px'
-                        ],
-                        [
-                            "eid40",
-                            "background-image",
-                            0,
-                            1000,
-                            "linear",
-                            "${base_b}",
-                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
-                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
+                            "${base_a}",
+                            '0px',
+                            '2px'
                         ],
                         [
                             "eid33",
@@ -3930,24 +3937,14 @@
                             'rgba(255,255,255,1.00)'
                         ],
                         [
-                            "eid31",
-                            "left",
+                            "eid40",
+                            "background-image",
+                            0,
                             1000,
-                            0,
                             "linear",
-                            "${base_a}",
-                            '0px',
-                            '0px'
-                        ],
-                        [
-                            "eid24",
-                            "left",
-                            2000,
-                            0,
-                            "linear",
-                            "${base_a}",
-                            '0px',
-                            '2px'
+                            "${base_b}",
+                            [270,[['rgba(255,85,85,0.73)',45],['rgba(255,0,0,0.59)',51],['rgba(254,9,9,1.00)',51]]],
+                            [270,[['rgba(254,200,19,0.73)',51],['rgba(204,152,0,1.00)',51]]]
                         ]
                     ]
                 }
@@ -3979,13 +3976,13 @@
                             boxShadow: ['inset', 0, 0, 43, 2, 'rgba(124,156,172,0.60)'],
                             c: [
                             {
+                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', ''],
                                 type: 'text',
-                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto'],
                                 align: 'center',
                                 id: 'label',
                                 text: 'LABEL',
                                 textShadow: ['rgba(255,255,255,1.00)', 1, 1, 1],
-                                font: ['bree-serif, sans-serif', [16, 'px'], 'rgba(89,89,89,1.00)', '700', 'none', '', 'break-word', '']
+                                rect: ['-2', '8px', '102%', '27', 'auto', 'auto']
                             }]
                         },
                         {
@@ -4239,12 +4236,12 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-260px', '-164px', '1094px', '710px', 'auto', 'auto'],
+                            rect: ['-260px', '-114px', '1094px', '710px', 'auto', 'auto'],
                             stroke: [3, 'rgb(236, 236, 236)', 'solid'],
                             id: 'Rectangle',
                             opacity: '0.8063617653963',
                             type: 'rect',
-                            fill: ['rgba(255,201,0,1.00)']
+                            fill: ['rgba(35,35,35,1.00)']
                         },
                         {
                             id: 'hudMarket2',
@@ -4365,8 +4362,8 @@
                         },
                         {
                             rect: ['424px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnPlumbing',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4374,8 +4371,8 @@
                         },
                         {
                             rect: ['309px', '231px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBike',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4383,8 +4380,8 @@
                         },
                         {
                             rect: ['190px', '229px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFilter',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4392,8 +4389,8 @@
                         },
                         {
                             rect: ['71px', '226px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnKit',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4401,8 +4398,8 @@
                         },
                         {
                             rect: ['424px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnFood',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4410,8 +4407,8 @@
                         },
                         {
                             rect: ['307px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnBucket',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4419,8 +4416,8 @@
                         },
                         {
                             rect: ['183px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnTablet',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4428,8 +4425,8 @@
                         },
                         {
                             rect: ['71px', '84px', '112px', '142px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             type: 'rect',
+                            stroke: [0, 'rgba(0,0,0,1)', 'none'],
                             id: 'btnSoap',
                             opacity: '0',
                             cursor: 'pointer',
@@ -4438,8 +4435,7 @@
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4461,90 +4457,89 @@
                 content: {
                     dom: [
                         {
+                            rect: ['-230px', '-39px', '1036px', '681px', 'auto', 'auto'],
                             id: 'gameboard_2016',
                             type: 'image',
-                            rect: ['-230px', '-39px', '1036px', '681px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/gameboard_2016.jpg', '0px', '0px']
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.4', '1.5']],
+                            rect: ['-94px', '277px', '128', '128', 'auto', 'auto'],
                             id: 'btnFarm',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['-94px', '277px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.438', '1.53641']],
+                            rect: ['-94px', '56px', '128', '128', 'auto', 'auto'],
                             id: 'btnHospital',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['-94px', '56px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.43851', '1.51866']],
+                            rect: ['114px', '57px', '128', '128', 'auto', 'auto'],
                             id: 'btnJob',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['114px', '57px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.43801', '1.52886']],
+                            rect: ['324px', '56px', '128', '128', 'auto', 'auto'],
                             id: 'btnMarket',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['324px', '56px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.44059', '1.53428']],
+                            rect: ['533px', '57px', '128', '128', 'auto', 'auto'],
                             id: 'btnToilet',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['533px', '57px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.43987', '1.535']],
+                            rect: ['115px', '277px', '128', '128', 'auto', 'auto'],
                             id: 'btnSchool',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['115px', '277px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
                             transform: [[], [], [], ['1.43987', '1.53738']],
+                            rect: ['326px', '277px', '128', '128', 'auto', 'auto'],
                             id: 'btnWater',
                             symbolName: 'btnInvisible',
                             cursor: 'pointer',
-                            rect: ['326px', '277px', '128', '128', 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
-                            rect: ['517px', '254px', '161px', '172px', 'auto', 'auto'],
                             transform: [[], [], [], ['-1']],
+                            tag: 'img',
                             id: 'character',
-                            fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px'],
                             type: 'image',
-                            tag: 'img'
+                            rect: ['517px', '254px', '161px', '172px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/character.png', '0px', '0px']
                         },
                         {
+                            type: 'text',
                             align: 'center',
-                            rect: ['76px', '-39px', 'auto', 'auto', 'auto', 'auto'],
                             textStyle: ['', '', '', '', 'none'],
+                            rect: ['76px', '-39px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['Verdana, Geneva, sans-serif', [41, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             id: 'Text',
-                            text: '<p style=\"margin: 0px;\"><span style=\"font-family: puritan, sans-serif; font-size: 34px;\">CHOOSE A DESTINATION</span></p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            type: 'text'
+                            text: '<p style=\"margin: 0px;\"><span style=\"font-family: puritan, sans-serif; font-size: 34px;\">CHOOSE A DESTINATION</span></p>'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '600px', '405px']
+                            rect: [null, null, '600px', '405px']
                         }
                     }
                 },
@@ -4845,18 +4840,19 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '-8px', '205px', '152px', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [9, 'px'], 'rgba(0,0,0,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
-                            opacity: '0.5',
-                            id: 'txtScoreMessage',
-                            text: '<p style=\"margin: 0px; text-align: left;\">​game<span style=\"font-size: 10px;\">​</span> tips go here</p>',
+                            rect: ['0px', '-8px', '273px', '152px', 'auto', 'auto'],
+                            font: ['bree-serif, sans-serif', [12, 'px'], 'rgba(0,0,0,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
                             align: 'left',
+                            id: 'txtScoreMessage',
+                            opacity: '0.5',
+                            text: '<p style=\"margin: 0px; text-align: left;\"><span style=\"font-size: 14px;\">asdfasdf</span></p>',
                             type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '258px', '177px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '258px', '177px']
                         }
                     }
                 },
@@ -4885,14 +4881,14 @@
                             '0.5'
                         ],
                         [
-                            "eid7310",
+                            "eid16574",
                             "width",
                             0,
                             0,
-                            "easeOutQuad",
+                            "linear",
                             "${txtScoreMessage}",
-                            '205px',
-                            '205px'
+                            '273px',
+                            '273px'
                         ],
                         [
                             "eid216",
@@ -4932,12 +4928,12 @@
                             fill: ['rgba(0,0,0,0)', 'images/dice-resized-v2.png', '0px', '0px', '1024px', '2048px', 'no-repeat']
                         },
                         {
+                            type: 'text',
                             rect: ['19px', '-31px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap'],
                             id: 'rollagain',
                             text: '<p style=\"margin: 0px;\">ROLL THE DICE</p>',
                             align: 'center',
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [24, 'px'], 'rgba(0,0,0,1)', '900', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -4985,16 +4981,6 @@
                             0,
                             "linear",
                             "${bg}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid340",
-                            "display",
-                            1053,
-                            0,
-                            "linear",
-                            "${dice-resized-v2}",
                             'block',
                             'none'
                         ],
@@ -5282,6 +5268,16 @@
                             [-600,-600],
                             [-800,-600],
                             {valueTemplate: '@@0@@px @@1@@px'}
+                        ],
+                        [
+                            "eid340",
+                            "display",
+                            1053,
+                            0,
+                            "linear",
+                            "${dice-resized-v2}",
+                            'block',
+                            'none'
                         ]
                     ]
                 }
@@ -5314,22 +5310,22 @@
                             id: 'txtObit',
                             text: '<p style=\"margin: 0px;\">obit</p>',
                             rect: ['323px', '181px', '302px', '333px', 'auto', 'auto'],
-                            opacity: '0',
                             align: 'left',
+                            textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [20, 'px'], 'rgba(0,0,0,1.00)', '100', 'none', 'normal', 'break-word', 'normal'],
                             textShadow: ['rgba(255,255,255,1.00)', 0, -2, 3],
-                            textStyle: ['', '', '', '', 'none']
+                            opacity: '0'
                         },
                         {
                             type: 'text',
                             id: 'txtNom',
                             text: '<p style=\"margin: 0px;\">player1<br></p>',
                             rect: ['316px', '108px', '313px', '70px', 'auto', 'auto'],
-                            opacity: '0',
                             align: 'center',
+                            textStyle: ['', '', '', '', 'none'],
                             font: ['puritan, sans-serif', [30, 'px'], 'rgba(82,82,82,1.00)', '900', 'none', 'normal', 'break-word', 'normal'],
                             textShadow: ['rgba(255,255,255,0.65)', 0, -3, 1],
-                            textStyle: ['', '', '', '', 'none']
+                            opacity: '0'
                         },
                         {
                             type: 'image',
@@ -5532,18 +5528,18 @@
                 content: {
                     dom: [
                         {
-                            transform: [[], [], [], ['2.18', '2.18']],
+                            type: 'rect',
                             id: 'dice_symbol_1',
                             symbolName: 'dice_symbol_1_1',
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['2.18', '2.18']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         },
                         {
-                            transform: [[], [], [], ['2.71', '2.71']],
+                            type: 'rect',
                             id: 'dice_symbol_2',
                             symbolName: 'dice_symbol_1_1',
-                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['2.71', '2.71']],
+                            rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto']
                         }
                     ],
                     style: {
@@ -5557,13 +5553,13 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid168",
+                            "eid172",
                             "scaleY",
                             0,
-                            821,
+                            500,
                             "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
+                            "${dice_symbol_2}",
+                            '2.71',
                             '1'
                         ],
                         [
@@ -5585,8 +5581,18 @@
                             [[227.02, 390.14, 0, 0, 0, 0,0],[227.01, 232.57, 0, 0, 0, 0,157.57]]
                         ],
                         [
-                            "eid167",
+                            "eid171",
                             "scaleX",
+                            0,
+                            500,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '2.71',
+                            '1'
+                        ],
+                        [
+                            "eid168",
+                            "scaleY",
                             0,
                             821,
                             "linear",
@@ -5595,23 +5601,13 @@
                             '1'
                         ],
                         [
-                            "eid172",
-                            "scaleY",
-                            0,
-                            500,
-                            "linear",
-                            "${dice_symbol_2}",
-                            '2.71',
-                            '1'
-                        ],
-                        [
-                            "eid171",
+                            "eid167",
                             "scaleX",
                             0,
-                            500,
+                            821,
                             "linear",
-                            "${dice_symbol_2}",
-                            '2.71',
+                            "${dice_symbol_1}",
+                            '2.18',
                             '1'
                         ],
                         [
@@ -6136,33 +6132,33 @@
                             type: 'rect',
                             id: 'shadow1',
                             display: 'block',
-                            opacity: '0',
+                            symbolName: 'shadow',
                             rect: ['400px', '22px', '136', '56', 'auto', 'auto'],
-                            symbolName: 'shadow'
+                            opacity: '0'
                         },
                         {
                             type: 'rect',
                             id: 'shadow2',
                             display: 'none',
-                            opacity: '0',
+                            symbolName: 'shadow',
                             rect: ['62px', '22px', '136', '56', 'auto', 'auto'],
-                            symbolName: 'shadow'
+                            opacity: '0'
                         },
                         {
-                            transform: [[], ['161'], [], ['2.18', '2.18']],
+                            type: 'rect',
                             id: 'dice_symbol_1',
                             display: 'block',
                             symbolName: 'dice_symbol_1_1',
                             rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], ['161'], [], ['2.18', '2.18']]
                         },
                         {
-                            transform: [[], [], [], ['2.71', '2.71']],
+                            type: 'rect',
                             id: 'dice_symbol_2',
                             display: 'none',
                             symbolName: 'dice_symbol_1_1',
                             rect: ['931px', '-65px', '90px', '90px', 'auto', 'auto'],
-                            type: 'rect'
+                            transform: [[], [], [], ['2.71', '2.71']]
                         }
                     ],
                     style: {
@@ -6236,14 +6232,14 @@
                             '161deg'
                         ],
                         [
-                            "eid167",
-                            "scaleX",
-                            0,
-                            821,
-                            "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
-                            '1'
+                            "eid8208",
+                            "rotateZ",
+                            5000,
+                            500,
+                            "easeInQuad",
+                            "${dice_symbol_2}",
+                            '0deg',
+                            '-29deg'
                         ],
                         [
                             "eid190",
@@ -6326,84 +6322,50 @@
                             '400px'
                         ],
                         [
-                            "eid172",
+                            "eid168",
                             "scaleY",
                             0,
-                            500,
+                            821,
                             "linear",
-                            "${dice_symbol_2}",
-                            '2.71',
+                            "${dice_symbol_1}",
+                            '2.18',
                             '1'
                         ],
                         [
-                            "eid12555",
-                            "scaleY",
-                            500,
-                            321,
+                            "eid154",
+                            "location",
+                            0,
+                            821,
                             "linear",
                             "${dice_symbol_2}",
-                            '1',
-                            '1.25'
+                            [[609.95, 61.04, 0, 0, 0, 0,0],[392.15, 51, 0, 0, 0, 0,218.03]]
                         ],
                         [
-                            "eid12569",
-                            "scaleY",
+                            "eid157",
+                            "location",
                             821,
                             179,
                             "linear",
                             "${dice_symbol_2}",
-                            '1.25',
-                            '1.18'
+                            [[392.15, 51, 0, 0, 0, 0,0],[331.02, 46.16, -21.2, -2.22, -124.71, -13.07,61.33],[308.53, 43.87, 0, 0, 0, 0,83.94]]
                         ],
                         [
-                            "eid12557",
-                            "scaleY",
+                            "eid12558",
+                            "location",
                             1000,
                             346,
-                            "linear",
+                            "easeOutQuad",
                             "${dice_symbol_2}",
-                            '1.18',
-                            '1'
+                            [[308.53, 43.87, -123.05, -12.24, 0, 0,0],[102.1, 38.36, 0, 0, 0, 0,206.53]]
                         ],
                         [
-                            "eid171",
-                            "scaleX",
-                            0,
+                            "eid12541",
+                            "location",
+                            5000,
                             500,
-                            "linear",
+                            "easeInQuad",
                             "${dice_symbol_2}",
-                            '2.71',
-                            '1'
-                        ],
-                        [
-                            "eid12554",
-                            "scaleX",
-                            500,
-                            321,
-                            "linear",
-                            "${dice_symbol_2}",
-                            '1',
-                            '1.25'
-                        ],
-                        [
-                            "eid12568",
-                            "scaleX",
-                            821,
-                            179,
-                            "linear",
-                            "${dice_symbol_2}",
-                            '1.25',
-                            '1.18'
-                        ],
-                        [
-                            "eid12556",
-                            "scaleX",
-                            1000,
-                            346,
-                            "linear",
-                            "${dice_symbol_2}",
-                            '1.18',
-                            '1'
+                            [[219.06, 125.85, 0, 0, 0, 0,0],[221, 810.55, 0, 0, 0, 0,684.7]]
                         ],
                         [
                             "eid144",
@@ -6542,40 +6504,14 @@
                             'block'
                         ],
                         [
-                            "eid154",
-                            "location",
+                            "eid167",
+                            "scaleX",
                             0,
                             821,
                             "linear",
-                            "${dice_symbol_2}",
-                            [[609.95, 61.04, 0, 0, 0, 0,0],[392.15, 51, 0, 0, 0, 0,218.03]]
-                        ],
-                        [
-                            "eid157",
-                            "location",
-                            821,
-                            179,
-                            "linear",
-                            "${dice_symbol_2}",
-                            [[392.15, 51, 0, 0, 0, 0,0],[331.02, 46.16, -21.2, -2.22, -124.71, -13.07,61.33],[308.53, 43.87, 0, 0, 0, 0,83.94]]
-                        ],
-                        [
-                            "eid12558",
-                            "location",
-                            1000,
-                            346,
-                            "easeOutQuad",
-                            "${dice_symbol_2}",
-                            [[308.53, 43.87, -123.05, -12.24, 0, 0,0],[102.1, 38.36, 0, 0, 0, 0,206.53]]
-                        ],
-                        [
-                            "eid12541",
-                            "location",
-                            5000,
-                            500,
-                            "easeInQuad",
-                            "${dice_symbol_2}",
-                            [[219.06, 125.85, 0, 0, 0, 0,0],[221, 810.55, 0, 0, 0, 0,684.7]]
+                            "${dice_symbol_1}",
+                            '2.18',
+                            '1'
                         ],
                         [
                             "eid6963",
@@ -6618,24 +6554,84 @@
                             '0'
                         ],
                         [
-                            "eid168",
+                            "eid172",
                             "scaleY",
                             0,
-                            821,
+                            500,
                             "linear",
-                            "${dice_symbol_1}",
-                            '2.18',
+                            "${dice_symbol_2}",
+                            '2.71',
                             '1'
                         ],
                         [
-                            "eid8208",
-                            "rotateZ",
-                            5000,
+                            "eid12555",
+                            "scaleY",
                             500,
-                            "easeInQuad",
+                            321,
+                            "linear",
                             "${dice_symbol_2}",
-                            '0deg',
-                            '-29deg'
+                            '1',
+                            '1.25'
+                        ],
+                        [
+                            "eid12569",
+                            "scaleY",
+                            821,
+                            179,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '1.25',
+                            '1.18'
+                        ],
+                        [
+                            "eid12557",
+                            "scaleY",
+                            1000,
+                            346,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '1.18',
+                            '1'
+                        ],
+                        [
+                            "eid171",
+                            "scaleX",
+                            0,
+                            500,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '2.71',
+                            '1'
+                        ],
+                        [
+                            "eid12554",
+                            "scaleX",
+                            500,
+                            321,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '1',
+                            '1.25'
+                        ],
+                        [
+                            "eid12568",
+                            "scaleX",
+                            821,
+                            179,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '1.25',
+                            '1.18'
+                        ],
+                        [
+                            "eid12556",
+                            "scaleX",
+                            1000,
+                            346,
+                            "linear",
+                            "${dice_symbol_2}",
+                            '1.18',
+                            '1'
                         ]
                     ]
                 }
@@ -6666,12 +6662,12 @@
                             fill: ['rgba(53,53,53,1.00)']
                         },
                         {
+                            type: 'text',
                             rect: ['62px', '23px', 'auto', 'auto', 'auto', 'auto'],
-                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">​ROLL DICE</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            type: 'text'
+                            font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap']
                         }
                     ],
                     style: {
@@ -6730,16 +6726,6 @@
                             '0.5145769715309143'
                         ],
                         [
-                            "eid5633",
-                            "width",
-                            0,
-                            0,
-                            "linear",
-                            "${RoundRect}",
-                            '218px',
-                            '218px'
-                        ],
-                        [
                             "eid5632",
                             "left",
                             0,
@@ -6758,6 +6744,16 @@
                             "${Text}",
                             '23px',
                             '21px'
+                        ],
+                        [
+                            "eid5633",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${RoundRect}",
+                            '218px',
+                            '218px'
                         ],
                         [
                             "eid5591",
@@ -6818,12 +6814,12 @@
                             fill: ['rgba(53,53,53,1)']
                         },
                         {
+                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto'],
                             font: ['bree-serif, sans-serif', [24, ''], 'rgba(191,191,191,1.00)', 'normal', 'none', '', 'break-word', 'nowrap'],
-                            type: 'text',
                             id: 'Text',
                             text: '<p style=\"margin: 0px;\">TIPS</p>',
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 2, 1],
-                            rect: ['24px', '24px', 'auto', 'auto', 'auto', 'auto']
+                            type: 'text'
                         }
                     ],
                     style: {
@@ -7013,61 +7009,61 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
-                            rect: ['0px', '-1px', '767px', '394px', 'auto', 'auto'],
                             transform: [[], [], [], ['0.5', '0.5']],
+                            rect: ['0px', '-1px', '767px', '394px', 'auto', 'auto'],
+                            type: 'rect',
                             id: 'Rectangle',
-                            opacity: '0',
                             stroke: [0, 'rgba(0,0,0,1)', 'none'],
+                            opacity: '0',
                             fill: ['rgba(14,108,139,1.00)']
                         },
                         {
                             type: 'text',
-                            id: 'Title',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">Inventory</span></p>',
-                            rect: ['288px', '-8px', 'auto', 'auto', 'auto', 'auto'],
+                            align: 'center',
                             opacity: '0',
+                            rect: ['288px', '-8px', 'auto', 'auto', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 34px;\">Inventory</span></p>',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [44, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            align: 'center'
+                            id: 'Title'
                         },
                         {
                             type: 'text',
-                            id: 'Instructions',
-                            text: '<p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">Your inventory contains:</span></p>',
-                            rect: ['232px', '36px', 'auto', 'auto', 'auto', 'auto'],
+                            align: 'center',
                             opacity: '0',
+                            rect: ['232px', '36px', 'auto', 'auto', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">Your inventory contains:</span></p>',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [12, 'px'], 'rgba(176,240,255,1.00)', '400', 'none', 'normal', 'break-word', 'nowrap'],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            align: 'center'
+                            id: 'Instructions'
                         },
                         {
                             type: 'text',
-                            id: 'InventoryList',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">SOAP</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER TABLET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BUCKET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FOOD</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FIRST AID KIT</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER FILTER</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BIKE</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​PLUMBING</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​MEDICINE</span></p>',
-                            rect: ['154px', '73px', '192px', '270px', 'auto', 'auto'],
+                            align: 'right',
                             opacity: '0',
+                            rect: ['154px', '73px', '192px', '270px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">SOAP</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER TABLET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BUCKET</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FOOD</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​FIRST AID KIT</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​WATER FILTER</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​BIKE</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​PLUMBING</span></p><p style=\"margin: 0px;\"><span style=\"font-family: bree-serif, sans-serif; font-size: 21px;\">​MEDICINE</span></p>',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['rancho, fantasy', [12, 'px'], 'rgba(255,255,255,1)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            align: 'right'
+                            id: 'InventoryList'
                         },
                         {
                             type: 'text',
-                            id: 'InventoryTotals',
-                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">0​</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p>',
-                            rect: ['356px', '73px', '272px', '270px', 'auto', 'auto'],
+                            align: 'left',
                             opacity: '0',
+                            rect: ['356px', '73px', '272px', '270px', 'auto', 'auto'],
+                            text: '<p style=\"margin: 0px;\">​<span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">0​</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p><p style=\"margin: 0px;\"><span style=\"font-size: 21px; font-family: bree-serif, sans-serif;\">​0</span></p>',
                             textStyle: ['', '', '', '', 'none'],
                             display: 'none',
                             font: ['bree-serif, sans-serif', [21, 'px'], 'rgba(209,255,0,1.00)', '400', 'none', 'normal', 'break-word', ''],
                             textShadow: ['rgba(0,0,0,0.65098)', 0, 1, 3],
-                            align: 'left'
+                            id: 'InventoryTotals'
                         },
                         {
                             type: 'image',
@@ -7161,12 +7157,12 @@
                             align: 'center'
                         },
                         {
-                            type: 'rect',
+                            transform: [[], [], [], ['1.34775', '0.23438']],
                             id: 'btnCloseInventory',
                             display: 'none',
                             symbolName: 'btnInvisible',
                             rect: ['281px', '309px', null, null, 'auto', 'auto'],
-                            transform: [[], [], [], ['1.34775', '0.23438']]
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -7230,14 +7226,14 @@
                             '1'
                         ],
                         [
-                            "eid14472",
-                            "display",
-                            1250,
+                            "eid14465",
+                            "scaleX",
                             0,
+                            500,
                             "easeOutElastic",
-                            "${InventoryTotals}",
-                            'none',
-                            'block'
+                            "${Rectangle}",
+                            '0.5',
+                            '1'
                         ],
                         [
                             "eid14486",
@@ -7270,6 +7266,26 @@
                             'none'
                         ],
                         [
+                            "eid14474",
+                            "display",
+                            750,
+                            0,
+                            "easeOutElastic",
+                            "${Instructions}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid14508",
+                            "opacity",
+                            0,
+                            500,
+                            "easeOutQuad",
+                            "${Rectangle}",
+                            '0',
+                            '1'
+                        ],
+                        [
                             "eid14578",
                             "display",
                             0,
@@ -7290,26 +7306,6 @@
                             'block'
                         ],
                         [
-                            "eid14508",
-                            "opacity",
-                            0,
-                            500,
-                            "easeOutQuad",
-                            "${Rectangle}",
-                            '0',
-                            '1'
-                        ],
-                        [
-                            "eid14474",
-                            "display",
-                            750,
-                            0,
-                            "easeOutElastic",
-                            "${Instructions}",
-                            'none',
-                            'block'
-                        ],
-                        [
                             "eid14466",
                             "scaleY",
                             0,
@@ -7318,6 +7314,16 @@
                             "${Rectangle}",
                             '0.5',
                             '1'
+                        ],
+                        [
+                            "eid14581",
+                            "display",
+                            0,
+                            0,
+                            "easeOutElastic",
+                            "${btnTablet}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid14579",
@@ -7338,16 +7344,6 @@
                             "${btnFood}",
                             'none',
                             'block'
-                        ],
-                        [
-                            "eid14581",
-                            "display",
-                            0,
-                            0,
-                            "easeOutElastic",
-                            "${btnTablet}",
-                            'block',
-                            'none'
                         ],
                         [
                             "eid14574",
@@ -7400,14 +7396,14 @@
                             'none'
                         ],
                         [
-                            "eid14465",
-                            "scaleX",
+                            "eid14472",
+                            "display",
+                            1250,
                             0,
-                            500,
                             "easeOutElastic",
-                            "${Rectangle}",
-                            '0.5',
-                            '1'
+                            "${InventoryTotals}",
+                            'none',
+                            'block'
                         ],
                         [
                             "eid14484",

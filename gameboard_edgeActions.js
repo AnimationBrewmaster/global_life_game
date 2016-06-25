@@ -2730,6 +2730,9 @@ console.log("seven seconds");
          // insert code here
          // Play an audio track 
          sym.$("song")[0].play();
+         // Set the volume of an audio track to 20% 
+         sym.$("song")[0].volume = 0.2;
+         
 
       });
       //Edge binding end
@@ -3445,6 +3448,54 @@ console.log("seven seconds");
          */       
          // button sound:
          //sym.$("click")[0].play();
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnSoap}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Soap is good for soaping.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnTablet}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Tablet is good for tableting.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnBucket}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Bucket is good for bucketing.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnFood}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Food is good for fooding.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnKit}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Kit is good for kiting.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnFilter}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Filter is good for filtering.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnBike}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Bike is good for biking.");
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${btnPlumbing}", "mouseover", function(sym, e) {
+         UpdateUserMessage("Plumbing is good for plumbingicizing.");
+
       });
       //Edge binding end
 
