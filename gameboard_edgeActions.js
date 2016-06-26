@@ -67,6 +67,16 @@ var _prevWater = 0;
 var _prevGlob = 0;
 var _prevEdu = 0;
 
+// NEW STORE DESCRIPTIONS:
+var msgSoap = "this_is_a_placeholder_message";
+var msgTablet = "this_is_a_placeholder_message";
+var msgBucket = "this_is_a_placeholder_message";
+var msgFood = "this_is_a_placeholder_message";
+var msgKit = "this_is_a_placeholder_message";
+var msgFilter = "this_is_a_placeholder_message";
+var msgBike = "this_is_a_placeholder_message";
+var msgPlumbing = "this_is_a_placeholder_message";
+
 // USE A GENERIC HOLDER FUNCTION TO DELAY TRIGGERING THE MAIN PATH
 // ACTION UNTIL THE USER REACHES THE DESTINATION:
 var holderFunction;
@@ -3452,49 +3462,49 @@ console.log("seven seconds");
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnSoap}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Soap is good for soaping.");
+         UpdateUserMessage(msgSoap);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnTablet}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Tablet is good for tableting.");
+         UpdateUserMessage(msgTablet);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnBucket}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Bucket is good for bucketing.");
+         UpdateUserMessage(msgBucket);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFood}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Food is good for fooding.");
+         UpdateUserMessage(msgFood);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnKit}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Kit is good for kiting.");
+         UpdateUserMessage(msgKit);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnFilter}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Filter is good for filtering.");
+         UpdateUserMessage(msgFilter);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnBike}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Bike is good for biking.");
+         UpdateUserMessage(msgBike);
 
       });
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${btnPlumbing}", "mouseover", function(sym, e) {
-         UpdateUserMessage("Plumbing is good for plumbingicizing.");
+         UpdateUserMessage(msgPlumbing);
 
       });
       //Edge binding end
@@ -4129,5 +4139,13 @@ console.log("seven seconds");
 
    })("rountBtn_1");
    //Edge symbol end:'rountBtn_1'
+
+   //=========================================================
+   
+   //Edge symbol: 'WinMessage'
+   (function(symbolName) {   
+   
+   })("WinMessage");
+   //Edge symbol end:'WinMessage'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-581531069");
