@@ -333,6 +333,7 @@ challengeCard11A.hp = 0;
 challengeCard11A.wp = -2;
 challengeCard11A.ep = 0;
 challengeCard11A.gb = -2;
+challengeCard11A.special = "gotSoap11";
 challengeCards[0][10] = challengeCard11A;
 
 var challengeCard11B = new Object();
@@ -343,6 +344,7 @@ challengeCard11B.hp = 0;
 challengeCard11B.wp = -2;
 challengeCard11B.ep = 0;
 challengeCard11B.gb = -3;
+challengeCard11B.special = "gotSoap11";
 challengeCards[1][10] = challengeCard11B;
 
 var challengeCard11C = new Object();
@@ -462,6 +464,7 @@ challengeCard15A.hp = -2;
 challengeCard15A.wp = 0;
 challengeCard15A.ep = 0;
 challengeCard15A.gb = -3;
+challengeCard15A.special = "gotSoap15";
 challengeCards[0][14] = challengeCard15A;
 
 var challengeCard15B = new Object();
@@ -472,6 +475,7 @@ challengeCard15B.hp = -2;
 challengeCard15B.wp = 0;
 challengeCard15B.ep = 0;
 challengeCard15B.gb = -3;
+challengeCard15B.special = "gotSoap15";
 challengeCards[1][14] = challengeCard15B;
 
 var challengeCard15C = new Object();
@@ -482,6 +486,7 @@ challengeCard15C.hp = -2;
 challengeCard15C.wp = 0;
 challengeCard15C.ep = 0;
 challengeCard15C.gb = -3;
+challengeCard15C.special = "gotSoap15";
 challengeCards[2][14] = challengeCard15C;
 
 //card 16

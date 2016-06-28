@@ -68,14 +68,14 @@ var _prevGlob = 0;
 var _prevEdu = 0;
 
 // NEW STORE DESCRIPTIONS:
-var msgSoap = "this_is_a_placeholder_message";
-var msgTablet = "this_is_a_placeholder_message";
-var msgBucket = "this_is_a_placeholder_message";
-var msgFood = "this_is_a_placeholder_message";
-var msgKit = "this_is_a_placeholder_message";
-var msgFilter = "this_is_a_placeholder_message";
-var msgBike = "this_is_a_placeholder_message";
-var msgPlumbing = "this_is_a_placeholder_message";
+var msgSoap = "1 Global Buck.<br><br>Soap keeps you healthy if you pull the Challange Card that says you are sick because you didn't wash your hands. You can only use each bar of soap once.";
+var msgTablet = "1 Global Buck.<br><br>The tablet keeps you healthy if you roll a 1 while collectiong water. You can only use each the tablet once.";
+var msgBucket = "2 Global Bucks.<br><br>The bucket allows you to carry twice as much water when collecting water. Only one per player.";
+var msgFood = "2 Global Bucks.<br><br>I hope you know what to do with food.  You can carry it with you and eat it any time to restore 4 health points.";
+var msgKit = "3 Global Bucks.<br><br>Adds 6 health points.  You can carry it with you and use it anytime.";
+var msgFilter = "20 Global Bucks.<br><br>The biosand filter from CAWST protects you from diarrhea, cholera and schistosomiasis. It also protects you if you roll a 1 when collecting water.";
+var msgBike = "20 Global Bucks.<br><br>A bike from Bicycles for Humanity allows you to roll 2 dice instead of 1. This ability to get around faster can help you get everywhere much faster.";
+var msgPlumbing = "100 Global Bucks.<br><br>Clean, filtered, unlimited water is pumped to your house. You never need to collect water again. It protects you from diarrhea, cholera and schistosomiasis.";
 
 // USE A GENERIC HOLDER FUNCTION TO DELAY TRIGGERING THE MAIN PATH
 // ACTION UNTIL THE USER REACHES THE DESTINATION:
@@ -1142,7 +1142,15 @@ function specialCards(fnstring) {
             gainEducationLevel();
             player1.bike = true;
             THE_GAME.ShowAllBikes();
-            break;      
+            break;
+            
+          case "gotSoap11":
+          	checkForSoap(11);     
+            break;
+            
+          case "gotSoap15":
+          	checkForSoap(15);     
+            break;
             
 		default: 
 			// nothing 
@@ -1186,8 +1194,46 @@ function payEducationLevel() {
 }
 
 function gotDiarrhea() {
-	sicknessTimer = 4;
-	console.log("you got Diarrhea!");
+	if (player1.soap) {
+		console.log("you got soap - no Diarrhea!");
+		player1.soap = false;
+	}
+	else {
+		sicknessTimer = 4;
+		console.log("you got Diarrhea!");
+	}	
+}
+
+function checkForSoap(card) {
+	if (player1.soap) {
+		console.log("protected by soap");
+		if (card == 11) {
+			if (countryValue == 0) {
+				impactStats(0, 2, 0, 2);
+				player1.soap = false;
+			}
+			else if (countryValue == 1) {
+				impactStats(0, 3, 0, 3);
+				player1.soap = false;
+			}
+			else {
+				// nothing
+			}
+		}
+		else if (card == 15) {
+			// TODO - add miss of work functionality
+			impactStats(2, 0, 0, 3);
+			player1.soap = false;
+		}
+		else {
+			//nothing
+		}
+	updateStats();
+	}	
+	else {
+		console.log("no soap - you get the full card damage");
+		//nothing
+	}	
 }
 
 function payOrBeat() {
@@ -1629,7 +1675,7 @@ function checkDiceRoll(diceRoll) {
     }
     // if card square was hit, wait 1.5 seconds then call the card function to determine the card and pop-up the card graphic
     if (cardYes) {
-    	setTimeout(checkCard, 1500);
+    	setTimeout(checkCard, 2500);
     	//checkCard(currentPlayerSquare); - TODO use this for randomized card squares
     }
 }
