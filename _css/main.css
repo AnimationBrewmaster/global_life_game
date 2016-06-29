@@ -107,9 +107,27 @@ h3 {
     visibility: hidden;
     display: none;
 }
+
+#column4 {
+	width: 25%;
+	float: left;
+}
+
+#column5 {
+	width: 30%;
+	float: left;
+	padding-left: 20px;
+}
+
+#column6 {
+	width: 30%;
+	float: left;
+	padding-left: 40px;
+}
+
 .text {
- padding 10px;
- margin 10px;
+ padding: 10px;
+ margin: 10px;
 	font-size: 100%;
 }
 #user_name {
@@ -287,7 +305,8 @@ styles for the Start Game form:
     cursor: pointer;    
 }
 #choice_description{
-    font-color:#599bb3;
+    /*font-color:#599bb3;*/
+   	color:#599bb3;
     font-weight: bold;
     zoom: 1;
     filter: alpha(opacity=50);
@@ -315,7 +334,8 @@ styles for the Start Game form:
 .start_description{
     font-size:12px;
     color:white;
-    font-color:#ccc;
+    /*font-color:#ccc;*/
+    color:#ccc;
     opacity: 80%;
     padding:6px;
     margin:0px;
@@ -325,4 +345,50 @@ styles for the Start Game form:
     -webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
+}
+
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: red;
+}
+
+/* link text decoration */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+.return {
+	background-color: #12BC12;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
