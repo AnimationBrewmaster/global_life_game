@@ -1,124 +1,125 @@
 <!doctype html>
 <html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<title>Global Life Game Engine</title>
-	<link href="_css/main.css" rel="stylesheet" media="screen, projection">
-	<!-- script src="_scripts/main.js"></script -->
-	
-	<script type="text/javascript" charset="utf-8" src="edge_includes/edge.5.0.1.min.js"></script>
-    <script type="text/javascript" src="_scripts/challengeCards.js"></script>
-	<script type="text/javascript" src="_scripts/partnershipCards.js"></script>
-	<script type="text/javascript" src="_scripts/gametips.js"></script>
-    
-	<!-- greensock for text animation  - CDN link for the latest TweenMax-->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
-        
-	<!-- prettify any dialog boxes ussing SweetAlert -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
-    <script src="//use.edgefonts.net/passion-one.js"></script> 
-	<script src="https://use.edgefonts.net/rancho.js"></script>
-	<script src="https://use.edgefonts.net/kotta-one.js"></script>
-	<style>
-/* edge preload CSS */  
-.edgeLoad-EDGE-581531069 {
-	visibility: hidden;
-	z-index: -11;
-	display:none;      
-}
 
-#startButton {
-	visibility: hidden;
-	display: none;
-}
-</style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Global Life Game Engine</title>
+    <link href="_css/main.css" rel="stylesheet" media="screen, projection">
+    <!-- script src="_scripts/main.js"></script -->
+
+    <script type="text/javascript" charset="utf-8" src="edge_includes/edge.5.0.1.min.js"></script>
+    <script type="text/javascript" src="_scripts/challengeCards.js"></script>
+    <script type="text/javascript" src="_scripts/partnershipCards.js"></script>
+    <script type="text/javascript" src="_scripts/gametips.js"></script>
+
+    <!-- greensock for text animation  - CDN link for the latest TweenMax-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+
+    <!-- prettify any dialog boxes using SweetAlert -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
+    <script src="https://use.edgefonts.net/passion-one.js"></script>
+    <script src="https://use.edgefonts.net/rancho.js"></script>
+    <script src="https://use.edgefonts.net/kotta-one.js"></script>
+    <style>
+        /* edge preload CSS */
+        
+        .edgeLoad-EDGE-581531069 {
+            visibility: hidden;
+            z-index: -11;
+            display: none;
+        }
+        
+        #startButton {
+            visibility: hidden;
+            display: none;
+        }
+    </style>
 </head>
 
 <body id="game">
-<div id="after"></div>
-<div id="top_title_padding">&nbsp;</div>
-<div id="column1">
-      <div class = "welcome_text"> <img src="_images/Logo_black_text.png" class="logo" alt="St. James School">
-    <h3> WELCOME TO THE GAME </h3>
-    <p class="intro"> Welcome to the Global Life Game! This game was designed by the grade 9 Global Leadership students at St. James School in Calagary, Alberta, Canada, as a way to educate youth about global issues people around the world face. We also want people to see that just a little help can make a big impact in developing nations. Once you have played, we hope you will visit some of our partner sites to learn more about these issues and how you can take action to make the world a better place! After you are done playing, please visit our ACTIONS YOU CAN TAKE page for lesson plans and ideas. Thanks for playing! </p>
-    <br>
-    <h3> HOW TO WIN </h3>
-    <p class="intro"> The objective of the game is to reach a certain standard of living so you can sustain your life. The more developed the country you choose, the easier it is to reach this sustainable level. You ‘win’ when you have:
-        
-    <ul class="win">
-          <li>50 Health Points</li>
-          <li>50 Water Points</li>
-          <li>30 Education Points</li>
-          <li>$75 Global Bucks</li>
-          <li>A Biosand Filter or Plumbing</li>
-        </ul>
-    <p></p>
-    <!-- done forms --> 
-  </div>
-  </div>
-      <div id="column2">
-    <h3>To begin playing <br />select a difficulty below:</h3>
-           <span style="padding:8px;" class="highlighted_word">Click the image to choose a different character!</span>
-    <img src="images/character.png" alt="player image" width="151" height="160" id="character" align="left"> 
-       
-          <br>
-    <div id="country_type">
-          <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"><span class="greenish">A</span> (Canada) </button>
-        <br />
-          <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> <span class="yellowish">B</span> (Brazil)</button>
-        <br />
-          <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> <span class="reddish">C</span> (Afghanistan)</button>
+    <div id="after"></div>
+    <div id="top_title_padding">&nbsp;</div>
+    <div id="column1">
+        <div class="welcome_text"> <img src="_images/Logo_black_text.png" class="logo" alt="St. James School">
+            <h3> WELCOME TO THE GAME </h3>
+            <p class="intro"> Welcome to the Global Life Game! This game was designed by the grade 9 Global Leadership students at St. James School in Calagary, Alberta, Canada, as a way to educate youth about global issues people around the world face. We also want people to see that just a little help can make a big impact in developing nations. Once you have played, we hope you will visit some of our partner sites to learn more about these issues and how you can take action to make the world a better place! After you are done playing, please visit our ACTIONS YOU CAN TAKE page for lesson plans and ideas. Thanks for playing! </p>
+            <br>
+            <h3> HOW TO WIN </h3>
+            <p class="intro"> The objective of the game is to reach a certain standard of living so you can sustain your life. The more developed the country you choose, the easier it is to reach this sustainable level. You ‘win’ when you have:
+
+                <ul class="win">
+                    <li>50 Health Points</li>
+                    <li>50 Water Points</li>
+                    <li>30 Education Points</li>
+                    <li>$75 Global Bucks</li>
+                    <li>A Biosand Filter or Plumbing</li>
+                </ul>
+                <p></p>
+                <!-- done forms -->
         </div>
-    <div id="choice_description">
-          <ul>
-        <li class="greenish">A = EASY (Developed Nation)
-              <div class="start_description">Health:30 | Water:30 | Education:14 | Global Bucks:$25</div>
-            </li>
-        <li class="yellowish">B = MEDIUM (Emerging Nation)
-              <div class="start_description">Health:20 | Water:20 | Education:10 | Global Bucks:$12</div>
-            </li>
-        <li class="reddish">C = HARD (Developing Nation)
-              <div class="start_description">Health:15 | Water:15 | Education:3 | Global Bucks:$2</div>
-            </li>
-      </ul>
-        </div>
-  </div>
-      <div id="startButton">
-    <button type="button" onclick="AreWeReadyToStart();" name="start_button" id="start_button" value="c" class="start-button">START!</button>
-  </div>
-      <div id="column3">
-    <div id="Stage" class="EDGE-581531069"></div>
-  </div>
-      <!--Adobe Edge Runtime--> 
-      <script>
-		window.onload = function() {		
-			
-			AdobeEdge.loadComposition('gameboard', 'EDGE-581531069', {
-			scaleToFit: "width",        
-			centerStage: "horizontal",
-			minW: "0",
-			maxW: "undefined"
-			}, {
-			dom: []
-			}, {
-			dom: []
-		}                  
-						  
-		); 
-			AdobeEdge.bootstrapCallback(function(compId) {     
-			// called when edge loads
-				InitGame();
-				InitGameTips();
-			});   
-			
-			
-		};
-</script> 
-      <!--Adobe Edge Runtime End--> 
-      
     </div>
+    <div id="column2">
+        <h3>To begin playing <br />select a difficulty below:</h3>
+        <span style="padding:8px;" class="highlighted_word">Click the image to choose a different character!</span>
+        <img src="images/character.png" alt="player image" width="151" height="160" id="character" align="left">
+
+        <br>
+        <div id="country_type">
+            <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="a"><span class="greenish">A</span> (Canada) </button>
+            <br />
+            <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="b"> <span class="yellowish">B</span> (Brazil)</button>
+            <br />
+            <button type="button" onclick="SetCountrySelected(this.value)" name="chosen_country" value="c"> <span class="reddish">C</span> (Afghanistan)</button>
+        </div>
+        <div id="choice_description">
+            <ul>
+                <li class="greenish">A = EASY (Developed Nation)
+                    <div class="start_description">Health:30 | Water:30 | Education:14 | Global Bucks:$25</div>
+                </li>
+                <li class="yellowish">B = MEDIUM (Emerging Nation)
+                    <div class="start_description">Health:20 | Water:20 | Education:10 | Global Bucks:$12</div>
+                </li>
+                <li class="reddish">C = HARD (Developing Nation)
+                    <div class="start_description">Health:15 | Water:15 | Education:3 | Global Bucks:$2</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="startButton">
+        <button type="button" onclick="AreWeReadyToStart();" name="start_button" id="start_button" value="c" class="start-button">START!</button>
+    </div>
+    <div id="column3">
+        <div id="Stage" class="EDGE-581531069"></div>
+    </div>
+    <!--Adobe Edge Runtime-->
+    <script>
+        window.onload = function() {
+
+            AdobeEdge.loadComposition('gameboard', 'EDGE-581531069', {
+                    scaleToFit: "width",
+                    centerStage: "horizontal",
+                    minW: "0",
+                    maxW: "undefined"
+                }, {
+                    dom: []
+                }, {
+                    dom: []
+                }
+
+            );
+            AdobeEdge.bootstrapCallback(function(compId) {
+                // called when edge loads
+                InitGame();
+                InitGameTips();
+            });
+
+
+        };
+    </script>
+    <!--Adobe Edge Runtime End-->
+
 </body>
 </html>
