@@ -427,8 +427,8 @@ challengeCards[2][12] = challengeCard13C;
 // TODO - mini game - bathroom break (card #14) - think this has to be a mini-game - otherwise it throws off all game turn functionality
 var challengeCard14A = new Object();
 challengeCard14A.title = "Bathroom Break";
-challengeCard14A.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation.";
-challengeCard14A.impact = "Lose 3 health points and 3 water points.";
+challengeCard14A.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14A.impact = "If you don’t make it, lose 3 health points and 3 water points.";
 challengeCard14A.hp = -3;
 challengeCard14A.wp = -3;
 challengeCard14A.ep = 0;
@@ -437,8 +437,8 @@ challengeCards[0][13] = challengeCard14A;
 
 var challengeCard14B = new Object();
 challengeCard14B.title = "Bathroom Break";
-challengeCard14B.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation.";
-challengeCard14B.impact = "Lose 3 health points and 3 water points.";
+challengeCard14B.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14B.impact = "If you don’t make it, lose 3 health points and 3 water points.";
 challengeCard14B.hp = -3;
 challengeCard14B.wp = -3;
 challengeCard14B.ep = 0;
@@ -447,8 +447,8 @@ challengeCards[1][13] = challengeCard14B;
 
 var challengeCard14C = new Object();
 challengeCard14C.title = "Bathroom Break";
-challengeCard14C.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation.";
-challengeCard14C.impact = "Lose 3 health points and 3 water points.";
+challengeCard14C.text = "You have to go to the bathroom! Many people around the world lack access to proper sanitation. Double the number you rolled and move that many spaces. You must make it to the bathroom right away!";
+challengeCard14C.impact = "If you don’t make it, lose 3 health points and 3 water points.";
 challengeCard14C.hp = -3;
 challengeCard14C.wp = -3;
 challengeCard14C.ep = 0;
@@ -1096,7 +1096,7 @@ challengeCards[1][33] = challengeCard35B;
 
 var challengeCard35C = new Object();
 challengeCard35C.title = "Government Elections";
-challengeCard35C.text = "The dictator who has run your country for years has finally agreed to hold elections, but thid election id not going to be fair or legitimate. Gangs of thugs are intimidating anyone who dares to support the opposing parties, and people are afraid to even go out and vote for fear of being beaten or killed. The dictator wins with 90% of the vote, and the people in your country will continue suffer.";
+challengeCard35C.text = "Though the dictator who has run your country for years has finally agreed to hold elections, you realize quite early that these elections are not going to be fair or legitimate. Gangs of thugs are intimidating anyone who dares to support the opposing parties, and many people are afraid to even go out and vote for fear of being beaten or killed by these gangs. It isn’t much of a surprise when the dictator wins with 90% of the vote, though almost everyone knows it wasn’t a real election. Since the dictator won, most of the people in your country will continue to go without proper education, medical treatment, safety, or jobs due to a poor economy.";
 challengeCard35C.impact = "Lose $2 Global Bucks and 2 health points.";
 challengeCard35C.hp = -2;
 challengeCard35C.wp = 0;
@@ -1424,7 +1424,7 @@ challengeCards[2][42] = challengeCard51C;
 //card 52
 var challengeCard52A = new Object();
 challengeCard52A.title = "Refugees";
-challengeCard52A.text = "Your country’s policies over the past 50 years have caused wars in many other countries causing people living in those countries to flee. By not helping other countries rise out of poverty, many people living in poorer countries see their only chance for a better life is to move to your country. As a country, you have a humanitarian responsibility to help people all over the world, as well as help refugees fleeing violence and poverty.";
+challengeCard52A.text = "Your country’s policies over the past 50 years have caused wars in many other countries which the people living in those countries have had to flee. Also, by not helping other countries rise out of poverty, many people living in poorer countries see their only chance for a better life is to move to your country. As a country, you have a humanitarian responsibility to help people all over the world, as well as help refugees fleeing violence and poverty. You must remember that these refugees want to be in your country and will be valuable and contributing members of society. Many of the young people will appreciate education more than people who were born in your country because they know what life is like without an education.";
 challengeCard52A.impact = "Give $3 Global Bucks to help these people adjust to life in your country. ";
 challengeCard52A.hp = 0;
 challengeCard52A.wp = 0;
@@ -1444,7 +1444,7 @@ challengeCards[1][43] = challengeCard52B;
 
 var challengeCard52C = new Object();
 challengeCard52C.title = "Refugees";
-challengeCard52C.text = "Civil war has been going on in your country for years but the fighting has been getting worse lately. You have lost many friends and family members to the war. With no water, food, education, hospitals or any government services, it is difficult to survive. You fear for the safety of your family. You make the difficult decision to abandon everything and make the dangerous journey to another country in hope of a better life for your family.";
+challengeCard52C.text = "Civil war has been going on in your country for years but the fighting has been getting worse lately. You have lost many friends and family members to the war. With no water, food, education, hospitals or any government services, it is difficult to survive. You fear for the safety of your family, especially your young children who are constantly afraid to go outside. You make the difficult decision to abandon everything you have and make the dangerous journey to another country in hope of a better life for your family.";
 challengeCard52C.impact = "Lose $2 Global Bucks.";
 challengeCard52C.hp = 0;
 challengeCard52C.wp = 0;

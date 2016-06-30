@@ -528,7 +528,7 @@ function getMedical() {
     //SetChosenPath("medical");
 
     if (player1.gb < 1) {
-        swal("You don't have enough money to buy any medicine");
+        swal("No Money", "Unfortunately you don't have enough money to buy medicine.");
     } else {
         getMedicalCure();
     }
@@ -696,7 +696,7 @@ function buyMedicine(medicineBuy) {
 function getSchool() {
     // SetChosenPath("school");
     if (player1.gb <= 0) {
-        swal("Unfortunately you have no money to buy an education.");
+        swal("No Money", "Unfortunately you don't have enough money to improve your education.");
     } else {
         buySchool();
     }
@@ -752,7 +752,7 @@ function buySchool() {
 function getStore() {
     //  SetChosenPath("store");30
     if (player1.gb <= 0) {
-        swal("Unfortunately you have no money to buy anything at the Market.");
+        swal("No Money", "Unfortunately you don't have enough money to buy something at the Market.");
         UpdateUserMessage(message);
     } else {
         OpenMarketHud();
